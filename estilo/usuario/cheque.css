@@ -1,0 +1,114 @@
+﻿BODY
+{
+	margin: 0;
+}
+*
+{
+}
+.chequewrapper
+{
+    display: block;
+    width: 182mm;
+    height: 75mm;
+    background: url( 'nbch_placeholder.jpg' ) 0 0 / contain;
+    font: bold small/1em Courier;
+}
+.olblChequeMontoNumero
+{
+	margin-left: 135mm;
+	margin-top: 8mm;
+	display: inline-block;
+}
+.divfecha
+{
+	margin-top: 1.2mm;
+}
+.olblChequeFechaDia
+{
+	margin-left: 50mm;
+	display: inline-block;
+}
+.olblChequeFechaMes
+{
+	display: inline-block;
+	margin-left: 0mm;
+}
+.olblChequeFechaAA
+{
+	display: inline-block;
+	margin-left: 5mm;
+}
+.olblChequeOrden
+{
+	width: 70mm;
+	display: inline-block;
+	margin-left: 46mm;
+	margin-top: 1.7mm;
+	line-height: 1.25;
+}
+.olblChequeMontoLetras
+{
+	width: 70mm;
+	display: inline-block;
+	overflow: hidden;
+	margin-top: 4.7mm;
+	margin-left: 60mm;
+	line-height: 1.25;
+}
+@media print
+{
+    .chequetip
+    {
+        display:none;
+    }
+    .chequewrapper
+    {
+	    display: block;
+	    width: 182mm;
+	    height: 75mm;
+	    font: bold small / 1em Courier;
+    }
+    .olblChequeMontoNumero
+    {
+	    margin-left: 140mm;
+	    margin-top: 7.2mm;
+	    display: inline-block;
+    }
+    .divfecha
+    {
+	    margin-top: 0.7mm;
+    }
+    .olblChequeFechaDia
+    {
+	    margin-left: 50mm;
+	    display: inline-block;
+    }
+    .olblChequeFechaMes
+    {
+	    display: inline-block;
+	    margin-left: 0mm;
+    }
+    .olblChequeFechaAA
+    {
+	    display: inline-block;
+	    margin-left: 5mm;
+    }
+    .olblChequeOrden
+    {
+	    width: 70mm;
+	    display: inline-block;
+	    margin-left: 46mm;
+	    margin-top: 1.7mm;
+	    line-height: 1.25;
+    }
+    .olblChequeMontoLetras
+    {
+	    width: 70mm;
+	    display: inline-block;
+	    overflow: hidden;
+	    margin-top: 4.7mm;
+	    margin-left: 60mm;
+	    line-height: 1.25;
+    }
+
+}

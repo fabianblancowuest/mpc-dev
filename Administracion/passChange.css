@@ -1,0 +1,19 @@
+.passChange-container {
+    display: flex;
+    justify-content: center;
+    gap: 2em;
+}
+
+.password-data input {
+    margin: .5em 0;
+    display: block;
+    width: 100%;
+    border-radius: 5px;
+    
+}
+
+.passChange-confirmar-btns {
+    display: flex;
+    justify-content: center;
+    gap: 1em;
+}

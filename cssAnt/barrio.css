@@ -1,0 +1,40 @@
+﻿body {
+} 
+.barrio {
+  max-width: 200px;
+   margin: 0px;
+   padding-left: 0px;
+  padding-right: 0px;
+  padding-top: 0px;
+  padding-bottom: 0px;
+    vertical-align:top;
+}
+.barrio .btnlote{
+
+    margin: 0px;
+   padding-left: 0px;
+  padding-right: 0px;
+  padding-top: 0px;
+  padding-bottom: 0px;
+    vertical-align:top;
+     
+}
+.btnlote{
+
+      margin: 0px;
+   padding-left: 0px;
+  padding-right: 0px;
+  padding-top: 0px;
+  padding-bottom: 0px;
+  vertical-align:top;
+    /*
+  margin: 0px;
+  border: none;
+  border-radius: 0px;
+  width: 8px;
+  height: 8px;
+  border-color:ActiveBorder black 
+        */
+  }
+
+

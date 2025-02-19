@@ -1,0 +1,162 @@
+﻿<%@ Master Language="VB" CodeFile="masterE.master.vb" Inherits="INCLUIR_master_masterE"  AutoEventWireup="false" %>
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html lang="es-ar" xml:lang="es-ar"  xmlns="http://www.w3.org/1999/xhtml">
+
+<head runat="server">
+    <link href="default.css" rel="stylesheet" type="text/css" />
+    <link href="../estilo/print/print.css" media="print" id="cssPrint" rel="stylesheet" type="text/css" />
+    <link rel="shortcut icon" href="http://www.i-lot.com.ar/cajachaco/master/favicon.ico" />
+	<script type="text/javascript" src="../estilo/tooltip/tooltip.js"></script>
+	<script type="text/javascript">
+	function printDiv(printarea) {
+     var printContents = document.getElementById(printarea).innerHTML;
+     var originalContents = document.body.innerHTML;
+
+     document.body.innerHTML = printContents;
+
+     window.print();
+
+     document.body.innerHTML = originalContents;
+}
+	</script>
+	<script type="text/javascript">
+	function getScrollXY() {
+    var x = 0, y = 0;
+    if( typeof( window.pageYOffset ) == 'number' ) {
+        // Netscape
+        x = window.pageXOffset;
+        y = window.pageYOffset;
+    } else if( document.body && ( document.body.scrollLeft || document.body.scrollTop ) ) {
+        // DOM
+        x = document.body.scrollLeft;
+        y = document.body.scrollTop;
+    } else if( document.documentElement && ( document.documentElement.scrollLeft || document.documentElement.scrollTop ) ) {
+        // IE6 standards compliant mode
+        x = document.documentElement.scrollLeft;
+        y = document.documentElement.scrollTop;
+    }
+    return [x, y];
+}
+           
+function setScrollXY(x, y) {
+    window.scrollTo(x, y);
+}
+function createCookie(name,value,days) {
+
+	if (days) {
+		var date = new Date();
+		date.setTime(date.getTime()+(days*24*60*60*1000));
+		var expires = "; expires="+date.toGMTString();
+	}
+	else var expires = "";
+	document.cookie = name+"="+value+expires+"; path=/";
+}
+
+function readCookie(name) {
+	var nameEQ = name + "=";
+	var ca = document.cookie.split(';');
+	for(var i=0;i < ca.length;i++) {
+		var c = ca[i];
+		while (c.charAt(0)==' ') c = c.substring(1,c.length);
+		if (c.indexOf(nameEQ) == 0) return c.substring(nameEQ.length,c.length);
+	}
+	return null;
+}
+function loadP(pageref){
+	x=readCookie(pageref+'x');
+	y=readCookie(pageref+'y');
+	setScrollXY(x,y)
+}
+function unloadP(pageref){
+	s=getScrollXY()
+	createCookie(pageref+'x',s[0],0.1);
+	createCookie(pageref+'y',s[1],0.1);
+}
+	</script>
+	<!--<script type="text/javascript">
+	window.onbeforeunload = function() {
+    return 'Posee información sin guardar. ¿Está seguro de que desea abandonar la página?';
+    };
+	</script> -->
+    <asp:ContentPlaceHolder id="head" runat="server" >
+    </asp:ContentPlaceHolder>
+</head>
+
+
+<body onunload="unloadP('UniquePageNameHereScroll')" onload="loadP('UniquePageNameHereScroll')">
+    <form id="form1" runat="server">
+    <div id="wrapper">
+    
+       
+        <div id="navigation">
+        <div>
+             <asp:Label ID="olblSession_operador" runat="server" Text="" CssClass="lbloperador"></asp:Label>
+             <asp:Label ID="olblSession_operadorCorreo" runat="server" Text="" CssClass="lbldelegacion"></asp:Label>
+             <asp:Label ID="olblSession_menuencurso" runat="server" Text="MENU ACCESO OPERADOR UGP" 
+                 CssClass="lblmenu" Visible="true"></asp:Label>
+        <b>
+        </b>
+        </div>
+             <div>
+             <asp:Label ID="olblSession_institucionDescripcion" runat="server" Text="" CssClass="lbloperador"></asp:Label>
+             <asp:Label ID="olblSession_institucionCodigo" runat="server" Text="" CssClass="lbldelegacion"></asp:Label>
+             <asp:Label ID="olblSession_institucionCorreo" runat="server" CssClass="lblmenu" 
+                     Visible="False"></asp:Label>
+          </div>
+        </div>
+        <div id="menu">
+        <div id="titlelabel">
+        </div>
+        
+        <div id="buttonsTriple"  style="margin: 178px 0px 0px 400px;">
+            <asp:Button ID="obutMenu" runat="server" CssClass="butLogout" Text="Menu Principal" />
+		
+			<asp:Button ID="obutLogout" runat="server" CssClass="butLogout" Text="Cerrar Sesión" />
+			<asp:Button ID="obutCambiarPass" runat="server" CssClass="butCambiaPass" Text="Cambiar Contraseña" />
+        </div>
+        </div>
+        
+        <div id="content">
+		<div id="printarea">		
+         <asp:ContentPlaceHolder id="ContentPlaceHolder1" runat="server">
+         </asp:ContentPlaceHolder>
+		</div>
+        </div>
+        
+        <div id="footer">
+            Powered by Strauss S.R.L. 2014. Todos los derechos reservados.
+        </div>
+        
+    
+    </div>
+	
+	<div Style="display:none">
+	<div id="tooltipobservacion">
+    <b>Observaciones de Rol</b>
+	<br />
+    Permite a un Operador dejar asentada una observación para realizar mejoras o sugerencias en los roles que conforman el sistema. Estas observaciones se agrupan por rol y permiten a los usuarios realizar un feedback con sistemas para mejorar la 
+	operatividad del sistema informático.                                                                                                                                                                                                                           
+    <a href="../documentacion/IMPLEMENTACION.pdf" target="_blank">Manual de Usuario</a>  
+    </div>
+	</div>
+    
+	<div Style="display:none">
+	<div id="tooltipobservacion2">
+		<h1>Observaciones de Rol</h1>
+		<br />
+		<div style="display:table">
+		<asp:Label ID="olblIMPLEMENTACIONCOMENTARIO" runat="server" Text="Observación:" CssClass="lblform" Style="display:table-cell; vertical-align: middle"></asp:Label>     
+         <asp:TextBox ID="otxtIMPLEMENTACIONCOMENTARIO" runat="server" CssClass="textchest" TextMode="MultiLine" ></asp:TextBox>           
+        <div>
+               <asp:Button ID="obutAltaConfirmada" runat="server" Text="Confirma Alta" CssClass="butaceptar" style="width:175px" />
+               <asp:Button ID="obutAltaAbandonada" runat="server" Text="Abandona Alta" CssClass="butcancelar" style="width:175px" />
+		</div>
+	</div>
+	</div>
+
+	</form>       
+
+</body>
+</html>

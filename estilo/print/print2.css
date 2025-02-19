@@ -1,0 +1,1262 @@
+/*Cuerpo*/
+@media print and (color)
+{
+	*
+	{
+		-webkit-print-color-adjust: exact;
+		print-color-adjust: exact;
+	}
+}
+HTML
+{
+	height: 100%;
+}
+BODY
+{
+	font-family: "Segoe UI";
+}
+A
+{
+	text-decoration: none;
+	color: #000000;
+}
+A:hover
+{
+	text-decoration: underline;
+}
+DIV TABLE
+{
+	margin: 0px 0px 0px -10px;
+	padding: 0 0 0 0px;
+}
+/*Scrollbar*/
+::-webkit-scrollbar
+{
+	width: 12px;
+}
+::-webkit-scrollbar:horizontal
+{
+	width: 12px;
+	height: 12px;
+}
+::-webkit-scrollbar-track
+{
+	background: #FFFFFF;
+	border-radius: 10px;
+}
+::-webkit-scrollbar-track:horizontal
+{
+	background: #FFFFFF;
+	border-radius: 10px;
+}
+::-webkit-scrollbar-thumb
+{
+	background: #000000;
+	border-radius: 10px;
+	border: 1px solid #9A9A9A;
+}
+/*Estilo General*/
+#wrapper
+{
+	width: 960px;
+}
+#header
+{
+	text-align: right;
+	float: left;
+	padding: 15px 25px 25px;
+	height: 80px;
+	width: 910px;
+	border-bottom: 1px solid #4D4D4D;
+	display: none;
+}
+#header .lblhtitulo
+{
+	color: #000000;
+	/*[empty]display:;*/
+}
+#header .lblhsubtitulo
+{
+	color: #000000;
+}
+#navigation
+{
+	float: left;
+	height: 30px;
+	width: 920px;
+	padding-right: 20px;
+	padding-left: 20px;
+	padding-top: 10px;
+	border-bottom: 1px solid #000000;
+	background: #FFF;
+	display: none;
+}
+#buttons
+{
+	display: none;
+}
+#content
+{
+	padding: 30px;
+	float: left;
+	background: #FFF;
+	width: 210mm;
+	height: 297mm;
+	overflow: auto;
+}
+#leftcolumn
+{
+	background: #FFFFFF;
+	width: 200px;
+	height: 768px;
+	float: left;
+	border-right: 1px solid #000000;
+	display: none;
+}
+#footer
+{
+	height: 25px;
+	width: 960px;
+	background: #FFF;
+	background-image: url(straussfoot.png);
+	background-repeat: no-repeat;
+	background-position: center;
+	clear: both;
+	color: #000000;
+	font-size: 9px;
+	text-align: center;
+	padding-top: 15px;
+	font-family: "Segoe UI";
+	border-top: 1px solid #000000;
+	display: none;
+}
+/*Estilo Recibo*/
+.recibowrapper
+{
+	margin: auto;
+	page-break-inside: avoid;
+	background: url(original.png);
+	border: 1px solid #837C7C;
+	color: #2B2B2B;
+	padding: 10px;
+	width: 780px !important;
+	height: 1000px !important;
+	font-size: 6pt;
+	float: left;
+	position: relative;
+}
+.recibowrappersmall
+{
+	page-break-inside: avoid;
+	background: url(original.png);
+	border: 1px solid #837C7C;
+	color: #2B2B2B;
+	padding: 5mm;
+	width: 19cm !important;
+	height: 13cm;
+	font-size: 6pt;
+	float: left;
+}
+.recibowrapper DIV
+{
+	margin: 0 0 10px;
+	padding: 0 0 5px;
+}
+.recibowrappersmall DIV
+{
+	margin: 0 0 10px;
+	padding: 0 0 5px;
+}
+#recibofechaemision
+{
+	float: left;
+}
+#recibofechaimputacion
+{
+	text-align: right;
+	display: inline-block;
+	padding: 0 0 5px 583px !important;
+}
+.recibowrapper #tsp
+{
+	position: absolute;
+	border-top: 1px solid #837C7C;
+	bottom: 0;
+	left: 5px;
+	right: 5px;
+}
+.recibowrappersmall #tsp
+{
+	border-top: 1px solid #837C7C;
+	bottom: 0;
+	left: 5px;
+	right: 5px;
+}
+.recibogrid
+{
+	border: 1px solid #7A7A7A;
+	font-family: "Segoe UI";
+	margin: 5px 0 0;
+	font-size: 6pt;
+	width: 100%;
+}
+.recibogrid TH
+{
+	text-transform: uppercase;
+	padding: 0 5px;
+	background: #CFCFCF;
+	color: #111111;
+}
+.recibogrid TD
+{
+	padding: 0 5px;
+	text-align: center;
+}
+.recibogrid .alt
+{
+	background: #E1E1E1;
+}
+.recibogrid TD INPUT
+{
+	background-color: transparent;
+	border: 0px;
+	font-family: "Segoe UI";
+	font-size: 6pt;
+	color: #000000;
+	width: 35px;
+}
+/*Estilo Recibo Duplicado*/
+.recibowrapperDuplicado
+{
+	page-break-inside: avoid;
+	margin: auto;
+	background: url(duplicado.png);
+	border: 1px solid #837C7C;
+	color: #2B2B2B;
+	padding: 10px;
+	width: 780px !important;
+	height: 1000px !important;
+	font-size: 6pt;
+	float: left;
+	position: relative;
+}
+.recibowrapperDuplicadosmall
+{
+	page-break-inside: avoid;
+	margin-top: 1cm;
+	background: url(original.png);
+	border: 1px solid #837C7C;
+	color: #2B2B2B;
+	padding: 5mm;
+	width: 19cm !important;
+	height: 13cm;
+	font-size: 6pt;
+	float: left;
+}
+.recibowrapperDuplicado DIV
+{
+	margin: 0 0 10px;
+	padding: 0 0 5px;
+}
+.recibowrapperDuplicadosmall DIV
+{
+	margin: 0 0 10px;
+	padding: 0 0 5px;
+}
+#recibofechaemisionD
+{
+	float: left;
+}
+#recibofechaimputacionD
+{
+	text-align: right;
+	display: inline-block;
+	padding: 0 0 5px 583px !important;
+}
+.recibowrapperDuplicado #tspduplicado
+{
+	position: absolute;
+	border-top: 1px solid #837C7C;
+	bottom: 0;
+	left: 5px;
+	right: 5px;
+}
+.recibowrapperDuplicadosmall #tspduplicado
+{
+	border-top: 1px solid #837C7C;
+	bottom: 0;
+	left: 5px;
+	right: 5px;
+}
+/*Estilo Orden Pago*/
+#ordenpagowrapper
+{
+	background: url(original.png);
+	border: 1px solid #837C7C;
+	color: #2B2B2B;
+	padding: 10px;
+	margin: 40px 0 0;
+	width: 680px !important;
+	font-size: 6pt;
+	float: left;
+}
+#ordenpagowrapper DIV
+{
+	border-bottom: 1px solid #837C7C;
+	margin: 0 0 4px;
+	padding: 0 0 5px;
+}
+#ordenpagowrapper DIV DIV
+{
+	border-bottom: 0px solid #837C7C;
+}
+#ordenpagofechaemision
+{
+	float: left;
+}
+#ordenpagofechaimputacion
+{
+	text-align: right;
+	display: inline-block;
+	padding: 0 0 5px 495px !important;
+}
+.ordenpagogrid
+{
+	border: 1px solid #7A7A7A;
+	font-family: "Segoe UI";
+	margin: 5px 0 0 -3px;
+	font-size: 6pt;
+	width: 100%;
+}
+.ordenpagogrid TH
+{
+	text-transform: uppercase;
+	padding: 0 5px;
+	background: #CFCFCF;
+	color: #111111;
+}
+.ordenpagogrid TD
+{
+	padding: 0 5px;
+	text-align: center;
+}
+.ordenpagogrid .alt
+{
+	background: #E1E1E1;
+}
+.ordenpagogrid TD INPUT
+{
+	background-color: transparent;
+	border: 0px;
+	font-family: "Segoe UI";
+	font-size: 6pt;
+	color: #000000;
+	width: 35px;
+}
+/*Estilo Orden Pago Duplicado*/
+#ordenpagowrapperDuplicado
+{
+	background: url(duplicado.png);
+	border: 1px solid #837C7C;
+	color: #2B2B2B;
+	padding: 10px;
+	margin: 40px 0 0;
+	width: 680px !important;
+	font-size: 6pt;
+	float: left;
+}
+#ordenpagowrapperDuplicado DIV
+{
+	border-bottom: 1px solid #837C7C;
+	margin: 0 0 4px;
+	padding: 0 0 5px;
+}
+#ordenpagowrapperDuplicado DIV DIV
+{
+	border-bottom: 0px solid #837C7C;
+}
+#ordenpagofechaemisionD
+{
+	float: left;
+}
+#ordenpagofechaimputacionD
+{
+	text-align: right;
+	display: inline-block;
+	padding: 0 0 5px 495px !important;
+}
+/*Estilo Carnet Afiliado*/
+#carnetwrapper
+{
+	width: 85mm;
+	height: 60mm;
+	border: 3px double #000;
+	padding: 0 5px 5px;
+	font-size: 9pt;
+	background: url(logo.png) no-repeat center;
+	float: left;
+	display: inline-block;
+	margin: 0 1px 0 0;
+}
+#carnetheader
+{
+	text-align: center;
+	border-bottom: 1px solid #000;
+	margin: 0 -5px 2.5px;
+	padding: 2px 0 5px;
+}
+#carnetconstancia
+{
+}
+#carnetprofesion
+{
+}
+#carnetafiliado
+{
+}
+#carnetfirmapresidente
+{
+	text-transform: uppercase;
+	text-align: center;
+	border-top: 1px dotted #000;
+	margin: 40px 0 0;
+	float: none;
+}
+#carnetimagen
+{
+	float: left;
+	margin: 0 5px 0 0;
+}
+.carnetimagen
+{
+	max-width: 120px;
+	max-height: 120px;
+	height: auto;
+}
+#carnetwrapper DIV
+{
+	margin-bottom: 5px;
+}
+#carnetwrapper .textbold
+{
+	text-transform: uppercase;
+}
+#carnetwrapper .lblform
+{
+	color: #000000;
+	font-family: "Segoe UI";
+	text-align: left;
+	text-indent: 0px;
+	display: inline-block;
+	margin: 0 0 3px;
+}
+#carnetwrapper .lblhtitulo
+{
+	font-size: 9.5pt;
+}
+#carnetwrapper .lblhsubtitulo
+{
+	font-size: 6pt;
+}
+#carnetwrapper2
+{
+	width: 85mm;
+	height: 60mm;
+	border: 3px double #000;
+	padding: 0px 5px 5px;
+	font-size: 9pt;
+	background: url(logo.png) no-repeat center;
+	float: left;
+	display: inline-block;
+}
+#carnetafiliacionfecha
+{
+}
+#carnetdni
+{
+}
+#carnetcuit
+{
+}
+#carnetnacimiento
+{
+}
+#carnetwrapper2 #carnetafiliacionfecha
+{
+	margin-top: 47px;
+}
+#carnetwrapper2 .lblform
+{
+	color: #000000;
+	font-family: "Segoe UI";
+	text-align: left;
+	text-indent: 0px;
+	display: inline-block;
+	margin: 0 0 3px;
+	padding: 0 0 0 15px;
+}
+#carnetfirmaafiliado
+{
+	text-transform: uppercase;
+	text-align: center;
+	border-top: 1px dotted #000;
+	margin: 40px 0 0;
+	float: none;
+}
+#carnetwrapper2 .lblhtitulo
+{
+	font-size: 6pt;
+}
+#carnetwrapper2 .lblhsubtitulo
+{
+	font-size: 4pt;
+}
+#carnetwrapper2 .textbold
+{
+	padding: 0 0 0 15px;
+}
+#carnetwrapper2 DIV
+{
+}
+#carnetaviso
+{
+	visibility: hidden;
+}
+#qrcode
+{
+	display: block;
+	height: 10px;
+	width: 10px;
+	margin: -150px 0 0 225px;
+}
+#qrcode IMG
+{
+	width: 75px;
+	border: 1px solid #000000;
+	box-shadow: 2px 2px 3px #484848;
+}
+/*Estilo Pantalla Login*/
+#loginwrapper
+{
+	border: 1px solid #C0C0C0;
+	margin: 100px auto 0;
+	width: 500px;
+	box-shadow: 0 1px 4px #000;
+}
+#loginheader
+{
+	text-align: right;
+	padding: 25px 25px 5px;
+	float: left;
+	height: 80px;
+	width: 450px;
+	background: #111111;
+	background-image: url(headerlgt.png);
+	border-bottom: 1px solid #C0C0C0;
+}
+#logincontent
+{
+	padding: 5px;
+	float: left;
+/*Old browsers*/
+	background: -moz-linear-gradient(top, #ffffff 0%, #e5e5e5 100%);
+/*FF3.6+*/
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#ffffff), color-stop(100%,#e5e5e5));
+/*Chrome,Safari4+*/
+	background: -webkit-linear-gradient(top, #ffffff 0%,#e5e5e5 100%);
+/*Chrome10+,Safari5.1+*/
+	background: -o-linear-gradient(top, #ffffff 0%,#e5e5e5 100%);
+/*Opera 11.10+*/
+	background: -ms-linear-gradient(top, #ffffff 0%,#e5e5e5 100%);
+/*IE10+*/
+	background: linear-gradient(to bottom, #ffffff 0%,#e5e5e5 100%);
+/*W3C*/
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#e5e5e5',GradientType=0 );
+/*IE6-9*/
+	width: 490px;
+	height: 225px;
+	text-align: center;
+	vertical-align: middle;
+}
+#loginfooter
+{
+	height: 27px;
+	width: 500px;
+	background: #111111;
+	clear: both;
+	font-size: 9px;
+	text-align: center;
+	padding-top: 13px;
+	font-family: "Segoe UI";
+	bottom: 0px;
+	color: #C0C0C0;
+	border-top: 1px solid #C0C0C0;
+}
+#loginreflect
+{
+	margin: 0 auto 0;
+	width: 500px;
+	opacity: .15;
+}
+/*Estilo Pantalla Timeout*/
+#logoutwrapper
+{
+	border: 1px solid #C0C0C0;
+	margin: 100px auto 0;
+	width: 500px;
+	box-shadow: 0 1px 4px #000;
+	/*+placement:shift 0px -200px;*/
+	position: relative;
+	left: 0px;
+	top: -200px;
+}
+#logoutcontent
+{
+	padding: 5px;
+	float: left;
+/*Old browsers*/
+	background: -moz-linear-gradient(top, #ffffff 0%, #e5e5e5 100%);
+/*FF3.6+*/
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#ffffff), color-stop(100%,#e5e5e5));
+/*Chrome,Safari4+*/
+	background: -webkit-linear-gradient(top, #ffffff 0%,#e5e5e5 100%);
+/*Chrome10+,Safari5.1+*/
+	background: -o-linear-gradient(top, #ffffff 0%,#e5e5e5 100%);
+/*Opera 11.10+*/
+	background: -ms-linear-gradient(top, #ffffff 0%,#e5e5e5 100%);
+/*IE10+*/
+	background: linear-gradient(to bottom, #ffffff 0%,#e5e5e5 100%);
+/*W3C*/
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#e5e5e5',GradientType=0 );
+/*IE6-9*/
+	width: 490px;
+	height: 225px;
+	text-align: center;
+	vertical-align: middle;
+}
+#logoutreflect
+{
+	margin: 0 auto 0;
+	width: 500px;
+	opacity: .15;
+	/*+placement:shift 0px 380px;*/
+	position: relative;
+	left: 0px;
+	top: 380px;
+}
+#logoutreflect IMG
+{
+	border: none;
+}
+/*Estilo Menu Navegacion Vertical*/
+.menu
+{
+	margin: 0;
+	padding: 0;
+	width: 200px;
+	list-style: none;
+}
+.menu LI
+{
+	padding: 0;
+	margin: 0 0 1px;
+	height: 35px;
+	display: block;
+}
+.menu LI A
+{
+	font-family: "Segoe UI";
+	text-align: left;
+	height: 35px;
+	padding: 0px 25px;
+	display: block;
+	color: #000000;
+	border-bottom-style: solid;
+	border-bottom-width: 1px;
+	border-bottom-color: #000000;
+}
+.menu LI A SPAN
+{
+	line-height: 40px;
+}
+/*Estilo de Elementos Varios*/
+.textbox
+{
+	border: 1px solid #000000;
+	padding: 5px;
+	margin: 5px;
+	font-family: "Segoe UI";
+	background-color: #FFF;
+	color: #000000;
+	font-size: 12px;
+	max-height: 35px;
+	width: 200px;
+}
+.textchest
+{
+	border: 1px solid #000000;
+	padding: 5px;
+	margin: 5px;
+	font-family: "Segoe UI";
+	background-color: #FFF;
+	color: #000000;
+	font-size: 12px;
+	height: 105px;
+	width: 400px;
+	max-height: 105px;
+	max-width: 400px;
+}
+.dropdown
+{
+	border: 1px solid #000000;
+	padding: 5px;
+	margin: 5px;
+	font-family: "Segoe UI";
+	background-color: #FFF;
+	color: #000000;
+	font-size: 12px;
+	width: 212px !important;
+}
+.butbuscar
+{
+	border: 1px solid #000000;
+	padding: 5px;
+	margin: 5px;
+	font-family: "Segoe UI";
+	background: #FFF;
+	font-size: 12px;
+	color: #000000;
+	vertical-align: middle;
+	text-align: center;
+	width: 150px;
+	height: 30px;
+}
+.butcancelar
+{
+	border: 1px solid #000000;
+	padding: 5px;
+	margin: 5px;
+	font-family: "Segoe UI";
+	background: #FFF;
+	color: #000000;
+	font-size: 12px;
+	vertical-align: middle;
+	text-align: center;
+	width: 150px;
+	height: 30px;
+}
+.butaceptar
+{
+	border: 1px solid #000000;
+	padding: 5px;
+	margin: 5px;
+	font-family: "Segoe UI";
+	background-color: #FFF;
+	color: #000000;
+	font-size: 12px;
+	vertical-align: middle;
+	text-align: center;
+	width: 150px;
+	height: 30px;
+}
+.butbuscar:hover
+{
+	cursor: pointer;
+	text-decoration: underline;
+}
+.butcancelar:hover
+{
+	cursor: pointer;
+	text-decoration: underline;
+}
+.butaceptar:hover
+{
+	cursor: pointer;
+	text-decoration: underline;
+}
+.butimprimir
+{
+	border: 1px solid #C0C0C0;
+	border-radius: 5px;
+	background-color: #000000;
+	background-image: url(print.png);
+	background-repeat: no-repeat;
+	background-position: center;
+	width: 30px;
+	height: 30px;
+	float: right;
+	transition: background .3s ease-in;
+	-webkit-transition: background .3s ease-in;
+	-moz-transition: background .3s ease-in;
+	-o-transition: background .3s ease-in;
+	-ms-transition: background .3s ease-in;
+}
+.butimprimir:hover
+{
+	background-color: #8F8F8F;
+	cursor: pointer;
+}
+.butvolver
+{
+	border: 1px solid #C0C0C0;
+	border-radius: 5px;
+	background-color: #000000;
+	background-image: url(backarrow.png);
+	background-repeat: no-repeat;
+	background-position: center;
+	width: 30px;
+	height: 28px;
+	float: right;
+	margin-right: 5px;
+	margin-bottom: 10px;
+	transition: background .3s ease-in;
+	-webkit-transition: background .3s ease-in;
+	-moz-transition: background .3s ease-in;
+	-o-transition: background .3s ease-in;
+	-ms-transition: background .3s ease-in;
+}
+.butvolver:hover
+{
+	background-color: #8F8F8F;
+	cursor: pointer;
+}
+.butraiz
+{
+	border: 1px solid #C0C0C0;
+	border-radius: 5px;
+	background-color: #000000;
+	background-image: url(rootarrow.png);
+	background-repeat: no-repeat;
+	background-position: center;
+	width: 30px;
+	height: 30px;
+	float: right;
+	margin-right: 5px;
+	margin-bottom: 10px;
+	transition: background .3s ease-in;
+	-webkit-transition: background .3s ease-in;
+	-moz-transition: background .3s ease-in;
+	-o-transition: background .3s ease-in;
+	-ms-transition: background .3s ease-in;
+}
+.butraiz:hover
+{
+	background-color: #8F8F8F;
+	cursor: pointer;
+}
+.butsql
+{
+	border: 1px solid #C0C0C0;
+	border-radius: 5px;
+	padding: 5px;
+	margin: 5px;
+	font-family: armataregular;
+	background-color: #979797;
+	background-image: url(cogs.png);
+	background-repeat: no-repeat;
+	background-position: center;
+	color: #000000;
+	font-size: 12px;
+	text-align: center;
+	width: 30px;
+	height: 30px;
+	text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.098);
+	transition: background .3s ease-in;
+	-webkit-transition: background .3s ease-in;
+	-moz-transition: background .3s ease-in;
+	-o-transition: background .3s ease-in;
+	-ms-transition: background .3s ease-in;
+}
+.butsql:hover
+{
+	background-color: #8F8F8F;
+	cursor: pointer;
+}
+.lblregular
+{
+	margin: 10px 0px;
+	color: #000000;
+	font-family: "Segoe UI";
+	font-size: 10px;
+	font-style: normal;
+	font-variant: normal;
+	font-weight: normal;
+	line-height: 1.2;
+	text-align: left;
+	text-indent: 0px;
+}
+.lblform
+{
+	margin: 10px 0px;
+	color: #000000;
+	font-family: "Segoe UI";
+	font-size: 10px;
+	font-style: normal;
+	font-variant: normal;
+	font-weight: normal;
+	line-height: 1.2;
+	text-align: left;
+	text-indent: 0px;
+	display: inline-block;
+	width: 150px;
+}
+.lblregularnavbar
+{
+	margin: 10px 0px;
+	color: #000000;
+	font-family: "Segoe UI";
+	font-size: 10px;
+	font-style: normal;
+	font-variant: normal;
+	font-weight: normal;
+	line-height: 1.2;
+	text-align: left;
+	text-indent: 0px;
+}
+.lblbold
+{
+	margin: 10px 0px;
+	color: #000000;
+	font-size: 17px;
+	font-family: "Segoe UI";
+	font-style: normal;
+	font-variant: normal;
+	font-weight: bold;
+	text-transform: uppercase;
+	line-height: 1.2;
+	text-align: left;
+	text-indent: 0px;
+}
+.lbloperador
+{
+	float: left;
+	color: #000000;
+	font-size: 17px;
+	font-family: "Segoe UI";
+	font-style: normal;
+	font-variant: normal;
+	line-height: 1.2;
+	text-align: left;
+	text-indent: 0px;
+}
+.lbldelegacion
+{
+	float: right;
+	color: #000000;
+	font-size: 17px;
+	font-family: "Segoe UI";
+	font-style: normal;
+	font-variant: normal;
+	font-weight: lighter;
+	line-height: 1.2;
+	text-align: left;
+	text-indent: 0px;
+}
+.lblmenu
+{
+	float: right;
+	color: #000000;
+	font-family: "Segoe UI";
+	font-size: 11px;
+	font-style: normal;
+	font-variant: normal;
+	font-weight: lighter;
+	line-height: 1.2;
+	text-align: left;
+	text-indent: 0px;
+}
+.lblhtitulo
+{
+	font-family: "Segoe UI";
+	font-size: 28px;
+	font-weight: bold;
+	color: #000000;
+}
+.lblhsubtitulo
+{
+	font-family: "Segoe UI";
+	font-size: 11px;
+	font-weight: lighter;
+	color: #000000;
+}
+.lblmensajeoperador
+{
+	color: #CC0000;
+}
+.textbold
+{
+	font-weight: bold;
+}
+.tsp
+{
+	font-style: italic;
+	font-size: 6pt;
+}
+/*Estilo Infragistic WebDateChooser*/
+.webdate
+{
+	border: 1px solid #000000;
+	margin: 5px;
+	padding: 0;
+	font-family: "Segoe UI";
+	background-color: #FFFFFF;
+	font-size: 12px;
+	width: 212px;
+}
+.webdate TBODY
+{
+	margin: 0px;
+	padding: 0px;
+}
+.webdate TBODY TR
+{
+	height: 25px;
+	margin: 0px;
+	padding: 0px;
+}
+.webdate TBODY TR TD
+{
+	margin: 0px;
+	padding: 0px;
+}
+.webdate TBODY TR TD INPUT
+{
+	font-family: "Segoe UI";
+	color: #000000;
+	font-size: 12px;
+	margin: 0;
+	padding: 0px;
+	width: 180px !important;
+	background-color: transparent;
+	transition: background-color .3s ease-in;
+	-webkit-transition: background-color .3s ease-in;
+	-moz-transition: background-color .3s ease-in;
+	-o-transition: background-color .3s ease-in;
+	-ms-transition: background-color .3s ease-in;
+}
+.webdate TBODY TR TD IMG
+{
+	background: #FFFFFF;
+	border: inherit;
+	margin: 0px 0 0px 0px;
+	padding: 0px;
+	transition: background .3s ease-in;
+	-webkit-transition: background .3s ease-in;
+	-moz-transition: border-color .3s ease-in;
+	-o-transition: border-color .3s ease-in;
+	-ms-transition: border-color .3s ease-in;
+}
+.dropdownbutton
+{
+	content: url(wdarrow.png);
+	height: 25px;
+}
+/*Estilo de Grilla ASP*/
+.mGrid
+{
+	border: 1px solid #000000;
+	font-family: "Segoe UI";
+	background-color: #FFF;
+	margin: 20px 0;
+	font-size: 11px;
+	width: 100%;
+}
+.mGrid TD
+{
+	padding: 5px;
+	border: 1px solid #000000;
+	color: #000000;
+	height: 10px;
+}
+.mGrid TD A
+{
+	padding: 5px;
+	color: #000000;
+	height: 10px;
+	transition: color .2s ease-in;
+	-webkit-transition: color .2s ease-in;
+	-moz-transition: color .2s ease-in;
+	-o-transition: color .2s ease-in;
+	-ms-transition: color .2s ease-in;
+}
+.mGrid TH
+{
+	border: 0 solid #000000;
+	padding: 5px 10px;
+	color: #000000;
+	font-size: 12px;
+	font-weight: bold;
+	text-transform: uppercase;
+}
+.mGrid TH A
+{
+	color: #000000;
+}
+.mGrid .pgr TABLE
+{
+	margin: 5px 0;
+}
+.mGrid .pgr TD
+{
+	border-width: 0;
+	padding: 0 6px;
+	font-weight: bold;
+	color: #656565;
+	line-height: 12px;
+}
+.mGrid .pgr A
+{
+	color: #000000;
+	text-decoration: none;
+}
+.gridbutton
+{
+	background-image: url(dbarrow.jpg);
+	background-repeat: no-repeat;
+	background-position: center;
+	width: 15px;
+	height: 15px;
+	/*[empty]border:;*/
+	transition: background-color .3s ease-in;
+	-webkit-transition: background-color .3s ease-in;
+	-moz-transition: background-color .3s ease-in;
+	-o-transition: background-color .3s ease-in;
+	-ms-transition: background-color .3s ease-in;
+}
+.mGrid TBODY TR TD.gridbutton INPUT
+{
+	border: 0px none;
+	width: 15px;
+	min-height: 25px;
+}
+/*Estilo de Tooltip
+For tooltip target element that has set class="tooltip"*/
+.tooltip
+{
+	margin: 5px;
+	padding: 5px;
+	border-bottom: 2px dotted #878787;
+	color: #000000;
+	outline: none;
+	cursor: pointer;
+	text-align: center;
+	border-bottom-style: none;
+}
+DIV IMG
+{
+	border: 1px solid #000000;
+	padding: 2px;
+	margin: 0px 10px 10px 0px;
+}
+/*For tooltip box*/
+DIV#mcTooltip
+{
+	line-height: 16px;
+	border-width: 1px;
+	color: #000000;
+	border-color: #8F8F8F;
+	padding: 20px;
+	font-size: 10px;
+	font-family: "Segoe UI";
+	border-radius: 6px;
+/*Rounded corners. N/A for IE 8 and below.*/
+}
+DIV#mcTooltip
+{
+	background-color: #FFFFFF;
+}
+DIV#mcTooltip DIV
+{
+	background: none;
+}
+/*For hyperlink within tooltip*/
+DIV#mcTooltip A
+{
+	color: #585858;
+}
+/*Close button. Only available when sticky or overlay has been set to true.*/
+DIV#mcttCloseButton
+{
+	width: 12px;
+	height: 12px;
+	position: absolute;
+	background-image: url(tooltip/closeBtn.png);
+	cursor: pointer;
+	overflow: hidden;
+	top: 15px;
+	right: 18px;
+	left: auto;
+}
+DIV#mcttCloseButton:hover
+{
+	background-image: url(tooltip/closeBtnHov.png);
+}
+/*Only applies when overlay has been set to true or 1.*/
+DIV#mcOverlay
+{
+	background-color: #000000;
+	opacity: 0.5;
+	filter: alpha(opacity=50);
+	display: none;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	overflow: visible;
+	z-index: 4;
+}
+/*Only available when calling by tooltip.ajax(...). It will be a spinning image indicating a request is in progress.*/
+DIV#tooltipAjaxSpin
+{
+	margin: 20px 50px;
+	background: transparent url(loading.gif) no-repeat center center;
+	width: 50px;
+	height: 30px;
+	font-size: 0;
+}
+/*The settings below should remain unchanged*/
+DIV#mcTooltipWrapper
+{
+	position: absolute;
+	visibility: hidden;
+	overflow: visible;
+	z-index: 9999999999;
+	top: -2000px;
+}
+DIV#mcTooltip
+{
+	float: left;
+	border-style: solid;
+	position: relative;
+	overflow: hidden;
+}
+DIV#mcttCo
+{
+	position: absolute;
+	text-align: left;
+}
+DIV#mcttCo EM, DIV#mcttCo B
+{
+	display: block;
+	width: 0;
+	height: 0;
+	overflow: hidden;
+}
+/*Boton de Tooltip*/
+.helpBtn
+{
+	height: 15px;
+	width: 15px;
+	background-image: url(tooltip/helpBtn.png);
+	display: inline-block;
+}
+/*Print Styles*/
+@media print
+{
+	BODY
+	{
+		background: #FFFFFF;
+		color: #000000;
+		margin: 0;
+	}
+}

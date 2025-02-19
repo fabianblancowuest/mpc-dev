@@ -1,0 +1,241 @@
+﻿<%@ Master Language="VB" CodeFile="masterH.master.vb" Inherits="~/SisFar/principal.master"  AutoEventWireup="false" %>
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html lang="es-ar" xml:lang="es-ar"  xmlns="http://www.w3.org/1999/xhtml">
+
+<head runat="server">
+    <title>Sistema de Mensajeria Interna.</title>
+    <link href="../../estilo/desarrollo/desarrollo.css" rel="stylesheet" type="text/css" />
+    
+   <%-- <link href="../../estilo/usuario/usuario.css" rel="stylesheet" type="text/css" />
+  --%>  
+    <link href="../../estilo/print/print.css" media="print" id="cssPrint" rel="stylesheet" type="text/css" />
+    <script type="text/javascript" src="http://incluirSaludUGPChaco.ddns.net/estilo/tooltip/tooltip.js"></script>
+	<script type="text/javascript">
+	function printDiv(printarea) {
+     var printContents = document.getElementById(printarea).innerHTML;
+     var originalContents = document.body.innerHTML;
+
+     document.body.innerHTML = printContents;
+
+     window.print();
+
+     document.body.innerHTML = originalContents;
+}
+	</script>
+	<script type="text/javascript">
+	function getScrollXY() {
+    var x = 0, y = 0;
+    if( typeof( window.pageYOffset ) == 'number' ) {
+        // Netscape
+        x = window.pageXOffset;
+        y = window.pageYOffset;
+    } else if( document.body && ( document.body.scrollLeft || document.body.scrollTop ) ) {
+        // DOM
+        x = document.body.scrollLeft;
+        y = document.body.scrollTop;
+    } else if( document.documentElement && ( document.documentElement.scrollLeft || document.documentElement.scrollTop ) ) {
+        // IE6 standards compliant mode
+        x = document.documentElement.scrollLeft;
+        y = document.documentElement.scrollTop;
+    }
+    return [x, y];
+}
+           
+function setScrollXY(x, y) {
+    window.scrollTo(x, y);
+}
+function createCookie(name,value,days) {
+
+	if (days) {
+		var date = new Date();
+		date.setTime(date.getTime()+(days*24*60*60*1000));
+		var expires = "; expires="+date.toGMTString();
+	}
+	else var expires = "";
+	document.cookie = name+"="+value+expires+"; path=/";
+}
+
+function readCookie(name) {
+	var nameEQ = name + "=";
+	var ca = document.cookie.split(';');
+	for(var i=0;i < ca.length;i++) {
+		var c = ca[i];
+		while (c.charAt(0)==' ') c = c.substring(1,c.length);
+		if (c.indexOf(nameEQ) == 0) return c.substring(nameEQ.length,c.length);
+	}
+	return null;
+}
+function loadP(pageref){
+	x=readCookie(pageref+'x');
+	y=readCookie(pageref+'y');
+	setScrollXY(x,y)
+}
+function unloadP(pageref){
+	s=getScrollXY()
+	createCookie(pageref+'x',s[0],0.1);
+	createCookie(pageref+'y',s[1],0.1);
+}
+	</script>
+	<!--<script type="text/javascript">
+	window.onbeforeunload = function() {
+    return 'Posee información sin guardar. ¿Está seguro de que desea abandonar la página?';
+    };
+	</script> -->
+    <asp:ContentPlaceHolder id="head" runat="server" >
+    </asp:ContentPlaceHolder>
+</head>
+
+
+<body onunload="unloadP('UniquePageNameHereScroll')" onload="loadP('UniquePageNameHereScroll')">
+    <form id="form1" runat="server">
+    <div id="wrapper">
+    
+        <div id="header">
+        <asp:Label ID="olblSede" runat="server" Text="Programa Federal Incluir Salud<br/>UGP Chaco" CssClass="lblhtitulo"></asp:Label>
+        <br />
+        <asp:Label ID="olblSede_subtitulo" runat="server" Text="" CssClass="lblhsubtitulo"></asp:Label>
+        </div>
+        
+        <div id="navigation">
+             <asp:Label ID="olblSession_operador" runat="server" Text="" CssClass="lbloperador"></asp:Label>
+             <asp:Label ID="olblSession_delegacion" runat="server" Text="" CssClass="lbldelegacion"></asp:Label>
+             <asp:Label ID="olblSession_menuencurso" runat="server" Text="" CssClass="lblmenu"></asp:Label>
+        </div>
+      
+        <div id="leftcolumn">
+          <ul class="menu">
+            <asp:LinkButton ID="olbMenu1" runat="server" CssClass="menutrigger">Inicio</asp:LinkButton>
+            <li><a href="../documentacion/IMPLEMENTACION.aspx" onmouseover="tooltip.pop(this, '#tooltipobservarol', { sticky: false, showdelay: 6500, position:1 })" class="butimplementacion"><span>Observar ROL</span></a></li>
+            <li><a href="../acceso/accesousuarioEstiloSeleccion.aspx"><span>Personalizar</span></a></li>
+            <li><a href="../acceso/accesoLogout.aspx"><span>Salir</span></a></li>
+          </ul>
+        </div>
+        
+        <div id="menu">
+        <div id="titlelabel">
+        <asp:Label runat="server" ID="olbltitulopagina" Text= "" CssClass="lbltitulopagina"></asp:Label>
+        </div>
+        
+        <div id="buttons">
+				<input type="button" onclick="printDiv('printarea')" class="butimprimir" Tooltip="Imprimir el contenido actual" alt="Imprimir el contenido actual" />
+                <asp:Button ID="obutvolver" runat="server" CssClass="butraiz" Tooltip="Volver al menú raíz" />
+				<a href="javascript:window.history.back();" class="butvolver" Tooltip="Volver a la página anterior"></a>
+				<input type="button" onmouseover="tooltip.pop(this, '#tooltipobservacion', { sticky: false, position: 0, showDelay: 700 })"
+				onclick="tooltip.pop(this, '#tooltipobservacion2', { sticky: true, overlay:true, position: 4, maxWidth: 600 })" class="butobservacion"/>
+        </div>
+        </div>
+        <asp:SqlDataSource ID="odsAreaOperador" runat="server" 
+            ConnectionString="<%$ ConnectionStrings:connCaja %>" 
+            SelectCommand="accesoAreaOperadorRecupera" SelectCommandType="StoredProcedure">
+            <SelectParameters>
+                <asp:SessionParameter Name="idOperador" SessionField="session_idOperador" 
+                    Type="Int32" />
+            </SelectParameters>
+        </asp:SqlDataSource>
+            <asp:GridView ID="ogvAreaOperador" runat="server" AutoGenerateColumns="False" 
+        CssClass="menuGrid" AllowPaging=True PageSize=15 PagerStyle-CssClass="pgr"  AlternatingRowStyle-CssClass="alt" 
+        DataKeyNames="idAccesoArea,accesoAreaCodigo,accesoAreaDescripcion,Roles" DataSourceID="odsAreaOperador" Visible="false"
+        ShowHeader="false" EmptyDataText="El operador no tiene asignada areas para acceder a los roles correspondientes. Comunicarse con el Administrador de Usuarios" >
+        <Columns>
+               <asp:CommandField ShowSelectButton="True" SelectText=""> 
+                   <ItemStyle CssClass="gridbutton" />
+               </asp:CommandField>
+            <asp:BoundField DataField="Roles" HeaderText="Cant. Roles" ReadOnly="True" 
+                SortExpression="Roles" Visible="False" ShowHeader="False" />
+            <asp:BoundField DataField="accesoAreaCodigo" HeaderText="Codigo" 
+                SortExpression="accesoAreaCodigo" Visible="False" ShowHeader="False" />
+            <asp:BoundField DataField="accesoAreaDescripcion" HeaderText="Descripcion" 
+                SortExpression="accesoAreaDescripcion" ShowHeader="False" />
+            <asp:BoundField DataField="idAccesoArea" HeaderText="idArea" ReadOnly="True" 
+                SortExpression="idAccesoArea" Visible="False" ShowHeader="False" >
+                <ItemStyle HorizontalAlign="Center" />
+            </asp:BoundField>
+        </Columns>
+        <PagerStyle CssClass="pgr" />
+        <AlternatingRowStyle CssClass="alt" />
+    </asp:GridView>
+         <asp:SqlDataSource ID="odsAreaRoles" runat="server" 
+                ConnectionString="<%$ ConnectionStrings:connCaja %>" 
+                SelectCommand="[accesoAreaRolesRecuperaTodo]" 
+                SelectCommandType="StoredProcedure">
+                <SelectParameters>
+                    <asp:ControlParameter ControlID="ogvAreaOperador" Name="idAccesoArea" PropertyName="SelectedValue" 
+                        Type="Int32" DefaultValue="" />
+                </SelectParameters>
+         </asp:SqlDataSource>  
+
+            <asp:GridView ID="ogvAreaRol" runat="server" AllowPaging="true" 
+                AlternatingRowStyle-CssClass="alt" AutoGenerateColumns="False"
+                CssClass="menuGrid" DataKeyNames="idAccesoArea,idAccesoRol,accesoRolCodigo,accesoRolDescripcion,accesoRolExplicacion,accesoRolPagina,accesoRolDocumentoOperativo" 
+                DataSourceID="odsAreaRoles" PagerStyle-CssClass="pgr" PageSize="15" 
+            ShowHeader="false" Visible="False">
+                <Columns>
+                    <asp:CommandField SelectText="" ShowSelectButton="True">
+                        <ItemStyle CssClass="gridbutton" />
+                    </asp:CommandField>
+                    <asp:BoundField DataField="idAccesoArea" HeaderText="idArea" ReadOnly="True" 
+                        SortExpression="idAccesoArea" Visible="False" />
+                    <asp:BoundField DataField="accesoAreaCodigo" HeaderText="Codigo" 
+                        SortExpression="accesoAreaCodigo" Visible="False" />
+                    <asp:BoundField DataField="accesoAreaExplicacion" HeaderText="Explicacion" 
+                        SortExpression="accesoAreaExplicacion" Visible="False" />
+                    <asp:BoundField DataField="idAccesoRol" HeaderText="idRol" 
+                        SortExpression="idAccesoRol" Visible="False" />
+                    <asp:BoundField DataField="accesoRolCodigo" HeaderText="Codigo" 
+                        SortExpression="accesoRolCodigo" Visible="false" />
+                    <asp:BoundField DataField="accesoRolDescripcion" HeaderText="Descripcion" 
+                        SortExpression="accesoRolDescripcion" />
+                    <asp:BoundField DataField="accesoRolExplicacion" HeaderText="Explicacion" 
+                        SortExpression="accesoRolExplicacion" Visible="False" />
+                    <asp:BoundField DataField="accesoRolPagina" HeaderText="Pagina" 
+                        SortExpression="accesoRolPagina" Visible="False" />
+                    <asp:BoundField DataField="accesoRolDocumentoOperativo" 
+                        HeaderText="Documento Operativo" SortExpression="accesoRolDocumentoOperativo" 
+                        Visible="False" />
+                </Columns>
+            </asp:GridView>
+       
+        <div id="content">
+		<div id="printarea">		
+         <asp:ContentPlaceHolder id="ContentPlaceHolder1" runat="server">
+         </asp:ContentPlaceHolder>
+		</div>
+        </div>
+        
+        <div id="footer">
+            Powered by Strauss Soluciones™ 2013. Todos los derechos reservados.
+        </div>
+        
+    
+    </div>
+	
+	<div Style="display:none">
+	<div id="tooltipobservacion">
+    <b>Observaciones de Rol</b>
+	<br />
+    Permite a un Operador dejar asentada una observación para realizar mejoras o sugerencias en los roles que conforman el sistema. Estas observaciones se agrupan por rol y permiten a los usuarios realizar un feedback con sistemas para mejorar la 
+	operatividad del sistema informático.                                                                                                                                                                                                                           
+    <a href="../documentacion/IMPLEMENTACION.pdf" target="_blank">Manual de Usuario</a>  
+    </div>
+	</div>
+    
+	<div Style="display:none">
+	<div id="tooltipobservacion2">
+		<h1>Observaciones de Rol</h1>
+		<br />
+		<div style="display:table">
+		<asp:Label ID="olblIMPLEMENTACIONCOMENTARIO" runat="server" Text="Observación:" CssClass="lblform" Style="display:table-cell; vertical-align: middle"></asp:Label>     
+         <asp:TextBox ID="otxtIMPLEMENTACIONCOMENTARIO" runat="server" CssClass="textchest" TextMode="MultiLine" ></asp:TextBox>           
+        <div>
+               <asp:Button ID="obutAltaConfirmada" runat="server" Text="Confirma Alta" CssClass="butaceptar" style="width:175px" />
+               <asp:Button ID="obutAltaAbandonada" runat="server" Text="Abandona Alta" CssClass="butcancelar" style="width:175px" />
+		</div>
+	</div>
+	</div>
+
+	</form>       
+
+</body>
+</html>

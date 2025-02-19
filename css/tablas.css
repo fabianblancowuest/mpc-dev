@@ -1,0 +1,510 @@
+/* body {
+  background-image: url("../images/mpc-proof.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: auto;
+} */
+
+.table-cemmi {
+  margin: 0 auto;
+  width: 100%;
+  max-width: 100%;
+}
+
+/* .table-cemmi th {
+  line-height: 1.8 !important;
+} */
+
+.table-cemmi td,
+.table-cemmi th {
+  /* max-width: 100px; */
+  border: 1px solid rgba(0, 0, 0, 0.3);
+  /* white-space: nowrap; */
+  overflow: hidden;
+  padding: 0 5px;
+  text-overflow: ellipsis;
+}
+
+.table-cemmi th,
+table th a {
+  background-color: #337ab7;
+  color: white;
+  text-align: center;
+}
+
+.tabla-roles {
+  max-width: 100%;
+  white-space: initial;
+}
+
+.tabla-roles tr {
+  border: 1px solid rgba(212, 212, 212, 0.95);
+}
+
+.tabla-roles tr:nth-child(odd) {
+  background-color: #f3f3f3;
+}
+
+.tabla-roles td {
+  padding: 0.5em 2em;
+  text-align: center;
+  white-space: initial;
+  border: none;
+}
+
+.table-cemmi tr {
+  transition: all 0.3s ease-in-out;
+}
+
+.table-cemmi tr:hover {
+  background-color: rgba(83, 176, 246, 0.21);
+}
+
+.table-cemmi td {
+  text-align: center;
+}
+
+tr td a {
+  padding-left: 10px;
+  padding-right: 10px;
+  display: flex;
+  justify-content: center;
+}
+
+@media (max-width: 900px) {
+  .contenedor-tabla-roles {
+    padding: 0 !important;
+    /* margin-top: 4em !important; */
+  }
+
+  .tabla-roles td {
+    display: block;
+    width: 100%;
+  }
+
+  .tabla-roles tr {
+    display: block;
+    width: 100%;
+  }
+
+  .tabla-roles th {
+    display: block;
+    width: 100%;
+  }
+
+  .tabla-roles th:first-of-type {
+    display: none;
+  }
+}
+
+.contenedor-tabla-roles {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+  min-height: 60vh;
+  width: 100%;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.contenedor-tabla-roles tr {
+  width: 100%;
+}
+
+@media (max-width: 900px) {
+  .tabla-roles tr:not(tr:first-child) {
+    min-height: 250px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .tabla-roles tr > :not(tr:first-child) * {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+  }
+
+  .tabla-roles td span {
+    width: 100%;
+    display: block;
+  }
+
+  .tabla-roles td {
+    width: 100%;
+  }
+}
+
+@media (max-width: 900px) {
+  .tabla-roles {
+    display: flex;
+  }
+
+  .tabla-roles tr td span {
+    display: block;
+  }
+
+  .tabla-roles tr {
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  .tabla-roles td {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .tabla-roles td:nth-child(1) {
+    order: 5;
+  }
+  .tabla-roles td:nth-child(2) {
+    order: 2;
+  }
+  .tabla-roles td:nth-child(3) {
+    order: 3;
+  }
+  .tabla-roles td:nth-child(4) {
+    order: 4;
+  }
+  .tabla-roles td:nth-child(5) {
+    order: 1;
+  }
+}
+
+/* Venta Vendedor Período */
+
+.venta-vendedor-periodo table {
+  margin-left: auto;
+  margin-right: auto;
+  width: 100%;
+  border-radius: 5px;
+}
+
+.venta-vendedor-periodo table tr:last-child {
+  font-size: 13px;
+  font-weight: bold;
+}
+
+.venta-vendedor-periodo,
+.operaciones-señadas {
+  font-size: 12px;
+}
+
+.operaciones-señadas {
+  width: 100%;
+}
+
+/* Control de adhesions concretadas por vendedor */
+
+.tabla-adhesiones th:nth-child(1) {
+  display: none;
+}
+
+.tabla-adhesiones td:nth-child(1) {
+  display: none;
+}
+
+.tabla-adhesiones tr,
+td,
+th {
+  padding: 0;
+}
+
+.tabla-adhesiones tr:hover,
+.venta-vendedor-periodo tr:hover {
+  background-color: #4d8cbf;
+  color: white;
+}
+
+.tabla-adhesiones th,
+.venta-vendedor-periodo th {
+  background-color: var(--btn-bg-color);
+  color: white;
+  text-align: center;
+  border: 1px solid rgba(0, 0, 0, 0.5);
+}
+
+@media print {
+  .tabla-adhesiones th,
+  .venta-vendedor-periodo th {
+    background-color: unset;
+    color: unset;
+  }
+}
+
+.tabla-adhesiones td,
+.venta-vendedor-periodo td {
+  border: 1px solid rgba(0, 0, 0, 0.5);
+}
+
+.tabla-operaciones-canceladas table tr {
+  font-size: 12px;
+}
+
+.subtitulo-rol {
+  font-size: 16px;
+  margin: 0;
+}
+
+@media print {
+  .tabla-adhesiones tr:hover,
+  .venta-vendedor-periodo tr:hover {
+    background-color: unset;
+    color: unset;
+  }
+
+  .venta-vendedor-periodo th:nth-child(1),
+  .venta-vendedor-periodo td:nth-child(1) {
+    display: none;
+  }
+
+  .operaciones-señadas th:nth-child(1),
+  .operaciones-señadas td:nth-child(1) {
+    display: inline-block;
+    width: 100%;
+    border-collapse: collapse;
+    border: none;
+  }
+
+  .operaciones-señadas tr {
+    border: 1px solid rgba(0, 0, 0, 0.5);
+  }
+
+  .operaciones-señadas tr {
+    width: 100%;
+  }
+
+  .tabla-adhesiones select,
+  .seleccion-fechas-sp select {
+    border: none;
+    appearance: none;
+  }
+
+  .correo-vendedor {
+    display: none;
+  }
+
+  .contenedor-flexible select {
+    appearance: none;
+    border: none;
+  }
+}
+
+.contenedor-tabla-roles tr td a {
+  background-color: #337ab7;
+  color: white;
+  min-width: 100px;
+}
+
+@media (max-width: 900px) {
+  .contenedor-tabla-roles tr td a {
+    display: block;
+    width: 100%;
+  }
+}
+
+.panel-acceso table tr td {
+  border: 2px solid rgba(0, 0, 0, 0.2);
+}
+
+/* Clases dinámicas */
+
+.centrar-contenido {
+  text-align: center;
+}
+
+/* panel documentación */
+
+.control-adhesiones-encabezado select {
+  max-width: 100%;
+}
+
+.panel-documentacion {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+}
+
+.panel-documentacion-encabezado input:nth-child(1) {
+  margin: 0 auto;
+  width: 200px;
+}
+
+@media (max-width: 900px) {
+  .panel-documentacion-encabezado input:nth-child(1) {
+    width: 100%;
+  }
+}
+
+.panel-documentacion img {
+  display: block;
+  margin: 0 auto;
+  width: 80%;
+  max-width: 800px;
+}
+
+.panel-documentacion div {
+  text-align: center;
+}
+
+.panel-documentacion input {
+  display: block;
+  margin: 0 auto;
+}
+
+.panel-documentacion input[value="Subir Imagen"] {
+  background-color: green;
+  color: white;
+  width: fit-content;
+  height: 40px !important;
+  border-radius: 5px;
+  border: none;
+}
+
+/* .panel-documentacion input[type="file"] {
+  color: red;
+  background-color: #337AB7;
+} */
+
+/* Comisión base = Naranja claro;
+Comisión premio = Naranja fuerte;
+Total Ingresos Mes = Verde claro
+Pago Pactado = Verde claro */
+
+/* Comisión Total */
+.resaltar {
+  background-color: yellow;
+  color: black;
+  font-weight: bold;
+}
+
+/* Comisión Premio */
+.resaltar2 {
+  background-color: orangered;
+  color: white;
+  font-weight: bold;
+}
+
+/* Comisión Base */
+.resaltar3 {
+  background-color: orange;
+  font-weight: bold;
+  color: black;
+}
+
+/* Total Ingreso Mes */
+.resaltar4 {
+  background-color: greenyellow;
+  color: black;
+  font-weight: bold;
+  /* padding: 5px; */
+}
+
+/* Valor Terreno */
+.resaltar5 {
+  background-color: green;
+  color: white;
+  font-weight: bold;
+}
+
+/* Pago Pactado */
+.resaltar6 {
+  background-color: greenyellow;
+  color: black;
+  font-weight: bold;
+}
+
+.gar-alta-opciones tr {
+  background-color: transparent;
+  color: gray;
+}
+
+.gar-alta-opciones input {
+  display: inline-block;
+  margin-right: 10px;
+}
+
+.espaciar {
+  overflow: auto;
+  max-width: fit-content;
+  line-height: 1.6;
+}
+
+/* Panel Acceso */
+
+.panel-acceso table {
+  width: 100%;
+}
+
+.panel-acceso table tr {
+  width: 100%;
+}
+
+@media (max-width: 900px) {
+  .accesos-habilitados th {
+    display: none;
+  }
+
+  .accesos-habilitados tr {
+    width: 100%;
+    max-width: 100%;
+  }
+
+  .accesos-habilitados td {
+    display: block;
+    width: 95vw;
+    max-width: 100%;
+    padding: 10px 0;
+  }
+
+  .accesos-habilitados td a {
+    background-color: #0d6efd;
+    color: #fff;
+    border-radius: 5px;
+    width: 100%;
+    padding: 10px 0;
+  }
+
+  .accesos-habilitados td a:hover {
+    background-color: #0b5ed7;
+  }
+
+  .accesos-habilitados .btn-primary {
+    width: 95vw !important;
+  }
+}
+
+.descripcion-ultimo-acceso {
+  width: 100%;
+  display: flex !important;
+  width: 90vw;
+  border: none;
+}
+
+.descripcion-ultimo-acceso tr td,
+.descripcion-ultimo-acceso tr th,
+.descripcion-ultimo-acceso tr {
+  display: flex !important;
+  /* flex-direction: column; */
+  justify-content: center;
+}
+
+.descripcion-ultimo-acceso tbody,
+.descripcion-ultimo-acceso tr,
+.descripcion-ultimo-acceso th,
+.descripcion-ultimo-acceso td {
+  width: 90vw;
+  max-width: 900px;
+}
+
+/* Estilos responsive de tablas en general */
+
+/* Este contenedor de tabla evita que se rompa la pantalla, permite un scroll horizontal de las tablas pero solo dentro del contenedor */
+.contenedor-responsive {
+  width: 100%;
+  overflow-x: auto;
+}

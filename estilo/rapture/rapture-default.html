@@ -1,0 +1,113 @@
+<html xmlns="http://www.w3.org/1999/xhtml">
+<!DOCTYPE html>
+
+<head runat="server">
+    <title>Style Test</title>
+    <asp:ContentPlaceHolder id="head" runat="server">
+    
+    <link href="C:\Users\Pachu\Desktop\Web Caja\webcaja preview\estilo\rapture\rapture.css" rel="stylesheet" type="text/css" />
+    <script type="text/javascript" src="C:\Users\Pachu\Desktop\Web Caja\webcaja preview\estilo\tooltip\tooltip.js"></script>
+	<script type="text/javascript" src="C:\Users\Pachu\Desktop\Web Caja\webcajapreview\estilo\inline.js"></script>
+
+</head>
+<body>
+    <div id="wrapper">
+    
+        <div id="header">
+		<label class="lblhtitulo">Caja de prevision para profesionales<br/>de la ingenieria de la provincia del chaco</label>
+		<br/>
+		<label class="lblhsubtitulo">Ley 3217, Modif. 3739</label>
+        </div>
+        <div id="navigation">
+             <Label ID="olblSession_operador" runat="server" Text="" Class="lbloperador">Operador: McPato, Chinguito</Label>
+             <Label ID="olblSession_delegacion" runat="server" Text="" Class="lbldelegacion">Sede Lateral</Label> <br/>             
+        </div>
+      
+        <div id="leftcolumn">
+          <ul class="menu">
+            <li><a href="../acceso/accesoOperadorAutorizado.aspx"><span>Inicio</span></a></li>
+            <li><a href=""><span>Menu 2</span></a></li>
+            <li><a href=""><span>Menu 3</span></a></li>
+            <li><a href=""><span>Menu 4</span></a></li>
+            <li><a href=""><span>Menu 4</span></a></li>
+            <li><a href=""><span>Menu 4</span></a></li>
+            <li><a href=""><span>Menu 4</span></a></li>
+            <li><a href="../acceso/accesoLogout.aspx"><span>Logout</span></a></li>
+          </ul>
+        </div>
+        
+        <div id="content">
+		<div>
+         <input class="textbox"></input>
+		</div>
+		<div>
+         <button text="button1" class="butaceptar">
+		</div>
+		<div>
+		 <button class="butbuscar">
+		</div>
+		<div>
+		 <button class="butcancelar">
+		</div>
+        <div>
+		<span class="tooltip" onclick="tooltip.pop(this, '#tooltip')">
+             <img src="estilo/tooltip/helpBtn.gif" />
+             </span> 
+             <div style="display:none;">
+             <div id="tooltip">
+             <b>Ingreso al sistema</b><br />
+             Ingrese el <b>nombre de usuario</b> asignado por el Administrador
+             del Sistema. De no poseerlo, refiérase a 
+             <a href="persona/personaDireccionPais.aspx">la concha de su hermana</a>.
+        </div>
+        </div>
+		<h1> Header 1 </h1>
+		<h2> Header 2 </h2>
+		<h3> Header 3 </h3>
+		<p> Paragraph 1 Paragraph 1Paragraph 1Paragraph 1Paragraph 1Paragraph 1Paragraph 1Paragraph 1Paragraph 1Paragraph 1Paragraph 1Paragraph 1
+		Paragraph 1Paragraph 1Paragraph 1Paragraph 1Paragraph 1Paragraph 1Paragraph 1Paragraph 1Paragraph 1Paragraph 1Paragraph 1Paragraph 1Paragraph 1 </p>
+	    </div>
+		<div>
+		<table class="mGrid">
+		<th class="mGrid th">Titulo</th>
+		<tr><td>Normal</td></tr>
+		<tr><td class="alt">Alternativo</td></tr>
+		<tr><td>Normal</td></tr>
+        <tr><td class="alt">Alternativo</td></tr>
+		<tr><td>Normal</td></tr>
+		<tr><td class="alt">Alternativo</td></tr>
+		</table>
+		</div>
+
+		<div>
+		<table class="tGrid">
+		<th class="tGrid th">Titulo</th>
+		<tr><td>Normal</td></tr>
+		<tr><td class="alt">Alternativo</td></tr>
+		<tr><td>Normal</td></tr>
+        <tr><td class="alt">Alternativo</td></tr>
+		<tr><td>Normal</td></tr>
+		<tr><td class="alt">Alternativo</td></tr>
+		</table>
+		</div>
+		
+		<div>
+		<label for="field1" class="lblregular">Corto</label> 
+        <input type="text" class="textbox" id="field1" /><br/>
+		<label for="field1" class="lblregular">Cortito</label>
+        <input type="text" class="textbox" id="field1" /><br/>
+		<label for="field1" class="lblregular">Laaaaaaaargo</label>
+        <input type="text" class="textbox" id="field1" /><br/>
+		<label for="field1" class="lblregular">Máaaaaaaaaaaas Largo</label>
+        <input type="text" class="textbox" id="field1" />
+		</div>
+		
+		</div>
+        
+        <div id="footer">
+            Powered by Strauss Soluciones™ 2013. Todos los derechos reservados.
+        </div>
+    </div>
+      </form>
+</body>
+</html>

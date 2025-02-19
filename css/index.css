@@ -1,0 +1,912 @@
+/* Setear Estilos Bootstrap */
+.row {
+  margin: 0;
+}
+
+/* Clase Oculta */
+.aspNetHidden {
+  display: none;
+}
+
+/* Acceso */
+.panel-primary {
+  border-color: #337ab7;
+  width: 100%;
+  max-width: 1000px;
+  margin-top: 10px;
+}
+
+.panel {
+  background-color: #fff;
+  border: 1px solid #337ab7;
+  border-radius: 4px;
+  box-shadow: 3px 3px 5px #337ab7;
+}
+
+.panel-primary .form-control,
+.panel.primary .btn,
+.panel-primary p,
+.panel-primary .panel-footer {
+  font-size: 1rem;
+}
+
+/* Estilos generales */
+
+:root {
+  --btn-bg-color: #286090;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  font-family: Montserrat, sans-serif;
+  font-weight: 400;
+  line-height: 1.8;
+  color: #777;
+  background-color: #ffffffb7;
+}
+
+a {
+  text-decoration: none;
+}
+
+.container {
+  width: 1350px;
+  max-width: 100%;
+  display: flex;
+  margin: 0 auto;
+  justify-content: center;
+}
+
+@media (max-width: 900px) {
+  .container {
+    padding-left: 5px;
+    padding-right: 5px;
+  }
+}
+
+.btn-basic {
+  padding: 8px 16px;
+  margin: 0 auto;
+  border-radius: 5px;
+  height: min-content !important;
+  min-width: 100px;
+}
+
+.contenedor-busqueda {
+  padding: 1em 0.5em;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.1em;
+  max-width: 100%;
+}
+
+.contenedor-busqueda button {
+  width: 100px;
+  min-width: fit-content;
+  margin-left: 0;
+  margin-right: 0;
+  background-color: #337ab7;
+}
+
+.contenedor-busqueda input,
+.contenedor-busqueda button {
+  max-width: 600px;
+}
+
+.no-padding {
+  padding: 0;
+}
+
+@media (max-width: 900px) {
+  .contenedor-busqueda {
+    flex-direction: column;
+    gap: 0.5em;
+  }
+
+  .contenedor-busqueda > * {
+    width: 100%;
+  }
+
+  .contenedor-busqueda button {
+    width: 100% !important;
+  }
+}
+
+.contenedor-busqueda input,
+.contenedor-busqueda button {
+  height: 40px;
+}
+
+.contenedor-busqueda input {
+  min-width: 300px;
+  padding: 0 0.5em;
+  border-radius: 5px;
+}
+
+.mensaje-busqueda {
+  font-size: 1.5rem;
+  text-align: center;
+}
+
+h1 {
+  text-align: center;
+  letter-spacing: 1px;
+  font-size: 2.8rem;
+  font-weight: bold;
+}
+
+form {
+  min-width: 90%;
+  max-width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+td {
+  padding: 1em;
+}
+
+input[type="checkbox"] {
+  width: 20px;
+  height: 20px;
+}
+
+button {
+  background: none;
+  border: none;
+  padding: 0;
+  margin: 0;
+  font: inherit;
+  color: inherit;
+  cursor: pointer;
+  outline: none;
+}
+
+.btn-nostyle {
+  background: none;
+  border: none;
+  padding: 0;
+  margin: 0;
+  font: inherit;
+  color: inherit;
+  cursor: pointer;
+  outline: none;
+}
+
+.cuadro-info {
+  background-color: #e6f7ff;
+  border-radius: 5px;
+  text-align: center;
+}
+
+.margenes-y {
+  margin-top: 1em;
+  margin-bottom: 1em;
+}
+
+.contenedor-flexible {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  gap: 1em;
+}
+
+.ancho-100 {
+  max-width: 100%;
+}
+
+.encabezado-acceso {
+  background-color: var(--btn-bg-color);
+  color: white;
+  font-size: 1.2rem;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  font-weight: normal;
+  padding: 10px 0;
+}
+
+.panel-primary input {
+  margin: 0 auto;
+}
+
+.login {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5em;
+  padding: 0 5px;
+}
+
+.login .titulo-rol {
+  margin: 0;
+  /* margin-top: -10px; */
+  font-weight: normal;
+  letter-spacing: normal;
+  font-size: 1.3rem;
+  padding: 0 25px;
+  line-height: 1;
+}
+
+.login h4 {
+  font-size: 16px;
+  margin-bottom: -20px;
+}
+
+/* Acceso fuera de sesión */
+
+.acceso-fuera-sesion {
+  display: flex;
+  min-height: 100vh;
+  max-width: 100%;
+  width: 100%;
+  gap: 3em;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+.acceso-fuera-sesion-box {
+  min-height: 600px;
+  display: flex;
+  gap: 3em;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  border: 1px solid rgb(33, 27, 154);
+  border-radius: 5px;
+  width: 100%;
+  max-width: 900px;
+  font-size: 1.2rem;
+}
+
+.acceso-fuera-sesion login {
+  border: 1px solid black;
+}
+
+.mensaje-sin-sesion {
+  font-size: 1rem;
+  background-color: var(--btn-bg-color);
+  color: white;
+  padding: 0.5em 0;
+  width: 100%;
+}
+
+.usuario-fuera-sesion p {
+  margin: 0 auto;
+  font-size: 1.5rem;
+}
+
+/* Botones */
+
+.btn-basic {
+  padding: 8px 16px;
+  margin: 0 auto;
+  border-radius: 5px;
+  height: min-content !important;
+  min-width: fit-content;
+  width: 200px;
+}
+
+@media (max-width: 900px) {
+  .btn,
+  .btn-basic {
+    width: 90%;
+    max-width: 600px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  input[type="checkbox"] {
+    width: 30px;
+    height: 30px;
+  }
+}
+
+.btn-inline {
+  display: inline;
+}
+
+.img-logo {
+  width: 150px;
+}
+
+.panel-credenciales {
+  padding: 1em;
+}
+
+@media (max-width: 900px) {
+  .panel-credenciales {
+    padding: 0;
+  }
+}
+
+.form-label {
+  margin: 5px auto;
+  display: block;
+  font-weight: bold;
+}
+
+.form-input {
+  margin: 0.5em auto;
+  max-width: 600px;
+  box-shadow: 1px 1px 5px #337ab7;
+}
+
+input {
+  max-width: 90%;
+}
+
+input[type="text"] {
+  display: block;
+}
+
+input[type="radio"] {
+  display: inline-block;
+  margin-left: 5px;
+  margin-right: 5px;
+}
+
+@media (max-width: 900px) {
+  input[type="text"] {
+    width: 95%;
+    margin: 0 auto;
+  }
+
+  select {
+    width: 90%;
+    margin: 0 auto;
+    max-width: 100%;
+    display: block;
+  }
+}
+
+.form-input:active {
+  outline: 1px solid var(--btn-bg-color);
+}
+
+.form-input:focus {
+  outline: 1px solid var(--btn-bg-color);
+}
+
+@media (max-width: 900px) {
+  .form-input {
+    width: 95%;
+  }
+}
+
+.text-info {
+  color: var(--btn-bg-color) !important;
+  padding: 10px 30px;
+}
+
+.panel-acceso {
+  padding: 1em 0;
+  max-width: 100%;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2em 0;
+}
+
+.panel-footer {
+  /* background-color: var(--btn-bg-color); */
+  background-color: rgb(239, 238, 238);
+  /* color: white; */
+  padding: 5px;
+  margin-top: 15px;
+  width: 100%;
+}
+/* Modo móvil (pantallas pequeñas) */
+@media (max-width: 768px) {
+  .table-cemmi {
+    max-width: 100%;
+  }
+
+  /* Ocultamos los encabezados de la tabla */
+  .table-cemmi thead {
+    display: none;
+  }
+
+  /* Descripción */
+  .table-cemmi tbody tr:first-child {
+    /* display: none; */
+  }
+
+  /* Cada fila se convierte en una "card" */
+  .table-cemmi tr {
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    overflow: hidden;
+    background-color: #f9f9f9;
+  }
+
+  /* Las celdas se convierten en filas individuales */
+  .table-cemmi td {
+    padding: 10px;
+    /* text-align: left; */
+  }
+
+  /* Antes de cada celda, ponemos su "título" */
+  .table-cemmi td::before {
+    content: attr(data-label);
+    font-weight: bold;
+    text-transform: uppercase;
+    color: #555;
+  }
+
+  .table-cemmi a,
+  .table-cemmi span {
+    display: block;
+    text-align: center;
+  }
+}
+
+/* Operador Venta Talón */
+
+.titulo-rol {
+  text-align: center;
+  font-size: 1.5rem;
+  font-weight: bold;
+  letter-spacing: 1px;
+  margin: 1em auto;
+  text-transform: uppercase;
+}
+
+.subtitulo-rol {
+  display: block;
+  text-align: center;
+  font-weight: bold;
+  /* letter-spacing: 1px; */
+  margin: 1em auto;
+}
+
+.panel-talon-seleccion {
+  text-align: center;
+  max-width: 100%;
+}
+
+.panel-talon-seleccion div {
+  border: 0.5px solid rgba(0, 0, 0, 0.5);
+  padding: 0.5em;
+}
+
+.panel-talon-seleccion div {
+  border-bottom: none;
+}
+
+.panel-talon-seleccion div:last-child {
+  border-bottom: 0.5px solid rgba(0, 0, 0, 0.5);
+}
+
+.btn-margin {
+  margin: 0.8em auto;
+}
+
+/* rpt Sorteo Producción */
+
+.info-sorteo-produccion span {
+  display: block;
+  padding: 0.5em;
+  text-align: center;
+}
+
+/* Fechas */
+
+.seleccion-fechas-sp {
+  display: flex;
+  justify-content: space-around;
+  padding: 0.5em;
+  margin: 0.5em;
+}
+
+.seleccion-fechas-sp > * {
+  padding: 0.3em;
+}
+
+.espaciado-interno {
+  padding: 1em;
+}
+
+.nav-proof {
+  /* display: flex; */
+}
+
+.navbar-user-settings {
+  margin-left: auto;
+  float: right !important;
+}
+
+@media (min-width: 900px) {
+  .navbar-user-settings {
+    display: flex;
+    gap: 2em;
+  }
+}
+
+.user {
+  /* font-size: .8rem; */
+  text-align: center;
+}
+
+@media (max-width: 900px) {
+  a.nav-link {
+    display: block !important;
+    width: 100vw !important;
+    text-align: center;
+    line-height: 2.5 !important;
+    font-size: 1rem;
+    /* color: white;
+    background-color: rgba(0, 0, 0, .5);
+    border: 1px solid white;
+    margin-left: 0;
+    border-radius: 5px; */
+  }
+
+  .container-fluid {
+    margin-left: 0;
+  }
+}
+
+/* Reporte producción por vendedor */
+
+.operaciones-en-proceso tr {
+  font-size: 0.6rem;
+}
+
+.operaciones-en-proceso td {
+  padding: 0 10px;
+}
+
+/* BarrioManzanaLote */
+
+.tabla-barrio-manzana {
+  table-layout: auto;
+  line-height: 1.5;
+}
+
+.tabla-barrio-manzana tr {
+  display: table-row;
+  padding: 0;
+}
+
+/* {
+  max-width: 130px;
+  padding: 0;
+} */
+
+/* Tablas */
+
+@media (max-width: 900px) {
+  .table-cemmi td {
+    align-items: center;
+  }
+}
+
+/* Lotes en barrios */
+
+/* .form-group {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+} */
+
+/* Sweet alert */
+
+.swal2-popup {
+  width: fit-content;
+  /* font-size: 1.2rem; */
+  /* padding: 1.5em 1em; */
+}
+
+.swal2-confirm {
+  background-color: #286090;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  /* font-size: 1.2rem; */
+}
+
+.flecha-arriba {
+  position: fixed;
+  right: 30px;
+  bottom: 30px;
+  color: blue;
+  font-size: 3.2rem;
+}
+
+.solo-imprimir {
+  display: none;
+}
+
+.seleccion-fechas-sp {
+  display: inline-block;
+}
+
+#odsUltimosPeriodos {
+  width: 100%;
+}
+
+.ancho-absoluto {
+  width: 100%;
+  margin-left: auto !important;
+  margin-right: auto !important;
+}
+
+@media (max-width: 900px) {
+  .flecha-arriba {
+    color: #373a3e;
+    color: white;
+    background-color: blue;
+    border-radius: 7px;
+  }
+}
+
+@media print {
+  .flecha-arriba {
+    display: none;
+  }
+
+  #btnImpContrato {
+    display: none;
+  }
+
+  .no-imprimir {
+    display: none;
+  }
+
+  .titulo-rol {
+    font-size: 16px;
+  }
+
+  .solo-imprimir {
+    display: unset;
+  }
+
+  .mod-impr {
+    text-align: center;
+  }
+
+  .no-padding-imp {
+    padding: 0;
+    margin: -20px;
+  }
+
+  .tabla-operaciones-señadas {
+    font-size: 16px;
+  }
+}
+
+.btn-imprimir {
+  cursor: pointer;
+}
+
+.bi-printer-fill {
+  font-size: 1.2rem;
+}
+
+/* @page {
+  margin: 0;
+} */
+
+/* /* RploteVendedorVentaPeriodo */
+/* @media (max-width: 768px) {
+  .table-cemmi tr th {
+    display: none !important;
+  }
+
+  .table-cemmi td {
+    text-align: right;
+    display: block;
+  }
+
+  table td::before {
+    content: attr(data-title) ": ";
+    float: left;
+  }
+} */
+
+/* ASIGNACIÓN DE RANGO DE TALONARIO A SUPERVISOR */
+
+.talonarios-grid a {
+  min-width: fit-content;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.talonario-supervisor {
+  flex-direction: column;
+  font-size: 16px;
+}
+
+/* Todos los select */
+select {
+  padding-top: 0.4em;
+  padding-bottom: 0.4em;
+  border-radius: 5px;
+}
+
+/* Revisión Contratos */
+
+.panel-revision-contratos select,
+.panel-revision-contratos option {
+  padding-top: 0.4em;
+  padding-bottom: 0.4em;
+  border-radius: 5px;
+}
+
+.revision-contratos-select span {
+  font-weight: bold;
+  display: block;
+  margin-top: 1em;
+}
+
+.lote-venta-liberacion-select select {
+  padding-top: 0.4em;
+  padding-bottom: 0.4em;
+  border-radius: 5px;
+  max-width: 100%;
+}
+
+.lote-venta-liberacion-select span {
+  font-weight: bold;
+}
+
+/* Botón dinámico */
+
+.btn-dinamico {
+  display: block;
+  margin: 1em auto;
+  height: 100%;
+}
+
+/* Contenedores generales de búsqueda */
+
+.contenedor-busqueda-nuevo {
+  max-width: 100%;
+  margin: 1em auto;
+  display: flex;
+  gap: 8px;
+  justify-content: center;
+  align-items: center;
+}
+
+.input-busqueda {
+  width: 65%;
+  border-radius: 4px;
+  height: 40px;
+}
+
+.btn-busqueda {
+  width: 30%;
+}
+
+@media (max-width: 900px) {
+  .contenedor-busqueda-nuevo {
+    flex-direction: column;
+  }
+
+  .input-busqueda {
+    width: 100%;
+    border-radius: 4px;
+    height: 40px;
+  }
+
+  .btn-busqueda {
+    width: 100%;
+  }
+}
+
+/* Contrato Revisión */
+
+.panel-impresion-contrato {
+  margin-top: 10mm;
+  margin-left: 13mm;
+  margin-right: 11mm;
+}
+
+@media print {
+  @page: first {
+    margin-bottom: 3cm;
+  }
+}
+
+.panel-impresion-contrato p,
+.panel-impresion-contrato b {
+  font-size: 0.8rem;
+}
+
+/* .panel-impresion-contrato b:first-of-type {
+  display: block;
+  text-align: center;
+} */
+
+.e-bloque {
+  display: block;
+}
+
+.panel-impresion-contrato h2 {
+  margin: 1em auto;
+  font-weight: bold;
+  text-align: center;
+}
+
+.titulo-contrato,
+.manzana-parcela-contrato {
+  font-size: 1.2rem;
+}
+
+.panel-impresion-contrato h3 {
+  text-align: center;
+  font-weight: bold;
+}
+
+.firmantes {
+  margin-top: 6rem;
+  display: flex;
+}
+
+.fiduciario,
+.agente-inmobiliario,
+.comprador {
+  font-size: 0.8rem;
+}
+
+.fiduciario {
+  text-align: left !important;
+  margin-right: auto;
+}
+
+.agente-inmobiliario:nth-child(3) {
+  text-align: right !important;
+  display: block;
+  color: red;
+}
+
+.comprador {
+  margin-top: 6rem;
+}
+
+.contrato-articulo {
+  display: inline;
+}
+
+/* .contrato-articulo::before { */
+/* Genera un salto de línea */
+/* content: '\A';  */
+/* Hace que el salto de línea se renderice */
+/* white-space: pre;  */
+/* } */
+
+/* LoteVentaVendedor22 */
+
+.panel-alta {
+  max-width: 100%;
+  width: 800px;
+  margin: 0.5em auto;
+  padding: 3em 2em;
+  border-radius: 5px;
+  box-shadow: 3px 3px 5px gray;
+}
+
+.panel-alta div {
+  display: block;
+  padding: 0.05em;
+}
+
+/* #form1 {
+  gap: 0;
+} */

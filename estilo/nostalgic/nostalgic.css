@@ -1,0 +1,1021 @@
+@font-face
+{
+	font-family: perfect_dos_vga_437_winRg;
+	src: url('vga473.eot');
+	src: url('vga473.eot?#iefix') format('embedded-opentype'), url('vga473.woff') format('woff'), url('vga473.ttf') format('truetype'), url('vga473.svg#perfect_dos_vga_437_winRg') format('svg');
+	font-weight: normal;
+	font-style: normal;
+}
+BODY
+{
+	background-color: #000000;
+	background-image: url( 'bg.png' );
+	color: #FFFFFF;
+	font-family: perfect_dos_vga_437_winRg;
+	font-size: 16px;
+	height: 100%;
+	margin: 0;
+	padding: 0;
+}
+A
+{
+	text-decoration: none;
+}
+A:hover
+{
+	text-decoration: underline;
+}
+H1, H2, H3, H4, H5, H6
+{
+	font-size: 20pt;
+	font-weight: normal;
+	font-family: perfect_dos_vga_437_winRg;
+	font-size: 30px;
+	text-transform: uppercase;
+}
+DIV TABLE
+{
+	margin: 0px 0px 0px -10px;
+	padding: 0 0 0 0px;
+}
+TD .lblform
+{
+	padding: 0 0 0 5px;
+}
+/*Scrollbar*/
+::-webkit-scrollbar
+{
+	width: 12px;
+}
+::-webkit-scrollbar:horizontal
+{
+	width: 12px;
+	height: 12px;
+}
+::-webkit-scrollbar-track
+{
+	background: #00A8A8;
+	border-left: 2px solid #FFF;
+}
+::-webkit-scrollbar-track:horizontal
+{
+	background: #00A8A8;
+}
+::-webkit-scrollbar-thumb
+{
+	background: #000084;
+	border-left: 2px solid #FFF;
+}
+::-webkit-scrollbar-thumb:hover
+{
+	background: #FFFFFF;
+}
+#wrapper
+{
+	margin: 0 auto;
+	width: 960px;
+	background-color: #000084;
+	border: 6px double #FFF;
+}
+#header
+{
+	text-align: center;
+	float: left;
+	padding: 25px;
+	height: 70px;
+	width: 910px;
+	background: #000084 url(logo.png) no-repeat center;
+}
+#navigation
+{
+	background-color: #000084;
+	color: #000000;
+	float: left;
+	height: 30px;
+	padding-left: 20px;
+	padding-right: 20px;
+	padding-top: 10px;
+	width: 920px;
+	border-top: 6px double #FFFFFF;
+	border-bottom: 6px double #FFFFFF;
+}
+.lbltitulopagina
+{
+	margin: 172px 0 0 -735px;
+	color: #FFFFFF;
+	font-size: 17px;
+	font-style: normal;
+	font-variant: normal;
+	font-weight: bolder;
+	line-height: 1.2;
+	text-align: center;
+	text-indent: 0px;
+	text-transform: uppercase;
+	text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.2);
+	width: 496px;
+	background-color: #000084;
+	border-left: 7px double #FFFFFF;
+	border-bottom: 7px double #FFFFFF;
+	border-right: 7px double #FFFFFF;
+	padding: 10px;
+	position: absolute;
+	min-height: 30px;
+}
+#buttons
+{
+	margin: 172px 0 0 764px;
+	height: 40px;
+	width: 150px;
+	padding: 10px 15px 0 0;
+	background-color: #000084;
+	border-left: 7px double #FFFFFF;
+	border-bottom: 7px double #FFFFFF;
+	border-right: 7px double #FFFFFF;
+	position: absolute;
+}
+#content
+{
+	background-color: #000084;
+	color: #FFFFFF;
+	float: left;
+	height: 722px;
+	overflow: auto;
+	padding: 60px 30px 0;
+	width: 700px;
+}
+#leftcolumn
+{
+	background-color: #000084;
+	color: #000000;
+	float: left;
+	height: 768px;
+	width: 200px;
+}
+#footer
+{
+	background-color: #000084;
+	clear: both;
+	color: #FFFFFF;
+	font-size: 11px;
+	height: 25px;
+	padding-top: 15px;
+	text-align: center;
+	width: 960px;
+	border-top: 6px double #FFFFFF;
+	background-image: url(straussfoot.png);
+	background-repeat: no-repeat;
+	background-position: center;
+}
+/*Estilo de menu vertical*/
+.menu
+{
+	list-style-image: none;
+	list-style: none;
+	margin: 0;
+	padding: 0;
+	width: 200px;
+}
+.menu LI
+{
+	display: block;
+	height: 35px;
+	margin-bottom: 25px;
+	margin-left: 0;
+	margin-right: 0;
+	margin-top: 10px;
+	padding: 0;
+}
+.menu LI A
+{
+	background-color: #000084;
+	color: #FFFFFF;
+	display: block;
+	font-size: 12px;
+	padding-bottom: 0px;
+	padding-left: 25px;
+	padding-right: 25px;
+	padding-top: 0px;
+	text-align: left;
+	text-decoration: none;
+	font-size: 15px;
+	border-top: 6px #FFFFFF;
+	border-bottom: 6px #FFFFFF;
+	border-right: 6px #FFFFFF;
+	border-left: 0px;
+	border-style: double;
+}
+.menu LI A:hover
+{
+	background-color: #00A8A8;
+}
+.menu LI A.active, .menu LI A.active:hover
+{
+	background-color: #000000;
+	background-position: -80px;
+	color: rgb(255, 255, 255);
+}
+.menu LI A SPAN
+{
+	line-height: 40px;
+}
+/*Estilo de elementos varios*/
+.textbox
+{
+	border: 1px solid #666666;
+	padding: 5px;
+	margin: 5px;
+	font-family: perfect_dos_vga_437_winRg;
+	background-color: #EAEAEA;
+	color: #606060;
+	font-size: 14px;
+	text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.098);
+	max-height: 35px;
+	width: 200px;
+}
+.textbox:focus
+{
+	background-color: #FFFFFF;
+	color: #2D2D2D;
+}
+.textbox:disabled
+{
+	background-color: #B3B5AF;
+	color: #666666;
+}
+.textchest
+{
+	border: 1px solid #666666;
+	padding: 5px;
+	margin: 5px;
+	font-family: perfect_dos_vga_437_winRg;
+	background-color: #EAEAEA;
+	color: #606060;
+	font-size: 14px;
+	text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.098);
+	height: 105px;
+	width: 400px;
+}
+.textchest:focus
+{
+	color: #2D2D2D;
+	background-color: #FFF;
+}
+.textchest:disabled
+{
+	background-color: #B3B5AF;
+	color: #666666;
+}
+.dropdown
+{
+	border: 1px solid #666666;
+	padding: 5px;
+	margin: 5px;
+	font-family: perfect_dos_vga_437_winRg;
+	background-color: #EAEAEA;
+	color: #606060;
+	font-size: 14px;
+	text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.098);
+	width: 212px;
+}
+.dropdown:focus
+{
+	background-color: #FFF;
+	color: #2D2D2D;
+}
+.dropdown:disabled
+{
+	border: 1px solid #666666;
+	background-color: #B3B5AF;
+	color: #666666;
+}
+.butbuscar
+{
+	font-family: perfect_dos_vga_437_winRg;
+	background-color: #00A8A8;
+	border-style: solid;
+	border-width: 0px;
+	color: #000000;
+	font-size: 14px;
+	height: 30px;
+	padding: 5px;
+	margin: 5px;
+	text-align: center;
+	vertical-align: middle;
+	width: 150px;
+}
+.butbuscar:hover
+{
+	background-color: #C6C3C6;
+	color: #000000;
+	cursor: pointer;
+}
+.butbuscar:active
+{
+	background-color: #FFFFFF;
+}
+.butcancelar
+{
+	font-family: perfect_dos_vga_437_winRg;
+	background-color: #00A8A8;
+	border-style: solid;
+	border-width: 0px;
+	color: #000000;
+	font-size: 14px;
+	height: 30px;
+	padding: 5px;
+	margin: 5px;
+	text-align: center;
+	vertical-align: middle;
+	width: 150px;
+}
+.butcancelar:hover
+{
+	background-color: #C6C3C6;
+	color: #000000;
+	cursor: pointer;
+}
+.butcancelar:active
+{
+	background-color: #FFFFFF;
+}
+.butaceptar
+{
+	font-family: perfect_dos_vga_437_winRg;
+	background-color: #00A8A8;
+	border-style: solid;
+	border-width: 0px;
+	color: #000000;
+	font-size: 14px;
+	height: 30px;
+	padding: 5px;
+	margin: 5px;
+	text-align: center;
+	vertical-align: middle;
+	width: 150px;
+}
+.butaceptar:hover
+{
+	background-color: #C6C3C6;
+	color: #000000;
+	cursor: pointer;
+}
+.butaceptar:active
+{
+	background-color: #FFFFFF;
+}
+.butimprimir
+{
+	border: 1px solid #C0C0C0;
+	border-radius: 5px;
+	background-color: #979797;
+	background-image: url(print.png);
+	background-repeat: no-repeat;
+	background-position: center;
+	width: 30px;
+	height: 30px;
+	float: right;
+}
+.butimprimir:hover
+{
+	background-color: #26ADE4;
+	cursor: pointer;
+}
+.butvolver
+{
+	border: 1px solid #C0C0C0;
+	border-radius: 5px;
+	background-color: #979797;
+	background-image: url(backarrow.png);
+	background-repeat: no-repeat;
+	background-position: center;
+	width: 30px;
+	height: 28px;
+	float: right;
+	margin-right: 5px;
+	margin-bottom: 10px;
+}
+.butvolver:hover
+{
+	background-color: #26ADE4;
+	cursor: pointer;
+}
+.butraiz
+{
+	border: 1px solid #000000;
+	border-radius: 5px;
+	background-color: #000000;
+	background-image: url(rootarrow.png);
+	background-repeat: no-repeat;
+	background-position: center;
+	width: 30px;
+	height: 30px;
+	float: right;
+	margin-right: 5px;
+	margin-bottom: 10px;
+}
+.butraiz:hover
+{
+	background-color: #00A8A8;
+	cursor: pointer;
+}
+.butobservacion
+{
+	border: 1px solid #000000;
+	border-radius: 5px;
+	background-color: #000000;
+	background-image: url(sugerencia.png);
+	background-repeat: no-repeat;
+	background-position: center;
+	width: 30px;
+	height: 30px;
+	float: right;
+	margin-right: 5px;
+	margin-bottom: 10px;
+}
+.butobservacion:hover
+{
+	background-color: #00A8A8;
+	cursor: pointer;
+}
+.butsql
+{
+	border: 1px solid #000000;
+	border-radius: 5px;
+	padding: 5px;
+	margin: 5px;
+	font-family: armataregular;
+	background-color: #000000;
+	background-image: url(cogs.png);
+	background-repeat: no-repeat;
+	background-position: center;
+	color: #FFFFFF;
+	font-size: 12px;
+	text-align: center;
+	width: 30px;
+	height: 30px;
+	text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.098);
+}
+.butsql:hover
+{
+	background-color: #00A8A8;
+	cursor: pointer;
+}
+.butimprimir
+{
+	border: 1px solid #000;
+	background-color: #000000;
+	background-image: url(print.png);
+	background-repeat: no-repeat;
+	background-position: center;
+	width: 30px;
+	height: 30px;
+	float: right;
+}
+.butimprimir:hover
+{
+	background-color: #00A8A8;
+	cursor: pointer;
+}
+.butvolver
+{
+	border: 1px solid #000;
+	background-color: #000000;
+	background-image: url(backarrow.png);
+	background-repeat: no-repeat;
+	background-position: center;
+	width: 30px;
+	height: 28px;
+	float: right;
+	margin-right: 5px;
+	margin-bottom: 10px;
+}
+.butvolver:hover
+{
+	background-color: #00A8A8;
+	cursor: pointer;
+}
+.butsql
+{
+	border: 1px solid #C0C0C0;
+	border-radius: 5px;
+	padding: 5px;
+	margin: 5px;
+	font-family: armataregular;
+	background-color: #979797;
+	background-image: url(cogs.png);
+	background-repeat: no-repeat;
+	background-position: center;
+	color: #FFFFFF;
+	font-size: 12px;
+	text-align: center;
+	width: 30px;
+	height: 30px;
+	text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.098);
+}
+.butsql:hover
+{
+	background-color: #26ADE4;
+	cursor: pointer;
+}
+.lblregular
+{
+	color: #FFF;
+	font-size: 12px;
+	font-style: normal;
+	font-variant: normal;
+	font-weight: normal;
+	line-height: 1.2;
+	margin-bottom: 10px;
+	margin-left: 0px;
+	margin-right: 0px;
+	margin-top: 10px;
+	text-align: left;
+	text-indent: 0px;
+}
+.lblform
+{
+	margin: 10px 0px;
+	color: #FFFFFF;
+	font-family: perfect_dos_vga_437_winRg;
+	font-size: 12px;
+	line-height: 1.2;
+	text-align: left;
+	text-indent: 0px;
+	text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.098);
+	display: inline-block;
+	width: 150px;
+	text-transform: uppercase;
+}
+#tooltipobservacion2 .lblform
+{
+	color: #ECECEC;
+}
+.lblregularnavbar
+{
+	color: #FFFFFF;
+	font-size: 12px;
+	font-style: normal;
+	font-variant: normal;
+	font-weight: normal;
+	line-height: 1.2;
+	margin-bottom: 10px;
+	margin-left: 0px;
+	margin-right: 0px;
+	margin-top: 10px;
+	text-align: left;
+	text-indent: 0px;
+}
+.lblbold
+{
+	color: #FFF;
+	font-size: 17px;
+	font-style: normal;
+	font-variant: normal;
+	font-weight: lighter;
+	text-transform: uppercase;
+	line-height: 1.2;
+	margin-bottom: 10px;
+	margin-left: 0px;
+	margin-right: 0px;
+	margin-top: 10px;
+	text-align: left;
+	text-indent: 0px;
+}
+.lbloperador
+{
+	color: #FFFFFF;
+	float: left;
+	font-size: 17px;
+	font-style: normal;
+	font-variant: normal;
+	font-weight: lighter;
+	line-height: 1.2;
+	text-align: left;
+	text-indent: 0px;
+}
+.lbldelegacion
+{
+	color: #FFFFFF;
+	float: right;
+	font-size: 17px;
+	font-style: normal;
+	font-variant: normal;
+	font-weight: lighter;
+	line-height: 1.2;
+	text-align: left;
+	text-indent: 0px;
+}
+.lblmenu
+{
+	color: #FFFFFF;
+	float: right;
+	font-size: 11px;
+	font-style: normal;
+	font-variant: normal;
+	font-weight: lighter;
+	line-height: 1.2;
+	text-align: left;
+	text-indent: 0px;
+}
+.lblhtitulo
+{
+	font-size: 30px;
+	color: #FFF;
+}
+.lblhsubtitulo
+{
+	font-size: 13px;
+	color: #FFF;
+}
+.lblobservaciontitulo
+{
+	font: 1em Armata;
+	text-transform: uppercase;
+	color: #FFFFFF;
+	text-shadow: 2px 1px 1px #2D2D2D;
+	font-size: 22px;
+	font-weight: lighter;
+}
+.lblmensajeoperador
+{
+	color: #E25252;
+	text-shadow: 1px 1px 1px #DADADA;
+	font-weight: bold;
+	text-transform: uppercase;
+}
+/*Estilo Infragistic WebDateChooser*/
+.webdate
+{
+	border: 1px solid #666666;
+	margin: 5px 8px 5px 2px;
+	padding: 0;
+	font-family: perfect_dos_vga_437_winRg;
+	background-color: #EAEAEA;
+	font-size: 14px;
+	text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.098);
+	width: 212px;
+}
+.webdate:disabled
+{
+	background-color: #B3B5AF;
+	color: #666666;
+	font-weight: bold;
+}
+.webdate TBODY
+{
+	margin: 0px;
+	padding: 0px;
+}
+.webdate TBODY TR
+{
+	height: 25px;
+	margin: 0px;
+	padding: 0px;
+}
+.webdate TBODY TR TD
+{
+	margin: 0px;
+	padding: 0px;
+}
+.webdate TBODY TR TD INPUT
+{
+	margin: 0;
+	font-family: perfect_dos_vga_437_winRg;
+	color: #606060;
+	font-size: 16px;
+	text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.098);
+	padding: 0px;
+	width: 180px !important;
+	background-color: transparent;
+}
+.webdate TBODY TR TD INPUT:focus
+{
+	background-color: #FFFFFF;
+	color: #2D2D2D;
+}
+.webdate TBODY TR TD INPUT:disabled
+{
+	background-color: #B3B5AF;
+	color: #666666;
+}
+.webdate TBODY TR TD IMG
+{
+	content: url(wdarrow.png);
+	background: #9D9D9D;
+	margin: 0px 0 0px 0px;
+	border: none;
+	padding: 0px;
+}
+.webdate TBODY TR TD IMG:hover
+{
+	background: #26ADE4;
+	cursor: pointer;
+}
+/*Estilo de Grilla ASP*/
+.menutrigger
+{
+	background-color: #000084;
+	color: #FFFFFF;
+	display: block;
+	font-size: 12px;
+	padding-left: 25px;
+	padding-right: 25px;
+	text-align: left;
+	text-decoration: none;
+	font-size: 15px;
+	border-top: 6px #FFFFFF;
+	border-bottom: 6px #FFFFFF;
+	border-right: 6px #FFFFFF;
+	border-left: 0px;
+	border-style: double;
+	height: 28px;
+	padding-top: 13px;
+	margin-top: 4px;
+}
+.menutrigger:hover
+{
+	background-color: #00A8A8;
+	text-decoration: none;
+}
+.menuGrid
+{
+	background-color: #000000;
+	position: absolute;
+	margin: 176px 0 0 204px;
+	width: 400px;
+	border: 7px double #FFFFFF;
+	font-family: perfect_dos_vga_437_winRg;
+	font-size: 14px;
+	text-transform: uppercase;
+}
+.menuGrid TR:hover
+{
+	background-color: #00A8A8;
+}
+.menuGrid TD
+{
+	padding: 5px;
+	color: #FFFFFF;
+	height: 10px;
+}
+.menuGrid TD A
+{
+	padding: 5px;
+	color: #FFFFFF;
+	height: 10px;
+}
+.menuGrid TD A:hover
+{
+	color: #1B59EA;
+	text-decoration: none;
+}
+.menuGrid .pgr
+{
+}
+.menuGrid .pgr TABLE
+{
+	margin: 5px 0;
+}
+.menuGrid .pgr TD
+{
+	border-width: 0;
+	padding: 0 6px;
+	font-weight: bold;
+	color: #FFF;
+	line-height: 12px;
+}
+.menuGrid .pgr TR:hover
+{
+	background-color: transparent;
+}
+.menuGrid .pgr A
+{
+	color: #A5A5A5;
+	text-decoration: none;
+	text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.098);
+}
+.menuGrid .pgr A:hover
+{
+	color: #FFFFA6;
+	text-decoration: none;
+}
+/*Estilo de Grilla ASP*/
+.mGrid
+{
+	border: 3px double #FFFFFF;
+	font-family: perfect_dos_vga_437_winRg;
+	margin: 20px 0;
+	font-size: 14px;
+	width: 100%;
+}
+.mGrid TR:hover
+{
+	background-color: #00A8A8;
+}
+.mGrid TD
+{
+	padding: 5px;
+	border: 3px double #FFFFFF;
+	color: #FFFFFF;
+	height: 10px;
+}
+.mGrid TD A
+{
+	padding: 5px;
+	color: #FFFFFF;
+	height: 10px;
+}
+.mGrid TD A:hover
+{
+	color: #1B59EA;
+	text-decoration: none;
+}
+.mGrid TH
+{
+	border: 3px double #FFFFFF;
+	padding: 5px 10px;
+	color: #FFF;
+	font-size: 16px;
+	text-transform: uppercase;
+}
+.mGrid TH A
+{
+	color: #FFF;
+}
+.mGrid TH A:hover
+{
+	color: #FFFFA6;
+	text-decoration: none;
+}
+.mGrid .alt
+{
+}
+.mGrid .pgr
+{
+}
+.mGrid .pgr TABLE
+{
+	margin: 5px 0;
+}
+.mGrid .pgr TD
+{
+	border-width: 0;
+	padding: 0 6px;
+	font-weight: bold;
+	color: #FFF;
+	line-height: 12px;
+}
+.mGrid .pgr TR:hover
+{
+	background-color: transparent;
+}
+.mGrid .pgr A
+{
+	color: #A5A5A5;
+	text-decoration: none;
+	text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.098);
+}
+.mGrid .pgr A:hover
+{
+	color: #FFFFA6;
+	text-decoration: none;
+}
+.gridbutton
+{
+	background-image: url(dbarrow.png);
+	background-repeat: no-repeat;
+	background-position: center;
+	width: 15px;
+	height: 15px;
+	/*[empty]border:;*/
+}
+.gridbutton:hover
+{
+	background-color: #26ADE4;
+}
+.mGrid TBODY TR TD.gridbutton INPUT
+{
+	border: 0px none;
+	width: 15px;
+	min-height: 25px;
+}
+/*Estilo de Tooltip
+For tooltip target element that has set class="tooltip"*/
+.tooltip
+{
+	margin: 5px;
+	padding: 5px;
+	border-bottom: 2px dotted #36C;
+	color: #36C;
+	outline: none;
+	cursor: pointer;
+	text-align: center;
+	border-bottom-style: none;
+}
+#tooltip IMG
+{
+	border: 1px solid #FFFFFF;
+	padding: 10px;
+	margin: 0px 10px 0px 0px;
+}
+/*For tooltip box*/
+DIV#mcTooltip
+{
+	border: 6px solid #00A8A8;
+	line-height: 16px;
+	color: #00A8A8;
+	padding: 20px;
+	font-size: 14px;
+	border-radius: 0;
+/*Rounded corners. N/A for IE 8 and below.*/
+	box-shadow: 0 1px 4px #AAAAAA;
+/*Drop shadow. N/A for IE 8 and below.*/
+}
+DIV#mcTooltip, DIV#mcTooltip DIV
+{
+	background-color: #000000;
+}
+/*For hyperlink within tooltip*/
+DIV#mcTooltip A
+{
+	color: #FFFFFF;
+}
+/*Close button. Only available when sticky or overlay has been set to true.*/
+DIV#mcttCloseButton
+{
+	width: 10px;
+	height: 10px;
+	position: absolute;
+	background-image: url(tooltip/closeBtn.png);
+	cursor: pointer;
+	overflow: hidden;
+	top: 25px;
+	right: 25px;
+	left: auto;
+}
+DIV#mcttCloseButton:hover
+{
+	background-image: url(tooltip/closeBtnHov.png);
+}
+/*Only applies when overlay has been set to true or 1.*/
+DIV#mcOverlay
+{
+	background-color: #000000;
+	opacity: 0.5;
+	filter: alpha(opacity=50);
+	display: none;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	overflow: visible;
+	z-index: 4;
+}
+/*Only available when calling by tooltip.ajax(...). It will be a spinning image indicating a request is in progress.*/
+DIV#tooltipAjaxSpin
+{
+	margin: 20px 50px;
+	background: transparent url(loading.gif) no-repeat center center;
+	width: 50px;
+	height: 30px;
+	font-size: 0;
+}
+/*The settings below should remain unchanged*/
+DIV#mcTooltipWrapper
+{
+	position: absolute;
+	visibility: hidden;
+	overflow: visible;
+	z-index: 9999999999;
+	top: -2000px;
+}
+DIV#mcTooltip
+{
+	float: left;
+	border-style: solid;
+	position: relative;
+	overflow: hidden;
+}
+DIV#mcttCo
+{
+	position: absolute;
+	text-align: left;
+}
+DIV#mcttCo EM, DIV#mcttCo B
+{
+	display: block;
+	width: 0;
+	height: 0;
+	overflow: hidden;
+}
+.helpBtn
+{
+	height: 15px;
+	width: 15px;
+	background-image: url(tooltip/helpBtn.png);
+	display: inline-block;
+}
+.helpBtn:hover
+{
+	background-image: url(tooltip/helpBtnHov.png);
+}

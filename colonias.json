@@ -1,0 +1,1243 @@
+{
+	"mapwidth": "1000",
+	"mapheight": "600",
+	"categories": [
+		{
+			"id": "construidas",
+			"title": "Viviendas Construidas",
+			"color": "#006ab0",
+			"show": "false"
+		},
+		{
+			"id": "calle",
+			"title": "Calle Pública",
+			"color": "#008941",
+			"show": "true"
+		},
+		{
+			"id": "perimetrales",
+			"title": "Lotes Perimetrales",
+			"color": "#4fbbe1",
+			"show": "true"
+		},
+		{
+			"id": "interior",
+			"title": "Lotes Interiores",
+			"color": "#83ba3b",
+			"show": "true"
+		}
+	],
+	"levels": [
+		{
+			"id": "all",
+			"title": "Terreno",
+			"map": "images/cecotto/mapa-cecotto-all.svg",
+			"minimap": "images/cecotto/mapa-cecotto-mz-1-mini.jpg",
+			"locations": [
+				{
+					"id": "m1p1",
+					"title": "Manzana 1, Parcela 1",
+					"about": "Manzana 1 , parecela 1 de Barrio Cecotto / Total 258 lotes",
+					"description": "18,4 x 10m (185m²)",
+					"category": "calle",
+					"link": "http://miprimercasa.ddns.net/sitioWEB/LoteConsulta.aspx?barrio=1,manzana=1,parcela=1",
+					"thumbnail": "images/thumbs/land.png",
+					"x": "0.1837",
+					"y": "0.4582"
+				},
+				{
+					"id": "m1p2",
+					"title": "Manzana 1, Parcela 2",
+					"about": "Lorem ipsum",
+					"description": "18,4 x 10m (185m²)",
+					"category": "perimetrales",
+					"link": "http://miprimercasa.ddns.net/sitioWEB/LoteConsulta.aspx?manzana=1,parcela=2",
+					"thumbnail": "images/thumbs/land.png",
+					"x": "0.2067",
+					"y": "0.4396"
+				},
+				{
+					"id": "m1p3",
+					"title": "Manzana 1, Parcela 3",
+					"about": "Lorem ipsum",
+					"description": "18,4 x 10m (185m²)",
+					"category": "calle",
+					"link": "http://miprimercasa.ddns.net/sitioWEB/LoteConsulta.aspx?manzana=1,parcela=3",
+					"thumbnail": "images/thumbs/land.png",
+					"x": "0.2282",
+					"y": "0.4211"
+				},
+				{
+					"id": "m1p4",
+					"title": "Manzana 1, Parcela 4",
+					"about": "Lorem ipsum",
+					"description": "18,4 x 10m (185m²)",
+					"category": "perimetrales",
+					"thumbnail": "images/thumbs/land.png",
+					"x": "0.2504",
+					"y": "0.4039"
+				},
+				{
+					"id": "m1p5",
+					"title": "Manzana 1, Parcela 5",
+					"about": "Lorem ipsum",
+					"description": "18,4 x 10m (185m²)",
+					"category": "perimetrales",
+					"thumbnail": "images/thumbs/land.png",
+					"x": "0.2710",
+					"y": "0.3867"
+				},
+				{
+					"id": "m1p6",
+					"title": "Manzana 1, Parcela 6",
+					"about": "Lorem ipsum",
+					"description": "18,4 x 10m (185m²)",
+					"category": "perimetrales",
+					"thumbnail": "images/thumbs/land.png",
+					"x": "0.2948",
+					"y": "0.3722"
+				},
+				{
+					"id": "m1p7",
+					"title": "Manzana 1, Parcela 7",
+					"about": "Lorem ipsum",
+					"description": "18,4 x 10m (185m²)",
+					"category": "perimetrales",
+					"thumbnail": "images/thumbs/land.png",
+					"x": "0.3167",
+					"y": "0.3540"
+				},
+				{
+					"id": "m1p8",
+					"title": "Manzana 1, Parcela 8",
+					"about": "Lorem ipsum",
+					"description": "18,4 x 10m (185m²)",
+					"category": "perimetrales",
+					"thumbnail": "images/thumbs/land.png",
+					"x": "0.3382",
+					"y": "0.3373"
+				},
+				{
+					"id": "m1p9",
+					"title": "Manzana 1, Parcela 9",
+					"about": "Lorem ipsum",
+					"description": "18,4 x 10m (185m²)",
+					"category": "perimetrales",
+					"thumbnail": "images/thumbs/land.png",
+					"x": "0.3587",
+					"y": "0.3198"
+				},
+				{
+					"id": "m1p10",
+					"title": "Manzana 1, Parcela 10",
+					"about": "Lorem ipsum",
+					"description": "18,4 x 10m (185m²)",
+					"category": "perimetrales",
+					"thumbnail": "images/thumbs/land.png",
+					"x": "0.3817",
+					"y": "0.3006"
+				},
+				{
+					"id": "m1p11",
+					"title": "Manzana 1, Parcela 11",
+					"about": "Lorem ipsum",
+					"description": "18,4 x 10m (185m²)",
+					"category": "perimetrales",
+					"thumbnail": "images/thumbs/land.png",
+					"x": "0.4042",
+					"y": "0.2848"
+				},
+				{
+					"id": "m1p12",
+					"title": "Manzana 1, Parcela 12",
+					"about": "Lorem ipsum",
+					"description": "18,4 x 10m (185m²)",
+					"category": "perimetrales",
+					"thumbnail": "images/thumbs/land.png",
+					"x": "0.4222",
+					"y": "0.2715"
+				},
+				{
+					"id": "m1p13",
+					"title": "Manzana 1, Parcela 13",
+					"about": "Lorem ipsum",
+					"description": "18,4 x 10m (185m²)",
+					"category": "perimetrales",
+					"thumbnail": "images/thumbs/land.png",
+					"x": "0.4467",
+					"y": "0.2540"
+				},
+				{
+					"id": "m1p14",
+					"title": "Manzana 1, Parcela 14",
+					"about": "Lorem ipsum",
+					"description": "18,4 x 10m (185m²)",
+					"category": "perimetrales",
+					"thumbnail": "images/thumbs/land.png",
+					"x": "0.4677",
+					"y": "0.2356"
+				},
+				{
+					"id": "m1p15",
+					"title": "Manzana 1, Parcela 15",
+					"about": "Lorem ipsum",
+					"description": "18,4 x 10m (185m²)",
+					"category": "perimetrales",
+					"thumbnail": "images/thumbs/land.png",
+					"x": "0.4917",
+					"y": "0.2190"
+				},
+				{
+					"id": "m1p16",
+					"title": "Manzana 1, Parcela 16",
+					"about": "Lorem ipsum",
+					"description": "18,4 x 10m (185m²)",
+					"category": "perimetrales",
+					"thumbnail": "images/thumbs/land.png",
+					"x": "0.5339",
+					"y": "0.2552"
+				},
+				{
+					"id": "m1p17",
+					"title": "Manzana 1, Parcela 17",
+					"about": "Lorem ipsum",
+					"description": "18,4 x 10m (185m²)",
+					"category": "perimetrales",
+					"thumbnail": "images/thumbs/land.png",
+					"x": "0.5103",
+					"y": "0.2766"
+				},
+				{
+					"id": "m1p18",
+					"title": "Manzana 1, Parcela 18",
+					"about": "Lorem ipsum",
+					"description": "18,4 x 10m (185m²)",
+					"category": "perimetrales",
+					"thumbnail": "images/thumbs/land.png",
+					"x": "0.4876",
+					"y": "0.2921"
+				},
+				{
+					"id": "m1p19",
+					"title": "Manzana 1, Parcela 19",
+					"about": "Lorem ipsum",
+					"description": "18,4 x 10m (185m²)",
+					"category": "interior",
+					"thumbnail": "images/thumbs/land.png",
+					"x": "0.4653",
+					"y": "0.3088"
+				},
+				{
+					"id": "m1p20",
+					"title": "Manzana 1, Parcela 20",
+					"about": "Lorem ipsum",
+					"description": "18,4 x 10m (185m²)",
+					"category": "interior",
+					"thumbnail": "images/thumbs/land.png",
+					"x": "0.4446",
+					"y": "0.3254"
+				},
+				{
+					"id": "m1p21",
+					"title": "Manzana 1, Parcela 21",
+					"about": "Lorem ipsum",
+					"description": "18,4 x 10m (185m²)",
+					"category": "interior",
+					"thumbnail": "images/thumbs/land.png",
+					"x": "0.4217",
+					"y": "0.3397"
+				},
+				{
+					"id": "m1p22",
+					"title": "Manzana 1, Parcela 22",
+					"about": "Lorem ipsum",
+					"description": "18,4 x 10m (185m²)",
+					"category": "interior",
+					"thumbnail": "images/thumbs/land.png",
+					"x": "0.4003",
+					"y": "0.3612"
+				},
+				{
+					"id": "m1p23",
+					"title": "Manzana 1, Parcela 23",
+					"about": "Lorem ipsum",
+					"description": "18,4 x 10m (185m²)",
+					"category": "interior",
+					"thumbnail": "images/thumbs/land.png",
+					"x": "0.3796",
+					"y": "0.3731"
+				},
+				{
+					"id": "m1p24",
+					"title": "Manzana 1, Parcela 24",
+					"about": "Lorem ipsum",
+					"description": "18,4 x 10m (185m²)",
+					"category": "interior",
+					"thumbnail": "images/thumbs/land.png",
+					"x": "0.3581",
+					"y": "0.3897"
+				},
+				{
+					"id": "m1p25",
+					"title": "Manzana 1, Parcela 25",
+					"about": "Lorem ipsum",
+					"description": "18,4 x 10m (185m²)",
+					"category": "interior",
+					"thumbnail": "images/thumbs/land.png",
+					"x": "0.3346",
+					"y": "0.4088"
+				},
+				{
+					"id": "m1p26",
+					"title": "Manzana 1, Parcela 26",
+					"about": "Lorem ipsum",
+					"description": "18,4 x 10m (185m²)",
+					"category": "interior",
+					"thumbnail": "images/thumbs/land.png",
+					"x": "0.3142",
+					"y": "0.4291"
+				},
+				{
+					"id": "m1p27",
+					"title": "Manzana 1, Parcela 27",
+					"about": "Lorem ipsum",
+					"description": "18,4 x 10m (185m²)",
+					"category": "interior",
+					"thumbnail": "images/thumbs/land.png",
+					"x": "0.2932",
+					"y": "0.4450"
+				},
+				{
+					"id": "m1p28",
+					"title": "Manzana 1, Parcela 28",
+					"about": "Lorem ipsum",
+					"description": "18,4 x 10m (185m²)",
+					"category": "perimetrales",
+					"thumbnail": "images/thumbs/land.png",
+					"x": "0.2692",
+					"y": "0.4591"
+				},
+				{
+					"id": "m1p29",
+					"title": "Manzana 1, Parcela 29",
+					"about": "Lorem ipsum",
+					"description": "18,4 x 10m (185m²)",
+					"category": "perimetrales",
+					"thumbnail": "images/thumbs/land.png",
+					"x": "0.2487",
+					"y": "0.4750"
+				},
+				{
+					"id": "m1p30",
+					"title": "Manzana 1, Parcela 30",
+					"about": "Lorem ipsum",
+					"description": "18,4 x 10m (185m²)",
+					"category": "perimetrales",
+					"thumbnail": "images/thumbs/land.png",
+					"x": "0.2287",
+					"y": "0.4958"
+				},
+				{
+					"id": "m2p1",
+					"title": "Manzana 2, Parcela 1",
+					"about": "Lorem ipsum",
+					"description": "18,4 x 10m (185m²)",
+					"category": "perimetrales",
+					"thumbnail": "images/thumbs/land.png",
+					"x": "0.2925",
+					"y": "0.5518"
+				},
+				{
+					"id": "m2p2",
+					"title": "Manzana 2, Parcela 2",
+					"about": "Lorem ipsum",
+					"description": "18,4 x 10m (185m²)",
+					"category": "perimetrales",
+					"thumbnail": "images/thumbs/land.png",
+					"x": "0.3155",
+					"y": "0.5335"
+				},
+				{
+					"id": "m2p3",
+					"title": "Manzana 2, Parcela 3",
+					"about": "Lorem ipsum",
+					"description": "18,4 x 10m (185m²)",
+					"category": "perimetrales",
+					"thumbnail": "images/thumbs/land.png",
+					"x": "0.3380",
+					"y": "0.5185"
+				},
+				{
+					"id": "m2p4",
+					"title": "Manzana 2, Parcela 4",
+					"about": "Lorem ipsum",
+					"description": "18,4 x 10m (185m²)",
+					"category": "interior",
+					"thumbnail": "images/thumbs/land.png",
+					"x": "0.3590",
+					"y": "0.4993"
+				},
+				{
+					"id": "m2p5",
+					"title": "Manzana 2, Parcela 5",
+					"about": "Lorem ipsum",
+					"description": "18,4 x 10m (185m²)",
+					"category": "interior",
+					"thumbnail": "images/thumbs/land.png",
+					"x": "0.3795",
+					"y": "0.4818"
+				},
+				{
+					"id": "m2p6",
+					"title": "Manzana 2, Parcela 6",
+					"about": "Lorem ipsum",
+					"description": "18,4 x 10m (185m²)",
+					"category": "interior",
+					"thumbnail": "images/thumbs/land.png",
+					"x": "0.4015",
+					"y": "0.4635"
+				},
+				{
+					"id": "m2p7",
+					"title": "Manzana 2, Parcela 7",
+					"about": "Lorem ipsum",
+					"description": "18,4 x 10m (185m²)",
+					"category": "interior",
+					"thumbnail": "images/thumbs/land.png",
+					"x": "0.4230",
+					"y": "0.4468"
+				},
+				{
+					"id": "m2p8",
+					"title": "Manzana 2, Parcela 8",
+					"about": "Lorem ipsum",
+					"description": "18,4 x 10m (185m²)",
+					"category": "interior",
+					"thumbnail": "images/thumbs/land.png",
+					"x": "0.4455",
+					"y": "0.4326"
+				},
+				{
+					"id": "m2p9",
+					"title": "Manzana 2, Parcela 9",
+					"about": "Lorem ipsum",
+					"description": "18,4 x 10m (185m²)",
+					"category": "interior",
+					"thumbnail": "images/thumbs/land.png",
+					"x": "0.4675",
+					"y": "0.4151"
+				},
+				{
+					"id": "m2p10",
+					"title": "Manzana 2, Parcela 10",
+					"about": "Lorem ipsum",
+					"description": "18,4 x 10m (185m²)",
+					"category": "interior",
+					"thumbnail": "images/thumbs/land.png",
+					"x": "0.4895",
+					"y": "0.3985"
+				},
+				{
+					"id": "m2p11",
+					"title": "Manzana 2, Parcela 11",
+					"about": "Lorem ipsum",
+					"description": "18,4 x 10m (185m²)",
+					"category": "interior",
+					"thumbnail": "images/thumbs/land.png",
+					"x": "0.5120",
+					"y": "0.3843"
+				},
+				{
+					"id": "m2p12",
+					"title": "Manzana 2, Parcela 12",
+					"about": "Lorem ipsum",
+					"description": "18,4 x 10m (185m²)",
+					"category": "interior",
+					"thumbnail": "images/thumbs/land.png",
+					"x": "0.5305",
+					"y": "0.3668"
+				},
+				{
+					"id": "m2p13",
+					"title": "Manzana 2, Parcela 13",
+					"about": "Lorem ipsum",
+					"description": "18,4 x 10m (185m²)",
+					"category": "perimetrales",
+					"thumbnail": "images/thumbs/land.png",
+					"x": "0.5505",
+					"y": "0.3485"
+				},
+				{
+					"id": "m2p14",
+					"title": "Manzana 2, Parcela 14",
+					"about": "Lorem ipsum",
+					"description": "18,4 x 10m (185m²)",
+					"category": "perimetrales",
+					"thumbnail": "images/thumbs/land.png",
+					"x": "0.5760",
+					"y": "0.3318"
+				},
+				{
+					"id": "m2p15",
+					"title": "Manzana 2, Parcela 15",
+					"about": "Lorem ipsum",
+					"description": "18,4 x 10m (185m²)",
+					"category": "perimetrales",
+					"thumbnail": "images/thumbs/land.png",
+					"x": "0.5985",
+					"y": "0.3151"
+				},
+				{
+					"id": "m2p16",
+					"title": "Manzana 2, Parcela 16",
+					"about": "Lorem ipsum",
+					"description": "18,4 x 10m (185m²)",
+					"category": "perimetrales",
+					"thumbnail": "images/thumbs/land.png",
+					"x": "0.6410",
+					"y": "0.3518"
+				},
+				{
+					"id": "m2p17",
+					"title": "Manzana 2, Parcela 17",
+					"about": "Lorem ipsum",
+					"description": "18,4 x 10m (185m²)",
+					"category": "perimetrales",
+					"thumbnail": "images/thumbs/land.png",
+					"x": "0.6200",
+					"y": "0.3701"
+				},
+				{
+					"id": "m2p18",
+					"title": "Manzana 2, Parcela 19",
+					"about": "Lorem ipsum",
+					"description": "18,4 x 10m (185m²)",
+					"category": "perimetrales",
+					"thumbnail": "images/thumbs/land.png",
+					"x": "0.5950",
+					"y": "0.3843"
+				},
+				{
+					"id": "m2p19",
+					"title": "Manzana 2, Parcela 19",
+					"about": "Lorem ipsum",
+					"description": "18,4 x 10m (185m²)",
+					"category": "interior",
+					"thumbnail": "images/thumbs/land.png",
+					"x": "0.5750",
+					"y": "0.4010"
+				},
+				{
+					"id": "m2p20",
+					"title": "Manzana 2, Parcela 20",
+					"about": "Lorem ipsum",
+					"description": "18,4 x 10m (185m²)",
+					"category": "interior",
+					"thumbnail": "images/thumbs/land.png",
+					"x": "0.5545",
+					"y": "0.4168"
+				},
+				{
+					"id": "m2p21",
+					"title": "Manzana 2, Parcela 21",
+					"about": "Lorem ipsum",
+					"description": "18,4 x 10m (185m²)",
+					"category": "interior",
+					"thumbnail": "images/thumbs/land.png",
+					"x": "0.5310",
+					"y": "0.4335"
+				},
+				{
+					"id": "m2p22",
+					"title": "Manzana 2, Parcela 22",
+					"about": "Lorem ipsum",
+					"description": "18,4 x 10m (185m²)",
+					"category": "interior",
+					"thumbnail": "images/thumbs/land.png",
+					"x": "0.5100",
+					"y": "0.4510"
+				},
+				{
+					"id": "m2p23",
+					"title": "Manzana 2, Parcela 23",
+					"about": "Lorem ipsum",
+					"description": "18,4 x 10m (185m²)",
+					"category": "interior",
+					"thumbnail": "images/thumbs/land.png",
+					"x": "0.4885",
+					"y": "0.4685"
+				},
+				{
+					"id": "m2p24",
+					"title": "Manzana 2, Parcela 24",
+					"about": "Lorem ipsum",
+					"description": "18,4 x 10m (185m²)",
+					"category": "interior",
+					"thumbnail": "images/thumbs/land.png",
+					"x": "0.4670",
+					"y": "0.4860"
+				},
+				{
+					"id": "m2p25",
+					"title": "Manzana 2, Parcela 25",
+					"about": "Lorem ipsum",
+					"description": "18,4 x 10m (185m²)",
+					"category": "interior",
+					"thumbnail": "images/thumbs/land.png",
+					"x": "0.4445",
+					"y": "0.5035"
+				},
+				{
+					"id": "m2p26",
+					"title": "Manzana 2, Parcela 26",
+					"about": "Lorem ipsum",
+					"description": "18,4 x 10m (185m²)",
+					"category": "interior",
+					"thumbnail": "images/thumbs/land.png",
+					"x": "0.4210",
+					"y": "0.5195"
+				},
+				{
+					"id": "m2p27",
+					"title": "Manzana 2, Parcela 27",
+					"about": "Lorem ipsum",
+					"description": "18,4 x 10m (185m²)",
+					"category": "interior",
+					"thumbnail": "images/thumbs/land.png",
+					"x": "0.4015",
+					"y": "0.5375"
+				},
+				{
+					"id": "m2p28",
+					"title": "Manzana 2, Parcela 28",
+					"about": "Lorem ipsum",
+					"description": "18,4 x 10m (185m²)",
+					"category": "perimetrales",
+					"thumbnail": "images/thumbs/land.png",
+					"x": "0.3785",
+					"y": "0.5725"
+				},
+				{
+					"id": "m2p29",
+					"title": "Manzana 2, Parcela 29",
+					"about": "Lorem ipsum",
+					"description": "18,4 x 10m (185m²)",
+					"category": "perimetrales",
+					"thumbnail": "images/thumbs/land.png",
+					"x": "0.3580",
+					"y": "0.5720"
+				},
+				{
+					"id": "m2p30",
+					"title": "Manzana 2, Parcela 30",
+					"about": "Lorem ipsum",
+					"description": "18,4 x 10m (185m²)",
+					"category": "perimetrales",
+					"thumbnail": "images/thumbs/land.png",
+					"x": "0.3355",
+					"y": "0.5875"
+				},
+				{
+					"id": "m3p1",
+					"title": "Manzana 3, Parcela 1",
+					"about": "Lorem ipsum",
+					"description": "18,4 x 10m (185m²)",
+					"category": "construidas",
+					"thumbnail": "images/thumbs/house.png",
+					"x": "0.4010",
+					"y": "0.6465"
+				},
+				{
+					"id": "m3p2",
+					"title": "Manzana 3, Parcela 2",
+					"about": "Lorem ipsum",
+					"description": "18,4 x 10m (185m²)",
+					"category": "construidas",
+					"thumbnail": "images/thumbs/house.png",
+					"x": "0.4225",
+					"y": "0.6265"
+				},
+				{
+					"id": "m3p3",
+					"title": "Manzana 3, Parcela 3",
+					"about": "Lorem ipsum",
+					"description": "18,4 x 10m (185m²)",
+					"category": "construidas",
+					"thumbnail": "images/thumbs/house.png",
+					"x": "0.4455",
+					"y": "0.6095"
+				},
+				{
+					"id": "m3p4",
+					"title": "Manzana 3, Parcela 4",
+					"about": "Lorem ipsum",
+					"description": "18,4 x 10m (185m²)",
+					"category": "construidas",
+					"thumbnail": "images/thumbs/house.png",
+					"x": "0.4650",
+					"y": "0.5915"
+				},
+				{
+					"id": "m3p5",
+					"title": "Manzana 3, Parcela 5",
+					"about": "Lorem ipsum",
+					"description": "18,4 x 10m (185m²)",
+					"category": "construidas",
+					"thumbnail": "images/thumbs/house.png",
+					"x": "0.4870",
+					"y": "0.5745"
+				},
+				{
+					"id": "m3p6",
+					"title": "Manzana 3, Parcela 6",
+					"about": "Lorem ipsum",
+					"description": "18,4 x 10m (185m²)",
+					"category": "calle",
+					"thumbnail": "images/thumbs/road.jpg",
+					"x": "0.5090",
+					"y": "0.5605"
+				},
+				{
+					"id": "m3p7",
+					"title": "Manzana 3, Parcela 7",
+					"about": "Lorem ipsum",
+					"description": "18,4 x 10m (185m²)",
+					"category": "interior",
+					"thumbnail": "images/thumbs/land.png",
+					"x": "0.5320",
+					"y": "0.5415"
+				},
+				{
+					"id": "m3p8",
+					"title": "Manzana 3, Parcela 8",
+					"about": "Lorem ipsum",
+					"description": "18,4 x 10m (185m²)",
+					"category": "interior",
+					"thumbnail": "images/thumbs/land.png",
+					"x": "0.5545",
+					"y": "0.5265"
+				},
+				{
+					"id": "m3p9",
+					"title": "Manzana 3, Parcela 9",
+					"about": "Lorem ipsum",
+					"description": "18,4 x 10m (185m²)",
+					"category": "interior",
+					"thumbnail": "images/thumbs/land.png",
+					"x": "0.5740",
+					"y": "0.5080"
+				},
+				{
+					"id": "m3p10",
+					"title": "Manzana 3, Parcela 10",
+					"about": "Lorem ipsum",
+					"description": "18,4 x 10m (185m²)",
+					"category": "interior",
+					"thumbnail": "images/thumbs/land.png",
+					"x": "0.5965",
+					"y": "0.4895"
+				},
+				{
+					"id": "m3p11",
+					"title": "Manzana 3, Parcela 11",
+					"about": "Lorem ipsum",
+					"description": "18,4 x 10m (185m²)",
+					"category": "interior",
+					"thumbnail": "images/thumbs/land.png",
+					"x": "0.6190",
+					"y": "0.4770"
+				},
+				{
+					"id": "m3p12",
+					"title": "Manzana 3, Parcela 12",
+					"about": "Lorem ipsum",
+					"description": "18,4 x 10m (185m²)",
+					"category": "interior",
+					"thumbnail": "images/thumbs/land.png",
+					"x": "0.6400",
+					"y": "0.4570"
+				},
+				{
+					"id": "m3p13",
+					"title": "Manzana 3, Parcela 13",
+					"about": "Lorem ipsum",
+					"description": "18,4 x 10m (185m²)",
+					"category": "interior",
+					"thumbnail": "images/thumbs/land.png",
+					"x": "0.6610",
+					"y": "0.4405"
+				},
+				{
+					"id": "m3p14",
+					"title": "Manzana 3, Parcela 14",
+					"about": "Lorem ipsum",
+					"description": "18,4 x 10m (185m²)",
+					"category": "perimetrales",
+					"thumbnail": "images/thumbs/land.png",
+					"x": "0.6845",
+					"y": "0.4265"
+				},
+				{
+					"id": "m3p15",
+					"title": "Manzana 3, Parcela 15",
+					"about": "Lorem ipsum",
+					"description": "18,4 x 10m (185m²)",
+					"category": "perimetrales",
+					"thumbnail": "images/thumbs/land.png",
+					"x": "0.7045",
+					"y": "0.4070"
+				},
+				{
+					"id": "m3p16",
+					"title": "Manzana 3, Parcela 16",
+					"about": "Lorem ipsum",
+					"description": "18,4 x 10m (185m²)",
+					"category": "perimetrales",
+					"thumbnail": "images/thumbs/land.png",
+					"x": "0.7485",
+					"y": "0.4455"
+				},
+				{
+					"id": "m3p17",
+					"title": "Manzana 3, Parcela 17",
+					"about": "Lorem ipsum",
+					"description": "18,4 x 10m (185m²)",
+					"category": "perimetrales",
+					"thumbnail": "images/thumbs/land.png",
+					"x": "0.7265",
+					"y": "0.4613"
+				},
+				{
+					"id": "m3p18",
+					"title": "Manzana 3, Parcela 19",
+					"about": "Lorem ipsum",
+					"description": "18,4 x 10m (185m²)",
+					"category": "perimetrales",
+					"thumbnail": "images/thumbs/land.png",
+					"x": "0.7050",
+					"y": "0.4805"
+				},
+				{
+					"id": "m3p19",
+					"title": "Manzana 3, Parcela 19",
+					"about": "Lorem ipsum",
+					"description": "18,4 x 10m (185m²)",
+					"category": "interior",
+					"thumbnail": "images/thumbs/land.png",
+					"x": "0.6830",
+					"y": "0.4930"
+				},
+				{
+					"id": "m3p20",
+					"title": "Manzana 3, Parcela 20",
+					"about": "Lorem ipsum",
+					"description": "18,4 x 10m (185m²)",
+					"category": "interior",
+					"thumbnail": "images/thumbs/land.png",
+					"x": "0.6620",
+					"y": "0.5105"
+				},
+				{
+					"id": "m3p21",
+					"title": "Manzana 3, Parcela 21",
+					"about": "Lorem ipsum",
+					"description": "18,4 x 10m (185m²)",
+					"category": "interior",
+					"thumbnail": "images/thumbs/land.png",
+					"x": "0.6405",
+					"y": "0.5295"
+				},
+				{
+					"id": "m3p22",
+					"title": "Manzana 3, Parcela 22",
+					"about": "Lorem ipsum",
+					"description": "18,4 x 10m (185m²)",
+					"category": "interior",
+					"thumbnail": "images/thumbs/land.png",
+					"x": "0.6185",
+					"y": "0.5455"
+				},
+				{
+					"id": "m3p23",
+					"title": "Manzana 3, Parcela 23",
+					"about": "Lorem ipsum",
+					"description": "18,4 x 10m (185m²)",
+					"category": "interior",
+					"thumbnail": "images/thumbs/land.png",
+					"x": "0.5975",
+					"y": "0.5640"
+				},
+				{
+					"id": "m3p24",
+					"title": "Manzana 3, Parcela 24",
+					"about": "Lorem ipsum",
+					"description": "18,4 x 10m (185m²)",
+					"category": "interior",
+					"thumbnail": "images/thumbs/land.png",
+					"x": "0.5750",
+					"y": "0.5780"
+				},
+				{
+					"id": "m3p25",
+					"title": "Manzana 3, Parcela 25",
+					"about": "Lorem ipsum",
+					"description": "18,4 x 10m (185m²)",
+					"category": "calle",
+					"thumbnail": "images/thumbs/road.jpg",
+					"x": "0.5525",
+					"y": "0.5965"
+				},
+				{
+					"id": "m3p26",
+					"title": "Manzana 3, Parcela 26",
+					"about": "Lorem ipsum",
+					"description": "18,4 x 10m (185m²)",
+					"category": "construidas",
+					"thumbnail": "images/thumbs/house.png",
+					"x": "0.5310",
+					"y": "0.6180"
+				},
+				{
+					"id": "m3p27",
+					"title": "Manzana 3, Parcela 27",
+					"about": "Lorem ipsum",
+					"description": "18,4 x 10m (185m²)",
+					"category": "construidas",
+					"thumbnail": "images/thumbs/house.png",
+					"x": "0.5100",
+					"y": "0.6135"
+				},
+				{
+					"id": "m3p28",
+					"title": "Manzana 3, Parcela 28",
+					"about": "Lorem ipsum",
+					"description": "18,4 x 10m (185m²)",
+					"category": "construidas",
+					"thumbnail": "images/thumbs/house.png",
+					"x": "0.4870",
+					"y": "0.6440"
+				},
+				{
+					"id": "m3p29",
+					"title": "Manzana 3, Parcela 29",
+					"about": "Lorem ipsum",
+					"description": "18,4 x 10m (185m²)",
+					"category": "construidas",
+					"thumbnail": "images/thumbs/house.png",
+					"x": "0.4660",
+					"y": "0.6630"
+				},
+				{
+					"id": "m3p30",
+					"title": "Manzana 3, Parcela 30",
+					"about": "Lorem ipsum",
+					"description": "18,4 x 10m (185m²)",
+					"category": "construidas",
+					"thumbnail": "images/thumbs/house.png",
+					"x": "0.4445",
+					"y": "0.6815"
+				},
+				{
+					"id": "m4p1",
+					"title": "Manzana 4, Parcela 1",
+					"about": "Lorem ipsum",
+					"description": "18,4 x 10m (185m²)",
+					"category": "construidas",
+					"thumbnail": "images/thumbs/house.png",
+					"x": "0.5060",
+					"y": "0.7370"
+				},
+				{
+					"id": "m4p2",
+					"title": "Manzana 4, Parcela 2",
+					"about": "Lorem ipsum",
+					"description": "18,4 x 10m (185m²)",
+					"category": "construidas",
+					"thumbnail": "images/thumbs/house.png",
+					"x": "0.5310",
+					"y": "0.7190"
+				},
+				{
+					"id": "m4p3",
+					"title": "Manzana 4, Parcela 3",
+					"about": "Lorem ipsum",
+					"description": "18,4 x 10m (185m²)",
+					"category": "construidas",
+					"thumbnail": "images/thumbs/house.png",
+					"x": "0.5540",
+					"y": "0.7020"
+				},
+				{
+					"id": "m4p4",
+					"title": "Manzana 4, Parcela 4",
+					"about": "Lorem ipsum",
+					"description": "18,4 x 10m (185m²)",
+					"category": "construidas",
+					"thumbnail": "images/thumbs/house.png",
+					"x": "0.5735",
+					"y": "0.6855"
+				},
+				{
+					"id": "m4p5",
+					"title": "Manzana 4, Parcela 5",
+					"about": "Lorem ipsum",
+					"description": "18,4 x 10m (185m²)",
+					"category": "construidas",
+					"thumbnail": "images/thumbs/house.png",
+					"x": "0.5945",
+					"y": "0.6705"
+				},
+				{
+					"id": "m4p6",
+					"title": "Manzana 4, Parcela 6",
+					"about": "Lorem ipsum",
+					"description": "18,4 x 10m (185m²)",
+					"category": "calle",
+					"thumbnail": "images/thumbs/road.jpg",
+					"x": "0.6185",
+					"y": "0.6545"
+				},
+				{
+					"id": "m4p7",
+					"title": "Manzana 4, Parcela 7",
+					"about": "Lorem ipsum",
+					"description": "18,4 x 10m (185m²)",
+					"category": "interior",
+					"thumbnail": "images/thumbs/land.png",
+					"x": "0.6400",
+					"y": "0.6365"
+				},
+				{
+					"id": "m4p8",
+					"title": "Manzana 4, Parcela 8",
+					"about": "Lorem ipsum",
+					"description": "18,4 x 10m (185m²)",
+					"category": "interior",
+					"thumbnail": "images/thumbs/land.png",
+					"x": "0.6620",
+					"y": "0.6170"
+				},
+				{
+					"id": "m4p9",
+					"title": "Manzana 4, Parcela 9",
+					"about": "Lorem ipsum",
+					"description": "18,4 x 10m (185m²)",
+					"category": "interior",
+					"thumbnail": "images/thumbs/land.png",
+					"x": "0.6805",
+					"y": "0.6015"
+				},
+				{
+					"id": "m4p10",
+					"title": "Manzana 4, Parcela 10",
+					"about": "Lorem ipsum",
+					"description": "18,4 x 10m (185m²)",
+					"category": "interior",
+					"thumbnail": "images/thumbs/land.png",
+					"x": "0.7030",
+					"y": "0.5835"
+				},
+				{
+					"id": "m4p11",
+					"title": "Manzana 4, Parcela 11",
+					"about": "Lorem ipsum",
+					"description": "18,4 x 10m (185m²)",
+					"category": "interior",
+					"thumbnail": "images/thumbs/land.png",
+					"x": "0.7245",
+					"y": "0.5675"
+				},
+				{
+					"id": "m4p12",
+					"title": "Manzana 4, Parcela 12",
+					"about": "Lorem ipsum",
+					"description": "18,4 x 10m (185m²)",
+					"category": "interior",
+					"thumbnail": "images/thumbs/land.png",
+					"x": "0.7460",
+					"y": "0.5510"
+				},
+				{
+					"id": "m4p13",
+					"title": "Manzana 4, Parcela 13",
+					"about": "Lorem ipsum",
+					"description": "18,4 x 10m (185m²)",
+					"category": "perimetrales",
+					"thumbnail": "images/thumbs/land.png",
+					"x": "0.7705",
+					"y": "0.5400"
+				},
+				{
+					"id": "m4p14",
+					"title": "Manzana 4, Parcela 14",
+					"about": "Lorem ipsum",
+					"description": "18,4 x 10m (185m²)",
+					"category": "perimetrales",
+					"thumbnail": "images/thumbs/land.png",
+					"x": "0.7900",
+					"y": "0.5170"
+				},
+				{
+					"id": "m4p15",
+					"title": "Manzana 4, Parcela 15",
+					"about": "Lorem ipsum",
+					"description": "18,4 x 10m (185m²)",
+					"category": "perimetrales",
+					"thumbnail": "images/thumbs/land.png",
+					"x": "0.8115",
+					"y": "0.5025"
+				},
+				{
+					"id": "m4p16",
+					"title": "Manzana 4, Parcela 16",
+					"about": "Lorem ipsum",
+					"description": "18,4 x 10m (185m²)",
+					"category": "perimetrales",
+					"thumbnail": "images/thumbs/land.png",
+					"x": "0.8585",
+					"y": "0.5380"
+				},
+				{
+					"id": "m4p17",
+					"title": "Manzana 4, Parcela 17",
+					"about": "Lorem ipsum",
+					"description": "18,4 x 10m (185m²)",
+					"category": "perimetrales",
+					"thumbnail": "images/thumbs/land.png",
+					"x": "0.8350",
+					"y": "0.5595"
+				},
+				{
+					"id": "m4p18",
+					"title": "Manzana 4, Parcela 19",
+					"about": "Lorem ipsum",
+					"description": "18,4 x 10m (185m²)",
+					"category": "perimetrales",
+					"thumbnail": "images/thumbs/land.png",
+					"x": "0.8115",
+					"y": "0.5725"
+				},
+				{
+					"id": "m4p19",
+					"title": "Manzana 4, Parcela 19",
+					"about": "Lorem ipsum",
+					"description": "18,4 x 10m (185m²)",
+					"category": "interior",
+					"thumbnail": "images/thumbs/land.png",
+					"x": "0.7910",
+					"y": "0.5920"
+				},
+				{
+					"id": "m4p20",
+					"title": "Manzana 4, Parcela 20",
+					"about": "Lorem ipsum",
+					"description": "18,4 x 10m (185m²)",
+					"category": "interior",
+					"thumbnail": "images/thumbs/land.png",
+					"x": "0.7695",
+					"y": "0.6080"
+				},
+				{
+					"id": "m4p21",
+					"title": "Manzana 4, Parcela 21",
+					"about": "Lorem ipsum",
+					"description": "18,4 x 10m (185m²)",
+					"category": "interior",
+					"thumbnail": "images/thumbs/land.png",
+					"x": "0.7500",
+					"y": "0.6575"
+				},
+				{
+					"id": "m4p22",
+					"title": "Manzana 4, Parcela 22",
+					"about": "Lorem ipsum",
+					"description": "18,4 x 10m (185m²)",
+					"category": "interior",
+					"thumbnail": "images/thumbs/land.png",
+					"x": "0.7245",
+					"y": "0.6405"
+				},
+				{
+					"id": "m4p23",
+					"title": "Manzana 4, Parcela 23",
+					"about": "Lorem ipsum",
+					"description": "18,4 x 10m (185m²)",
+					"category": "interior",
+					"thumbnail": "images/thumbs/land.png",
+					"x": "0.7040",
+					"y": "0.6585"
+				},
+				{
+					"id": "m4p24",
+					"title": "Manzana 4, Parcela 24",
+					"about": "Lorem ipsum",
+					"description": "18,4 x 10m (185m²)",
+					"category": "interior",
+					"thumbnail": "images/thumbs/land.png",
+					"x": "0.6825",
+					"y": "0.6750"
+				},
+				{
+					"id": "m4p25",
+					"title": "Manzana 4, Parcela 25",
+					"about": "Lorem ipsum",
+					"description": "18,4 x 10m (185m²)",
+					"category": "calle",
+					"thumbnail": "images/thumbs/road.jpg",
+					"x": "0.6610",
+					"y": "0.6910"
+				},
+				{
+					"id": "m4p26",
+					"title": "Manzana 4, Parcela 26",
+					"about": "Lorem ipsum",
+					"description": "18,4 x 10m (185m²)",
+					"category": "construidas",
+					"thumbnail": "images/thumbs/house.png",
+					"x": "0.6390",
+					"y": "0.7075"
+				},
+				{
+					"id": "m4p27",
+					"title": "Manzana 4, Parcela 27",
+					"about": "Lorem ipsum",
+					"description": "18,4 x 10m (185m²)",
+					"category": "construidas",
+					"thumbnail": "images/thumbs/house.png",
+					"x": "0.6170",
+					"y": "0.7220"
+				},
+				{
+					"id": "m4p28",
+					"title": "Manzana 4, Parcela 28",
+					"about": "Lorem ipsum",
+					"description": "18,4 x 10m (185m²)",
+					"category": "construidas",
+					"thumbnail": "images/thumbs/house.png",
+					"x": "0.5975",
+					"y": "0.7415"
+				},
+				{
+					"id": "m4p29",
+					"title": "Manzana 4, Parcela 29",
+					"about": "Lorem ipsum",
+					"description": "18,4 x 10m (185m²)",
+					"category": "construidas",
+					"thumbnail": "images/thumbs/house.png",
+					"x": "0.5735",
+					"y": "0.7545"
+				},
+				{
+					"id": "m4p30",
+					"title": "Manzana 4, Parcela 30",
+					"about": "Lorem ipsum",
+					"description": "18,4 x 10m (185m²)",
+					"category": "construidas",
+					"thumbnail": "images/thumbs/house.png",
+					"x": "0.5525",
+					"y": "0.7790"
+				}
+			]
+		}
+	]
+}
