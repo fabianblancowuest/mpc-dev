@@ -461,16 +461,19 @@ input[type="radio"] {
   font-size: 1.5rem;
   font-weight: bold;
   letter-spacing: 1px;
-  margin: 1em auto;
+  margin: 1rem auto;
   text-transform: uppercase;
 }
 
 .subtitulo-rol {
+  font-size: 1.1rem;
   display: block;
+  text-transform: uppercase;
   text-align: center;
-  font-weight: bold;
-  /* letter-spacing: 1px; */
-  margin: 1em auto;
+  font-weight: 500;
+  /* font-weight: bold; */
+  letter-spacing: 1px;
+  margin: 0.3em auto;
 }
 
 .panel-talon-seleccion {

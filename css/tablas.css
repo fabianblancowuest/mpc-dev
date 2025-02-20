@@ -244,11 +244,6 @@ th {
   font-size: 12px;
 }
 
-.subtitulo-rol {
-  font-size: 16px;
-  margin: 0;
-}
-
 @media print {
   .tabla-adhesiones tr:hover,
   .venta-vendedor-periodo tr:hover {
