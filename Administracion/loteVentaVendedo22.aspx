@@ -226,8 +226,11 @@
 
 
         <div class="row">
-            <asp:Button ID="obutAlta" runat="server" Text="Nueva adhesion"
-                CssClass="btn btn-basic btn-success" />
+            <asp:Button ID="obutAlta" runat="server" Text="Nueva adhesion - Primer recibo" Visible="false"  />
+
+            <asp:Button ID="obutCompletaDatosComprador" runat="server" Text="Completa Datos Comprador" Visible="false" />
+            <asp:Button ID="obutNuevoReciboAdhesion" runat="server" Text="Nuevo recibo Adhesion" Visible="false"  />
+            <asp:Button ID="obutCargarImagenes" runat="server" Text="Subir imagenes documentacion " Visible="false"  />
 
         </div>
 
@@ -408,29 +411,7 @@
             </asp:Panel>
 
             <asp:Panel ID="PanelRecibo" runat="server" Visible="false">
-                <div class="form-group">
-
-
-
-
-
-
-                    <asp:Label ID="olblLOTEVENTAFECHAVISITA" runat="server"
-                        Text="Fecha de Venta:  ingresar DD/MM/AAAA" CssClass="control-label">
-                    </asp:Label>
-                    <asp:TextBox ID="otxtLOTEVENTAFECHAVISITA" CssClass="" runat="server"></asp:TextBox>
-
-                    <asp:Calendar ID="Calendar1" runat="server"></asp:Calendar>
-                </div>
-                <div class="form-group">
-                    <asp:Label ID="Label10" runat="server"
-                        Text="Fecha de Cancelacion :  ingresar DD/MM/AAAA" CssClass="control-label">
-                    </asp:Label>
-                    <asp:TextBox ID="otxtLOTEVENTAFECHACANCELACION" CssClass="" runat="server">
-                    </asp:TextBox>
-
-                    <asp:Calendar ID="Calendar2" runat="server"></asp:Calendar>
-                </div>
+               
                 <div class="form-group">
                     <asp:Label ID="olblCLIENTE01NOMBRE" runat="server" Text="1 - Sr / Sra.:"
                         CssClass="control-label"></asp:Label>

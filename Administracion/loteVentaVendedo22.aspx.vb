@@ -20,14 +20,8 @@ Partial Class STRSYSTEM_Administracion_LOTEVENTAVENDEDOR22
 
 
 
-            olblLOTEVENTATitulo.Text = "                                                                                                                                                                                                        "
-            'otxtLOTEVENTAFECHAVISITA.Attributes.Add("readonly", "readonly")
-            otxtLOTEVENTAFECHAVISITA.Text = Left(Date.Today.ToString, 10)
-            otxtLOTEVENTAFECHACANCELACION.Text = Left(Date.Today.ToString, 10)
-            'Tareas que se realizan en esta pagina por primer y única vez
-
-            'STRSYSTEM.accesoRolUsuarioActividadRegistro(Session("session_idOperador"), Session("session_paginaActual")) 
-
+            olblLOTEVENTATitulo.Text = ""
+           
         End If
     End Sub
 
@@ -42,9 +36,6 @@ Partial Class STRSYSTEM_Administracion_LOTEVENTAVENDEDOR22
         obutAltaAbandonada.Text = "Abandona Alta"
         otxtLOTEVENTACODIGO.Text = ""
         otxtLOTEVENTADESCRIPCION.Text = ""
-        otxtLOTEVENTAFECHAVISITA.Text = ""
-        otxtLOTEVENTAFECHACANCELACION.Text = ""
-
         otxtLOTEVENTAADHESIONMONTO.Text = ""
         otxtLOTEVENTACUOTAMONTO.TEXT = ""
         otxtCLIENTE01NOMBRE.Text = ""
@@ -114,8 +105,6 @@ Partial Class STRSYSTEM_Administracion_LOTEVENTAVENDEDOR22
             oddlBARRIOLOTEOperador.SelectedValue = ogvLOTEVENTA.SelectedDataKey.Item("IDBARRIOLOTE")
             otxtLOTEVENTACODIGO.Text = ogvLOTEVENTA.SelectedDataKey.Item("LOTEVENTACODIGO")
             otxtLOTEVENTADESCRIPCION.Text = ogvLOTEVENTA.SelectedDataKey.Item("LOTEVENTADESCRIPCION")
-              otxtLOTEVENTAFECHAVISITA.Text = ogvLOTEVENTA.SelectedDataKey.Item("LOTEVENTAFECHAVISITA")
-            otxtLOTEVENTAFECHACANCELACION.Text = ogvLOTEVENTA.SelectedDataKey.Item("LOTEVENTAFECHACANCELACION")
             otxtLOTEVENTAADHESIONMONTO.Text = ogvLOTEVENTA.SelectedDataKey.Item("LOTEVENTAADHESIONMONTO")
             otxtLOTEVENTACUOTAMONTO.Text = ogvLOTEVENTA.SelectedDataKey.Item("LOTEVENTACUOTAMONTO")
 
@@ -134,16 +123,15 @@ Partial Class STRSYSTEM_Administracion_LOTEVENTAVENDEDOR22
             OTXTLOTEPRECIOBC.Text = ogvLOTEVENTA.SelectedDataKey.Item("LOTEPRECIOBC")
             OTXTCUOTABC.Text = ogvLOTEVENTA.SelectedDataKey.Item("CUOTABC")
             olblIDLOTEVENTA.Text = ogvLOTEVENTA.SelectedDataKey.Item("IDLOTEVENTA")
-            If ogvLOTEVENTA.Rows.Count = 0 Then
-                obutAlta.Visible = True
-            Else
-                obutAlta.Visible = false
-
-            End If
-
-
+            obutAlta.Enabled = False
             Panel1.Visible = False
             PanelAlta.Visible = True
+            PanelRecibo.Visible = True
+            PanelReserva.Visible = False
+            PanelReciboAsigna.Visible = True
+            PanelCuotaValor.Visible = True
+
+
 
 
         Else
@@ -209,8 +197,15 @@ Partial Class STRSYSTEM_Administracion_LOTEVENTAVENDEDOR22
 
         If ogvLOTEVENTA.Rows.Count >= 1 Then
             obutAlta.Visible = False
+            obutCargarImagenes.Visible = True
+            obutCompletaDatosComprador.Visible = True
+            obutNuevoReciboAdhesion.Visible = True
+
         Else
             obutAlta.Visible = True
+            obutCargarImagenes.Visible = False
+            obutCompletaDatosComprador.Visible = False
+            obutNuevoReciboAdhesion.Visible = False
 
         End If
         oddlBarrioHabilitadoSelecciona.Visible = False
@@ -273,16 +268,9 @@ Partial Class STRSYSTEM_Administracion_LOTEVENTAVENDEDOR22
             connection.Close()
         End Using
     End Sub
-    Protected Sub Calendar1_SelectionChanged(sender As Object, e As EventArgs) Handles Calendar1.SelectionChanged
-        otxtLOTEVENTAFECHAVISITA.Text = Calendar1.SelectedDate
+     
 
-    End Sub
-
-    Protected Sub Calendar2_SelectionChanged(sender As Object, e As EventArgs) Handles Calendar2.SelectionChanged
-        otxtLOTEVENTAFECHACANCELACION.Text = Calendar2.SelectedDate
-
-    End Sub
-
+     
     Protected Sub oddlBarrioHabilitadoSelecciona_SelectedIndexChanged(sender As Object, e As EventArgs) Handles oddlBarrioHabilitadoSelecciona.SelectedIndexChanged
         Session.Item("idBarrio") = oddlBarrioHabilitadoSelecciona.SelectedValue
 
