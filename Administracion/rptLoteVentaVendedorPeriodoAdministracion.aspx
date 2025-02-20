@@ -40,13 +40,15 @@
                     </SelectParameters>
                 </asp:SqlDataSource>
 
-                <!-- Icono imprimir -->
-                <button class="btn btn-light btn-imprimir no-imprimir">Imprimir <i
-                        class="bi bi-printer-fill"></i></button>
-                <button class="btn btn-light no-imprimir" id="btn-espaciar">Centrar <i
-                        class="bi bi-distribute-horizontal"></i></button>
-                <button class="btn btn-light no-imprimir" id="btn-resaltar">Resaltar Totales <i
-                        class="bi bi-highlighter"></i></button>
+                <!-- Botones menú -->
+                <div id="botones-menu">
+                    <button class="btn btn-light btn-imprimir no-imprimir">Imprimir <i
+                            class="bi bi-printer-fill"></i></button>
+                    <button class="btn btn-light no-imprimir" id="btn-espaciar">Centrar <i
+                            class="bi bi-distribute-horizontal"></i></button>
+                    <button class="btn btn-light no-imprimir" id="btn-resaltar">Resaltar Totales <i
+                            class="bi bi-highlighter"></i></button>
+                </div>
             </div>
             <asp:Panel ID="PanelPrincipal" runat="server">
                 <div class="venta-vendedor-periodo contenedor-responsive" id="ventaVendedorPeriodo">
@@ -138,7 +140,7 @@
                 </div>
 
                 <asp:Label ID="Label4" runat="server" Text="Operaciones Señadas" CssClass="subtitulo-rol"></asp:Label>
-                <div class="venta-vendedor-periodo">
+                <div class="venta-vendedor-periodo contenedor-responsive">
                     <asp:SqlDataSource ID="odsrptLoteVentaVendedorIdPeriodoAdhesionPendiente" runat="server"
                         ConnectionString="<%$ ConnectionStrings:STRSYSTEM %>"
                         SelectCommand="rptLoteVentaVendedorIdPeriodoAdhesionPendiente"
@@ -204,7 +206,7 @@
                     <asp:Label ID="olblCLIENTE01NOMBRE" runat="server" Text="" style="font-weight: bold;"></asp:Label>
                 </div>
 
-                <div class="panel-documentacion">
+                <div class="panel-documentacion" id="panelDoc">
                     <uc1:loteDocumentacion runat="server" ID="persona1DocumentoAnverso" />
                     <uc1:loteDocumentacion runat="server" ID="persona1DocumentoReverso" />
                     <uc1:loteDocumentacion runat="server" ID="persona2DocumentoAnverso" />
@@ -236,10 +238,21 @@
                     })
 
                     const tablaVPeriodo = document.getElementById("ventaVendedorPeriodo");
+                    const panelDocumentacion = document.getElementById("panelDoc");
                     const filas = document.querySelectorAll("tr");
                     const columnas = tablaVPeriodo.querySelectorAll("td");
 
                     const btnEspaciar = document.getElementById("btn-espaciar");
+
+                    const menuBotones = document.getElementById("botones-menu");
+
+                    console.log(panelDocumentacion)
+
+                    if (tablaVPeriodo) {
+                        menuBotones.style.display = "block";
+                    } else if (panelDocumentacion) {
+                        menuBotones.style.backgroundColor = "red";
+                    }
 
                     btnEspaciar.addEventListener("click", (event) => {
 

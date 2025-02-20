@@ -1,10 +1,10 @@
 .navbar {
-	font-family: Montserrat, sans-serif;
-	margin-bottom: 0;
-	background-color: #2D2D30;
-	border: 0;
-	font-size: 11px !important;
-	opacity: 0.9;
-	padding: .5em 0;
-	position: static;
+  font-family: Montserrat, sans-serif;
+  margin-bottom: 0;
+  background-color: #2d2d30;
+  border: 0;
+  font-size: 11px !important;
+  opacity: 0.9;
+  padding: 0.5em 0;
+  position: static;
 }

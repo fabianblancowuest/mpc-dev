@@ -209,8 +209,6 @@
                         <asp:BoundField DataField="IDLOTETIPO" HeaderText="Tipo de Lote"
                             InsertVisible="False" ReadOnly="True" SortExpression="IDLOTETIPO"
                             Visible="False" />
-                        <asp:BoundField DataField="loteDimensionDescripcion" HeaderText="Dimension"
-                            SortExpression="loteDimensionDescripcion" />
                         <asp:BoundField DataField="cuotasCantidadDescripcion"
                             HeaderText="Cantidad Cuotas" SortExpression="cuotasCantidadDescripcion" />
                         <asp:BoundField DataField="loteTipoDescripcion" HeaderText="Tipo Lote"
@@ -220,13 +218,15 @@
                 </asp:GridView>
 
             </div>
+            <asp:Label ID="Label24" runat="server" Text="Filas recuperadas : "></asp:Label>
+            <asp:Label ID="olblGrillaColumna" runat="server" Text="" Font-Bold="true" ></asp:Label>
         </div>
         <br />
         <br />
 
 
         <div class="row">
-            <asp:Button ID="obutAlta" runat="server" Text="Nuevo Registro"
+            <asp:Button ID="obutAlta" runat="server" Text="Nueva adhesion"
                 CssClass="btn btn-basic btn-success" />
 
         </div>
@@ -240,7 +240,7 @@
                 <asp:Label ID="olblBarrioManzanaParcelaSeleccionado" runat="server" Text="" Font-Bold="true" Font-Size="Large"></asp:Label>
             </div>
             <div>
-                <asp:Label ID="olblIDBarrioLoteOperador" runat="server" Text="xxxx" Visible="false"></asp:Label>
+                <asp:Label ID="olblIDBarrioLoteOperador" runat="server" Text="xxxx" Visible="True"></asp:Label>
 
             </div>
             <div>

@@ -129,13 +129,22 @@ Partial Class STRSYSTEM_Administracion_LOTEVENTAVENDEDOR22
             otxtCLIENTE02TELEFONO.Text = ogvLOTEVENTA.SelectedDataKey.Item("CLIENTE02TELEFONO")
             oddlCLIENTEIVA.SelectedValue = ogvLOTEVENTA.SelectedDataKey.Item("IDCLIENTEIVA")
             otxtCLIENTECUIT.Text = ogvLOTEVENTA.SelectedDataKey.Item("CLIENTECUIT")
-                 oddlCUOTASCANTIDAD.SelectedValue = ogvLOTEVENTA.SelectedDataKey.Item("IDCUOTASCANTIDAD")
+            oddlCUOTASCANTIDAD.SelectedValue = ogvLOTEVENTA.SelectedDataKey.Item("IDCUOTASCANTIDAD")
 
             OTXTLOTEPRECIOBC.Text = ogvLOTEVENTA.SelectedDataKey.Item("LOTEPRECIOBC")
             OTXTCUOTABC.Text = ogvLOTEVENTA.SelectedDataKey.Item("CUOTABC")
             olblIDLOTEVENTA.Text = ogvLOTEVENTA.SelectedDataKey.Item("IDLOTEVENTA")
+            If ogvLOTEVENTA.Rows.Count = 0 Then
+                obutAlta.Visible = True
+            Else
+                obutAlta.Visible = false
+
+            End If
+
+
             Panel1.Visible = False
             PanelAlta.Visible = True
+
 
         Else
             olblMensajeValidacion.Text = "No pueden editarse los datos de las ventas de otro vendedor"
@@ -168,11 +177,11 @@ Partial Class STRSYSTEM_Administracion_LOTEVENTAVENDEDOR22
                 cmd.Parameters.Add("@IDBARRIO", Data.SqlDbType.Int).SqlValue = oddlBarrioHabilitadoSelecciona.SelectedValue
                 cmd.Parameters.Add("@IDBARRIOLOTE", Data.SqlDbType.Int).SqlValue = oddlBARRIOLOTEOperador.SelectedValue
                 cmd.Parameters.Add("@IDVENDEDOR", Data.SqlDbType.Int).SqlValue = Session("session_idOperador")
-                cmd.Parameters.Add("@LOTEVENTAADHESIONMONTO", Data.SqlDbType.Char).SqlValue = olblLOTEVENTAADHESIONMONTO.Text
-                cmd.Parameters.Add("@LOTEVENTACUOTAMONTO", Data.SqlDbType.Char).SqlValue = otxtLOTEVENTACUOTAMONTO.Text
+                cmd.Parameters.Add("@LOTEVENTAADHESIONMONTO", Data.SqlDbType.Char).SqlValue = otxtLOTEVENTAADHESIONMONTO.Text.Replace(",", ".")
+                cmd.Parameters.Add("@LOTEVENTACUOTAMONTO", Data.SqlDbType.Char).SqlValue = otxtLOTEVENTACUOTAMONTO.Text.Replace(",", ".")
                 cmd.Parameters.Add("@IDCUOTASCANTIDAD", Data.SqlDbType.Int).SqlValue = oddlCUOTASCANTIDAD.SelectedValue
-                cmd.Parameters.Add("@LOTEPRECIOBC", Data.SqlDbType.Char).SqlValue = OTXTLOTEPRECIOBC.Text
-                cmd.Parameters.Add("@CUOTABC", Data.SqlDbType.Char).SqlValue = OTXTCUOTABC.Text
+                cmd.Parameters.Add("@LOTEPRECIOBC", Data.SqlDbType.Char).SqlValue = OTXTLOTEPRECIOBC.Text.Replace(",", ".")
+                cmd.Parameters.Add("@CUOTABC", Data.SqlDbType.Char).SqlValue = OTXTCUOTABC.Text.Replace(",", ".")
 
 
                 reader = cmd.ExecuteReader
@@ -185,7 +194,7 @@ Partial Class STRSYSTEM_Administracion_LOTEVENTAVENDEDOR22
                     End While
                 End If
             Catch ex As Exception
-                olblReciboValidacionMensaje.Text = "error en alta de venta lote " + ex.Message
+                olblReciboValidacionMensaje.Text = "error en alta de venta lote ////" + ex.Message + "/// BARRIO " + oddlBarrioHabilitadoSelecciona.SelectedValue.ToString + " Id Barrio Lote " + oddlBARRIOLOTEOperador.SelectedValue.ToString + " Monto adhesion " + otxtLOTEVENTAADHESIONMONTO.Text.Replace(",", ".") + "  Monto de cuota " + otxtLOTEVENTACUOTAMONTO.Text.Replace(",", ".") + " Precio Lote  BC " + OTXTLOTEPRECIOBC.Text.Replace(",", ".") + "  Cuota BC " + OTXTCUOTABC.Text.Replace(",", ".")
             End Try
             connection.Close()
         End Using
@@ -194,6 +203,16 @@ Partial Class STRSYSTEM_Administracion_LOTEVENTAVENDEDOR22
 
     Protected Sub oddlBARRIOLOTEOperador_SelectedIndexChanged(sender As Object, e As EventArgs) Handles oddlBARRIOLOTEOperador.SelectedIndexChanged
         Session.Item("idBarrioLote") = oddlBARRIOLOTEOperador.SelectedValue
+        ogvLOTEVENTA.DataBind()
+        olblGrillaColumna.Text = ogvLOTEVENTA.Rows.Count.ToString
+
+
+        If ogvLOTEVENTA.Rows.Count >= 1 Then
+            obutAlta.Visible = False
+        Else
+            obutAlta.Visible = True
+
+        End If
         oddlBarrioHabilitadoSelecciona.Visible = False
         oddlBarrioHabilitadoManzanaSelecciona.Visible = False
         oddlBARRIOLOTEOperador.Enabled = False
@@ -243,13 +262,12 @@ Partial Class STRSYSTEM_Administracion_LOTEVENTAVENDEDOR22
                         otxtLoteTipoDescripcion.Text = reader.Item("loteTipoDescripcion")
                         olblloteVentaAdhesionMontoALetras.Text = reader.Item("loteVentaAdhesionMontoALetras")
                         olblBarrioManzanaParcelaSeleccionado.Text = reader.Item("barrioManzanaLoteSeleccionado")
-                        OTXTCUOTABC.Text = "88888888"
-
+                        
 
                     End While
                 End If
             Catch ex As Exception
-                OTXTCUOTABC.Text = ex.Message
+
                 olblGestionDescripcion.Text = ex.Message
             End Try
             connection.Close()
@@ -418,9 +436,7 @@ Partial Class STRSYSTEM_Administracion_LOTEVENTAVENDEDOR22
 
     Protected Sub obutReciboConfirmaAlta_Click(sender As Object, e As EventArgs) Handles obutReciboConfirmaAlta.Click
         loteVentaAltaConPrimerRecibo()
-         
-
-        'loteVentaReciboAsienta()
+        loteVentaReciboAsienta()
 
     End Sub
 

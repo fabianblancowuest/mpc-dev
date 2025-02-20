@@ -7,9 +7,8 @@
 
     <head runat="server">
         <title>Ingreso de Usuario</title>
-        <meta name="viewport" content="width=device-width, initial-scale=1" />
-        <link rel="stylesheet" href="./css/bootstrap.min.css" type="text/css" />
-        <link rel="stylesheet" href="./css/bootstrap-pachu.css" type="text/css" />
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <link href="http://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet" type="text/css" />
         <link href="http://fonts.googleapis.com/css?family=Lato" rel="stylesheet" type="text/css" />
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js" type="text/jscript"></script>
@@ -173,7 +172,7 @@
                     </Columns>
                 </asp:GridView>
                 <asp:Button ID="obutAccesocorrectoLogout" runat="server" Text="Salir"
-                    CssClass="btn btn-primary btn-basic" />
+                    CssClass="btn btn-danger btn-basic" />
 
 
             </asp:Panel>
