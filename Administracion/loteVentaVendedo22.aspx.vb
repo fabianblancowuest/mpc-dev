@@ -34,8 +34,6 @@ Partial Class STRSYSTEM_Administracion_LOTEVENTAVENDEDOR22
         olblIDLOTEVENTA.Text = "0"
         obutAltaConfirmada.Text = "Confirma Alta "
         obutAltaAbandonada.Text = "Abandona Alta"
-        otxtLOTEVENTACODIGO.Text = ""
-        otxtLOTEVENTADESCRIPCION.Text = ""
         otxtLOTEVENTAADHESIONMONTO.Text = ""
         otxtLOTEVENTACUOTAMONTO.TEXT = ""
         otxtCLIENTE01NOMBRE.Text = ""
@@ -103,8 +101,6 @@ Partial Class STRSYSTEM_Administracion_LOTEVENTAVENDEDOR22
             obutAltaAbandonada.Text = "Abandona Modificacion"
             olblIDLOTEVENTA.Text = ogvLOTEVENTA.SelectedDataKey.Item("IDLOTEVENTA")
             oddlBARRIOLOTEOperador.SelectedValue = ogvLOTEVENTA.SelectedDataKey.Item("IDBARRIOLOTE")
-            otxtLOTEVENTACODIGO.Text = ogvLOTEVENTA.SelectedDataKey.Item("LOTEVENTACODIGO")
-            otxtLOTEVENTADESCRIPCION.Text = ogvLOTEVENTA.SelectedDataKey.Item("LOTEVENTADESCRIPCION")
             otxtLOTEVENTAADHESIONMONTO.Text = ogvLOTEVENTA.SelectedDataKey.Item("LOTEVENTAADHESIONMONTO")
             otxtLOTEVENTACUOTAMONTO.Text = ogvLOTEVENTA.SelectedDataKey.Item("LOTEVENTACUOTAMONTO")
 
@@ -118,17 +114,21 @@ Partial Class STRSYSTEM_Administracion_LOTEVENTAVENDEDOR22
             otxtCLIENTE02TELEFONO.Text = ogvLOTEVENTA.SelectedDataKey.Item("CLIENTE02TELEFONO")
             oddlCLIENTEIVA.SelectedValue = ogvLOTEVENTA.SelectedDataKey.Item("IDCLIENTEIVA")
             otxtCLIENTECUIT.Text = ogvLOTEVENTA.SelectedDataKey.Item("CLIENTECUIT")
+            oddlCUOTASCANTIDAD.DataBind()
             oddlCUOTASCANTIDAD.SelectedValue = ogvLOTEVENTA.SelectedDataKey.Item("IDCUOTASCANTIDAD")
 
+            olblCUOTASCANTIDADDESCRIPCION.Text = oddlCUOTASCANTIDAD.SelectedItem.ToString
+            olblCUOTASCANTIDADDESCRIPCION.Visible = True
+            oddlCUOTASCANTIDAD.Visible = False
             OTXTLOTEPRECIOBC.Text = ogvLOTEVENTA.SelectedDataKey.Item("LOTEPRECIOBC")
             OTXTCUOTABC.Text = ogvLOTEVENTA.SelectedDataKey.Item("CUOTABC")
             olblIDLOTEVENTA.Text = ogvLOTEVENTA.SelectedDataKey.Item("IDLOTEVENTA")
             obutAlta.Enabled = False
             Panel1.Visible = False
             PanelAlta.Visible = True
-            PanelRecibo.Visible = True
+            PanelRecibo.Visible = False
             PanelReserva.Visible = False
-            PanelReciboAsigna.Visible = True
+            PanelReciboAsigna.Visible = False
             PanelCuotaValor.Visible = True
 
 

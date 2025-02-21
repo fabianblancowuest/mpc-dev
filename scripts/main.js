@@ -113,19 +113,4 @@ document.addEventListener("DOMContentLoaded", () => {
 
   console.log(btnSearch);
   console.log(tabla);
-
-  // Ocultar flecha arriba
-  const ocultarFlecha = document.querySelector("#ocultarFlecha div span");
-  const mostrarFlechaTextIco = ` Mostrar flecha`;
-  const ocultarFlechaTextIco = ` Ocultar flecha`;
-
-  ocultarFlecha.addEventListener("click", () => {
-    document.getElementById("flechaArriba").classList.toggle("oculto");
-    if (ocultarFlecha.textContent === " Ocultar flecha") {
-      ocultarFlecha.innerHTML = mostrarFlechaTextIco;
-    } else {
-      ocultarFlecha.innerHTML = ocultarFlechaTextIco;
-      // ocultarFlecha.textContent = "Ocultar flecha";
-    }
-  });
 });

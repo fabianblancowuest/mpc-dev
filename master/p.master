@@ -118,6 +118,22 @@
             <a href="#navbar" id="flechaArriba">
                 <i class="bi bi-arrow-up-square flecha-arriba"></i>
             </a>
+            <script>
+                // Ocultar flecha arriba
+                const ocultarFlecha = document.querySelector("#ocultarFlecha div span");
+                const mostrarFlechaTextIco = ` Mostrar flecha`;
+                const ocultarFlechaTextIco = ` Ocultar flecha`;
+
+                ocultarFlecha.addEventListener("click", () => {
+                    document.getElementById("flechaArriba").classList.toggle("oculto");
+                    if (ocultarFlecha.textContent === " Ocultar flecha") {
+                        ocultarFlecha.innerHTML = mostrarFlechaTextIco;
+                    } else {
+                        ocultarFlecha.innerHTML = ocultarFlechaTextIco;
+                        // ocultarFlecha.textContent = "Ocultar flecha";
+                    }
+                });
+            </script>
         </div>
 
 
@@ -134,8 +150,9 @@
         });
         $.fn.datepicker.defaults.format = 'dd/mm/yyyy';
 
+
      
-    </script>
+        </script>
 
         <script src="../scripts//main.js" defer></script>
         <!-- Bootstrap -->

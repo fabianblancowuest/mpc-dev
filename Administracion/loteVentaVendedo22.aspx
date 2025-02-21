@@ -16,12 +16,12 @@
 
 
     <asp:Panel ID="PanelTitulo" runat="server">
-        <div class="row">
+       <%-- <div class="row">
             <h1>
 
-                <asp:Label ID="olblLOTEVENTATitulo" runat="server" Text=""></asp:Label>
+                <asp:Label ID="olblLOTEVENTATitulo" runat="server" Text="Vendedor gestiona adhesiones por lote en todos los barrios"></asp:Label>
             </h1>
-        </div>
+        </div>--%>
     </asp:Panel>
     <div>
         <asp:Label ID="olblOperadorAdministrador" runat="server" Text=""></asp:Label>
@@ -236,15 +236,18 @@
 
     </asp:Panel>
 
-
+    i
     <asp:Panel ID="PanelAlta" runat="server" Visible="false" CssClass="panel-alta">
         <form class="form" role="form">
             <div>
                 <asp:Label ID="olblBarrioManzanaParcelaSeleccionado" runat="server" Text="" Font-Bold="true" Font-Size="Large"></asp:Label>
             </div>
             <div>
-                <asp:Label ID="olblIDBarrioLoteOperador" runat="server" Text="xxxx" Visible="True"></asp:Label>
-
+                <asp:Label ID="Label10" runat="server" Text="Identificador Lote:"></asp:Label>
+                <asp:Label ID="olblIDBarrioLoteOperador" runat="server" Text="xxxx" Visible="True" Font-Bold="true"></asp:Label>
+                <asp:Label ID="Label27" runat="server" Text=" - - "></asp:Label>
+                <asp:Label ID="Label23" runat="server" Text="Identificador de  Venta (0=Pendiente) " Visible="True"></asp:Label>
+                <asp:Label ID="olblIDLOTEVENTA" runat="server" Text="" Visible="True" Font-Bold="true"></asp:Label>  
             </div>
             <div>
                 <asp:Label ID="Label14" runat="server"
@@ -288,6 +291,7 @@
 
             <div class="form-group">
                 <asp:Label ID="olblIDCUOTASCANTIDAD" runat="server" Text="Cantidad Cuotas:"></asp:Label>
+                <asp:Label ID="olblCUOTASCANTIDADDESCRIPCION" runat="server" Text="" Visible ="false" Font-Bold ="true"></asp:Label>
                 <asp:SqlDataSource ID="odsCUOTASCANTIDAD" runat="server"
                     ConnectionString="<%$ ConnectionStrings:STRSYSTEM %>"
                     SelectCommand="CUOTASCANTIDADTraerOddl" SelectCommandType="StoredProcedure"></asp:SqlDataSource>
@@ -303,7 +307,7 @@
                     <asp:Label ID="Label13" runat="server" Text="Cantidad BC mensual: "></asp:Label>
 
 
-                    <asp:Label ID="OTXTCUOTABC" runat="server" Text="">
+                    <asp:Label ID="OTXTCUOTABC" runat="server" Text="" Font-Bold="true">
                     </asp:Label>
                 </div>
 
@@ -311,7 +315,7 @@
                     <asp:Label ID="Label9" runat="server" Text="Monto Cuota:"></asp:Label>
 
                     <asp:Label ID="otxtLOTEVENTACUOTAMONTO" runat="server" Text=""
-                        CssClass="valor-monto"></asp:Label>
+                        CssClass="valor-monto" Font-Bold ="true"></asp:Label>
                     <asp:Label ID="olblMontoCuotaEnLetras" runat="server" Text="" Font-Size="X-Small" Font-Bold="true"></asp:Label>
                 </div>
             </asp:Panel>
@@ -330,18 +334,7 @@
 
             
 
-            <div class="form-group">
-                <asp:Label ID="olblLOTEVENTACODIGO" runat="server" Text="Codigo:"
-                    CssClass="control-label" Visible="false"></asp:Label>
-                <asp:TextBox ID="otxtLOTEVENTACODIGO" runat="server" CssClass="form-control"
-                    MaxLength="10" Visible="false"></asp:TextBox>
-            </div>
-            <div class="form-group">
-                <asp:Label ID="olblLOTEVENTADESCRIPCION" runat="server" Text="Descripcion:"
-                    CssClass="control-label" Visible="false"></asp:Label>
-                <asp:TextBox ID="otxtLOTEVENTADESCRIPCION" runat="server" CssClass="form-control"
-                    MaxLength="50" Visible="false"></asp:TextBox>
-            </div>
+           
 
             <asp:Panel ID="PanelReciboAsigna" runat="server" Visible="false">
                 <div>
@@ -395,11 +388,7 @@
                 
                 
                 </div>
-             <div class="form-group">
-                 <asp:Label ID="Label23" runat="server" Text="id Venta (0=Pendiente) " Visible="True"></asp:Label>
-                 
-                <asp:Label ID="olblIDLOTEVENTA" runat="server" Text="" Visible="True"></asp:Label>
-            </div>
+             
                 <div>
                     <asp:Button ID="obutReciboValidaAlta" runat="server" Text="Valida cobranza" />
                     <asp:Button ID="obutReciboConfirmaAlta" runat="server" Text="Confirma Alta Recibo y bloquea lote" Visible="false" />
