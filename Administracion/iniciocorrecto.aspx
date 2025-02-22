@@ -22,11 +22,11 @@
                         runat="server" AutoGenerateColumns="False"
                         DataKeyNames="idAccesoRol,accesoRolCodigo,accesoRolDescripcion,accesoRolExplicacion,accesoRolPagina,accesoRolDocumentoOperativo,accesoRolEstado"
                         DataSourceID="odsEmpresaOperadorRolDespilega"
-                        EmptyDataText="El usuario ingresado no tiene roles asignados en la Empresa seleccionada. Comuniquese con el administrador del Sistema.">
-                        <AlternatingRowStyle CssClass="alt"/>
+                        EmptyDataText="El usuario ingresado no tiene roles asignados en la Empresa seleccionada. Comuniquese con el Administrador del Sistema.">
+                        <AlternatingRowStyle CssClass="alt" />
                         <Columns>
 
-                            <asp:CommandField SelectText="Acceder" ShowSelectButton="True"  />
+                            <asp:CommandField SelectText="Acceder" ShowSelectButton="True" />
 
                             <asp:BoundField DataField="idAccesoRol" HeaderText="idAccesoRol" InsertVisible="False"
                                 ReadOnly="True" SortExpression="idAccesoRol" Visible="False" />
@@ -73,7 +73,7 @@
                 for (let i = 0; i < itemsA.length; i++) {
                     itemsA[i].classList.add("btn");
                     itemsA[i].classList.add("btn-primary");
-                    
+
                 }
             </script>
         </asp:Content>

@@ -13,22 +13,6 @@
     <asp:ScriptManager ID="ScriptManager1" runat="server" EnableScriptGlobalization="true"
         EnableScriptLocalization="true">
     </asp:ScriptManager>
-
-
-    <asp:Panel ID="PanelTitulo" runat="server">
-       <%-- <div class="row">
-            <h1>
-
-                <asp:Label ID="olblLOTEVENTATitulo" runat="server" Text="Vendedor gestiona adhesiones por lote en todos los barrios"></asp:Label>
-            </h1>
-        </div>--%>
-    </asp:Panel>
-    <div>
-        <asp:Label ID="olblOperadorAdministrador" runat="server" Text=""></asp:Label>
-        <asp:Label ID="olblIdOperador" runat="server" Text=""></asp:Label>
-
-
-    </div>
     <div>
         <asp:Label ID="olblSeleccionaBarrio" runat="server" Text="Seleccione Barrio"></asp:Label>
         <asp:SqlDataSource ID="odsBarrioHabilitadoSelecciona" runat="server"
@@ -225,14 +209,7 @@
         <br />
 
 
-        <div class="row">
-            <asp:Button ID="obutAlta" runat="server" Text="Nueva adhesion - Primer recibo" Visible="false"  />
-
-            <asp:Button ID="obutCompletaDatosComprador" runat="server" Text="Completa Datos Comprador" Visible="false" />
-            <asp:Button ID="obutNuevoReciboAdhesion" runat="server" Text="Nuevo recibo Adhesion" Visible="false"  />
-            <asp:Button ID="obutCargarImagenes" runat="server" Text="Subir imagenes documentacion " Visible="false"  />
-
-        </div>
+    
 
     </asp:Panel>
 
@@ -246,8 +223,8 @@
                 <asp:Label ID="Label10" runat="server" Text="Identificador Lote:"></asp:Label>
                 <asp:Label ID="olblIDBarrioLoteOperador" runat="server" Text="xxxx" Visible="True" Font-Bold="true"></asp:Label>
                 <asp:Label ID="Label27" runat="server" Text=" - - "></asp:Label>
-                <asp:Label ID="Label23" runat="server" Text="Identificador de  Venta (0=Pendiente) " Visible="True"></asp:Label>
-                <asp:Label ID="olblIDLOTEVENTA" runat="server" Text="" Visible="True" Font-Bold="true"></asp:Label>  
+                <asp:Label ID="Label23" runat="server" Text="Identificador de  Venta (0=Pendiente) :" Visible="True"></asp:Label>
+                <asp:Label ID="olblIDLOTEVENTA" runat="server" Text="0" Visible="True" Font-Bold="true"></asp:Label>  
             </div>
             <div>
                 <asp:Label ID="Label14" runat="server"
@@ -398,7 +375,20 @@
 
                 </div>
             </asp:Panel>
+            <asp:Panel ID="PanelBotonera" runat="server">
+                    <div class="row">
+            <asp:Button ID="obutAlta" runat="server" Text="Nueva adhesion - Primer recibo" Visible="false"  />
 
+            <asp:Button ID="obutCompletaDatosComprador" runat="server" Text="Completa Datos Comprador" Visible="false" />
+            <asp:Button ID="obutNuevoReciboAdhesion" runat="server" Text="Nuevo recibo Adhesion" Visible="false"  />
+            <asp:Button ID="obutCargarImagenes" runat="server" Text="Subir imagenes documentacion " Visible="false"  />
+            <asp:Button ID="obutMenuVolver" runat="server" Text="Volver" Visible="false"  />
+
+        </div>
+
+
+
+            </asp:Panel>
             <asp:Panel ID="PanelRecibo" runat="server" Visible="false">
                
                 <div class="form-group">

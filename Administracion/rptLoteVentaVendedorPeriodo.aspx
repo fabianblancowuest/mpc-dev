@@ -37,7 +37,14 @@
                 </asp:SqlDataSource>
             </div>
         </div>
-        <div class="tabla-adhesiones">
+        <div id="botones-menu" class="mx-auto">
+            <button class="btn btn-light btn-imprimir no-imprimir">Imprimir <i class="bi bi-printer-fill"></i></button>
+            <button class="btn btn-light no-imprimir" id="btn-espaciar">Centrar <i
+                    class="bi bi-distribute-horizontal"></i></button>
+            <button class="btn btn-light no-imprimir" id="btn-resaltar">Resaltar Totales <i
+                    class="bi bi-highlighter"></i></button>
+        </div>
+        <div id="tabla-adhesiones" class="tabla-adhesiones contenedor-responsive">
             <asp:SqlDataSource ID="odsUltimosPeriodos" runat="server"
                 ConnectionString="<%$ ConnectionStrings:STRSYSTEM %>" SelectCommand="select top 12 * from ejercicioDetalle  where  ejercicioDetalleFechaDesde &lt;= getdate()
 order by idEjercicioDetalle DEsc"></asp:SqlDataSource>
@@ -97,7 +104,7 @@ order by idEjercicioDetalle DEsc"></asp:SqlDataSource>
             </asp:GridView>
         </div>
 
-        <div class="tabla-operaciones-canceladas">
+        <div class="tabla-operaciones-canceladas contenedor-responsive">
             <asp:SqlDataSource ID="odsrptLoteVentaVendedorPeriodoResumen" runat="server"
                 ConnectionString="<%$ ConnectionStrings:STRSYSTEM %>" SelectCommand="rptLoteVentaVendedorPeriodoResumen"
                 SelectCommandType="StoredProcedure">
@@ -119,7 +126,7 @@ order by idEjercicioDetalle DEsc"></asp:SqlDataSource>
         </div>
 
         <asp:Label ID="Label4" runat="server" Text="Operaciones Señadas" CssClass="subtitulo-rol"></asp:Label>
-        <div class="tabla-operaciones-señadas">
+        <div class="tabla-operaciones-señadas contenedor-responsive">
             <asp:SqlDataSource ID="odsrptLoteVentaVendedorIdPeriodoAdhesionPendiente" runat="server"
                 ConnectionString="<%$ ConnectionStrings:STRSYSTEM %>"
                 SelectCommand="rptLoteVentaVendedorIdPeriodoAdhesionPendiente" SelectCommandType="StoredProcedure">
@@ -165,15 +172,71 @@ order by idEjercicioDetalle DEsc"></asp:SqlDataSource>
                     </asp:BoundField>
                 </Columns>
             </asp:GridView>
-            <div class="text-center no-imprimir my-4">
-                <button class="btn btn-primary btn-basic" id="imp-venta-vend-periodo">Imprimir <i
-                        class="bi bi-printer-fill"></i></button>
-            </div>
         </div>
         <script>
             document.addEventListener("DOMContentLoaded", () => {
-                document.getElementById("imp-venta-vend-periodo").addEventListener("click", () => {
-                    window.print();
+                document.querySelectorAll(".btn-imprimir").forEach((btn) => {
+                    btn.addEventListener("click", () => {
+                        window.print();
+                    })
+                })
+
+                const tablaAdhesiones = document.getElementById("tabla-adhesiones");
+                const filas = document.querySelectorAll("tr");
+                const columnas = tablaAdhesiones.querySelectorAll("td");
+                const menuBotones = document.getElementById("botones-menu");
+                const btnEspaciar = document.getElementById("btn-espaciar");
+
+                btnEspaciar.addEventListener("click", (event) => {
+                    event.preventDefault();
+
+                    const buttonText = btnEspaciar.innerText.trim();
+                    console.log("hola");
+
+                    for (let i = 0; i < columnas.length; i++) {
+                        columnas[i].classList.toggle("centrar-contenido");
+                    }
+
+                    btnEspaciar.classList.toggle("btn-light");
+                    btnEspaciar.classList.toggle("btn-primary");
+                })
+
+                const inputs = document.querySelectorAll("input");
+                console.log(inputs);
+
+                const btnResaltar = document.getElementById("btn-resaltar");
+                btnResaltar.addEventListener("click", (event) => {
+                    event.preventDefault();
+                    // columnas[columnas.length -1].classList.toggle("resaltar");
+                    // Verificar si hay columnas para evitar errores
+
+                    const comisionTotal = columnas[columnas.length - 1];
+                    const comisionPremio = columnas[columnas.length - 2];
+                    const comisionBase = columnas[columnas.length - 3];
+                    const totalIngresoMes = columnas[columnas.length - 4];
+                    const valorTerreno = columnas[columnas.length - 5];
+                    const pagoPactado = columnas[columnas.length - 6];
+
+                    if (columnas && columnas.length > 0) {
+                        // Alternar clase en la última columna
+                        if (comisionTotal.textContent.trim() !== "") {
+
+                            comisionTotal.classList.toggle("resaltar");
+                            comisionPremio.classList.toggle("resaltar2");
+                            comisionBase.classList.toggle("resaltar3");
+                            totalIngresoMes.classList.toggle("resaltar4");
+                            valorTerreno.classList.toggle("resaltar5");
+                            pagoPactado.classList.toggle("resaltar6");
+                            btnResaltar.classList.toggle("btn-light");
+                            btnResaltar.classList.toggle("btn-primary");
+                        } else {
+                            alert("El vendedor seleccionado no persive comisión")
+                        }
+                    } else {
+                        console.warn("No hay columnas disponibles para resaltar.");
+                    }
+
+
                 })
             })
         </script>

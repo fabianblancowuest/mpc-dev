@@ -47,11 +47,12 @@
                 <div class="collapse navbar-collapse nav-proof" id="myNavbar">
                     <ul class="navbar-nav me-auto">
                         <li class="nav-item">
-                            <a class="nav-link active" href="..\administracion\inicioCorrecto.aspx">Menú Principal</a>
+                            <a class="nav-link active" href="..\administracion\inicioCorrecto.aspx"><i
+                                    class="bi bi-menu-button-wide"></i> Menú Principal</a>
                         </li>
-                        <li class="nav-item dropdown">
-                            <!-- Ejemplo de dropdown en Bootstrap 5 -->
-                            <!-- 
+                        <!-- <li class="nav-item dropdown"> -->
+                        <!-- Ejemplo de dropdown en Bootstrap 5 -->
+                        <!-- 
                         <a class="nav-link dropdown-toggle" href="#" id="dropdownMenu" role="button" data-bs-toggle="dropdown" aria-expanded="false">Page 1</a>
                         <ul class="dropdown-menu" aria-labelledby="dropdownMenu">
                             <li><a class="dropdown-item" href="#">Page 1-1</a></li>
@@ -59,11 +60,11 @@
                             <li><a class="dropdown-item" href="#">Page 1-3</a></li>
                         </ul>
                         -->
-                        </li>
+                        <!-- </li> -->
                     </ul>
                     <div class="user text-white">
                         <div>
-                            <asp:Label ID="Label1" runat="server" Text="Usuario:"></asp:Label>
+                            <asp:Label ID="Label1" runat="server" Text="Nombre:"></asp:Label>
                             <asp:Label ID="olblSession_operadorDescripcion" runat="server"></asp:Label>
                         </div>
                         <div>
@@ -75,11 +76,12 @@
                             <asp:Label ID="olblSession_empresaSucursalSector" runat="server"></asp:Label>
                         </div>
                     </div>
-                    <div class="user text-white">
+                    <div class="user text-white user-email-nav">
                         <div>
-                            <asp:Label ID="Label7" runat="server" Text=" ("></asp:Label>
+                            <!-- <asp:Label ID="Label7" runat="server" Text=" ("></asp:Label> -->
+                            <label>Usuario: </label>
                             <asp:Label ID="olblSession_operadorCodigo" runat="server"></asp:Label>
-                            <asp:Label ID="Label8" runat="server" Text=")"></asp:Label>
+                            <!-- <asp:Label ID="Label8" runat="server" Text=")"></asp:Label> -->
                         </div>
                         <div>
                             <asp:Label ID="olblSession_accesoOperadorCategoria" runat="server"></asp:Label>
@@ -88,7 +90,7 @@
                             <asp:Label ID="olblSession_accesoOperadorLocalidad" runat="server"></asp:Label>
                         </div>
                     </div>
-                    <ul class="navbar-nav ms-auto navbar-user-settings">
+                    <ul class="navbar-nav ms-auto navbar-user-settings text-white">
                         <li class="nav-item" id="ocultarFlecha">
                             <div class="nav-link"><i class="bi bi-arrow-up-square"></i><span> Ocultar flecha</span>
                             </div>
@@ -97,7 +99,7 @@
                             <a class="nav-link" href="..\administracion\passchange.aspx"><i class="bi bi-person"></i>
                                 Cambio de Contraseña</a>
                         </li>
-                        <li class="nav-item">
+                        <li class="nav-item cerrar-sesion">
                             <a class="nav-link" href="..\acceso.aspx"><i class="bi bi-box-arrow-right"></i> Cerrar
                                 Sesión</a>
                         </li>

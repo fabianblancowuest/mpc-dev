@@ -32,7 +32,7 @@ Partial Class Administracion_contratoRevision
             With cmd
                 .Connection = connection
                 .CommandType = Data.CommandType.StoredProcedure
-                .CommandText = "[boletoCompraVentaLosBufalosidLoteVenta]"
+                .CommandText = "[contratoCompraVentaBarrio]"
 
                 .Parameters.Clear()
             End With
@@ -85,8 +85,9 @@ Partial Class Administracion_contratoRevision
 
 
 
-        'Session.Item("idBarrioLote") = 1750
-        Session.Item("idBarrio") = 13
+
+        Session.Item("idBarrio") = oddlBARRIO.SelectedValue
+
         If Session("session_idOperador") Is Nothing Then
             Response.Redirect("~/Administracion/accesoFueraDeSesion.aspx")
         End If
@@ -185,8 +186,9 @@ Partial Class Administracion_contratoRevision
 
     Private Sub edicion()
 
+
      
-        'oddlBarrioHabilitadoSelecciona.SelectedValue = oddlBARRIO.SelectedValue
+        'oddlBARRIO.SelectedValue = Session("idBarrio")
 
         oddlBARRIOLOTE.Enabled = False
             olblGestionDescripcion.Text = "Esperando accion de Operador"
@@ -323,6 +325,7 @@ Partial Class Administracion_contratoRevision
     Protected Sub obutEdita_Click(sender As Object, e As EventArgs) Handles obutEdita.Click
         PanelSeleccion.Visible = False
         PanelAlta.Visible = True
+
         oddlBarrioHabilitadoManzanaSeleccionaCambio.SelectedValue = oddlBarrioHabilitadoManzanaSelecciona.SelectedValue
         oddlBARRIOLOTEOPERADORCAMBIA.SelectedValue = oddlBARRIOLOTEOperador.SelectedValue
         edicion()
@@ -371,6 +374,13 @@ Partial Class Administracion_contratoRevision
   
     Protected Sub oddlBarrioHabilitadoManzanaSelecciona_SelectedIndexChanged(sender As Object, e As EventArgs) Handles oddlBarrioHabilitadoManzanaSelecciona.SelectedIndexChanged
         oddlBARRIOLOTEOPERADORCAMBIA.DataBind()
+
+
+    End Sub
+
+    Protected Sub oddlBarrioHabilitadoSelecciona_SelectedIndexChanged(sender As Object, e As EventArgs) Handles oddlBarrioHabilitadoSelecciona.SelectedIndexChanged
+        Session("idBarrio") = oddlBarrioHabilitadoSelecciona.SelectedValue
+        oddlBARRIO.DataBind()
 
 
     End Sub

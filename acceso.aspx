@@ -171,7 +171,7 @@
                         </asp:BoundField>
                     </Columns>
                 </asp:GridView>
-                <asp:Button ID="obutAccesocorrectoLogout" runat="server" Text="Salir"
+                <asp:Button ID="obutAccesocorrectoLogout" runat="server" Text="SALIR"
                     CssClass="btn btn-danger btn-basic" />
 
 

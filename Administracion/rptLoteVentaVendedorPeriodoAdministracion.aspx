@@ -241,10 +241,9 @@
                     const panelDocumentacion = document.getElementById("panelDoc");
                     const filas = document.querySelectorAll("tr");
                     const columnas = tablaVPeriodo.querySelectorAll("td");
-
-                    const btnEspaciar = document.getElementById("btn-espaciar");
-
+                    // Botones
                     const menuBotones = document.getElementById("botones-menu");
+                    const btnEspaciar = document.getElementById("btn-espaciar");
 
                     console.log(panelDocumentacion)
 
@@ -255,7 +254,6 @@
                     }
 
                     btnEspaciar.addEventListener("click", (event) => {
-
                         event.preventDefault();
 
                         const buttonText = btnEspaciar.innerText.trim();
@@ -278,11 +276,7 @@
 
                     const inputs = document.querySelectorAll("input");
 
-                    console.log(inputs)
-
                     const btnResaltar = document.getElementById("btn-resaltar");
-
-
                     btnResaltar.addEventListener("click", (event) => {
                         event.preventDefault();
                         // columnas[columnas.length -1].classList.toggle("resaltar");

@@ -1,3 +1,7 @@
+/* Fuentes */
+
+@import url("https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Quicksand:wght@300..700&family=Roboto:ital,wght@0,100..900;1,100..900&family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap");
+
 /* Setear Estilos Bootstrap */
 .row {
   margin: 0;
@@ -22,7 +26,7 @@
 
 .panel {
   background-color: #fff;
-  border: 1px solid #337ab7;
+  border: 2px solid #337ab7;
   border-radius: 4px;
   box-shadow: 3px 3px 5px #337ab7;
 }
@@ -47,7 +51,11 @@ body {
   display: flex;
   flex-direction: column;
   gap: 0.5rem;
-  font-family: Montserrat, sans-serif;
+  font-family: sans-serif;
+  /* font-family: "Quicksand", serif; */
+  /* font-family: "Ubuntu", serif; */
+  /* font-family: "Roboto", serif; */
+  /* font-family: "Lato", serif; */
   font-weight: 400;
   line-height: 1.8;
   color: #777;
@@ -211,7 +219,7 @@ button {
 .encabezado-acceso {
   background-color: var(--btn-bg-color);
   color: white;
-  font-size: 1.4rem;
+  font-size: 1.2rem;
   text-transform: uppercase;
   letter-spacing: 1px;
   font-weight: normal;
@@ -232,9 +240,9 @@ button {
 .login .titulo-rol {
   margin: 0;
   /* margin-top: -10px; */
-  font-weight: normal;
+  font-weight: 400;
   letter-spacing: normal;
-  font-size: 1.3rem;
+  font-size: 20px;
   padding: 0 25px;
   line-height: 1;
 }
@@ -778,7 +786,7 @@ select {
   }
 }
 
-/* Contrato Revisión */
+/* Contratos */
 
 .panel-impresion-contrato {
   margin-top: 10mm;
@@ -806,10 +814,10 @@ select {
   display: block;
 }
 
-.panel-impresion-contrato h2 {
-  margin: 1em auto;
-  font-weight: bold;
+.titulo-contrato {
+  margin: 1em auto 0.2em auto;
   text-align: center;
+  font-weight: bold;
 }
 
 .titulo-contrato,
@@ -825,6 +833,24 @@ select {
 .firmantes {
   margin-top: 6rem;
   display: flex;
+  justify-content: space-around;
+}
+
+.f-comprador .comprador,
+.f-vendedor .agente-inmobiliario {
+  margin: 0;
+}
+
+/* .f-comprador {
+  margin-left: 3rem;
+}
+
+.f-vendedor {
+  margin-right: 3rem;
+} */
+
+.agente-inmobiliario {
+  margin: 0;
 }
 
 .fiduciario,
@@ -833,10 +859,9 @@ select {
   font-size: 0.8rem;
 }
 
-.fiduciario {
-  text-align: left !important;
+/* .fiduciario {
   margin-right: auto;
-}
+} */
 
 .agente-inmobiliario:nth-child(3) {
   text-align: right !important;
@@ -898,4 +923,8 @@ select {
     margin-top: 10px;
     padding: 8px 0;
   }
+}
+
+.parrafo-contrato {
+  text-align: justify;
 }

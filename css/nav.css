@@ -1,5 +1,7 @@
+@import url("https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Quicksand:wght@300..700&family=Roboto:ital,wght@0,100..900;1,100..900&family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap");
+
 .navbar {
-  font-family: Montserrat, sans-serif;
+  font-family: "Montserrat", sans-serif;
   margin-bottom: 0;
   background-color: #2d2d30;
   border: 0;
@@ -45,6 +47,7 @@ div.nav-link {
     text-align: center;
     line-height: 2.5;
     font-size: 1rem;
+    color: white;
     /* color: white;
     background-color: rgba(0, 0, 0, .5);
     border: 1px solid white;
@@ -53,7 +56,57 @@ div.nav-link {
     cursor: pointer;
   }
 
+  .nav-item,
+  .user {
+    background-image: linear-gradient(60deg, #29323c 0%, #485563 100%);
+    border: 0.1px solid gray;
+    /* border-radius: 5px; */
+  }
+
+  .nav-item:active,
+  .nav-item:hover,
+  .nav-item:focus,
+  .user:active,
+  .user:hover,
+  .user:focus {
+    background-image: linear-gradient(60deg, #3a4652 0%, #5a6b7d 100%);
+  }
+
+  .nav-item:nth-child(1) {
+    border-bottom: none;
+  }
+
+  .cerrar-sesion {
+    border-top: none;
+  }
+
+  .user {
+    border-bottom: none;
+    border-bottom-right-radius: 0;
+    border-bottom-left-radius: 0;
+  }
+
+  .user-email-nav {
+    border-top: none;
+    border-top-right-radius: 0;
+    border-top-left-radius: 0;
+  }
+
   .container-fluid {
     margin-left: 0;
+    padding-left: 0;
+    padding-right: 0;
   }
+
+  .navbar-toggler {
+    margin-right: 10px;
+  }
+
+  .navbar-brand {
+    margin-left: 10px;
+  }
+  /* 
+  .navbar-collapse {
+    padding-top: 10px;
+  } */
 }

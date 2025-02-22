@@ -20,14 +20,15 @@
                 <!-- Selecciones -->
                 <div class="revision-contratos-select">
                     <div class="py-2">
-                        <asp:Label ID="olblSeleccionaBarrio" runat="server" Text="Seleccione Barrio:"></asp:Label>
-                        <asp:SqlDataSource ID="odsBarrioHabilitadoSelecciona" runat="server"
-                            ConnectionString="<%$ ConnectionStrings:STRSYSTEM %>"
-                            SelectCommand="barrioHabilitadoSelecciona" SelectCommandType="StoredProcedure">
-                        </asp:SqlDataSource>
-                        <asp:DropDownList ID="oddlBarrioHabilitadoSelecciona" runat="server" AutoPostBack="True"
-                            DataSourceID="odsBarrioHabilitadoSelecciona" DataTextField="barrioDescripcion"
-                            DataValueField="idBarrio" Width="100%"></asp:DropDownList>
+                        <%=Session ("idBarrio") %>
+                            <asp:Label ID="olblSeleccionaBarrio" runat="server" Text="Seleccione Barrio:"></asp:Label>
+                            <asp:SqlDataSource ID="odsBarrioHabilitadoSelecciona" runat="server"
+                                ConnectionString="<%$ ConnectionStrings:STRSYSTEM %>"
+                                SelectCommand="barrioHabilitadoSelecciona" SelectCommandType="StoredProcedure">
+                            </asp:SqlDataSource>
+                            <asp:DropDownList ID="oddlBarrioHabilitadoSelecciona" runat="server" AutoPostBack="True"
+                                DataSourceID="odsBarrioHabilitadoSelecciona" DataTextField="barrioDescripcion"
+                                DataValueField="idBarrio" Width="100%"></asp:DropDownList>
                     </div>
                     <div class="py-2">
                         <asp:Label ID="olblSeleccionaManzana" runat="server" Text="Seleccione Manzana:"></asp:Label>
@@ -83,11 +84,11 @@
                                 PropertyName="SelectedValue" Type="Int32" />
                         </SelectParameters>
                     </asp:SqlDataSource>
+                    <div>
+                        <asp:Button ID="obutAlta" runat="server" Text="Alta Nueva Adhesión en Lote"
+                            CssClass="btn btn-basic btn-success my-4" />
+                    </div>
                     <div class="table-responsive">
-                        <div>
-                            <asp:Button ID="obutAlta" runat="server" Text="Alta Nueva Adhesión en Lote"
-                                CssClass="btn btn-basic btn-success my-4" />
-                        </div>
                         <asp:GridView ID="ogvLOTEVENTA" runat="server" AutoGenerateColumns="False"
                             CssClass="table-cemmi" AlternatingRowStyle-CssClass="alt" AllowPaging="True" PageSize="15"
                             PagerStyle-CssClass="pgr"
@@ -189,19 +190,16 @@
                             </Columns>
                             <PagerStyle CssClass="pgr" />
                         </asp:GridView>
-
-                        <div class="contenedor-flexible margenes-y">
-                            <asp:Button ID="obutEdita" runat="server" Text="Editar Adhesión"
-                                CssClass="btn btn-basic btn-warning" />
-                            <asp:Button ID="obutAltaAdhesion" runat="server" Text="Alta Nueva Adhesión"
-                                CssClass="btn btn-basic btn-success" />
-                            <asp:Button ID="obutImprime" runat="server" Text="Imprime Contrato de Adhesión"
-                                CssClass="btn btn-basic btn-primary" />
-                        </div>
-
-
                         <asp:Label ID="olblMensaje" runat="server" Text=""></asp:Label>
                     </div>
+                </div>
+                <div class="contenedor-flexible margenes-y">
+                    <asp:Button ID="obutEdita" runat="server" Text="Editar Adhesión"
+                        CssClass="btn btn-basic btn-warning" />
+                    <asp:Button ID="obutAltaAdhesion" runat="server" Text="Alta Nueva Adhesión"
+                        CssClass="btn btn-basic btn-success" />
+                    <asp:Button ID="obutImprime" runat="server" Text="Imprime Contrato de Adhesión"
+                        CssClass="btn btn-basic btn-primary" />
                 </div>
             </asp:Panel>
 
@@ -217,7 +215,7 @@
                         </SelectParameters>
                     </asp:SqlDataSource>
                     <asp:DropDownList ID="oddlBARRIOLOTE" runat="server" DataSourceID="odsBARRIOLOTE"
-                        DataTextField="BARRIOLOTEDescripcion" DataValueField="IDBARRIOLOTE" CssClass="form-control"
+                        DataTextField="idBarrioLote" DataValueField="idBarrioLote" CssClass="form-control"
                         AutoPostBack="True">
                     </asp:DropDownList>
                 </div>
@@ -487,7 +485,8 @@
             </asp:Panel>
 
             <asp:Panel ID="PanelImpresion" runat="server" Visible="false" CssClass="panel-impresion-contrato">
-                <button class="no-imprimir btn btn-primary btn-basic e-bloque margenes-y" id="btnImpContrato">Imprimir <i class="bi bi-printer-fill"></i></button>
+                <button class="no-imprimir btn btn-primary btn-basic e-bloque margenes-y" id="btnImpContrato">Imprimir
+                    <i class="bi bi-printer-fill"></i></button>
                 <!-- class="btn btn-basic btn-primary btn-imprimir my-4 d-block no-imprimir" -->
                 <% Response.Write(armaReporteVenta())%>
             </asp:Panel>

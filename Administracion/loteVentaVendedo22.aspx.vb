@@ -20,7 +20,7 @@ Partial Class STRSYSTEM_Administracion_LOTEVENTAVENDEDOR22
 
 
 
-            olblLOTEVENTATitulo.Text = ""
+            'olblLOTEVENTATitulo.Text = ""
            
         End If
     End Sub
@@ -124,12 +124,16 @@ Partial Class STRSYSTEM_Administracion_LOTEVENTAVENDEDOR22
             OTXTCUOTABC.Text = ogvLOTEVENTA.SelectedDataKey.Item("CUOTABC")
             olblIDLOTEVENTA.Text = ogvLOTEVENTA.SelectedDataKey.Item("IDLOTEVENTA")
             obutAlta.Enabled = False
+            obutAlta.Visible = True
+
             Panel1.Visible = False
             PanelAlta.Visible = True
             PanelRecibo.Visible = False
             PanelReserva.Visible = False
             PanelReciboAsigna.Visible = False
             PanelCuotaValor.Visible = True
+            PanelBotonera.Visible = True
+
 
 
 
@@ -195,14 +199,20 @@ Partial Class STRSYSTEM_Administracion_LOTEVENTAVENDEDOR22
         olblGrillaColumna.Text = ogvLOTEVENTA.Rows.Count.ToString
 
 
-        If ogvLOTEVENTA.Rows.Count >= 1 Then
-            obutAlta.Visible = False
+        If ogvLOTEVENTA.Rows.Count > 0 Then
+            obutAlta.Enabled = False
+
             obutCargarImagenes.Visible = True
             obutCompletaDatosComprador.Visible = True
             obutNuevoReciboAdhesion.Visible = True
 
         Else
-            obutAlta.Visible = True
+            PanelAlta.Visible = True
+            Panel1.Visible = False
+
+            obutAlta.Enabled = False
+            obutAlta.Visible = False
+
             obutCargarImagenes.Visible = False
             obutCompletaDatosComprador.Visible = False
             obutNuevoReciboAdhesion.Visible = False
@@ -474,5 +484,22 @@ Partial Class STRSYSTEM_Administracion_LOTEVENTAVENDEDOR22
             End Try
             connection.Close()
         End Using
+    End Sub
+
+    Protected Sub obutReservaAbandona_Click(sender As Object, e As EventArgs) Handles obutReservaAbandona.Click
+        Response.Redirect("loteVentaVendedo22.aspx")
+
+
+    End Sub
+
+    Protected Sub obutReciboAbandonaAlta_Click(sender As Object, e As EventArgs) Handles obutReciboAbandonaAlta.Click
+        Response.Redirect("loteVentaVendedo22.aspx")
+
+
+    End Sub
+
+    Protected Sub obutMenuVolver_Click(sender As Object, e As EventArgs) Handles obutMenuVolver.Click
+        Response.Redirect("loteVentaVendedo22.aspx")
+
     End Sub
 End Class
