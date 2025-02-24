@@ -3,7 +3,7 @@
     Inherits="STRSYSTEM_Administracion_LOTEVENTAVENDEDOR22" Title="Tratamiento de venta de lotes por vendedor"
     Culture="es-AR" %>
 
-<%@ Register Src="~/ventaWEB/loteDocumentacionBlanco.ascx" TagPrefix="uc1" TagName="loteDocumentacion" %>
+<%@ Register Src="~/Administracion/loteDocumentacionNuevo.ascx" TagPrefix="uc1" TagName="loteDocumentacion" %>
 
 <%@ Register Assembly="AjaxControlToolkit" Namespace="AjaxControlToolkit" TagPrefix="asp" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="Server">
@@ -40,22 +40,6 @@
         </asp:DropDownList>
     </div>
 
-
-
-    <%-- <div class="form-group">
-                    <asp:Label ID="olblIDBARRIOLOTE" runat="server" Text="Lote seleccionado:" CssClass="control-label">
-                    </asp:Label>
-                    <asp:SqlDataSource ID="odsBARRIOLOTE" runat="server"
-                        ConnectionString="<%$ ConnectionStrings:STRSYSTEM %>" SelectCommand="[BARRIOLOTEIdTraeroddl]"
-                        SelectCommandType="StoredProcedure">
-                        <SelectParameters>
-                            <asp:SessionParameter Name="idBarrioLote" SessionField="idBarrioLote" Type="Int32" />
-                        </SelectParameters>
-                    </asp:SqlDataSource>
-                    <asp:DropDownList ID="oddlBARRIOLOTE" runat="server" DataSourceID="odsBARRIOLOTE"
-                        DataTextField="BARRIOLOTEDescripcion" DataValueField="IDBARRIOLOTE" CssClass="form-control">
-                    </asp:DropDownList>
-                    </div>--%>
     <asp:Panel ID="Panel1" runat="server">
         <div class="row">
 
@@ -213,7 +197,6 @@
 
     </asp:Panel>
 
-    i
     <asp:Panel ID="PanelAlta" runat="server" Visible="false" CssClass="panel-alta">
         <form class="form" role="form">
             <div>

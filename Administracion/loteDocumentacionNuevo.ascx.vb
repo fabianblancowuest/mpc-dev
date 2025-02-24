@@ -1,5 +1,5 @@
 ﻿
-Partial Class ventaWEB_loteDocumentacionBlanco
+Partial Class Administracion_loteDocumentacionNuevo
     Inherits System.Web.UI.UserControl
 
     Protected Sub Page_Load(sender As Object, e As EventArgs) Handles Me.Load
@@ -17,7 +17,8 @@ Partial Class ventaWEB_loteDocumentacionBlanco
         imagenTipoCarga()
         oimgImagen.ImageUrl = olblImagenURL.Text
         If color = "1" Then
-            PanelImagen.BackColor = Drawing.Color.White
+            PanelImagen.BackColor = Drawing.Color.NavajoWhite
+
 
         End If
 
@@ -111,12 +112,12 @@ Partial Class ventaWEB_loteDocumentacionBlanco
 
 
                 olblPrevisualiza.Text = "~/loteDocumentacion/" + nombreArchivo + extension
-                olblPrevisualiza.Visible = True
+                olblPrevisualiza.Visible = False
 
 
 
                 Label11.Text = "https://www.miprimercasa.ar/loteDocumentacion/" + nombreArchivo + extension
-                Label11.Visible = True
+                Label11.Visible = False
 
 
                 oimgImagen.ImageUrl = Label11.Text

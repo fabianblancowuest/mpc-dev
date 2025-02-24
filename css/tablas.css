@@ -220,7 +220,9 @@ th {
 }
 
 .tabla-adhesiones th,
-.venta-vendedor-periodo th {
+.venta-vendedor-periodo th,
+.tabla-operaciones-señadas th,
+.tabla-operaciones-canceladas th {
   background-color: var(--btn-bg-color);
   color: white;
   text-align: center;
@@ -229,7 +231,9 @@ th {
 
 @media print {
   .tabla-adhesiones th,
-  .venta-vendedor-periodo th {
+  .venta-vendedor-periodo th,
+  .tabla-operaciones-señadas th,
+  .tabla-operaciones-canceladas th {
     background-color: unset;
     color: unset;
   }
