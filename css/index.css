@@ -613,7 +613,7 @@ input[type="radio"] {
   position: fixed;
   right: 30px;
   bottom: 30px;
-  color: blue;
+  color: #337ab7;
   font-size: 3.2rem;
 }
 
@@ -639,7 +639,7 @@ input[type="radio"] {
   .flecha-arriba {
     color: #373a3e;
     color: white;
-    background-color: blue;
+    background-color: #337ab7;
     border-radius: 7px;
   }
 }
