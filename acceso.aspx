@@ -180,9 +180,7 @@
 
             </asp:Panel>
         </form>
-        <script>
 
-        </script>
         <script src="acceso_busqueda.js" defer></script>
     </body>
 

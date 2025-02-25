@@ -410,11 +410,11 @@ input[type="radio"] {
 .panel-acceso {
   padding: 1em 0;
   max-width: 100%;
-  min-height: 100vh;
+  /* min-height: 100vh; */
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 1em 0;
+  gap: 0.5em 0;
 }
 
 .panel-footer {
@@ -425,6 +425,19 @@ input[type="radio"] {
   margin-top: 15px;
   width: 100%;
 }
+
+#obutAccesocorrectoLogout {
+  position: absolute;
+  bottom: 100px;
+}
+
+@media (max-width: 900px) {
+  #obutAccesocorrectoLogout {
+    position: absolute;
+    bottom: 40px;
+  }
+}
+
 /* Modo móvil (pantallas pequeñas) */
 @media (max-width: 768px) {
   .table-cemmi {
