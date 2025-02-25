@@ -332,6 +332,12 @@ button {
   width: 150px;
 }
 
+.img-no-encontrado {
+  width: 200px;
+  max-width: 100%;
+  height: auto;
+}
+
 .panel-credenciales {
   padding: 1em;
 }

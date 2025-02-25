@@ -52,7 +52,8 @@ document.addEventListener("DOMContentLoaded", () => {
         const cardTitle = cell.textContent.toLocaleLowerCase();
 
         if (cardTitle.includes(searched)) {
-          row.style.display = ""; //Mostrar la fila
+          //Mostrar la fila
+          row.style.display = "";
           row.style.backgroundColor = "#E3F2FD";
           hasResults = true;
           inputSearch.value = "";
@@ -70,13 +71,22 @@ document.addEventListener("DOMContentLoaded", () => {
         allTheads[i].style.display = "none";
       }
       mensajeBusqueda.innerHTML = "";
-      mensajeBusqueda.textContent += `No se encontraron coincidencias para "${inputSearch.value}".`;
+      const inputSearchValue = document.createElement("span");
+      inputSearchValue.textContent = `"${inputSearch.value}".`;
+      inputSearchValue.style.fontWeight = "bold";
+      // mensajeBusqueda.textContent += `No se encontraron coincidencias para "${inputSearchValue}".`;
+      mensajeBusqueda.textContent += `No se encontraron coincidencias para `;
+      mensajeBusqueda.append(inputSearchValue);
       document.querySelector("table").style.display = "none";
       mensajeBusqueda.style.order = "1";
       document.getElementById("btnMostrarTodosLosRoles").style.order = "2";
       tituloRoles.style.display = "none";
       contenedorTablaRoles.append(mensajeBusqueda);
       // contenedorTablaRoles.style.minHeight = "60vh";
+      const imgNoEncontrado = document.createElement("img");
+      imgNoEncontrado.classList.add("img-no-encontrado");
+      imgNoEncontrado.src = "../img/pagina-no-encontrada.png";
+      contenedorTablaRoles.append(imgNoEncontrado);
       inputSearch.value = "";
     }
   };
