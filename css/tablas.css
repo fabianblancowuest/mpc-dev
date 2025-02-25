@@ -328,6 +328,12 @@ th {
   max-width: 100%;
 }
 
+@media (max-width: 768px) {
+  .control-adhesiones-encabezado select {
+    text-align: center;
+  }
+}
+
 .panel-documentacion {
   display: flex;
   justify-content: center;
