@@ -31,8 +31,9 @@
   text-align: center;
 }
 
+a.nav-link,
 div.nav-link {
-  min-width: 100px;
+  /* min-width: 130px; */
 }
 
 .navbar-user-settings span {
@@ -105,6 +106,18 @@ div.nav-link {
   .navbar-brand {
     margin-left: 10px;
   }
+
+  /* @media (min-width: 890px) {
+    .navbar-brand {
+      display: none !important;
+    }
+  } */
+
+  /* @media (max-width: 1199px) {
+    .navbar-brand {
+      display: none;
+    }
+  } */
   /* 
   .navbar-collapse {
     padding-top: 10px;

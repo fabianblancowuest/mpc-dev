@@ -213,9 +213,16 @@ th {
   padding: 0;
 }
 
+.tabla-adhesiones,
+.venta-vendedor-periodo,
+.tabla-operaciones-canceladas .tabla-operaciones-señadas {
+  font-size: 11px !important;
+}
+
 .tabla-adhesiones tr:hover,
-.venta-vendedor-periodo tr:hover {
-  background-color: #4d8cbf;
+.venta-vendedor-periodo tr:hover,
+.tabla-operaciones-canceladas tr:hover .tabla-operaciones-señadas tr:hover {
+  background-color: #4d8cbf !important;
   color: white;
 }
 

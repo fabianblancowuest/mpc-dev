@@ -17,6 +17,8 @@
         <!-- Bootstrap Actualizado -->
         <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
 
+        <!-- Bootstrap Icons -->
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
 
         <link rel="shortcut icon" href="/img/logo.png" type="image/x-icon">
 
@@ -37,7 +39,8 @@
 
                 <div class="container text-center">
                     <div class="panel panel-primary">
-                        <h2 class="panel-heading encabezado-acceso">Ingreso al Sistema</h2>
+                        <h2 class="panel-heading encabezado-acceso">Ingreso al Sistema <i
+                                class="bi bi-window-sidebar"></i></h2>
                         <img src="img/logo.png" class="img-logo" />
                         <%-- <asp:Label ID="Label1" runat="server" Text="PAGINA EN MANTENIMIENTO" Font-Bold="true"
                             ForeColor="Red" Font-Size="XX-Large"></asp:Label>

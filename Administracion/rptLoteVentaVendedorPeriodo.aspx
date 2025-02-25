@@ -16,7 +16,7 @@
             </asp:Label>
         </h1>
 
-        <div class="mod-imp text-center">
+        <div class="mod-imp text-center seleccion-fechas">
             <asp:Label ID="Label2" runat="server" Text="Vendedor:"></asp:Label>
             <asp:Label ID="olblVendedorNombre" runat="server" Text="" Font-Bold="true" Font-Size="Large"></asp:Label>
             <asp:Label ID="olblVendedorCorreo" runat="server" Text="" CssClass="correo-vendedor"></asp:Label>

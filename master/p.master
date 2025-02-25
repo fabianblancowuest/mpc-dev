@@ -27,6 +27,10 @@
         <link rel="stylesheet" href="../css/nav.css">
         <link rel="stylesheet" href="../css/index.css" type="text/css" />
         <link rel="stylesheet" href="../css/tablas.css">
+
+        <!-- Precarga de imágenes -->
+        <link rel="preload" as="image" href="../img/logo.png">
+
         <%-- <meta name="viewport"
             content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" />--%>
         <asp:ContentPlaceHolder ID="head" runat="server">
@@ -92,7 +96,8 @@
                     </div>
                     <ul class="navbar-nav ms-auto navbar-user-settings text-white">
                         <li class="nav-item" id="ocultarFlecha">
-                            <div class="nav-link"><i class="bi bi-arrow-up-square"></i><span> Ocultar flecha</span>
+                            <div class="nav-link"><i class="bi bi-arrow-up-square">
+                                </i><span> Ocultar flecha navegación</span>
                             </div>
                         </li>
                         <li class="nav-item">
@@ -124,12 +129,12 @@
                 // Ocultar flecha arriba
                 const ocultarFlechaNav = document.querySelector("#ocultarFlecha")
                 const ocultarFlecha = document.querySelector("#ocultarFlecha div span");
-                const mostrarFlechaTextIco = ` Mostrar flecha`;
-                const ocultarFlechaTextIco = ` Ocultar flecha`;
+                const mostrarFlechaTextIco = ` Mostrar flecha navegación`;
+                const ocultarFlechaTextIco = ` Ocultar flecha navegación`;
 
                 ocultarFlechaNav.addEventListener("click", () => {
                     document.getElementById("flechaArriba").classList.toggle("oculto");
-                    if (ocultarFlecha.textContent === " Ocultar flecha") {
+                    if (ocultarFlecha.textContent === " Ocultar flecha navegación") {
                         ocultarFlecha.innerHTML = mostrarFlechaTextIco;
                     } else {
                         ocultarFlecha.innerHTML = ocultarFlechaTextIco;

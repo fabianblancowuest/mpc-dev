@@ -523,28 +523,6 @@ input[type="radio"] {
   text-align: center;
 }
 
-/* Fechas */
-
-.seleccion-fechas-sp {
-  display: flex;
-  justify-content: space-around;
-}
-
-.seleccion-fechas-sp > * {
-  padding: 0.3em;
-}
-
-@media (max-width: 900px) {
-  .seleccion-fechas-sp {
-    width: 100%;
-  }
-  .seleccion-fechas-sp select {
-    width: 90%;
-    text-align: center;
-    padding: 8px 0;
-  }
-}
-
 .espaciado-interno {
   padding: 1em;
 }
@@ -621,8 +599,42 @@ input[type="radio"] {
   display: none;
 }
 
+/* Fechas */
+
+.seleccion-fechas {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+@media (max-width: 900px) {
+  .seleccion-fechas {
+    flex-direction: column;
+  }
+}
+
+.seleccion-fechas-sp > * {
+  padding: 0.3em;
+}
+
 .seleccion-fechas-sp {
-  display: inline-block;
+  display: flex;
+  justify-content: center;
+}
+
+@media (max-width: 900px) {
+  .seleccion-fechas-sp {
+    width: 100%;
+    margin: 0 auto;
+  }
+  .seleccion-fechas-sp select {
+    display: block;
+    margin: 0 auto;
+    width: 90%;
+    text-align: center;
+    padding: 8px 0;
+    max-width: 600px;
+  }
 }
 
 #odsUltimosPeriodos {
