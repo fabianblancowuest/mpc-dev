@@ -204,6 +204,7 @@ order by idEjercicioDetalle DEsc"></asp:SqlDataSource>
                 const inputs = document.querySelectorAll("input");
                 console.log(inputs);
 
+                let toggle = false;
                 const btnResaltar = document.getElementById("btn-resaltar");
                 btnResaltar.addEventListener("click", (event) => {
                     event.preventDefault();
@@ -229,6 +230,13 @@ order by idEjercicioDetalle DEsc"></asp:SqlDataSource>
                             pagoPactado.classList.toggle("resaltar6");
                             btnResaltar.classList.toggle("btn-light");
                             btnResaltar.classList.toggle("btn-primary");
+                            if (toggle) {
+                                toggle = !toggle
+                                return; // Vuelve al inicio
+                            } else {
+                                comisionTotal.scrollIntoView({ behavior: "smooth", block: "center" }); // Va a la celda
+                            }
+                            toggle = !toggle;
                         } else {
                             alert("El vendedor seleccionado no persive comisión")
                         }
