@@ -443,6 +443,28 @@ Pago Pactado = Verde claro */
   width: 100%;
 }
 
+.panel-acceso table td {
+  padding: 5px 10px;
+}
+
+@media (max-width: 900px) {
+  .panel-acceso table td {
+    padding: 5px 0;
+  }
+}
+
+.accesos-habilitados td a {
+  background-color: #0d6efd;
+  color: #fff;
+  border-radius: 5px;
+  padding: 6px 10px;
+  min-width: 115px;
+}
+
+.accesos-habilitados td a:hover {
+  background-color: #0b5ed7;
+}
+
 @media (max-width: 900px) {
   .accesos-habilitados th {
     display: none;
@@ -461,15 +483,8 @@ Pago Pactado = Verde claro */
   }
 
   .accesos-habilitados td a {
-    background-color: #0d6efd;
-    color: #fff;
-    border-radius: 5px;
     width: 100%;
-    padding: 10px 0;
-  }
-
-  .accesos-habilitados td a:hover {
-    background-color: #0b5ed7;
+    padding: 8px 0;
   }
 
   .accesos-habilitados .btn-primary {
