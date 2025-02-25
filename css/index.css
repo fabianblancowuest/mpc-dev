@@ -944,7 +944,6 @@ select {
 
 @media (max-width: 900px) {
   #botones-menu {
-    margin-top: -10px;
     flex-direction: column;
     width: 90%;
   }
