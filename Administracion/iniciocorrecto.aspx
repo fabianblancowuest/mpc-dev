@@ -12,7 +12,8 @@
                 </div>
                 <div class="contenedor-busqueda">
                     <input type="search" name="" id="input-search" placeholder="Buscar...">
-                    <button type="button" class="btn btn-primary" id="btn-search">Buscar</button>
+                    <button type="button" class="btn btn-primary" id="btn-search">Buscar <i
+                            class="bi bi-search"></i></button>
                 </div>
 
                 <!-- Tabla Roles -->
@@ -66,14 +67,19 @@
                 </asp:SqlDataSource>
             </asp:Panel>
             <script>
-                const grillaPrincipal = document.getElementById("grillaPrincipal");
-                const itemsA = grillaPrincipal.querySelectorAll("a");
 
+                document.addEventListener("DOMContentLoaded", () => {
+                    const grillaPrincipal = document.getElementById("grillaPrincipal");
+                    const itemsA = grillaPrincipal.querySelectorAll("a");
+                    // const arrowIco = `<i class="bi bi-box-arrow-in-right"></i>`
 
-                for (let i = 0; i < itemsA.length; i++) {
-                    itemsA[i].classList.add("btn");
-                    itemsA[i].classList.add("btn-primary");
+                    for (let i = 0; i < itemsA.length; i++) {
+                        itemsA[i].classList.add("btn", "btn-primary");
+                        const arrowIco = document.createElement("i");
+                        arrowIco.classList.add("bi", "bi-box-arrow-in-right");
+                        itemsA[i].append(arrowIco);
 
-                }
+                    }
+                })
             </script>
         </asp:Content>

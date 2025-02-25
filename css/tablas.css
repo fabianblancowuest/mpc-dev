@@ -122,11 +122,11 @@ tr td a {
     justify-content: center;
   }
 
-  .tabla-roles tr > :not(tr:first-child) * {
+  /* .tabla-roles tr > :not(tr:first-child) * {
     display: flex;
     flex-direction: column;
     flex-wrap: wrap;
-  }
+  } */
 
   .tabla-roles td span {
     width: 100%;
@@ -295,7 +295,7 @@ th {
 .contenedor-tabla-roles tr td a {
   background-color: #337ab7;
   color: white;
-  min-width: 100px;
+  min-width: 115px;
 }
 
 @media (max-width: 900px) {

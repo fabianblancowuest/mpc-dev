@@ -99,8 +99,7 @@ a {
 }
 
 .contenedor-busqueda button {
-  width: 100px;
-  min-width: fit-content;
+  min-width: 115px;
   margin-left: 0;
   margin-right: 0;
   background-color: #337ab7;
