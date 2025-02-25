@@ -223,10 +223,10 @@
 
 
             </asp:Panel>
-            <div class="text-center">
+            <!-- <div class="text-center">
                 <button class="btn btn-primary no-imprimir btn-imprimir">Imprimir <i
                         class="bi bi-printer-fill"></i></button>
-            </div>
+            </div> -->
 
             <script>
                 document.addEventListener("DOMContentLoaded", () => {
@@ -248,7 +248,7 @@
                     console.log(panelDocumentacion)
 
                     if (tablaVPeriodo) {
-                        menuBotones.style.display = "block";
+                        menuBotones.style.display = "flex";
                     } else if (panelDocumentacion) {
                         menuBotones.style.backgroundColor = "red";
                     }

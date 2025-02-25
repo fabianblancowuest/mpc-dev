@@ -10,8 +10,8 @@
         <!-- <div>
         <asp:Label ID="Label3" runat="server" Text="Mi Primer Casa S.A." Font-Bold ="true" Font-Size ="Large" ></asp:Label>    
     </div> -->
-        <h1 class="titulo-rol no-padding-imp">
-            <span class="solo-imprimir">Mi Primer Casa S.A.</span>
+        <h1 class="titulo-rol">
+            <!-- <span class="solo-imprimir">Mi Primer Casa S.A.</span> -->
             <asp:Label ID="Label1" runat="server" Text="Control de Adhesiones concretadas por vendedor en período">
             </asp:Label>
         </h1>

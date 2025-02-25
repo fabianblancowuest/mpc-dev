@@ -523,12 +523,21 @@ input[type="radio"] {
 .seleccion-fechas-sp {
   display: flex;
   justify-content: space-around;
-  padding: 0.5em;
-  margin: 0.5em;
 }
 
 .seleccion-fechas-sp > * {
   padding: 0.3em;
+}
+
+@media (max-width: 900px) {
+  .seleccion-fechas-sp {
+    width: 100%;
+  }
+  .seleccion-fechas-sp select {
+    width: 90%;
+    text-align: center;
+    padding: 8px 0;
+  }
 }
 
 .espaciado-interno {
@@ -911,6 +920,11 @@ select {
   gap: 1em;
 }
 
+#botones-menu button {
+  box-shadow: 1px 1px 3px;
+  min-width: 180px;
+}
+
 @media (max-width: 900px) {
   #botones-menu {
     margin-top: -10px;
@@ -920,7 +934,6 @@ select {
 
   #botones-menu button {
     width: 100%;
-    margin-top: 10px;
     padding: 8px 0;
   }
 }
