@@ -15,11 +15,11 @@
             </h1>
          </asp:Panel>
 
-         <asp:Panel ID="Panel1" runat="server">
+         <asp:Panel ID="Panel1" runat="server" CssClass="manzanas-en-barrios">
 
             <div class="row">
 
-               <div class="form-group margenes-y caja-busqueda">
+               <div class="contenedor-busqueda">
                   <asp:Label ID="Label1" runat="server" Text="SELECCIONE BARRIO:" CssClass="control-label"></asp:Label>
                   <asp:SqlDataSource ID="odsBARRIOOperador" runat="server"
                      ConnectionString="<%$ ConnectionStrings:STRSYSTEM %>" SelectCommand="BARRIOOPERADORSELECCIONA"
@@ -50,7 +50,7 @@
                      DataKeyNames="IDBARRIOMANZANA      ,IDBARRIO  ,BARRIOMANZANACODIGO        ,BARRIOMANZANADESCRIPCION         ,BARRIOMANZANAEXPLICACION         ,IDBARRIOMANZANASTATUS        ,BARRIOMANZANAESTADO         ,BARRIOMANZANAPRECIOBC         ,BARRIOMANZANABONIFICACION         ,BARRIOMANZANALOTEABLE         "
                      DataSourceID="odsBARRIOMANZANA"
                      EmptyDataText="No existen entradas en la tabla con el argumento de busqueda ingresado"
-                     AllowSorting="True" Font-Size="X-Small">
+                     AllowSorting="True">
                      <Columns>
                         <asp:CommandField ShowSelectButton="True" SelectText="Seleccione">
                         </asp:CommandField>

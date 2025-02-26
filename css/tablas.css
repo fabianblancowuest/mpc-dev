@@ -605,3 +605,11 @@ Pago Pactado = Verde claro */
 .vendedor-gestiona-lotes-todos-los-barrios {
   gap: 1rem;
 }
+
+.consulta-adhesiones-por-barrio {
+  gap: 1rem;
+}
+
+.manzanas-en-barrios table {
+  font-size: 12px;
+}
