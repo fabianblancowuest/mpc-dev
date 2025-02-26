@@ -269,7 +269,9 @@
             <asp:Label ID="Label21" runat="server" Text="TOTAL DEL GASTO:"></asp:Label>
             <asp:Label ID="olblGARTotal" runat="server" Text="0" Font-Bold="true"></asp:Label>
         </div>
-
+        <div>
+            <asp:Label ID="olblValidacionMensaje" runat="server" Text=""></asp:Label>
+        </div>
         <div>
             <br />
             <br />

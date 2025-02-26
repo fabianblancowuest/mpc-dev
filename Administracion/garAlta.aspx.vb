@@ -206,7 +206,7 @@ Partial Class Administracion_garAlta
         If totalGasto <> 0 Then
 
             If totalGasto - montoGAR - montoTransferencia - montoAcuentaOperador = 0 Then
-                obutGarGastoAlta.Visible = True
+                obutRegistroAlta.Visible = True
                 obutRegistroValidar.Visible = False
                 obutRegistroReingresar.Visible = True
                 otxtGARMontoTotal.Enabled = False

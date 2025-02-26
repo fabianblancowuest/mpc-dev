@@ -26,7 +26,7 @@
                     <asp:Label ID="olblIdOperador" runat="server" Text=""></asp:Label>
                 </div>
                 <div class="vendedor-gestiona-lotes-todos-los-barrios contenedor-busqueda">
-                    <asp:Label ID="olblSeleccionaBarrio" runat="server" Text="Seleccione Barrio"></asp:Label>
+                    <asp:Label ID="olblSeleccionaBarrio" runat="server" Text="Seleccione Barrio:"></asp:Label>
                     <asp:SqlDataSource ID="odsBarrioHabilitadoSelecciona" runat="server"
                         ConnectionString="<%$ ConnectionStrings:STRSYSTEM %>" SelectCommand="BARRIOTraerODDL"
                         SelectCommandType="StoredProcedure"></asp:SqlDataSource>
@@ -34,7 +34,7 @@
                         DataSourceID="odsBarrioHabilitadoSelecciona" DataTextField="barrioDescripcion"
                         DataValueField="idBarrio"></asp:DropDownList>
 
-                    <asp:Label ID="olblSeleccionaManzana" runat="server" Text="Seleccione Manzana"></asp:Label>
+                    <asp:Label ID="olblSeleccionaManzana" runat="server" Text="Seleccione Manzana:"></asp:Label>
                     <asp:SqlDataSource ID="odsBarrioHabilitadoManzanaSelecciona" runat="server"
                         ConnectionString="<%$ ConnectionStrings:STRSYSTEM %>"
                         SelectCommand="barrioHabilitadoManzanaSelecciona" SelectCommandType="StoredProcedure">
@@ -48,11 +48,11 @@
                         DataValueField="idBarrioManzana"></asp:DropDownList>
                 </div>
                 <asp:Panel ID="Panel1" runat="server">
-                    <asp:Label ID="olblIDBarrioLoteOperador" runat="server" Text="xxxx" CssClass="d-block text-center">
+                    <asp:Label ID="olblIDBarrioLoteOperador" runat="server" Text="----" CssClass="d-block text-center">
                     </asp:Label>
                     <div class="row">
 
-                        <div class="vendedor-gestiona-lotes-todos-los-barrios contenedor-busqueda">
+                        <div class="vendedor-gestiona-lotes-todos-los-barrios contenedor-busqueda align-items-center">
                             <asp:Label ID="Label1" runat="server" Text="SELECCIONE  LOTE:" CssClass="select">
                             </asp:Label>
                             <asp:SqlDataSource ID="odsBARRIOLOTEOperador" runat="server"
@@ -75,9 +75,11 @@
                                 DataSourceID="odsBARRIOLOTEOPERADOR" DataTextField="BARRIOLOTEDescripcion"
                                 DataValueField="idBARRIOLOTE" CssClass="input" AutoPostBack="True">
                             </asp:DropDownList>
-                            <asp:CheckBox ID="ochTodos" runat="server" Checked="false" AutoPostBack="true" />
-
-                            <asp:Label ID="Label11" runat="server" Text=" - (Todos los lotes)"></asp:Label>
+                            <div class="d-flex align-items-center justify-content-center">
+                                <asp:CheckBox ID="ochTodos" runat="server" Checked="false" AutoPostBack="true" />
+                                <asp:Label ID="Label11" runat="server" Text="Todos los lotes" CssClass="mx-2">
+                                </asp:Label>
+                            </div>
 
                         </div>
                     </div>
