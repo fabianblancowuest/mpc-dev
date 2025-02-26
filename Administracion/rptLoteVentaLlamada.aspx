@@ -25,6 +25,8 @@ order by barrioDescripcion "></asp:SqlDataSource>
         <asp:SqlDataSource ID="odsLoteVentaLlamada" runat="server" ConnectionString="<%$ ConnectionStrings:STRSYSTEM %>" SelectCommand="LOTEVENTALLAMADATraeroddl" SelectCommandType="StoredProcedure"></asp:SqlDataSource>
         <asp:DropDownList ID="oddlLoteVentaLlamada" runat="server" AutoPostBack="True" DataSourceID="odsLoteVentaLlamada" DataTextField="loteVentaLlamadaDescripcion" DataValueField="idLoteVentaLlamada"></asp:DropDownList>
         
+           <asp:Button ID="obutReporteActualiza" runat="server" Text="Actualizar ulimas novedades" BackColor="Green" ForeColor ="White" />
+        
            </div>
 
 
@@ -96,6 +98,8 @@ order by barrioDescripcion "></asp:SqlDataSource>
             <asp:Label ID="olblIdLoteVenta" runat="server" Text="" Font-Bold ="true" ForeColor ="Green" ></asp:Label>
             <asp:Label ID="olblLoteSeleccionado" runat="server" Text="" Font-Bold ="true" ForeColor ="Blue" ></asp:Label>
 
+            <asp:Button ID="obutVolverAlReporte" runat="server" Height="61px" Text="Volver al Reporte" />
+
         </div>
         <div>
             <asp:Label ID="Label4" runat="server" Text="Datos del / los compradores "></asp:Label>
@@ -130,13 +134,13 @@ order by barrioDescripcion "></asp:SqlDataSource>
                     <asp:ControlParameter ControlID="olblIdLoteVenta" Name="idLoteVenta" PropertyName="Text" Type="Int32" />
                 </SelectParameters>
             </asp:SqlDataSource>
-            <asp:GridView ID="GridView1" runat="server" AutoGenerateColumns="False" CssClass="table-cemmi" DataSourceID="odsLoteVentaLlamadaRealizadas" EmptyDataText="No se han registrado llamadas hasta el momento." Font-Size="Small">
+            <asp:GridView ID="ogvLlamadasRegistradas" runat="server" AutoGenerateColumns="False" CssClass="table-cemmi" DataSourceID="odsLoteVentaLlamadaRealizadas" EmptyDataText="No se han registrado llamadas hasta el momento." Font-Size="Small">
                 <Columns>
-                    <asp:BoundField DataField="idLoteVentaLlamadaGestion" HeaderText="idLoteVentaLlamadaGestion" InsertVisible="False" ReadOnly="True" SortExpression="idLoteVentaLlamadaGestion" />
+                    <asp:BoundField DataField="idLoteVentaLlamadaGestion" HeaderText="id" InsertVisible="False" ReadOnly="True" SortExpression="idLoteVentaLlamadaGestion" />
                     <asp:BoundField DataField="idOperador" HeaderText="idOperador" SortExpression="idOperador" Visible="False" />
                     <asp:BoundField DataField="idLoteVenta" HeaderText="idLoteVenta" SortExpression="idLoteVenta" Visible="False" />
                     <asp:BoundField DataField="idLoteVentaLlamadaTipo" HeaderText="idLoteVentaLlamadaTipo" SortExpression="idLoteVentaLlamadaTipo" Visible="False" />
-                    <asp:BoundField DataField="loteVentaLlamadaFecha" HeaderText="Fecha" SortExpression="loteVentaLlamadaFecha" DataFormatString="{0:d}" />
+                    <asp:BoundField DataField="loteVentaLlamadaFecha" HeaderText="Fecha" SortExpression="loteVentaLlamadaFecha" />
                     <asp:BoundField DataField="loteVentaLLamadaTipoDescripcion" HeaderText="Tipo" SortExpression="loteVentaLLamadaTipoDescripcion" />
                     <asp:BoundField DataField="loteVentaLlamadaComentario" HeaderText="Comentario" SortExpression="loteVentaLlamadaComentario" />
                     <asp:BoundField DataField="operador" HeaderText="Operador" SortExpression="operador" />
@@ -165,15 +169,6 @@ order by barrioDescripcion "></asp:SqlDataSource>
                 SelectCommand="OPERADORTraerOddl" SelectCommandType="StoredProcedure"></asp:SqlDataSource>         
                         <asp:DropDownList ID="oddlOPERADOR" runat="server" DataSourceID="odsOPERADOR"    
                 DataTextField="OPERADORDescripcion" DataValueField="IDOPERADOR" CssClass="form-control">     
-            </asp:DropDownList> 
-</div>
-<div class="form-group">
-<asp:Label ID="Label9" runat="server" Text="Lote adherido:" CssClass="control-label"></asp:Label>   
-                         <asp:SqlDataSource ID="odsLOTEVENTA" runat="server"     
-                ConnectionString="<%$ ConnectionStrings:STRSYSTEM %>"   
-                SelectCommand="LOTEVENTATraerOddl" SelectCommandType="StoredProcedure"></asp:SqlDataSource>         
-                        <asp:DropDownList ID="oddlLOTEVENTA" runat="server" DataSourceID="odsLOTEVENTA"  
-                DataTextField="LOTEVENTADescripcion" DataValueField="IDLOTEVENTA" CssClass="form-control">    
             </asp:DropDownList> 
 </div>
 <div class="form-group">

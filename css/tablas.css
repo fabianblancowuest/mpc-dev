@@ -545,3 +545,9 @@ Pago Pactado = Verde claro */
 .conceptos-contables table {
   font-size: 12px;
 }
+
+/* Mantenimiento del plan de cuentas */
+
+.mantenimiento-plan-cuentas table {
+  font-size: 12px;
+}

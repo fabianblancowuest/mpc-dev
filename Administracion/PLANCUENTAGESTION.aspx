@@ -19,13 +19,13 @@
                 </div>
             </asp:Panel>
 
-            <asp:Panel ID="Panel1" runat="server">
+            <asp:Panel ID="Panel1" runat="server" CssClass="mantenimiento-plan-cuentas">
 
                 <div class="row">
 
-                    <div class="form-group">
-                        <asp:Label ID="Label1" runat="server" Text="SELECCIONE PLANCUENTARUBRO:"
-                            CssClass="control-label"></asp:Label>
+                    <div class="contenedor-busqueda">
+                        <asp:Label ID="Label1" runat="server" Text="SELECCIONE PLAN CUENTARUBRO: "
+                            CssClass="control-label mx-2"></asp:Label>
                         <asp:SqlDataSource ID="odsPLANCUENTARUBROOperador" runat="server"
                             ConnectionString="<%$ ConnectionStrings:STRSYSTEM %>"
                             SelectCommand="PLANCUENTARUBROOPERADORSELECCIONA" SelectCommandType="StoredProcedure">
@@ -35,7 +35,7 @@
                         </asp:SqlDataSource>
                         <asp:DropDownList ID="oddlPLANCUENTARUBROOperador" runat="server"
                             DataSourceID="odsPLANCUENTARUBROOPERADOR" DataTextField="PLANCUENTARUBRODescripcion"
-                            DataValueField="idPLANCUENTARUBRO" CssClass="form-control" AutoPostBack="True">
+                            DataValueField="idPLANCUENTARUBRO" AutoPostBack="True">
                         </asp:DropDownList>
                     </div>
                 </div>

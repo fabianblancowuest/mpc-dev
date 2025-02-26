@@ -19,12 +19,12 @@
          <asp:Panel ID="Panel1" runat="server" CssClass="tipos-de-comprobante">
             <!-- <h2 class="titulo-rol">Tipos de comprobante</h2> -->
 
-            <div class="row contenedor-flexible margenes-y">
-               <asp:Label ID="olblBuscar" runat="server" Text="Localizar"
+            <div class="contenedor-busqueda">
+               <!-- <asp:Label ID="olblBuscar" runat="server" Text="Localizar"
                   ToolTip="Permite realizar la busqueda de los datos requeridos. Para traer todos los datos de la tabla ingresar TODO y apretar el boton BUSCAR ">
-               </asp:Label>
-               <asp:TextBox ID="otxtCadena" runat="server" CssClass="form-control">Todo</asp:TextBox>
-               <asp:Button ID="obutBuscar" runat="server" Text="Buscar" CssClass="btn btn-primary btn-basic" />
+               </asp:Label> -->
+               <asp:TextBox ID="otxtCadena" runat="server" CssClass="input">Todo</asp:TextBox>
+               <asp:Button ID="obutBuscar" runat="server" Text="Buscar" CssClass="btn btn-primary" />
             </div>
             <div>
 
