@@ -19,7 +19,9 @@
 
                 <!-- Tabla Roles -->
                 <div class="contenedor-tabla-roles" id="grillaPrincipal">
-                    <asp:Label runat="server" Text="ROLES ASIGNADOS POR USUARIO" CssClass="titulo-rol"></asp:Label>
+                    <asp:Label runat="server" Text="ROLES ASIGNADOS POR USUARIO"
+                        CssClass="titulo-rol titulo-roles-asignados">
+                    </asp:Label>
                     <asp:GridView CssClass="mGrid tabla-roles" AlternatingRowStyle-CssClass="alt" ID="ogvRolesUsuario"
                         runat="server" AutoGenerateColumns="False"
                         DataKeyNames="idAccesoRol,accesoRolCodigo,accesoRolDescripcion,accesoRolExplicacion,accesoRolPagina,accesoRolDocumentoOperativo,accesoRolEstado"

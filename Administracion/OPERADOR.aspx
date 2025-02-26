@@ -24,8 +24,10 @@
                     <!-- <asp:Label ID="olblBuscar" runat="server" Text="Localizar"
                         ToolTip="Permite realizar la busqueda de los datos requeridos. Para traer todos los datos de la tabla ingresar TODO y apretar el boton BUSCAR ">
                     </asp:Label> -->
-                    <asp:TextBox ID="otxtCadena" runat="server" CssClass="input-busqueda" placeholder="Escribe tu búsqueda aquí..." ></asp:TextBox>
-                    <asp:Button ID="obutBuscar" runat="server" Text="Buscar" CssClass="btn btn-basic btn-primary btn-busqueda"  />
+                    <asp:TextBox ID="otxtCadena" runat="server" CssClass="input-busqueda"
+                        placeholder="Escribe tu búsqueda aquí..."></asp:TextBox>
+                    <asp:Button ID="obutBuscar" runat="server" Text="Buscar"
+                        CssClass="btn btn-basic btn-primary btn-busqueda" />
                 </div>
                 <div>
 
@@ -98,7 +100,8 @@
 
 
                 <div class="row">
-                    <asp:Button ID="obutAlta" runat="server" Text="Nuevo Registro" CssClass="btn-basic btn btn-success" />
+                    <asp:Button ID="obutAlta" runat="server" Text="Nuevo Registro"
+                        CssClass="btn-basic btn btn-success" />
 
                 </div>
 
@@ -158,8 +161,8 @@
                         <asp:CheckBox ID="otxtOPERADORESTADO" runat="server" />
                     </div>
                     <div class="form-group">
-                        <asp:Label ID="olblESSUPERVISOR" runat="server" Text="ES SUPERVISOR?:"
-                            CssClass="control-label"></asp:Label>
+                        <asp:Label ID="olblESSUPERVISOR" runat="server" Text="ES SUPERVISOR?:" CssClass="control-label">
+                        </asp:Label>
                         <asp:CheckBox ID="otxtESSUPERVISOR" runat="server" />
                     </div>
                     <div class="form-group">

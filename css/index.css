@@ -149,12 +149,12 @@ a {
   text-align: center;
 }
 
-h1 {
+/* h1 {
   text-align: center;
   letter-spacing: 1px;
   font-size: 2.8rem;
   font-weight: bold;
-}
+} */
 
 form {
   min-width: 90%;
@@ -490,13 +490,18 @@ input[type="radio"] {
 
 /* Operador Venta Talón */
 
-.titulo-rol {
+.titulo-rol,
+h1 {
   text-align: center;
   font-size: 1.5rem;
   font-weight: bold;
   letter-spacing: 1px;
   margin: 1rem auto;
   text-transform: uppercase;
+}
+
+.titulo-roles-asignados {
+  font-size: 1.5rem;
 }
 
 .subtitulo-rol {
@@ -684,10 +689,6 @@ input[type="radio"] {
 
   .no-imprimir {
     display: none;
-  }
-
-  .titulo-rol {
-    font-size: 16px;
   }
 
   .solo-imprimir {
@@ -974,3 +975,26 @@ select {
 .parrafo-contrato {
   text-align: justify;
 }
+
+/* Creando un label y un select en la mismca línea en escritorio */
+
+.caja-busqueda {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+.caja-busqueda span {
+  min-width: 200px;
+  text-align: center;
+}
+
+.caja-busqueda select {
+  min-width: 300px;
+}
+
+/* .select-busqueda:focus {
+  outline: 1px solid #337ab7;
+  box-shadow: 1px 1px 3px #337ab7;
+} */

@@ -24,7 +24,7 @@
 
                 <div class="row contenedor-flexible margenes-y">
 
-                    <div class="form-group">
+                    <div class="caja-busqueda">
                         <asp:Label ID="Label1" runat="server" Text="SELECCIONE BARRIO:" CssClass="control-label">
                         </asp:Label>
                         <asp:SqlDataSource ID="odsBARRIOOperador" runat="server"
@@ -36,8 +36,7 @@
                         </asp:SqlDataSource>
                         <div class="barrio-mz">BARRIO</div>
                         <asp:DropDownList ID="oddlBARRIOOperador" runat="server" DataSourceID="odsBARRIOOPERADOR"
-                            DataTextField="BARRIODescripcion" DataValueField="idBARRIO" CssClass="form-control"
-                            AutoPostBack="True">
+                            DataTextField="BARRIODescripcion" DataValueField="idBARRIO" AutoPostBack="True">
                         </asp:DropDownList>
                     </div>
                 </div>
@@ -47,7 +46,7 @@
 
                 <div class="row contenedor-flexible margenes-y">
 
-                    <div class="form-group">
+                    <div class="caja-busqueda">
                         <asp:Label ID="Label3" runat="server" Text="SELECCIONE MANZANA:" CssClass="control-label">
                         </asp:Label>
                         <asp:SqlDataSource ID="odsBARRIOMANZANAOPERADOR" runat="server"
@@ -62,7 +61,7 @@
                         <div class="barrio-mz">MANZANA</div>
                         <asp:DropDownList ID="oddlBarrioManzanaOperador" runat="server"
                             DataSourceID="odsBARRIOMANZANAOPERADOR" DataTextField="barrioManzanaCodigo"
-                            DataValueField="idBarrioManzana" CssClass="form-control" AutoPostBack="True">
+                            DataValueField="idBarrioManzana" AutoPostBack="True">
                         </asp:DropDownList>
                     </div>
                 </div>
