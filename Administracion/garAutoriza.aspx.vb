@@ -3,6 +3,13 @@ Partial Class Administracion_garAutoriza
     Inherits System.Web.UI.Page
 
     Protected Sub ogvGARAutoriza_SelectedIndexChanged(sender As Object, e As EventArgs) Handles ogvGARAutoriza.SelectedIndexChanged
+        orbOpciones.SelectedValue = "0"
+        PanelRechazo.Visible = False
+        obutGarAutorizacionAbandona.Visible = False
+        obutGarAutorizacionConfirma.Visible = False
+        otxtGarRechazo.Enabled = False
+        otxtGarAutorizaMonto.Enabled = True
+        olblMensajePrevio.Visible = False
         PanelSelecciona.Visible = False
         PanelAutoriza.Visible = True
 

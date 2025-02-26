@@ -18,14 +18,14 @@
             </div>
          </asp:Panel>
 
-         <asp:Panel ID="Panel1" runat="server">
+         <asp:Panel ID="Panel1" runat="server" CssClass="tablas-del-sistema">
 
-            <div class="row contenedor-flexible margenes-y">
+            <div class="contenedor-busqueda">
                <asp:Label ID="olblBuscar" runat="server" Text="Localizar"
                   ToolTip="Permite realizar la busqueda de los datos requeridos. Para traer todos los datos de la tabla ingresar TODO y apretar el boton BUSCAR ">
                </asp:Label>
-               <asp:TextBox ID="otxtCadena" runat="server" CssClass="form-control">Todo</asp:TextBox>
-               <asp:Button ID="obutBuscar" runat="server" Text="Buscar" CssClass="btn-basic btn btn-primary" />
+               <asp:TextBox ID="otxtCadena" runat="server" CssClass="input">Todo</asp:TextBox>
+               <asp:Button ID="obutBuscar" runat="server" Text="Buscar" CssClass="btn btn-primary" />
             </div>
             <div>
 
@@ -47,11 +47,11 @@
                         </asp:CommandField>
                         <asp:BoundField DataField="IDTABLA" HeaderText="ID" InsertVisible="False" ReadOnly="True"
                            visible="False" SortExpression="IDTABLA" />
-                        <asp:BoundField DataField="TABLACODIGO" HeaderText="CODIGO TABLA"
+                        <asp:BoundField DataField="TABLACODIGO" HeaderText="CÓDIGO TABLA"
                            SortExpression="TABLACODIGO" />
                         <asp:BoundField DataField="TABLADESCRIPCION" HeaderText="NOMBRE TABLA"
                            SortExpression="TABLADESCRIPCION" />
-                        <asp:BoundField DataField="TABLAEXPLICACION" HeaderText="EXPLICACION TABLA"
+                        <asp:BoundField DataField="TABLAEXPLICACION" HeaderText="EXPLICACIÓN TABLA"
                            SortExpression="TABLAEXPLICACION" />
                         <asp:TemplateField HeaderText="ESTADO TABLA" SortExpression="TABLAESTADO">
                            <ItemTemplate>
@@ -81,7 +81,7 @@
                   <asp:Label ID="olblIDTABLA" runat="server" Text="" Visible="false"></asp:Label>
                </div>
                <div class="form-group">
-                  <asp:Label ID="olblTABLACODIGO" runat="server" Text="CODIGO TABLA:" CssClass="control-label">
+                  <asp:Label ID="olblTABLACODIGO" runat="server" Text="CÓDIGO TABLA:" CssClass="control-label">
                   </asp:Label>
                   <asp:TextBox ID="otxtTABLACODIGO" runat="server" CssClass="form-control" MaxLength="200">
                   </asp:TextBox>
@@ -93,7 +93,7 @@
                   </asp:TextBox>
                </div>
                <div class="form-group">
-                  <asp:Label ID="olblTABLAEXPLICACION" runat="server" Text="EXPLICACION TABLA:"
+                  <asp:Label ID="olblTABLAEXPLICACION" runat="server" Text="EXPLICACIÓN TABLA:"
                      CssClass="control-label"></asp:Label>
                   <asp:TextBox ID="otxtTABLAEXPLICACION" runat="server" CssClass="form-control" TextMode="MultiLine"
                      height="500px"></asp:TextBox>

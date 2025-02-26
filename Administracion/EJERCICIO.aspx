@@ -10,21 +10,19 @@
 
 
          <asp:Panel ID="PanelTitulo" runat="server">
-            <div class="row">
-               <h1 class="titulo-rol">
-                  <asp:Label ID="olblEJERCICIOTitulo" runat="server" Text="EJERCICIO CONTABLE"></asp:Label>
-               </h1>
-            </div>
+            <h1 class="titulo-rol">
+               <asp:Label ID="olblEJERCICIOTitulo" runat="server" Text="EJERCICIO CONTABLE"></asp:Label>
+            </h1>
          </asp:Panel>
 
-         <asp:Panel ID="Panel1" runat="server">
+         <asp:Panel ID="Panel1" runat="server" CssClass="ejercicio-contable">
 
-            <div class="row">
-               <asp:Label ID="olblBuscar" runat="server" Text="Localizar"
+            <div class="contenedor-busqueda">
+               <!-- <asp:Label ID="olblBuscar" runat="server" Text="Localizar"
                   ToolTip="Permite realizar la busqueda de los datos requeridos. Para traer todos los datos de la tabla ingresar TODO y apretar el boton BUSCAR ">
-               </asp:Label>
-               <asp:TextBox ID="otxtCadena" runat="server" CssClass="form-control">Todo</asp:TextBox>
-               <asp:Button ID="obutBuscar" runat="server" Text="Buscar" CssClass="btn btn-default" />
+               </asp:Label> -->
+               <asp:TextBox ID="otxtCadena" runat="server" CssClass="input">Todo</asp:TextBox>
+               <asp:Button ID="obutBuscar" runat="server" Text="Buscar" CssClass="btn btn-primary" />
             </div>
             <div>
 

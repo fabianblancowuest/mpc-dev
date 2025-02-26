@@ -12,20 +12,18 @@ TITULARIDAD DE LOTES" Culture="es-AR" %>
 
 
          <asp:Panel ID="PanelTitulo" runat="server">
-            <div class="row">
-               <h1 class="titulo-rol">
-                  <asp:Label ID="olblBARRIOLOTEPROVEEDORTITULARIDADTitulo" runat="server" Text="TITULARIDAD DE LOTES">
-                  </asp:Label>
-               </h1>
-            </div>
+            <h1 class="titulo-rol">
+               <asp:Label ID="olblBARRIOLOTEPROVEEDORTITULARIDADTitulo" runat="server" Text="TITULARIDAD DE LOTES">
+               </asp:Label>
+            </h1>
          </asp:Panel>
 
-         <asp:Panel ID="Panel1" runat="server">
+         <asp:Panel ID="Panel1" runat="server" CssClass="titularidad-lotes">
 
             <div class="row">
 
-               <div class="form-group">
-                  <asp:Label ID="Label1" runat="server" Text="SELECCIONE BARRIOLOTE:" CssClass="control-label">
+               <div class="contenedor-busqueda">
+                  <asp:Label ID="Label1" runat="server" Text="SELECCIONE BARRIOLOTE:" CssClass="mx-2">
                   </asp:Label>
                   <asp:SqlDataSource ID="odsBARRIOLOTEOperador" runat="server"
                      ConnectionString="<%$ ConnectionStrings:STRSYSTEM %>" SelectCommand="BARRIOLOTEOPERADORSELECCIONA"
@@ -35,7 +33,7 @@ TITULARIDAD DE LOTES" Culture="es-AR" %>
                      </SelectParameters>
                   </asp:SqlDataSource>
                   <asp:DropDownList ID="oddlBARRIOLOTEOperador" runat="server" DataSourceID="odsBARRIOLOTEOPERADOR"
-                     DataTextField="BARRIOLOTEDescripcion" DataValueField="idBARRIOLOTE" CssClass="form-control"
+                     DataTextField="BARRIOLOTEDescripcion" DataValueField="idBARRIOLOTE" CssClass="input"
                      AutoPostBack="True">
                   </asp:DropDownList>
                </div>

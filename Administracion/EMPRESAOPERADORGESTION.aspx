@@ -11,19 +11,17 @@
 
 
             <asp:Panel ID="PanelTitulo" runat="server">
-                <div class="row">
-                    <h1 class="titulo-rol">
-                        <asp:Label ID="olblEMPRESAOPERADORTitulo" runat="server" Text="OPERADORES POR EMPRESA">
-                        </asp:Label>
-                    </h1>
-                </div>
+                <h1 class="titulo-rol">
+                    <asp:Label ID="olblEMPRESAOPERADORTitulo" runat="server" Text="OPERADORES POR EMPRESA">
+                    </asp:Label>
+                </h1>
             </asp:Panel>
 
-            <asp:Panel ID="Panel1" runat="server">
+            <asp:Panel ID="Panel1" runat="server" CssClass="operadores-por-empresa">
 
                 <div class="row">
 
-                    <div class="form-group">
+                    <div class="contenedor-busqueda">
                         <asp:Label ID="Label1" runat="server" Text="SELECCIONE OPERADOR:" CssClass="control-label">
                         </asp:Label>
                         <asp:SqlDataSource ID="odsOPERADOROperador" runat="server"
@@ -34,7 +32,7 @@
                             </SelectParameters>
                         </asp:SqlDataSource>
                         <asp:DropDownList ID="oddlOPERADOROperador" runat="server" DataSourceID="odsOPERADOROPERADOR"
-                            DataTextField="OPERADORDescripcion" DataValueField="idOPERADOR" CssClass="form-control"
+                            DataTextField="OPERADORDescripcion" DataValueField="idOPERADOR" CssClass="select"
                             AutoPostBack="True">
                         </asp:DropDownList>
                     </div>
@@ -126,17 +124,19 @@
                             ConnectionString="<%$ ConnectionStrings:STRSYSTEM %>" SelectCommand="EMPRESATraerOddl"
                             SelectCommandType="StoredProcedure"></asp:SqlDataSource>
                         <asp:DropDownList ID="oddlEMPRESA" runat="server" DataSourceID="odsEMPRESA"
-                            DataTextField="EMPRESADescripcion" DataValueField="IDEMPRESA" CssClass="form-control" AutoPostBack="True">
+                            DataTextField="EMPRESADescripcion" DataValueField="IDEMPRESA" CssClass="form-control"
+                            AutoPostBack="True">
                         </asp:DropDownList>
                     </div>
                     <div class="form-group">
                         <asp:Label ID="olblIDEMPRESASUCURSAL" runat="server" Text="SUCURSAL:" CssClass="control-label">
                         </asp:Label>
                         <asp:SqlDataSource ID="odsEMPRESASUCURSAL" runat="server"
-                            ConnectionString="<%$ ConnectionStrings:STRSYSTEM %>"
-                            SelectCommand="EMPRESASUCURSALTRAERID" SelectCommandType="StoredProcedure">
+                            ConnectionString="<%$ ConnectionStrings:STRSYSTEM %>" SelectCommand="EMPRESASUCURSALTRAERID"
+                            SelectCommandType="StoredProcedure">
                             <SelectParameters>
-                                <asp:ControlParameter ControlID="oddlEMPRESA" Name="idEmpresa" PropertyName="SelectedValue" Type="Int32" />
+                                <asp:ControlParameter ControlID="oddlEMPRESA" Name="idEmpresa"
+                                    PropertyName="SelectedValue" Type="Int32" />
                             </SelectParameters>
                         </asp:SqlDataSource>
                         <asp:DropDownList ID="oddlEMPRESASUCURSAL" runat="server" DataSourceID="odsEMPRESASUCURSAL"
@@ -151,7 +151,8 @@
                             ConnectionString="<%$ ConnectionStrings:STRSYSTEM %>" SelectCommand="EMPRESASECTORTRAERID"
                             SelectCommandType="StoredProcedure">
                             <SelectParameters>
-                                <asp:ControlParameter ControlID="oddlEMPRESA" Name="idEmpresa" PropertyName="SelectedValue" Type="Int32" />
+                                <asp:ControlParameter ControlID="oddlEMPRESA" Name="idEmpresa"
+                                    PropertyName="SelectedValue" Type="Int32" />
                             </SelectParameters>
                         </asp:SqlDataSource>
                         <asp:DropDownList ID="oddlEMPRESASECTOR" runat="server" DataSourceID="odsEMPRESASECTOR"

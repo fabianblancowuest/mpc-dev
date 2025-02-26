@@ -4,11 +4,9 @@
     <asp:Content ID="Content1" ContentPlaceHolderID="head" Runat="Server">
     </asp:Content>
     <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" Runat="Server">
-        <div class="row">
-            <h1 class="titulo-rol">
-                <asp:Label ID="olblACCESOROLTitulo" runat="server" Text="COTIZACION DE MONEDA EXTRANJERA"></asp:Label>
-            </h1>
-        </div>
+        <h1 class="titulo-rol">
+            <asp:Label ID="olblACCESOROLTitulo" runat="server" Text="COTIZACIÓN DE MONEDA EXTRANJERA"></asp:Label>
+        </h1>
 
         <div>
 
@@ -47,9 +45,9 @@
                         HeaderText="Fecha de Cotizacion" SortExpression="cotizacionFecha" />
                     <asp:BoundField DataField="idMoneda" HeaderText="idMoneda" SortExpression="idMoneda"
                         Visible="False" />
-                    <asp:BoundField DataField="monedaCodigo" HeaderText="Codigo Moneda "
+                    <asp:BoundField DataField="monedaCodigo" HeaderText="Código Moneda "
                         SortExpression="monedaCodigo" />
-                    <asp:BoundField DataField="monedaDescripcion" HeaderText="Descripcion Moneda"
+                    <asp:BoundField DataField="monedaDescripcion" HeaderText="Descripción Moneda"
                         SortExpression="monedaDescripcion" />
 
                     <asp:TemplateField HeaderText="Valor de Compra" SortExpression="cotizacionValorCompra">
@@ -72,9 +70,9 @@
             <br />
             <div class="contenedor-flexible margenes-y">
 
-                <asp:Button ID="obutCotizacionActualiza" runat="server" Text="Actualiza cotizacion"
+                <asp:Button ID="obutCotizacionActualiza" runat="server" Text="Actualizar cotización"
                     CssClass="btn btn-basic btn-success" />
-                <asp:Button ID="obutCotizacionFechaAlta" runat="server" Text="Agrega nueva Fecha"
+                <asp:Button ID="obutCotizacionFechaAlta" runat="server" Text="Agregar nueva fecha"
                     CssClass="btn btn-basic btn-primary" />
 
 

@@ -77,6 +77,7 @@ Partial Class Administracion_garAlta
 
     Protected Sub ogvOperadorGar_SelectedIndexChanged(sender As Object, e As EventArgs) Handles ogvOperadorGar.SelectedIndexChanged
         If ogvOperadorGar.SelectedDataKey.Item("idAsientoCabecera").ToString.Trim <> "0" Then
+            orbOpcion.SelectedValue = "1"
             PanelGARAutorizado.Visible = True
             PanelGARNoAutorizado.Visible = False
             olblGAROperadorSolicita.Text = oddlgarOperadorSelecciona.SelectedItem.ToString

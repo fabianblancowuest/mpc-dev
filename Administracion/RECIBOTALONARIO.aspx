@@ -10,22 +10,20 @@
 
 
             <asp:Panel ID="PanelTitulo" runat="server">
-                <div class="row">
-                    <h1 class="titulo-rol">
-                        <asp:Label ID="olblRECIBOTALONARIOTitulo" runat="server" Text="ALTA DE TALONARIOS DE RECIBOS">
-                        </asp:Label>
-                    </h1>
-                </div>
+                <h1 class="titulo-rol">
+                    <asp:Label ID="olblRECIBOTALONARIOTitulo" runat="server" Text="ALTA DE TALONARIOS DE RECIBOS">
+                    </asp:Label>
+                </h1>
             </asp:Panel>
 
-            <asp:Panel ID="Panel1" runat="server">
+            <asp:Panel ID="Panel1" runat="server" CssClass="alta-talonarios-recibos">
 
-                <div class="row contenedor-flexible margenes-y">
-                    <asp:Label ID="olblBuscar" runat="server" Text="Localizar"
+                <div class="contenedor-busqueda">
+                    <!-- <asp:Label ID="olblBuscar" runat="server" Text="Localizar"
                         ToolTip="Permite realizar la busqueda de los datos requeridos. Para traer todos los datos de la tabla ingresar TODO y apretar el boton BUSCAR ">
-                    </asp:Label>
-                    <asp:TextBox ID="otxtCadena" runat="server" CssClass="form-control">Todo</asp:TextBox>
-                    <asp:Button ID="obutBuscar" runat="server" Text="Buscar" CssClass="btn-basic btn btn-primary" />
+                    </asp:Label> -->
+                    <asp:TextBox ID="otxtCadena" runat="server" CssClass="input">Todo</asp:TextBox>
+                    <asp:Button ID="obutBuscar" runat="server" Text="Buscar" CssClass="btn btn-primary" />
                 </div>
                 <div>
 
@@ -44,7 +42,7 @@
                             DataKeyNames="IDRECIBOTALONARIO,RECIBOTALONARIOCODIGO,RECIBOTALONARIODESCRIPCION,FECHASOLICITUD,FECHARECEPCION,RECIBOTALONARIONUMEROPUNTOVENTA,RECIBOTALONARIOLETRA,RECIBOTALONARIONUMERODESDE,RECIBOTALONARIONUMEROHASTA,RECIBOTALONARIOEXPLICACION,RECIBOTALONARIOESTADO"
                             DataSourceID="odsRECIBOTALONARIO"
                             EmptyDataText="No existen entradas en la tabla con el argumento de busqueda ingresado"
-                            AllowSorting="True" Font-Size="XX-Small">
+                            AllowSorting="True">
                             <AlternatingRowStyle CssClass="alt" />
                             <Columns>
                                 <asp:CommandField SelectText="Seleccione" ShowSelectButton="True" />

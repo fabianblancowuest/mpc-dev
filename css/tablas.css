@@ -551,3 +551,45 @@ Pago Pactado = Verde claro */
 .mantenimiento-plan-cuentas table {
   font-size: 12px;
 }
+
+/* Ejercicio contable */
+
+.ejercicio-contable table {
+  font-size: 12px;
+}
+
+.periodos-ejercicio-contable table {
+  font-size: 12px;
+}
+
+/* Valores de referencia por período contable */
+
+.valores-referencia-periodo-contable table {
+  font-size: 12px;
+}
+
+/* Tablas del sistema */
+
+.tablas-del-sistema table {
+  font-size: 12px;
+}
+
+/* Estado de venta de lotes */
+
+.estado-venta-lotes table {
+  font-size: 12px;
+}
+
+/* Modo actualización */
+
+.modo-actualizacion table {
+  font-size: 12px;
+}
+
+.contenedor-barrio table {
+  font-size: 12px;
+}
+
+.alta-talonarios-recibos table {
+  font-size: 12px;
+}
