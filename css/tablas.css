@@ -593,3 +593,15 @@ Pago Pactado = Verde claro */
 .alta-talonarios-recibos table {
   font-size: 12px;
 }
+
+.roles-asignados-por-empresa table {
+  font-size: 10px;
+}
+
+.roles-asignados-por-empresa {
+  gap: 1rem;
+}
+
+.vendedor-gestiona-lotes-todos-los-barrios .contenedor-busqueda {
+  gap: 1rem;
+}
