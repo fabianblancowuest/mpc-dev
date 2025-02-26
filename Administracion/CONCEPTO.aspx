@@ -3,26 +3,24 @@
    <%@ Register Assembly="AjaxControlToolkit" Namespace="AjaxControlToolkit" TagPrefix="asp" %>
       <asp:Content ID="Content1" ContentPlaceHolderID="head" Runat="Server">
       </asp:Content>
-      <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" Runat="Server">
+      <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" Runat="Server" CssClass="conceptos">
 
          <asp:ScriptManager ID="ScriptManager1" runat="server" EnableScriptGlobalization="true"
             EnableScriptLocalization="true"></asp:ScriptManager>
 
 
          <asp:Panel ID="PanelTitulo" runat="server">
-            <div class="row">
-               <h1 class="titulo-rol">
-                  <asp:Label ID="olblCONCEPTOTitulo" runat="server" Text="CONCEPTOS CONTABLES"></asp:Label>
-               </h1>
-            </div>
+            <h1 class="titulo-rol">
+               <asp:Label ID="olblCONCEPTOTitulo" runat="server" Text="CONCEPTOS CONTABLES"></asp:Label>
+            </h1>
          </asp:Panel>
 
-         <asp:Panel ID="Panel1" runat="server">
+         <asp:Panel ID="Panel1" runat="server" CssClass="conceptos-contables">
 
             <div class="row">
 
-               <div class="form-group">
-                  <asp:Label ID="Label1" runat="server" Text="SELECCIONE EMPRESA:" CssClass="control-label"></asp:Label>
+               <div class="caja-busqueda">
+                  <asp:Label ID="Label1" runat="server" Text="SELECCIONE EMPRESA:"></asp:Label>
                   <asp:SqlDataSource ID="odsEMPRESAOperador" runat="server"
                      ConnectionString="<%$ ConnectionStrings:STRSYSTEM %>" SelectCommand="EMPRESAOPERADORSELECCIONA"
                      SelectCommandType="StoredProcedure">
@@ -31,8 +29,7 @@
                      </SelectParameters>
                   </asp:SqlDataSource>
                   <asp:DropDownList ID="oddlEMPRESAOperador" runat="server" DataSourceID="odsEMPRESAOPERADOR"
-                     DataTextField="EMPRESADescripcion" DataValueField="idEMPRESA" CssClass="form-control"
-                     AutoPostBack="True">
+                     DataTextField="EMPRESADescripcion" DataValueField="idEMPRESA" AutoPostBack="True">
                   </asp:DropDownList>
                </div>
             </div>

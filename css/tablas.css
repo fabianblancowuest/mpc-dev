@@ -535,3 +535,13 @@ Pago Pactado = Verde claro */
   width: 100%;
   overflow-x: auto;
 }
+
+/* Roles del sistema */
+
+.roles-del-sistema table {
+  font-size: 12px;
+}
+
+.conceptos-contables table {
+  font-size: 12px;
+}

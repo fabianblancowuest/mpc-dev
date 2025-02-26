@@ -983,6 +983,7 @@ select {
   justify-content: center;
   gap: 1rem;
   flex-wrap: wrap;
+  margin: 0 auto 1rem auto;
 }
 
 .caja-busqueda span {
@@ -994,6 +995,11 @@ select {
   min-width: 300px;
 }
 
+@media (max-width: 900px) {
+  .caja-busqueda select {
+    text-align: center;
+  }
+}
 /* .select-busqueda:focus {
   outline: 1px solid #337ab7;
   box-shadow: 1px 1px 3px #337ab7;

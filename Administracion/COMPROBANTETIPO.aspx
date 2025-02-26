@@ -10,15 +10,14 @@
 
 
          <asp:Panel ID="PanelTitulo" runat="server">
-            <div class="row">
-               <h1 class="titulo-rol">
-                  <asp:Label ID="olblCOMPROBANTETIPOTitulo" runat="server" Text="Tipos de comprobante"></asp:Label>
-               </h1>
-            </div>
+            <h1 class="titulo-rol">
+               <asp:Label ID="olblCOMPROBANTETIPOTitulo" runat="server" Text="Tipos de comprobante"></asp:Label>
+               Tipos de comprobante
+            </h1>
          </asp:Panel>
 
-         <asp:Panel ID="Panel1" runat="server">
-            <h2 class="titulo-rol">Tipos de comprobante</h2>
+         <asp:Panel ID="Panel1" runat="server" CssClass="tipos-de-comprobante">
+            <!-- <h2 class="titulo-rol">Tipos de comprobante</h2> -->
 
             <div class="row contenedor-flexible margenes-y">
                <asp:Label ID="olblBuscar" runat="server" Text="Localizar"

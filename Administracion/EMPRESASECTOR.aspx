@@ -17,11 +17,11 @@
             </div>
          </asp:Panel>
 
-         <asp:Panel ID="Panel1" runat="server">
+         <asp:Panel ID="Panel1" runat="server" class="sector-de-empresa">
 
             <div class="row">
 
-               <div class="form-group">
+               <div class="caja-busqueda">
                   <asp:Label ID="Label1" runat="server" Text="SELECCIONE EMPRESA:" CssClass="control-label"></asp:Label>
                   <asp:SqlDataSource ID="odsEMPRESAOperador" runat="server"
                      ConnectionString="<%$ ConnectionStrings:STRSYSTEM %>" SelectCommand="EMPRESAOPERADORSELECCIONA"
@@ -31,8 +31,7 @@
                      </SelectParameters>
                   </asp:SqlDataSource>
                   <asp:DropDownList ID="oddlEMPRESAOperador" runat="server" DataSourceID="odsEMPRESAOPERADOR"
-                     DataTextField="EMPRESADescripcion" DataValueField="idEMPRESA" CssClass="form-control"
-                     AutoPostBack="True">
+                     DataTextField="EMPRESADescripcion" DataValueField="idEMPRESA" AutoPostBack="True">
                   </asp:DropDownList>
                </div>
             </div>
@@ -84,7 +83,7 @@
 
 
             <div class="row">
-               <asp:Button ID="obutAlta" runat="server" Text="Nuevo Registro" CssClass="btn btn-success" />
+               <asp:Button ID="obutAlta" runat="server" Text="Nuevo Registro" CssClass="btn btn-basic btn-success" />
 
             </div>
 
