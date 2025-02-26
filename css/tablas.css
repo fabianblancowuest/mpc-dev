@@ -613,3 +613,15 @@ Pago Pactado = Verde claro */
 .manzanas-en-barrios table {
   font-size: 12px;
 }
+
+.fuente-chica {
+  font-size: 13px;
+}
+
+.fuente-mediana {
+  font-size: 15px;
+}
+
+.fuente-grande {
+  font-size: 16;
+}

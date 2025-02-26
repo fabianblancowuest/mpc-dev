@@ -37,8 +37,8 @@
                </asp:SqlDataSource>
                <div class="table-responsive">
                   <asp:GridView ID="ogvCOMPROBANTETIPO" runat="server" AutoGenerateColumns="False"
-                     CssClass="table-cemmi" AlternatingRowStyle-CssClass="alt" AllowPaging="True" PageSize="15"
-                     PagerStyle-CssClass="pgr"
+                     CssClass="table-cemmi fuente-chica" AlternatingRowStyle-CssClass="alt" AllowPaging="True"
+                     PageSize="15" PagerStyle-CssClass="pgr"
                      DataKeyNames="IDCOMPROBANTETIPO       ,COMPROBANTETIPOCODIGO         ,COMPROBANTETIPODESCRIPCION          ,COMPROBANTETIPOLETRA         ,COMPROBANTETIPOPUNTO         ,COMPROBANTETIPOEXPLICACION          ,IDEMPRESASECTOR       ,COMPROBANTETIPOESTADO          "
                      DataSourceID="odsCOMPROBANTETIPO"
                      EmptyDataText="No existen entradas en la tabla con el argumento de busqueda ingresado"

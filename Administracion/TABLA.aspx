@@ -21,9 +21,9 @@
          <asp:Panel ID="Panel1" runat="server" CssClass="tablas-del-sistema">
 
             <div class="contenedor-busqueda">
-               <asp:Label ID="olblBuscar" runat="server" Text="Localizar"
+               <!-- <asp:Label ID="olblBuscar" runat="server" Text="Localizar"
                   ToolTip="Permite realizar la busqueda de los datos requeridos. Para traer todos los datos de la tabla ingresar TODO y apretar el boton BUSCAR ">
-               </asp:Label>
+               </asp:Label> -->
                <asp:TextBox ID="otxtCadena" runat="server" CssClass="input">Todo</asp:TextBox>
                <asp:Button ID="obutBuscar" runat="server" Text="Buscar" CssClass="btn btn-primary" />
             </div>

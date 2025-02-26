@@ -19,12 +19,12 @@
 
          <asp:Panel ID="Panel1" runat="server">
 
-            <div class="row contenedor-flexible margenes-y">
-               <asp:Label ID="olblBuscar" runat="server" Text="Localizar"
+            <div class="contenedor-busqueda">
+               <!-- <asp:Label ID="olblBuscar" runat="server" Text="Localizar"
                   ToolTip="Permite realizar la busqueda de los datos requeridos. Para traer todos los datos de la tabla ingresar TODO y apretar el boton BUSCAR ">
-               </asp:Label>
-               <asp:TextBox ID="otxtCadena" runat="server" CssClass="form-control">Todo</asp:TextBox>
-               <asp:Button ID="obutBuscar" runat="server" Text="Buscar" CssClass="btn btn-basic btn-primary" />
+               </asp:Label> -->
+               <asp:TextBox ID="otxtCadena" runat="server" CssClass="input">Todo</asp:TextBox>
+               <asp:Button ID="obutBuscar" runat="server" Text="Buscar" CssClass="btn btn-primary" />
             </div>
             <div>
 
@@ -35,8 +35,9 @@
                   </SelectParameters>
                </asp:SqlDataSource>
                <div class="table-responsive">
-                  <asp:GridView ID="ogvSORTEO" runat="server" AutoGenerateColumns="False" CssClass="table-cemmi"
-                     AlternatingRowStyle-CssClass="alt" AllowPaging="True" PageSize="15" PagerStyle-CssClass="pgr"
+                  <asp:GridView ID="ogvSORTEO" runat="server" AutoGenerateColumns="False"
+                     CssClass="table-cemmi fuente-chica" AlternatingRowStyle-CssClass="alt" AllowPaging="True"
+                     PageSize="15" PagerStyle-CssClass="pgr"
                      DataKeyNames="IDSORTEO   ,SORTEOCODIGO      ,SORTEODESCRIPCION       ,SORTEOEXPLICACION      ,SORTEOESTADO      ,FECHADESDE     ,FECHAHASTA     "
                      DataSourceID="odsSORTEO"
                      EmptyDataText="No existen entradas en la tabla con el argumento de busqueda ingresado"

@@ -10,11 +10,9 @@
 
 
          <asp:Panel ID="PanelTitulo" runat="server">
-            <div class="row">
-               <h1 class="titulo-rol">
-                  <asp:Label ID="olblEMPRESASECTORTitulo" runat="server" Text="SECTOR DE EMPRESA"></asp:Label>
-               </h1>
-            </div>
+            <h1 class="titulo-rol">
+               <asp:Label ID="olblEMPRESASECTORTitulo" runat="server" Text="SECTOR DE EMPRESA"></asp:Label>
+            </h1>
          </asp:Panel>
 
          <asp:Panel ID="Panel1" runat="server" class="sector-de-empresa">

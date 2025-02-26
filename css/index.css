@@ -144,10 +144,6 @@ a {
     width: 100% !important;
   }
 
-  .contenedor-busqueda .input {
-    max-width: 100%;
-  }
-
   .contenedor-busqueda span {
     text-align: center;
   }

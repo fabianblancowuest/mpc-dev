@@ -1,4 +1,4 @@
-﻿<%@ Page Title="Solicitud de Gastos a Rendir" Language="VB" MasterPageFile="~/master/p.master" AutoEventWireup="false"
+﻿<%@ Page Title="Solicitud de Gastos a Rendir" MaintainScrollPositionOnPostback="true" Language="VB" MasterPageFile="~/master/p.master" AutoEventWireup="false"
     CodeFile="garAlta.aspx.vb" Inherits="Administracion_garAlta" %>
 
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="Server">
@@ -145,8 +145,6 @@
 
 
     </asp:Panel>
-
-
     <asp:Panel ID="PanelGARAutorizado" runat="server" Visible="false">
 
         <div>
@@ -176,6 +174,7 @@
         </div>
 
     </asp:Panel>
+
     <asp:Panel ID="PanelGastosRegistrados" runat="server" Visible="false">
 
         <asp:SqlDataSource ID="odsGARGastosRegistrados" runat="server"
@@ -219,7 +218,7 @@
             </Columns>
         </asp:GridView>
         <div>
-            <asp:Button ID="obutGarGastoAlta" runat="server" Text="Alta del Gasto" />
+            <asp:Button ID="obutGarGastoAlta" runat="server" Text="Alta de Gasto" />
         </div>
 
         <div>
@@ -240,7 +239,7 @@
         </div>
         <div>
             <asp:Label ID="Label17" runat="server" Text="Concepto :"></asp:Label>
-            <asp:TextBox ID="otxtGARRegistroConcepto" runat="server" Width="50%"></asp:TextBox>
+            <asp:TextBox ID="otxtGARRegistroConcepto" runat="server"  ></asp:TextBox>
         </div>
         <div>
             <asp:Label ID="Label22" runat="server" Text="TOTAL DEL GASTO:"></asp:Label>
@@ -248,12 +247,12 @@
         </div>
         <div>
             <br />
-            <asp:Label ID="Label23" runat="server" Text="Ingrese la forma de pago del Gasto."></asp:Label>
+            <asp:Label ID="Label23" runat="server" Text="Ingrese la forma de pago del Gasto." Font-Bold ="true"></asp:Label>
 
         </div>
         <div>
             <asp:Label ID="Label18" runat="server" Text="Monto pagado con Efectivo Empresa:"></asp:Label>
-            <asp:TextBox ID="otxtGARMontoGAI" runat="server" Text="0"></asp:TextBox>
+            <asp:TextBox ID="otxtGARMontoGAI" runat="server" Text="0" cssclass="imput"></asp:TextBox>
         </div>
 
 

@@ -17,12 +17,12 @@
             </div>
          </asp:Panel>
 
-         <asp:Panel ID="Panel1" runat="server">
+         <asp:Panel ID="Panel1" runat="server" CssClass="premios-de-sorteos">
 
             <div class="row">
 
-               <div class="form-group">
-                  <asp:Label ID="Label1" runat="server" Text="SELECCIONE SORTEO:" CssClass="control-label"></asp:Label>
+               <div class="contenedor-busqueda">
+                  <asp:Label ID="Label1" runat="server" Text="SELECCIONE SORTEO:" CssClass="span"></asp:Label>
                   <asp:SqlDataSource ID="odsSORTEOOperador" runat="server"
                      ConnectionString="<%$ ConnectionStrings:STRSYSTEM %>" SelectCommand="SORTEOOPERADORSELECCIONA"
                      SelectCommandType="StoredProcedure">
@@ -31,8 +31,7 @@
                      </SelectParameters>
                   </asp:SqlDataSource>
                   <asp:DropDownList ID="oddlSORTEOOperador" runat="server" DataSourceID="odsSORTEOOPERADOR"
-                     DataTextField="SORTEODescripcion" DataValueField="idSORTEO" CssClass="form-control"
-                     AutoPostBack="True">
+                     DataTextField="SORTEODescripcion" DataValueField="idSORTEO" CssClass="input" AutoPostBack="True">
                   </asp:DropDownList>
                </div>
             </div>
@@ -47,8 +46,9 @@
                   </SelectParameters>
                </asp:SqlDataSource>
                <div class="table-responsive">
-                  <asp:GridView ID="ogvSORTEOPREMIO" runat="server" AutoGenerateColumns="False" CssClass="table-cemmi"
-                     AlternatingRowStyle-CssClass="alt" AllowPaging="True" PageSize="15" PagerStyle-CssClass="pgr"
+                  <asp:GridView ID="ogvSORTEOPREMIO" runat="server" AutoGenerateColumns="False"
+                     CssClass="table-cemmi fuente-chica" AlternatingRowStyle-CssClass="alt" AllowPaging="True"
+                     PageSize="15" PagerStyle-CssClass="pgr"
                      DataKeyNames="IDSORTEOPREMIO      ,IDSORTEO   ,SORTEOPREMIOCODIGO        ,SORTEOPREMIODESCRIPCION         ,SORTEOPREMIOEXPLICACION         ,SORTEOPREMIOORDEN        ,SORTEOPREMIOCOSTO        ,SORTEOPREMIOESTADO        "
                      DataSourceID="odsSORTEOPREMIO"
                      EmptyDataText="No existen entradas en la tabla con el argumento de busqueda ingresado"
@@ -86,13 +86,10 @@
 
                </div>
             </div>
-            <br />
-            <br />
 
 
-            <div class="row">
-               <asp:Button ID="obutAlta" runat="server" Text="Nuevo Registro" CssClass="btn-basic btn btn-success" />
-
+            <div class="row my-3">
+               <asp:Button ID="obutAlta" runat="server" Text="Nuevo Registro" CssClass="btn btn-basic btn-success" />
             </div>
 
          </asp:Panel>

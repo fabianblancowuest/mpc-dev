@@ -180,12 +180,45 @@ Partial Class Administracion_garAlta
     End Sub
 
     Protected Sub obutGarGastoAlta_Click(sender As Object, e As EventArgs) Handles obutGarGastoAlta.Click
+        PanelGastosRegistrados.Visible = False
         PanelGastoRegistro.Visible = True
+        PanelGastoRegistro.BackColor = Drawing.Color.Aquamarine
 
     End Sub
 
     Protected Sub obutRegistroVolver_Click(sender As Object, e As EventArgs) Handles obutRegistroVolver.Click
         PanelGastoRegistro.Visible = False
+        PanelGastosRegistrados.Visible = True
 
+    End Sub
+
+    Protected Sub obutRegistroValidar_Click(sender As Object, e As EventArgs) Handles obutRegistroValidar.Click
+        Dim totalGasto As Double
+        Dim montoGAR As Double
+        Dim montoTransferencia As Double
+        Dim montoAcuentaOperador As Double
+
+        totalGasto = otxtGARMontoTotal.Text
+        montoGAR = otxtGARMontoGAI.Text
+        montoTransferencia = otxtGARMontoTransferencia.Text
+        montoAcuentaOperador = otxtGARMontoOperador.Text
+
+        If totalGasto <> 0 Then
+
+            If totalGasto - montoGAR - montoTransferencia - montoAcuentaOperador = 0 Then
+                obutGarGastoAlta.Visible = True
+                obutRegistroValidar.Visible = False
+                obutRegistroReingresar.Visible = True
+                otxtGARMontoTotal.Enabled = False
+                otxtGARMontoGAI.Enabled = False
+                otxtGARMontoOperador.Enabled = False
+                otxtGARMontoTransferencia.Enabled = False
+
+            Else
+
+            End If
+        Else
+
+        End If
     End Sub
 End Class
