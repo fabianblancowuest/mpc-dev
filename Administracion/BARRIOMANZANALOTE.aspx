@@ -38,15 +38,7 @@
                         <asp:DropDownList ID="oddlBARRIOOperador" runat="server" DataSourceID="odsBARRIOOPERADOR"
                             DataTextField="BARRIODescripcion" DataValueField="idBARRIO" AutoPostBack="True">
                         </asp:DropDownList>
-                    </div>
-                </div>
 
-
-
-
-                <div class="row contenedor-flexible margenes-y">
-
-                    <div class="caja-busqueda">
                         <asp:Label ID="Label3" runat="server" Text="SELECCIONE MANZANA:" CssClass="control-label">
                         </asp:Label>
                         <asp:SqlDataSource ID="odsBARRIOMANZANAOPERADOR" runat="server"
@@ -64,7 +56,9 @@
                             DataValueField="idBarrioManzana" AutoPostBack="True">
                         </asp:DropDownList>
                     </div>
+
                 </div>
+
 
                 <div>
                     <asp:SqlDataSource ID="odsBARRIOLOTE" runat="server"
@@ -222,25 +216,26 @@
                                     PropertyName="SelectedValue" Type="Int32" />
                             </SelectParameters>
                         </asp:SqlDataSource>
-                        <asp:GridView ID="ogvBarrioManzanaResumen" runat="server" AutoGenerateColumns="False"
-                            CssClass="table-cemmi barrio-mz-lote-resultados" DataSourceID="odsBarrioManzanaResumen"
-                            Width="100%">
-                            <Columns>
-                                <asp:BoundField DataField="TotalLotes" HeaderText="Total Lotes" ReadOnly="True"
-                                    SortExpression="TotalLotes">
-                                    <ItemStyle HorizontalAlign="Center" />
-                                </asp:BoundField>
-                                <asp:BoundField DataField="TotalAdhesiones" HeaderText="Total Adhesiones"
-                                    ReadOnly="True" SortExpression="TotalAdhesiones">
-                                    <ItemStyle HorizontalAlign="Center" />
-                                </asp:BoundField>
-                                <asp:BoundField DataField="TotalLibres" HeaderText="Total Libres" ReadOnly="True"
-                                    SortExpression="TotalLibres">
-                                    <ItemStyle HorizontalAlign="Center" />
-                                </asp:BoundField>
-                            </Columns>
-                        </asp:GridView>
+
                     </div>
+                    <asp:GridView ID="ogvBarrioManzanaResumen" runat="server" AutoGenerateColumns="False"
+                        CssClass="table-cemmi barrio-mz-lote-resultados" DataSourceID="odsBarrioManzanaResumen"
+                        Width="100%">
+                        <Columns>
+                            <asp:BoundField DataField="TotalLotes" HeaderText="Total Lotes" ReadOnly="True"
+                                SortExpression="TotalLotes">
+                                <ItemStyle HorizontalAlign="Center" />
+                            </asp:BoundField>
+                            <asp:BoundField DataField="TotalAdhesiones" HeaderText="Total Adhesiones" ReadOnly="True"
+                                SortExpression="TotalAdhesiones">
+                                <ItemStyle HorizontalAlign="Center" />
+                            </asp:BoundField>
+                            <asp:BoundField DataField="TotalLibres" HeaderText="Total Libres" ReadOnly="True"
+                                SortExpression="TotalLibres">
+                                <ItemStyle HorizontalAlign="Center" />
+                            </asp:BoundField>
+                        </Columns>
+                    </asp:GridView>
                 </div>
 
                 <div class="row">

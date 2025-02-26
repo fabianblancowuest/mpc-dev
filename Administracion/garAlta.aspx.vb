@@ -178,4 +178,14 @@ Partial Class Administracion_garAlta
 
 
     End Sub
+
+    Protected Sub obutGarGastoAlta_Click(sender As Object, e As EventArgs) Handles obutGarGastoAlta.Click
+        PanelGastoRegistro.Visible = True
+
+    End Sub
+
+    Protected Sub obutRegistroVolver_Click(sender As Object, e As EventArgs) Handles obutRegistroVolver.Click
+        PanelGastoRegistro.Visible = False
+
+    End Sub
 End Class

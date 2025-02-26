@@ -1031,12 +1031,14 @@ select {
 }
 
 .caja-busqueda select {
-  min-width: 300px;
+  width: 300px;
+  max-width: 100%;
 }
 
 @media (max-width: 900px) {
   .caja-busqueda select {
     text-align: center;
+    width: 100%;
   }
 }
 /* .select-busqueda:focus {
