@@ -12,7 +12,7 @@
                     EnableScriptLocalization="true"></asp:ScriptManager>
 
 
-                <asp:Panel ID="PanelTitulo" runat="server" CssClass="vendedor-gestiona-lotes-todos-los-barrios">
+                <asp:Panel ID="PanelTitulo" runat="server">
                     <!-- <h1 class="titulo-rol">
                         <asp:Label ID="olblLOTEVENTATitulo" runat="server"
                             Text="VENDEDOR GESTIONA LOTES TODOS LOS BARRIOS"></asp:Label>
@@ -25,7 +25,7 @@
                     <asp:Label ID="olblOperadorAdministrador" runat="server" Text=""></asp:Label>
                     <asp:Label ID="olblIdOperador" runat="server" Text=""></asp:Label>
                 </div>
-                <div class="contenedor-busqueda">
+                <div class="vendedor-gestiona-lotes-todos-los-barrios contenedor-busqueda">
                     <asp:Label ID="olblSeleccionaBarrio" runat="server" Text="Seleccione Barrio"></asp:Label>
                     <asp:SqlDataSource ID="odsBarrioHabilitadoSelecciona" runat="server"
                         ConnectionString="<%$ ConnectionStrings:STRSYSTEM %>" SelectCommand="BARRIOTraerODDL"
@@ -33,9 +33,7 @@
                     <asp:DropDownList ID="oddlBarrioHabilitadoSelecciona" runat="server" AutoPostBack="True"
                         DataSourceID="odsBarrioHabilitadoSelecciona" DataTextField="barrioDescripcion"
                         DataValueField="idBarrio"></asp:DropDownList>
-                </div>
 
-                <div class="contenedor-busqueda">
                     <asp:Label ID="olblSeleccionaManzana" runat="server" Text="Seleccione Manzana"></asp:Label>
                     <asp:SqlDataSource ID="odsBarrioHabilitadoManzanaSelecciona" runat="server"
                         ConnectionString="<%$ ConnectionStrings:STRSYSTEM %>"
@@ -50,14 +48,13 @@
                         DataValueField="idBarrioManzana"></asp:DropDownList>
                 </div>
                 <asp:Panel ID="Panel1" runat="server">
-                    <asp:Label ID="olblIDBarrioLoteOperador" runat="server" Text="xxxx"></asp:Label>
+                    <asp:Label ID="olblIDBarrioLoteOperador" runat="server" Text="xxxx" CssClass="d-block text-center">
+                    </asp:Label>
                     <div class="row">
 
-                        <div class="form-group">
-                            <asp:Label ID="Label1" runat="server" Text="SELECCIONE  LOTE:" CssClass="control-label">
+                        <div class="vendedor-gestiona-lotes-todos-los-barrios contenedor-busqueda">
+                            <asp:Label ID="Label1" runat="server" Text="SELECCIONE  LOTE:" CssClass="select">
                             </asp:Label>
-                            <asp:Label ID="Label11" runat="server" Text=" -   (Todos los lotes)"></asp:Label>
-                            <asp:CheckBox ID="ochTodos" runat="server" Checked="false" AutoPostBack="true" />
                             <asp:SqlDataSource ID="odsBARRIOLOTEOperador" runat="server"
                                 ConnectionString="<%$ ConnectionStrings:STRSYSTEM %>"
                                 SelectCommand="BARRIOMANZANALOTEOPERADORSELECCIONA" SelectCommandType="StoredProcedure">
@@ -73,10 +70,15 @@
                                         Type="Int32"></asp:ControlParameter>
                                 </SelectParameters>
                             </asp:SqlDataSource>
+
                             <asp:DropDownList ID="oddlBARRIOLOTEOperador" runat="server"
                                 DataSourceID="odsBARRIOLOTEOPERADOR" DataTextField="BARRIOLOTEDescripcion"
-                                DataValueField="idBARRIOLOTE" CssClass="form-control" AutoPostBack="True">
+                                DataValueField="idBARRIOLOTE" CssClass="input" AutoPostBack="True">
                             </asp:DropDownList>
+                            <asp:CheckBox ID="ochTodos" runat="server" Checked="false" AutoPostBack="true" />
+
+                            <asp:Label ID="Label11" runat="server" Text=" - (Todos los lotes)"></asp:Label>
+
                         </div>
                     </div>
                     <div>

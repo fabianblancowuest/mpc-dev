@@ -151,6 +151,14 @@ a {
   .contenedor-busqueda span {
     text-align: center;
   }
+
+  .contenedor-busqueda .select {
+    max-width: 100%;
+  }
+
+  .contenedor-busqueda .select option {
+    max-width: 100%;
+  }
 }
 
 .contenedor-busqueda input,
