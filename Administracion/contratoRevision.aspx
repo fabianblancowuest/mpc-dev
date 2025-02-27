@@ -198,7 +198,7 @@
                         CssClass="btn btn-basic btn-warning" />
                     <asp:Button ID="obutAltaAdhesion" runat="server" Text="Alta Nueva Adhesión"
                         CssClass="btn btn-basic btn-success" />
-                    <asp:Button ID="obutImprime" runat="server" Text="Imprime Contrato de Adhesión"
+                    <asp:Button ID="obutImprime" runat="server" Text="Imprimir Contrato de Adhesión"
                         CssClass="btn btn-basic btn-primary" />
                 </div>
             </asp:Panel>

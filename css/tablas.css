@@ -614,6 +614,10 @@ Pago Pactado = Verde claro */
   font-size: 12px;
 }
 
+.fuente-mas-chica {
+  font-size: 11.5px;
+}
+
 .fuente-chica {
   font-size: 13px;
 }
