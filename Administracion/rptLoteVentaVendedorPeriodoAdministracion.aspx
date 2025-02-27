@@ -15,7 +15,7 @@
                 <asp:Label ID="Label1" runat="server" Text="Control de Adhesiones concretadas por vendedor en período">
                 </asp:Label>
             </h2>
-            <div class="contenedor-flexible control-adhesiones-encabezado">
+            <div class="contenedor-flexible control-adhesiones-encabezado" id="venta-periodo-admin">
                 <asp:Label ID="Label2" runat="server" Text="Vendedor:"></asp:Label>
                 <asp:SqlDataSource ID="odsVendedorLote" runat="server"
                     ConnectionString="<%$ ConnectionStrings:STRSYSTEM %>" SelectCommand="oddlVendedorLote"
@@ -48,6 +48,8 @@
                             class="bi bi-distribute-horizontal"></i></button>
                     <button class="btn btn-light no-imprimir" id="btn-resaltar">Resaltar Totales <i
                             class="bi bi-highlighter"></i></button>
+                    <button class="btn btn-light no-imprimir" id="btn-comision">Comisión del Mes <i
+                            class="bi bi-currency-dollar"></i></button>
                 </div>
             </div>
             <asp:Panel ID="PanelPrincipal" runat="server">
@@ -244,6 +246,36 @@
                     // Botones
                     const menuBotones = document.getElementById("botones-menu");
                     const btnEspaciar = document.getElementById("btn-espaciar");
+                    const btnComision = document.getElementById("btn-comision");
+                    const ventaVendedorBox = document.getElementById("venta-periodo-admin");
+                    const selectsAdhesiones = ventaVendedorBox.querySelectorAll("select");
+                    const comisionTotal = columnas[columnas.length - 3];
+
+                    console.log("HOla");
+                    console.log(selectsAdhesiones);
+
+                    btnComision.addEventListener("click", (event) => {
+                        event.preventDefault();
+                        // Captura el option seleccionado
+                        const vendedorSeleccionado = selectsAdhesiones[0].options[selectsAdhesiones[0].selectedIndex].text;
+                        const mesSeleccionado = selectsAdhesiones[1].options[selectsAdhesiones[1].selectedIndex].text;
+                        if (comisionTotal.textContent.trim() !== "") {
+                            Swal.fire({
+                                title: `<h4 style="font-size: 20px; max-width: 600px">La comisión del mes de ${mesSeleccionado} del vendedor ${vendedorSeleccionado} es: </h4`,
+                                html: `<strong style="color: green; font-size: 24px">${comisionTotal.textContent}</strong>`,
+                                // icon: "success",
+                            })
+                        } else {
+                            Swal.fire({
+                                title: `<h4 style="font-size: 20px; max-width: 600px">En el mes de ${mesSeleccionado} el vendedor ${vendedorSeleccionado} no registró comisión alguna.</h4`,
+                                // html: `<strong style="color: green; font-size: 24px">${comisionTotal.textContent}</strong>`,
+                                // icon: "success",
+                            })
+                        }
+                        // btnComision.classList.toggle("btn-light");
+                        // btnComision.classList.toggle("btn-primary");
+
+                    })
 
                     console.log(panelDocumentacion)
 
