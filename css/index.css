@@ -541,6 +541,10 @@ h1 {
   font-size: 1.5rem;
 }
 
+.titulo-roles-asignados span {
+  display: inline;
+}
+
 .subtitulo-rol {
   font-size: 1.1rem;
   display: block;

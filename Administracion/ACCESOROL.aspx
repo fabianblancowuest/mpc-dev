@@ -32,9 +32,10 @@
                      <asp:ControlParameter ControlID="otxtCadena" Name="cadena" PropertyName="Text" Type="String" />
                   </SelectParameters>
                </asp:SqlDataSource>
-               <div class="table-responsive">
-                  <asp:GridView ID="ogvACCESOROL" runat="server" AutoGenerateColumns="False" CssClass="table-cemmi"
-                     AlternatingRowStyle-CssClass="alt" AllowPaging="True" PageSize="15" PagerStyle-CssClass="pgr"
+               <div id="tabla-acceso-rol" class="table-responsive">
+                  <asp:GridView ID="ogvACCESOROL" runat="server" AutoGenerateColumns="False"
+                     CssClass="table-cemmi tabla-adaptada" AlternatingRowStyle-CssClass="alt" AllowPaging="True"
+                     PageSize="15" PagerStyle-CssClass="pgr"
                      DataKeyNames="IDACCESOROL     ,ACCESOROLCODIGO       ,ACCESOROLDESCRIPCION        ,ACCESOROLEXPLICACION        ,ACCESOROLPAGINA       ,ACCESOROLDOCUMENTOOPERATIVO             ,ACCESOROLESTADO       "
                      DataSourceID="odsACCESOROL"
                      EmptyDataText="No existen entradas en la tabla con el argumento de busqueda ingresado"
@@ -130,11 +131,27 @@
                   <asp:Button ID="obutAltaAbandonada" runat="server" Text="Abandona Alta" CssClass="btn btn-danger" />
                </div>
             </form>
-
-
-
-
          </asp:Panel>
+
+         <script>
+            // document.addEventListener("DOMContentLoaded", () => {
+            //    const tablaAccesoRol = document.querySelector("#tabla-acceso-rol table");
+
+            //    if (!tablaAccesoRol) return; // Evitar errores si no se encuentra la tabla
+
+            //    console.log(tablaAccesoRol);
+
+            //    const filas = tablaAccesoRol.querySelectorAll("tr");
+
+            //    filas.forEach(fila => {
+            //       const celdas = fila.querySelectorAll("td");
+            //       if (celdas.length > 3) { // Asegurarse de que la fila tiene al menos 4 celdas
+            //          celdas[3].style.width = "300px !important";
+            //       }
+            //    });
+            // });
+
+         </script>
 
 
       </asp:Content>

@@ -5,6 +5,12 @@
   background-size: auto;
 } */
 
+.tabla-adaptada {
+  width: auto; /* Permite que la tabla se ajuste al contenido */
+  table-layout: auto; /* Hace que las celdas se ajusten automáticamente */
+  white-space: nowrap; /* Evita que el contenido dentro de las celdas haga saltos de línea */
+}
+
 .table-cemmi {
   margin: 0 auto;
   width: 100%;
@@ -35,6 +41,7 @@ table th a {
 .tabla-roles {
   max-width: 100%;
   white-space: initial;
+  /* box-shadow: 1px 1px 10px #337ab7; */
 }
 
 .tabla-roles tr {
