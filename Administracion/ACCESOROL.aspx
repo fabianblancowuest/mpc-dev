@@ -133,25 +133,25 @@
             </form>
          </asp:Panel>
 
-         <script>
-            // document.addEventListener("DOMContentLoaded", () => {
-            //    const tablaAccesoRol = document.querySelector("#tabla-acceso-rol table");
+         <!-- <script> -->
+         // document.addEventListener("DOMContentLoaded", () => {
+         // const tablaAccesoRol = document.querySelector("#tabla-acceso-rol table");
 
-            //    if (!tablaAccesoRol) return; // Evitar errores si no se encuentra la tabla
+         // if (!tablaAccesoRol) return; // Evitar errores si no se encuentra la tabla
 
-            //    console.log(tablaAccesoRol);
+         // console.log(tablaAccesoRol);
 
-            //    const filas = tablaAccesoRol.querySelectorAll("tr");
+         // const filas = tablaAccesoRol.querySelectorAll("tr");
 
-            //    filas.forEach(fila => {
-            //       const celdas = fila.querySelectorAll("td");
-            //       if (celdas.length > 3) { // Asegurarse de que la fila tiene al menos 4 celdas
-            //          celdas[3].style.width = "300px !important";
-            //       }
-            //    });
-            // });
+         // filas.forEach(fila => {
+         // const celdas = fila.querySelectorAll("td");
+         // if (celdas.length > 3) { // Asegurarse de que la fila tiene al menos 4 celdas
+         // celdas[3].style.width = "300px !important";
+         // }
+         // });
+         // });
 
-         </script>
+         <!-- </script> -->
 
 
       </asp:Content>
