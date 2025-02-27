@@ -213,11 +213,24 @@ order by idEjercicioDetalle DEsc"></asp:SqlDataSource>
                     event.preventDefault();
                     const comisionTotal = columnas[columnas.length - 1];
 
-                    Swal.fire({
-                        title: `<h3 style="font-size: 16x">Su comisión del mes de ${selectPeriodo.textContent} es: </h3`,
-                        html: `<strong style="color: green; font-size: 24px">${comisionTotal.textContent}</strong>`,
-                        // icon: "success",
-                    })
+                    if (comisionTotal.textContent.trim() !== "") {
+
+
+                        Swal.fire({
+                            title: `<h3 style="font-size: 16x">Su comisión del mes de ${selectPeriodo.textContent} es: </h3`,
+                            html: `<strong style="color: green; font-size: 24px">${comisionTotal.textContent}</strong>`,
+                            // icon: "success",
+                        })
+                    } else {
+                        Swal.fire({
+                            title: `<h3 style="font-size: 16x">Este mes no se registró comisión alguna</h3`,
+                            // html: `<strong style="color: green; font-size: 24px">${comisionTotal.textContent}</strong>`,
+                            // icon: "success",
+                        })
+                    }
+
+                    // btnComision.classList.toggle("btn-light");
+                    // btnComision.classList.toggle("btn-primary");
 
                 })
 
