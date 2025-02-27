@@ -191,7 +191,7 @@ order by idEjercicioDetalle DEsc"></asp:SqlDataSource>
                 const menuBotones = document.getElementById("botones-menu");
                 const btnEspaciar = document.getElementById("btn-espaciar");
                 const btnComision = document.getElementById("btn-comision");
-                const selectPeriodo = document.querySelector("#venta-periodo select option");
+                const selectPeriodo = document.querySelector("#venta-periodo select");
 
                 console.log("Hola", selectPeriodo.textContent)
 
@@ -213,11 +213,13 @@ order by idEjercicioDetalle DEsc"></asp:SqlDataSource>
                     event.preventDefault();
                     const comisionTotal = columnas[columnas.length - 1];
 
+                    const mesSeleccionado = selectPeriodo.options[selectPeriodo.selectedIndex].text;
+
                     if (comisionTotal.textContent.trim() !== "") {
 
 
                         Swal.fire({
-                            title: `<h3 style="font-size: 16x">Su comisión del mes de ${selectPeriodo.textContent} es: </h3`,
+                            title: `<h3 style="font-size: 16x">Su comisión del mes de ${mesSeleccionado} es: </h3`,
                             html: `<strong style="color: green; font-size: 24px">${comisionTotal.textContent}</strong>`,
                             // icon: "success",
                         })
