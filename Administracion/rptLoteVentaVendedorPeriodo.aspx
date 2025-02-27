@@ -219,13 +219,13 @@ order by idEjercicioDetalle DEsc"></asp:SqlDataSource>
 
 
                         Swal.fire({
-                            title: `<h3 style="font-size: 16x">Su comisión del mes de ${mesSeleccionado} es: </h3`,
-                            html: `<strong style="color: green; font-size: 24px">${comisionTotal.textContent}</strong>`,
+                            title: `<h4 style="font-size: 16x; max-width: 600px">Su comisión del mes de <strong>${mesSeleccionado}</strong> es: </h4`,
+                            html: `<strong style="color: green; font-size: 26px">${comisionTotal.textContent}</strong>`,
                             // icon: "success",
                         })
                     } else {
                         Swal.fire({
-                            title: `<h3 style="font-size: 16x">Este mes no se registró comisión alguna</h3`,
+                            title: `<h4 style="font-size: 16x; max-width: 600px">En el mes <strong>${mesSeleccionado}</strong> no se registró comisión alguna.</h4`,
                             // html: `<strong style="color: green; font-size: 24px">${comisionTotal.textContent}</strong>`,
                             // icon: "success",
                         })
