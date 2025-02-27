@@ -261,8 +261,8 @@
                         const mesSeleccionado = selectsAdhesiones[1].options[selectsAdhesiones[1].selectedIndex].text;
                         if (comisionTotal.textContent.trim() !== "") {
                             Swal.fire({
-                                title: `<h4 style="font-size: 20px; max-width: 600px">La comisión del mes de ${mesSeleccionado} del vendedor ${vendedorSeleccionado} es: </h4`,
-                                html: `<strong style="color: green; font-size: 24px">${comisionTotal.textContent}</strong>`,
+                                title: `<h4 style="font-size: 20px; max-width: 600px">La comisión del mes de <strong>${mesSeleccionado}</strong> del vendedor <strong>${vendedorSeleccionado}</strong> es: </h4`,
+                                html: `<strong style="color: green; font-size: 26px">${comisionTotal.textContent}</strong>`,
                                 // icon: "success",
                             })
                         } else {
