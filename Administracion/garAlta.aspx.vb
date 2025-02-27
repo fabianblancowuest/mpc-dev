@@ -182,7 +182,7 @@ Partial Class Administracion_garAlta
     Protected Sub obutGarGastoAlta_Click(sender As Object, e As EventArgs) Handles obutGarGastoAlta.Click
         PanelGastosRegistrados.Visible = False
         PanelGastoRegistro.Visible = True
-        PanelGastoRegistro.BackColor = Drawing.Color.Aquamarine
+        PanelGastoRegistro.BackColor = Drawing.Color.LightGray
 
     End Sub
 
@@ -197,11 +197,14 @@ Partial Class Administracion_garAlta
         Dim montoGAR As Double
         Dim montoTransferencia As Double
         Dim montoAcuentaOperador As Double
+        Dim montoGARTotal As Double
 
         totalGasto = otxtGARMontoTotal.Text
         montoGAR = otxtGARMontoGAI.Text
         montoTransferencia = otxtGARMontoTransferencia.Text
         montoAcuentaOperador = otxtGARMontoOperador.Text
+        montoGARTotal = montoGAR + montoTransferencia + montoAcuentaOperador
+        olblGARTotal.Text = montoGARTotal.ToString
 
         If totalGasto <> 0 Then
 
@@ -213,12 +216,62 @@ Partial Class Administracion_garAlta
                 otxtGARMontoGAI.Enabled = False
                 otxtGARMontoOperador.Enabled = False
                 otxtGARMontoTransferencia.Enabled = False
+                olblValidacionMensaje.Text = "El comprobante ha sido validado. Puede darlo de alta."
 
             Else
+                olblValidacionMensaje.Text = "Se registra una diferencia entre el total del comprobante y el / los medios de pago de $" + (totalGasto - montoGARTotal).ToString
 
             End If
         Else
-
+            olblValidacionMensaje.Text = "Debe ingresar el monto del comprobante para validar la operacion."
         End If
     End Sub
+
+    Protected Sub obutRegistroAlta_Click(sender As Object, e As EventArgs) Handles obutRegistroAlta.Click
+        garRegistroAlta()
+
+    End Sub
+    Private Sub garRegistroAlta()
+        Dim Settings As ConnectionStringSettings
+        Dim reader As System.Data.SqlClient.SqlDataReader
+        Dim errorMessages As New StringBuilder()
+        Dim retorno As Integer
+
+        Dim cmd As New System.Data.SqlClient.SqlCommand
+        Settings = System.Configuration.ConfigurationManager.ConnectionStrings(Session("session_conexion"))
+        Dim connectionString As String = Settings.ConnectionString
+        retorno = 0
+        Using connection As New System.Data.SqlClient.SqlConnection(connectionString)
+            With cmd
+                .Connection = connection
+                .CommandType = Data.CommandType.StoredProcedure
+                .CommandText = "garEstadoActualizado"
+
+                .Parameters.Clear()
+            End With
+            Try
+                connection.Open()
+
+
+                cmd.Parameters.Add("@idGar", Data.SqlDbType.Int).SqlValue = olblGARSeleccionadoIDGAR.Text
+
+                reader = cmd.ExecuteReader
+
+                If reader.HasRows Then
+                    While reader.Read
+                        olblGARSeleccionadoMontoGastado.Text = reader.Item("GARSeleccionadoMontoGastado")
+                        olblGARSeleccionadoSaldo.Text = reader.Item("GARSeleccionadoSaldo")
+
+                    End While
+                End If
+            Catch ex As Exception
+
+                olblGestionDescripcion.Text = ex.Message
+
+
+            End Try
+            connection.Close()
+        End Using
+    End Sub
+
 End Class

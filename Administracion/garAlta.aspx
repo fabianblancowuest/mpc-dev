@@ -234,6 +234,11 @@
 
         </div>
         <div>
+            <asp:Label ID="Label24" runat="server" Text="Tipo de Comprobante"></asp:Label>
+            <asp:SqlDataSource ID="odsgarComprobanteTipo" runat="server" ConnectionString="<%$ ConnectionStrings:STRSYSTEM %>" SelectCommand="select * from garComprobanteTipo order by garComprobanteTipoCodigo "></asp:SqlDataSource>
+            <asp:DropDownList ID="oddlgarComprobanteTipo" runat="server" DataSourceID="odsgarComprobanteTipo" DataTextField="garComprobanteTipoDescripcion" DataValueField="idGarComprobanteTipo"></asp:DropDownList>
+        </div>
+        <div>
             <asp:Label ID="Label16" runat="server" Text="Comprobante:"></asp:Label>
             <asp:TextBox ID="otxtGARRegistroComprobante" runat="server"></asp:TextBox>
         </div>

@@ -4,27 +4,27 @@ Partial Class STRSYSTEM_Administracion_GARRENDICION
 
     Inherits System.Web.UI.Page
 
-Protected Sub Page_Load(ByVal sender As Object, ByVal e As System.EventArgs) Handles Me.Load       
+    Protected Sub Page_Load(ByVal sender As Object, ByVal e As System.EventArgs) Handles Me.Load
         If Session("session_idOperador") Is Nothing Then
             Response.Redirect("~/Administracion/accesoFueraDeSesion.aspx")
         End If
 
         If IsPostBack Then
             ' Tareas que hay que realizar si se retorna a la Pagina desde 
-    
-        ELSE
-          olblGARRENDICIONTitulo.text="RENDICION DE GASTOS                                                                                                                                                                                     "
-otxtGARRENDICIONFECHA.Attributes.Add("readonly", "readonly")    
-otxtGARRENDICIONFECHA.Text = Left(Date.Today.ToString, 10)     
-otxtGARRENDICIONFECHAA.Attributes.Add("readonly", "readonly")     
-otxtGARRENDICIONFECHAA.Text = Left(Date.Today.ToString, 10)      
-            
+
+        Else
+            olblGARRENDICIONTitulo.text = "RENDICION DE GASTOS                                                                                                                                                                                     "
+            otxtGARRENDICIONFECHA.Attributes.Add("readonly", "readonly")
+            otxtGARRENDICIONFECHA.Text = Left(Date.Today.ToString, 10)
+            otxtGARRENDICIONFECHAA.Attributes.Add("readonly", "readonly")
+            otxtGARRENDICIONFECHAA.Text = Left(Date.Today.ToString, 10)
+
             'Tareas que se realizan en esta pagina por primer y única vez
-     
+
             'STRSYSTEM.accesoRolUsuarioActividadRegistro(Session("session_idOperador"), Session("session_paginaActual")) 
 
         End If
-END sub  
+    End Sub
 
 
 
@@ -113,21 +113,21 @@ otxtGARRENDICIONASIENTOCABECERA.text=          ""
                 connection.Open()
 
 
-            cmd.Parameters.Add("@idOperador", Data.SqlDbType.Int).SqlValue = Session("session_idOperador")
-            cmd.Parameters.Add("@IDGARRENDICION", Data.SqlDbType.Int).SqlValue = olblIDGARRENDICION.Text       
-         cmd.Parameters.Add("@IDGAR", Data.SqlDbType.Int).SqlValue = oddlGAR.SelectedValue    
-         cmd.Parameters.Add("@GARRENDICIONFECHA", Data.SqlDbType.DateTime).SqlValue = otxtGARRENDICIONFECHA.text              
-         cmd.Parameters.Add("@IDGARCOMPROBANTETIPO", Data.SqlDbType.Int).SqlValue = oddlGARCOMPROBANTETIPO.SelectedValue                 
-         cmd.Parameters.Add("@GARRENDICIONMONTOGAI", Data.SqlDbType.Float).SqlValue = otxtGARRENDICIONMONTOGAI.text               
-         cmd.Parameters.Add("@GARRENDICIONMONTOTRANSFERENCIAEMPRESA", Data.SqlDbType.Float).SqlValue = otxtGARRENDICIONMONTOTRANSFERENCIAEMPRESA.text                               
-         cmd.Parameters.Add("@GARRENDICIONMONTOOPERADORACUENTA", Data.SqlDbType.Float).SqlValue = otxtGARRENDICIONMONTOOPERADORACUENTA.text                             
-         cmd.Parameters.Add("@GARRENDICIONCOMPROBANTE", Data.SqlDbType.Char).SqlValue = otxtGARRENDICIONCOMPROBANTE.text                    
-         cmd.Parameters.Add("@GARRENDICIONDESCRIPCION", Data.SqlDbType.Text).SqlValue = otxtGARRENDICIONDESCRIPCION.text                
-         cmd.Parameters.Add("@GARRENDICIONCOMPROBANTEIMAGEN", Data.SqlDbType.Char).SqlValue = otxtGARRENDICIONCOMPROBANTEIMAGEN.text                         
-         cmd.Parameters.Add("@GARRENDICIONESTADO", Data.SqlDbType.Bit).SqlValue = otxtGARRENDICIONESTADO.Checked               
-         cmd.Parameters.Add("@GARRENDICIONFECHAA", Data.SqlDbType.DateTime).SqlValue = otxtGARRENDICIONFECHAA.text               
-         cmd.Parameters.Add("@GARADMINISTRACIONRENDICIONOPERADOR", Data.SqlDbType.Int).SqlValue = otxtGARADMINISTRACIONRENDICIONOPERADOR.text                        
-         cmd.Parameters.Add("@GARRENDICIONASIENTOCABECERA", Data.SqlDbType.Int).SqlValue = otxtGARRENDICIONASIENTOCABECERA.text                    
+                cmd.Parameters.Add("@idOperador", Data.SqlDbType.Int).SqlValue = Session("session_idOperador")
+                cmd.Parameters.Add("@IDGARRENDICION", Data.SqlDbType.Int).SqlValue = olblIDGARRENDICION.Text
+                cmd.Parameters.Add("@IDGAR", Data.SqlDbType.Int).SqlValue = oddlGAR.SelectedValue
+                cmd.Parameters.Add("@GARRENDICIONFECHA", Data.SqlDbType.DateTime).SqlValue = otxtGARRENDICIONFECHA.Text
+                cmd.Parameters.Add("@IDGARCOMPROBANTETIPO", Data.SqlDbType.Int).SqlValue = oddlGARCOMPROBANTETIPO.SelectedValue
+                cmd.Parameters.Add("@GARRENDICIONMONTOGAI", Data.SqlDbType.Float).SqlValue = otxtGARRENDICIONMONTOGAI.Text
+                cmd.Parameters.Add("@GARRENDICIONMONTOTRANSFERENCIAEMPRESA", Data.SqlDbType.Float).SqlValue = otxtGARRENDICIONMONTOTRANSFERENCIAEMPRESA.Text
+                cmd.Parameters.Add("@GARRENDICIONMONTOOPERADORACUENTA", Data.SqlDbType.Float).SqlValue = otxtGARRENDICIONMONTOOPERADORACUENTA.Text
+                cmd.Parameters.Add("@GARRENDICIONCOMPROBANTE", Data.SqlDbType.Char).SqlValue = otxtGARRENDICIONCOMPROBANTE.Text
+                cmd.Parameters.Add("@GARRENDICIONDESCRIPCION", Data.SqlDbType.Text).SqlValue = otxtGARRENDICIONDESCRIPCION.Text
+                cmd.Parameters.Add("@GARRENDICIONCOMPROBANTEIMAGEN", Data.SqlDbType.Char).SqlValue = otxtGARRENDICIONCOMPROBANTEIMAGEN.Text
+                cmd.Parameters.Add("@GARRENDICIONESTADO", Data.SqlDbType.Bit).SqlValue = otxtGARRENDICIONESTADO.Checked
+                cmd.Parameters.Add("@GARRENDICIONFECHAA", Data.SqlDbType.DateTime).SqlValue = otxtGARRENDICIONFECHAA.Text
+                cmd.Parameters.Add("@GARADMINISTRACIONRENDICIONOPERADOR", Data.SqlDbType.Int).SqlValue = otxtGARADMINISTRACIONRENDICIONOPERADOR.Text
+                cmd.Parameters.Add("@GARRENDICIONASIENTOCABECERA", Data.SqlDbType.Int).SqlValue = otxtGARRENDICIONASIENTOCABECERA.Text
                 reader = cmd.ExecuteReader
 
                 If reader.HasRows Then

@@ -4,6 +4,8 @@
 
     <asp:Content ID="Content1" ContentPlaceHolderID="head" Runat="Server">
         <link rel="stylesheet" href="/Administracion/rptLoteVentaVendedorPeriodo.css">
+        <!-- Sweet Alert -->
+        <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
     </asp:Content>
     <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" Runat="Server">
 
@@ -21,7 +23,7 @@
             <asp:Label ID="olblVendedorNombre" runat="server" Text="" Font-Bold="true" Font-Size="Large"></asp:Label>
             <asp:Label ID="olblVendedorCorreo" runat="server" Text="" CssClass="correo-vendedor"></asp:Label>
             <!-- <span class="solo-imprimir d-inline-block m-3">Período:</span> -->
-            <div class="seleccion-fechas-sp">
+            <div class="seleccion-fechas-sp" id="venta-periodo">
 
                 <asp:DropDownList CssClass="m-3" ID="oddlUltimosPeriodos" runat="server" AutoPostBack="True"
                     DataSourceID="odsUltimosPeriodos" DataTextField="ejercicioDetalleDescripcion"
@@ -43,6 +45,8 @@
                     class="bi bi-distribute-horizontal"></i></button>
             <button class="btn btn-light no-imprimir" id="btn-resaltar">Resaltar Totales <i
                     class="bi bi-highlighter"></i></button>
+            <button class="btn btn-light no-imprimir" id="btn-comision">Mi Comisión del Mes <i
+                    class="bi bi-currency-dollar"></i></button>
         </div>
         <div id="tabla-adhesiones" class="tabla-adhesiones contenedor-responsive">
             <asp:SqlDataSource ID="odsUltimosPeriodos" runat="server"
@@ -186,6 +190,10 @@ order by idEjercicioDetalle DEsc"></asp:SqlDataSource>
                 const columnas = tablaAdhesiones.querySelectorAll("td");
                 const menuBotones = document.getElementById("botones-menu");
                 const btnEspaciar = document.getElementById("btn-espaciar");
+                const btnComision = document.getElementById("btn-comision");
+                const selectPeriodo = document.querySelector("#venta-periodo select option");
+
+                console.log("Hola", selectPeriodo.textContent)
 
                 btnEspaciar.addEventListener("click", (event) => {
                     event.preventDefault();
@@ -199,6 +207,18 @@ order by idEjercicioDetalle DEsc"></asp:SqlDataSource>
 
                     btnEspaciar.classList.toggle("btn-light");
                     btnEspaciar.classList.toggle("btn-primary");
+                })
+
+                btnComision.addEventListener("click", (event) => {
+                    event.preventDefault();
+                    const comisionTotal = columnas[columnas.length - 1];
+
+                    Swal.fire({
+                        title: `<h3 style="font-size: 16x">Su comisión del mes de ${selectPeriodo.textContent} es: </h3`,
+                        html: `<strong style="color: green; font-size: 24px">${comisionTotal.textContent}</strong>`,
+                        // icon: "success",
+                    })
+
                 })
 
                 const inputs = document.querySelectorAll("input");
