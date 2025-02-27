@@ -45,13 +45,13 @@
                         </asp:CommandField>
                         <asp:BoundField DataField="IDACCESOROL" HeaderText="ID" InsertVisible="False" ReadOnly="True"
                            visible="False" SortExpression="IDACCESOROL" />
-                        <asp:BoundField DataField="ACCESOROLCODIGO" HeaderText="CODIGO DE ROL"
+                        <asp:BoundField DataField="ACCESOROLCODIGO" HeaderText="CÓDIGO DE ROL"
                            SortExpression="ACCESOROLCODIGO" />
-                        <asp:BoundField DataField="ACCESOROLDESCRIPCION" HeaderText="DESCRIPCION DEL ROL"
+                        <asp:BoundField DataField="ACCESOROLDESCRIPCION" HeaderText="DESCRIPCIÓN DEL ROL"
                            SortExpression="ACCESOROLDESCRIPCION" />
-                        <asp:BoundField DataField="ACCESOROLEXPLICACION" HeaderText="EXPLICACION EXTENDIDA DEL ROL"
+                        <asp:BoundField DataField="ACCESOROLEXPLICACION" HeaderText="EXPLICACIÓN EXTENDIDA DEL ROL"
                            SortExpression="ACCESOROLEXPLICACION" />
-                        <asp:BoundField DataField="ACCESOROLPAGINA" HeaderText="PAGINA WEB"
+                        <asp:BoundField DataField="ACCESOROLPAGINA" HeaderText="PÁGINA WEB"
                            SortExpression="ACCESOROLPAGINA" />
                         <asp:BoundField DataField="ACCESOROLDOCUMENTOOPERATIVO" HeaderText="DOCUMENTO"
                            SortExpression="ACCESOROLDOCUMENTOOPERATIVO" />
@@ -87,25 +87,25 @@
                   <asp:Label ID="olblIDACCESOROL" runat="server" Text="" Visible="false"></asp:Label>
                </div>
                <div class="form-group">
-                  <asp:Label ID="olblACCESOROLCODIGO" runat="server" Text="CODIGO DE ROL:" CssClass="control-label">
+                  <asp:Label ID="olblACCESOROLCODIGO" runat="server" Text="CÓDIGO DE ROL:" CssClass="control-label">
                   </asp:Label>
                   <asp:TextBox ID="otxtACCESOROLCODIGO" runat="server" CssClass="form-control" MaxLength="65">
                   </asp:TextBox>
                </div>
                <div class="form-group">
-                  <asp:Label ID="olblACCESOROLDESCRIPCION" runat="server" Text="DESCRIPCION DEL ROL:"
+                  <asp:Label ID="olblACCESOROLDESCRIPCION" runat="server" Text="DESCRIPCIÓN DEL ROL:"
                      CssClass="control-label"></asp:Label>
                   <asp:TextBox ID="otxtACCESOROLDESCRIPCION" runat="server" CssClass="form-control" MaxLength="200">
                   </asp:TextBox>
                </div>
                <div class="form-group">
-                  <asp:Label ID="olblACCESOROLEXPLICACION" runat="server" Text="EXPLICACION EXTENDIDA DEL ROL:"
+                  <asp:Label ID="olblACCESOROLEXPLICACION" runat="server" Text="EXPLICACIÓN EXTENDIDA DEL ROL:"
                      CssClass="control-label"></asp:Label>
                   <asp:TextBox ID="otxtACCESOROLEXPLICACION" runat="server" CssClass="form-control" TextMode="MultiLine"
                      height="500px"></asp:TextBox>
                </div>
                <div class="form-group">
-                  <asp:Label ID="olblACCESOROLPAGINA" runat="server" Text="PAGINA WEB:" CssClass="control-label">
+                  <asp:Label ID="olblACCESOROLPAGINA" runat="server" Text="PÁGINA WEB:" CssClass="control-label">
                   </asp:Label>
                   <asp:TextBox ID="otxtACCESOROLPAGINA" runat="server" CssClass="form-control" MaxLength="200">
                   </asp:TextBox>
@@ -127,8 +127,8 @@
                   <asp:Label ID="olblGestionCodigo" runat="server" Text="" Visible="false"></asp:Label>
                   <asp:Label ID="olblGestionDescripcion" runat="server" Text=""></asp:Label>
                   <br />
-                  <asp:Button ID="obutAltaConfirmada" runat="server" Text="Confirma Alta" CssClass="btn btn-success" />
-                  <asp:Button ID="obutAltaAbandonada" runat="server" Text="Abandona Alta" CssClass="btn btn-danger" />
+                  <asp:Button ID="obutAltaConfirmada" runat="server" Text="Confirmar Alta" CssClass="btn btn-success" />
+                  <asp:Button ID="obutAltaAbandonada" runat="server" Text="Abandonar Alta" CssClass="btn btn-danger" />
                </div>
             </form>
          </asp:Panel>
