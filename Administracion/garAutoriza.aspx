@@ -5,9 +5,9 @@
     <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="Server">
     </asp:Content>
     <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="Server">
-        <div>
-            <asp:Label ID="Label1" runat="server" Text="Autorizacion de GASTO a RENDIR" Font-Bold="true"></asp:Label>
-        </div>
+        <h1 class="titulo-rol">
+            <asp:Label ID="Label1" runat="server" Text="Autorizacion de GASTO a RENDIR"></asp:Label>
+        </h1>
         <asp:Panel ID="PanelSelecciona" runat="server">
             <asp:RadioButtonList ID="orbOpcion" runat="server" AutoPostBack="True">
                 <asp:ListItem Selected="True" Value="0">Pendientes</asp:ListItem>

@@ -89,7 +89,6 @@ a {
   padding: 8px 16px;
   margin: 0 auto;
   border-radius: 5px;
-  height: min-content !important;
   min-width: 100px;
 }
 
@@ -346,7 +345,6 @@ button {
   padding: 8px 16px;
   margin: 0 auto;
   border-radius: 5px;
-  height: min-content !important;
   min-width: fit-content;
   width: 200px;
 }
