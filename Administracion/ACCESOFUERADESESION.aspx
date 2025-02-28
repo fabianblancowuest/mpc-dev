@@ -37,34 +37,35 @@
                             <div class="acceso-fuera-sesion login">
                                 <div class="acceso-fuera-sesion-box">
                                     <h1 class="panel-heading titulo-fuera-de-sesion">Reingresar al sistema
-                                        <h2 class="mensaje-sin-sesion">Se ha perdido la sesión. Puede haber
-                                            pasado un tiempo desde que no se opera el sistema. Debe ingresar nuevamente.
-                                            <i class="bi bi-window-dash"></i>
-                                        </h2>
-                                        <div class="panel-body">
-                                            <div class="usuario-fuera-sesion">
-                                                <p>Usuario fuera de Sesión <i class="bi bi-window-x"></i>
+                                        <i class="bi bi-window-stack"></i>
                                     </h1>
-                                    </p>
-                                    <p>Por favor, reingrese al sistema para seguir operando.</p>
-                                    <asp:Button ID="obutReingresar" runat="server" Text="Reingresar al Sistema"
-                                        CssClass="btn-basic btn btn-primary d-block my-4" />
-                                    <asp:Label ID="olblObservacion" runat="server"
-                                        Text="Haga click en el botón 'Reingresar al Sistema'. Será necesario reintroducir sus credenciales.">
-                                    </asp:Label>
-                                </div>
-                                <div class="fuera-sesion-footer">
-                                    Pablo Strauss Desarrollos. &#169 Todos los derechos reservados.
+                                    <div class="mensaje-sin-sesion">Se ha perdido la sesión. Puede haber
+                                        pasado un tiempo desde que no se opera el sistema. Debe ingresar nuevamente.
+                                        <i class="bi bi-window-dash"></i>
+                                    </div>
+                                    <div class="panel-body">
+                                        <div class="usuario-fuera-sesion">
+                                            <p>Usuario fuera de Sesión <i class="bi bi-window-x"></i>
+                                            </p>
+                                            <p>Por favor, reingrese al sistema para seguir operando.</p>
+                                            <asp:Button ID="obutReingresar" runat="server" Text="Reingresar al Sistema"
+                                                CssClass="btn-basic btn btn-primary d-block my-4" />
+                                            <asp:Label ID="olblObservacion" runat="server"
+                                                Text="Haga click en el botón 'Reingresar al Sistema'. Será necesario reintroducir sus credenciales.">
+                                            </asp:Label>
+                                        </div>
+                                        <div class=" fuera-sesion-footer">
+                                            Pablo Strauss Desarrollos. &#169 Todos los derechos reservados.
+                                        </div>
+                                    </div>
                                 </div>
                             </div>
-            </div>
-            </div>
-            </asp:Panel>
+                        </asp:Panel>
 
 
 
-            </ContentTemplate>
-            </asp:UpdatePanel>
+                    </ContentTemplate>
+                </asp:UpdatePanel>
 
             </div>
         </form>

@@ -74,12 +74,12 @@
                         <!-- <button class="btn btn-light margenes-y text-center mx-auto d-block" id="btn-expandir">Expandir contenido</button> -->
 
                         <asp:GridView ID="ogvBARRIOLOTE" runat="server" AutoGenerateColumns="False"
-                            CssClass="table-cemmi" AlternatingRowStyle-CssClass="alt" PageSize="100"
+                            CssClass="table-cemmi fuente-mas-chica" AlternatingRowStyle-CssClass="alt" PageSize="100"
                             PagerStyle-CssClass="pgr"
                             DataKeyNames="IDBARRIOLOTE,IDBARRIO,IDBARRIOMANZANA,BARRIOLOTEPARCELA,BARRIOLOTEFRENTEMETROS,BARRIOLOTELADOIZQUIERDOMETROS,BARRIOLOTEFONDOMETROS,BARRIOLOTELADODERECHOMETROS,BARRIOLOTESUPERFICIE,IDORIENTACION,SECUENCIA,IDLOTETIPO,IDCOSTOREFERENCIA,BARRIOLOTEPRECIOREFERENCIABC,BARRIOLOTEADHESIONREFERENCIA,BARRIOLOTEESTADO,BARRIOLOTEENVENTA,BARRIOLOTEBONIFICADO,PARCELACATASTRAL"
                             DataSourceID="odsBARRIOLOTE"
                             EmptyDataText="No existen entradas en la tabla con el argumento de busqueda ingresado"
-                            AllowSorting="True" Font-Size="X-Small">
+                            AllowSorting="True">
                             <AlternatingRowStyle CssClass="alt fila-barrio-mz-lote" />
                             <Columns>
                                 <asp:CommandField SelectText="Seleccione" ShowSelectButton="True" />

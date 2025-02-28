@@ -297,25 +297,27 @@ button {
 
 .acceso-fuera-sesion {
   display: flex;
-  min-height: 100vh;
+  min-height: 95vh;
   max-width: 100%;
   width: 100%;
-  gap: 3em;
   flex-direction: column;
   align-items: center;
   justify-content: center;
   text-align: center;
+  /* color: #555; */
 }
 
 .acceso-fuera-sesion-box {
+  position: relative;
   min-height: 600px;
   display: flex;
-  gap: 3em;
+  gap: 2em;
   flex-direction: column;
   align-items: center;
   justify-content: center;
   text-align: center;
-  border: 1px solid rgb(33, 27, 154);
+  /* border: 3px solid rgb(33, 27, 154); */
+  box-shadow: 3px 3px 10px #286090;
   border-radius: 5px;
   width: 100%;
   max-width: 900px;
@@ -326,17 +328,42 @@ button {
   border: 1px solid black;
 }
 
-.mensaje-sin-sesion {
-  font-size: 1rem;
+.titulo-fuera-de-sesion {
+  position: absolute;
+  top: 0;
+  font-size: 1.2rem;
   background-color: var(--btn-bg-color);
   color: white;
   padding: 0.5em 0;
   width: 100%;
+  border-radius: 5px;
+}
+
+.mensaje-sin-sesion {
+  font-size: 1.4rem;
+  padding: 1em;
+  font-style: oblique;
+  align-self: flex-start;
 }
 
 .usuario-fuera-sesion p {
   margin: 0 auto;
-  font-size: 1.5rem;
+  font-size: 1.2rem;
+}
+
+.usuario-fuera-sesion span {
+  font-size: 16.5px;
+}
+
+.fuera-sesion-footer {
+  background-color: #ccc;
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  border-radius: 5px;
+  padding: 6px;
+  font-size: 1.1rem;
 }
 
 /* Botones */

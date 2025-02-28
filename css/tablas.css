@@ -543,62 +543,20 @@ Pago Pactado = Verde claro */
   overflow-x: auto;
 }
 
-/* Roles del sistema */
-
-.roles-del-sistema table {
-  font-size: 12px;
-}
-
-.conceptos-contables table {
-  font-size: 12px;
-}
-
-/* Mantenimiento del plan de cuentas */
-
-.mantenimiento-plan-cuentas table {
-  font-size: 12px;
-}
-
-/* Ejercicio contable */
-
-.ejercicio-contable table {
-  font-size: 12px;
-}
-
-.periodos-ejercicio-contable table {
-  font-size: 12px;
-}
-
-/* Valores de referencia por período contable */
-
-.valores-referencia-periodo-contable table {
-  font-size: 12px;
-}
-
-/* Tablas del sistema */
-
-.tablas-del-sistema table {
-  font-size: 12px;
-}
-
-/* Estado de venta de lotes */
-
-.estado-venta-lotes table {
-  font-size: 12px;
-}
-
 /* Modo actualización */
-
-.modo-actualizacion table {
-  font-size: 12px;
-}
-
-.contenedor-barrio table {
-  font-size: 12px;
-}
-
-.alta-talonarios-recibos table {
-  font-size: 12px;
+.roles-del-sistema table,
+.conceptos-contables table,
+.mantenimiento-plan-cuentas table,
+.ejercicio-contable table,
+.periodos-ejercicio-contable table,
+.valores-referencia-periodo-contable table,
+.tablas-del-sistema table,
+.estado-venta-lotes table,
+.modo-actualizacion table,
+.contenedor-barrio table,
+.alta-talonarios-recibos table,
+.manzanas-en-barrios table {
+  font-size: 12.5px;
 }
 
 .roles-asignados-por-empresa table {
@@ -617,10 +575,6 @@ Pago Pactado = Verde claro */
   gap: 1rem;
 }
 
-.manzanas-en-barrios table {
-  font-size: 12px;
-}
-
 .fuente-mas-chica {
   font-size: 11.5px;
 }
@@ -635,4 +589,10 @@ Pago Pactado = Verde claro */
 
 .fuente-grande {
   font-size: 16;
+}
+
+/* Lotes en barrios */
+
+.tabla-barrio-manzana table tr {
+  line-height: 1.6;
 }
