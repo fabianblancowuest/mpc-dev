@@ -21,9 +21,7 @@
 
         </div>
 
-        <div>
-
-
+        <div class="contenedor-responsive">
             <asp:SqlDataSource ID="odsCotizacionFechaTrae" runat="server"
                 ConnectionString="<%$ ConnectionStrings:STRSYSTEM %>" SelectCommand="cotizacionFechaTrae"
                 SelectCommandType="StoredProcedure">
@@ -67,16 +65,7 @@
 
                 </Columns>
             </asp:GridView>
-            <br />
-            <div class="contenedor-flexible margenes-y">
 
-                <asp:Button ID="obutCotizacionActualiza" runat="server" Text="Actualizar cotización"
-                    CssClass="btn btn-basic btn-success" />
-                <asp:Button ID="obutCotizacionFechaAlta" runat="server" Text="Agregar nueva fecha"
-                    CssClass="btn btn-basic btn-primary" />
-
-
-            </div>
             <div>
                 <asp:Label ID="olblMensajeGestion" runat="server" Text="" ForeColor="Blue"></asp:Label>
 
@@ -87,6 +76,14 @@
             </div>
         </div>
 
+        <div class="contenedor-flexible margenes-y">
 
+            <asp:Button ID="obutCotizacionActualiza" runat="server" Text="Actualizar cotización"
+                CssClass="btn btn-basic btn-success" />
+            <asp:Button ID="obutCotizacionFechaAlta" runat="server" Text="Agregar nueva fecha"
+                CssClass="btn btn-basic btn-primary" />
+
+
+        </div>
 
     </asp:Content>
