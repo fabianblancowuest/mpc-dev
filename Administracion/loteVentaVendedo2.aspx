@@ -427,12 +427,10 @@
                             </div>
                         </div>
 
-                        <div class="col-sm-offset-2 col-sm-10 contenedor-flexible mt-3">
-                            <div>
-                                <asp:Label ID="olblGestionCodigo" runat="server" Text="" Visible="false">
-                                </asp:Label>
-                                <asp:Label ID="olblGestionDescripcion" runat="server" Text=""></asp:Label>
-                            </div>
+                        <div class="col-sm-offset-2 col-sm-10 contenedor-flexible mt-3 flex-column">
+                            <asp:Label ID="olblGestionCodigo" runat="server" Text="" Visible="false">
+                            </asp:Label>
+                            <asp:Label ID="olblGestionDescripcion" runat="server" Text=""></asp:Label>
                             <asp:Button ID="obutAltaConfirmada" runat="server" Text="Confirmar Alta"
                                 CssClass="btn btn-success" />
                             <asp:Button ID="obutAltaAbandonada" runat="server" Text="Abandonar Alta"

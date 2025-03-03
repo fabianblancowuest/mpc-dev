@@ -789,3 +789,9 @@ Pago Pactado = Verde claro */
 .datos-venta select {
   box-shadow: 1px 1px 3px #0d6efd;
 }
+
+.tamanio-max {
+  width: 600px;
+  max-width: 100%;
+  margin: 0 auto;
+}
