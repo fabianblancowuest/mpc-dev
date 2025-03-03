@@ -691,6 +691,8 @@ Pago Pactado = Verde claro */
 .calendario table {
   width: 700px;
   max-width: 100%;
+  /* box-shadow: 3px 3px 5px #337ab7; */
+  box-shadow: 3px 3px 7px;
 }
 
 .calendario table tr {
@@ -709,6 +711,16 @@ Pago Pactado = Verde claro */
 .calendario table a {
   text-align: center;
   cursor: pointer;
+}
+
+.calendario tr:first-child td tr td a {
+  color: white !important;
+  font-size: 18px !important;
+  font-weight: 900 !important;
+}
+
+.calendario tr:first-child td {
+  border: none;
 }
 
 /* .calendario table a[href*="javascript"] {
