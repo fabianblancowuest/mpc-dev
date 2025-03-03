@@ -33,6 +33,7 @@
   overflow: hidden;
   padding: 0 5px;
   text-overflow: ellipsis;
+  line-height: 2;
 }
 
 .table-cemmi th,

@@ -191,6 +191,7 @@ Partial Class Administracion_rptLoteVentaLlamada
     Protected Sub ogvLlamadaDetalle_SelectedIndexChanged(sender As Object, e As EventArgs) Handles ogvLlamadaDetalle.SelectedIndexChanged
         PanelPanelSuperior.Visible = False
         PanelLlamadasPorLote.Visible = False
+        obutReporteVolver.Visible = True
 
         olblReporteIdLoteVenta.Text = ogvLlamadaDetalle.SelectedDataKey.Item("idLoteventa")
         ogvReporteLlamadasRegistradas.DataBind()
@@ -210,9 +211,8 @@ Partial Class Administracion_rptLoteVentaLlamada
 
     Protected Sub obutReporteVolver_Click(sender As Object, e As EventArgs) Handles obutReporteVolver.Click
         PanelPanelSuperior.Visible = True
-        PanelConsultaDesdeReporte.Visible = False
-
-
+        'PanelGestion.Visible = False
+        'PanelReportePeriodo.Visible = True
 
     End Sub
 

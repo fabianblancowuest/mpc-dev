@@ -305,7 +305,7 @@ order by lvg.barrio , lvg.loteVentaLLamadaTipoDescripcion">
         <asp:Panel ID="PanelLlamadasPorLote" runat="server">
             <div>
                 <asp:Label ID="Label16" runat="server" Text="Detalle por lote."></asp:Label>
-                 <asp:Button ID="obutReporteVolver" runat="server" Text="Volver a reporte general" />
+                 <asp:Button ID="obutReporteVolver" runat="server" Text="Volver a reporte general" Visible ="false" />
             </div>
             <div>
                 <asp:SqlDataSource ID="odsLlamadaDetalle" runat="server" ConnectionString="<%$ ConnectionStrings:STRSYSTEM %>" SelectCommand="select * from   tblloteVentaLlamadaGestion  where idOperador = @idOperador
