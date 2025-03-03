@@ -206,7 +206,7 @@ order by barrioDescripcion "></asp:SqlDataSource>
 
             <div>
                 <asp:Label ID="Label10" runat="server" Text="Ingrese período a procesar" CssClass="subtitulo-rol"></asp:Label>
-                <asp:SqlDataSource ID="odsCalendario" runat="server" ConnectionString="<%$ ConnectionStrings:STRSYSTEM %>" SelectCommand="select id, cONVERT(nvarchar(30),fecha , 102) fecha from calendario order by fecha desc"></asp:SqlDataSource>
+                <asp:SqlDataSource ID="odsCalendario" runat="server" ConnectionString="<%$ ConnectionStrings:STRSYSTEM %>" SelectCommand="calendarioAlta;select id, cONVERT(nvarchar(30),fecha , 102) fecha from calendario order by fecha desc"></asp:SqlDataSource>
             </div>
 
             <div class="seleccion-fechas-sp">

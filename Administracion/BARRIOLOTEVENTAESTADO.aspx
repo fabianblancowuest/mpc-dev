@@ -45,6 +45,7 @@
                      AllowSorting="True">
                      <Columns>
                         <asp:CommandField ShowSelectButton="True" SelectText="Seleccione">
+                           <ItemStyle />
                         </asp:CommandField>
                         <asp:BoundField DataField="IDBARRIOLOTEVENTAESTADO" HeaderText="id" InsertVisible="False"
                            ReadOnly="True" visible="False" SortExpression="IDBARRIOLOTEVENTAESTADO" />

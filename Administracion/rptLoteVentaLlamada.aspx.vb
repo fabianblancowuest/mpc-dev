@@ -80,7 +80,7 @@ Partial Class Administracion_rptLoteVentaLlamada
                     End While
                 End If
             Catch ex As Exception
-                olblGestionDescripcion.Text = ex.Message
+                olblGestionDescripcion.Text = " Error al ejecutar  LOTEVENTALLAMADAGESTIONALTA" + ex.Message
             End Try
             connection.Close()
         End Using
@@ -165,7 +165,7 @@ Partial Class Administracion_rptLoteVentaLlamada
                     End While
                 End If
             Catch ex As Exception
-                olblMensajeActualizaDatos.Text = ex.Message
+                olblMensajeActualizaDatos.Text = "Error al ejecutar rptloteVentaLlamadaGestion   " + ex.Message
             End Try
             connection.Close()
         End Using
@@ -214,5 +214,13 @@ Partial Class Administracion_rptLoteVentaLlamada
 
 
 
+    End Sub
+
+    Protected Sub Page_Load(sender As Object, e As EventArgs) Handles Me.Load
+        If IsPostBack Then
+        Else
+            oddlLoteVentaLlamada.DataBind()
+
+        End If
     End Sub
 End Class
