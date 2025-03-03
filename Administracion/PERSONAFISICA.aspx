@@ -11,7 +11,7 @@
 
          <asp:Panel ID="PanelTitulo" runat="server">
             <h1 class="titulo-rol">
-               <asp:Label ID="olblPERSONAFISICATitulo" runat="server" Text="MANTENIMIENTO DE PERSONAS F�SICAS">
+               <asp:Label ID="olblPERSONAFISICATitulo" runat="server" Text="MANTENIMIENTO DE PERSONAS FÍSICAS">
                </asp:Label>
             </h1>
          </asp:Panel>
@@ -34,9 +34,10 @@
                      <asp:ControlParameter ControlID="otxtCadena" Name="cadena" PropertyName="Text" Type="String" />
                   </SelectParameters>
                </asp:SqlDataSource>
-               <div class="table-responsive">
-                  <asp:GridView ID="ogvPERSONAFISICA" runat="server" AutoGenerateColumns="False" CssClass="table-cemmi"
-                     AlternatingRowStyle-CssClass="alt" AllowPaging="True" PageSize="15" PagerStyle-CssClass="pgr"
+               <div class="table-responsive" id="tabla-personas-fisicas">
+                  <asp:GridView ID="ogvPERSONAFISICA" runat="server" AutoGenerateColumns="False"
+                     CssClass="table-cemmi tabla-adaptada fuente-chica" AlternatingRowStyle-CssClass="alt"
+                     AllowPaging="True" PageSize="15" PagerStyle-CssClass="pgr"
                      DataKeyNames="IDPERSONAFISICA     ,PERSONAFISICACODIGO       ,PERSONAFISICADESCRIPCION        ,PERSONAFISICAAPELLIDO       ,PERSONAFISICANOMBRES         ,PERSONAFISICANACIMIENTOFECHA          ,IDPERSONAFISICADOCUMENTOTIPO          ,PERSONAFISICADOCUMENTONUMERO             ,PERSONAFISICACUIT     ,PERSONAFISICATELEFONONUMERO            ,PERSONAFISICACORREOELECTRONICO            ,PERSONAFISICABARRIO       ,PERSONAFISICACALLE      ,PERSONAFISICALOCALIDAD        ,PERSONAFISICAPROFESION        ,PERSONAFISICADOMICILIOLABORAL         "
                      DataSourceID="odsPERSONAFISICA"
                      EmptyDataText="No existen entradas en la tabla con el argumento de busqueda ingresado"
@@ -46,9 +47,9 @@
                         </asp:CommandField>
                         <asp:BoundField DataField="IDPERSONAFISICA" HeaderText="id" InsertVisible="False"
                            ReadOnly="True" visible="False" SortExpression="IDPERSONAFISICA" />
-                        <asp:BoundField DataField="PERSONAFISICACODIGO" HeaderText="CODIGO (CUIT / DNI)" Visible="false"
+                        <asp:BoundField DataField="PERSONAFISICACODIGO" HeaderText="CÓDIGO (CUIT / DNI)" Visible="false"
                            SortExpression="PERSONAFISICACODIGO" />
-                        <asp:BoundField DataField="PERSONAFISICADESCRIPCION" HeaderText="DESCRIPCION (RAZON SOCIAL )"
+                        <asp:BoundField DataField="PERSONAFISICADESCRIPCION" HeaderText="DESCRIPCIÓN (RAZÓN SOCIAL )"
                            Visible="false" SortExpression="PERSONAFISICADESCRIPCION" />
                         <asp:BoundField DataField="PERSONAFISICAAPELLIDO" HeaderText="APELLIDO"
                            SortExpression="PERSONAFISICAAPELLIDO" />
@@ -59,16 +60,16 @@
                         <asp:BoundField DataField="IDPERSONAFISICADOCUMENTOTIPO"
                            HeaderText="TIPO DE DOCUMENTO PERSONA FISICA" InsertVisible="False" ReadOnly="True"
                            visible="False" SortExpression="IDPERSONAFISICADOCUMENTOTIPO" />
-                        <asp:BoundField DataField="PERSONAFISICADOCUMENTONUMERO" HeaderText="NUMERO DE DOCUMENTO"
+                        <asp:BoundField DataField="PERSONAFISICADOCUMENTONUMERO" HeaderText="NÚMERO DE DOCUMENTO"
                            SortExpression="PERSONAFISICADOCUMENTONUMERO">
                            <ItemStyle HorizontalAlign="Right" />
                         </asp:BoundField>
                         <asp:BoundField DataField="PERSONAFISICACUIT" HeaderText="CUIT"
                            SortExpression="PERSONAFISICACUIT" />
-                        <asp:BoundField DataField="PERSONAFISICATELEFONONUMERO" HeaderText="N�MERO DE TELEFONO /S"
+                        <asp:BoundField DataField="PERSONAFISICATELEFONONUMERO" HeaderText="NÚMERO DE TELEFONO /S"
                            SortExpression="PERSONAFISICATELEFONONUMERO" />
                         <asp:BoundField DataField="PERSONAFISICACORREOELECTRONICO"
-                           HeaderText="CORREO ELECTR�NICO / USUARIO DE ACCESO"
+                           HeaderText="CORREO ELECTRÓNICO / USUARIO DE ACCESO"
                            SortExpression="PERSONAFISICACORREOELECTRONICO" />
                         <asp:BoundField DataField="PERSONAFISICABARRIO" HeaderText="BARRIO"
                            SortExpression="PERSONAFISICABARRIO" />
@@ -76,7 +77,7 @@
                            SortExpression="PERSONAFISICACALLE" />
                         <asp:BoundField DataField="PERSONAFISICALOCALIDAD" HeaderText="LOCALIDAD"
                            SortExpression="PERSONAFISICALOCALIDAD" />
-                        <asp:BoundField DataField="PERSONAFISICAPROFESION" HeaderText="PROFESION"
+                        <asp:BoundField DataField="PERSONAFISICAPROFESION" HeaderText="PROFESIÓN"
                            SortExpression="PERSONAFISICAPROFESION" />
                         <asp:BoundField DataField="PERSONAFISICADOMICILIOLABORAL" HeaderText="DOMICILIO LABORAL"
                            SortExpression="PERSONAFISICADOMICILIOLABORAL" />
@@ -90,7 +91,7 @@
 
 
             <div class="row">
-               <asp:Button ID="obutAlta" runat="server" Text="Nuevo Registro" CssClass="btn btn-success" />
+               <asp:Button ID="obutAlta" runat="server" Text="Nuevo Registro" CssClass="btn btn-basic btn-success" />
 
             </div>
 
@@ -104,13 +105,13 @@
                   <asp:Label ID="olblIDPERSONAFISICA" runat="server" Text="" Visible="false"></asp:Label>
                </div>
                <div class="form-group">
-                  <asp:Label ID="olblPERSONAFISICACODIGO" runat="server" Text="CODIGO (CUIT / DNI):"
+                  <asp:Label ID="olblPERSONAFISICACODIGO" runat="server" Text="CÓDIGO (CUIT / DNI):"
                      CssClass="control-label"></asp:Label>
                   <asp:TextBox ID="otxtPERSONAFISICACODIGO" runat="server" CssClass="form-control" MaxLength="50">
                   </asp:TextBox>
                </div>
                <div class="form-group">
-                  <asp:Label ID="olblPERSONAFISICADESCRIPCION" runat="server" Text="DESCRIPCION (RAZON SOCIAL ):"
+                  <asp:Label ID="olblPERSONAFISICADESCRIPCION" runat="server" Text="DESCRIPCIÓN (RAZÓN SOCIAL ):"
                      CssClass="control-label"></asp:Label>
                   <asp:TextBox ID="otxtPERSONAFISICADESCRIPCION" runat="server" CssClass="form-control" MaxLength="100">
                   </asp:TextBox>
@@ -159,7 +160,7 @@
                   </asp:TextBox>
                </div>
                <div class="form-group">
-                  <asp:Label ID="olblPERSONAFISICATELEFONONUMERO" runat="server" Text="N�MERO DE TELEFONO /S:"
+                  <asp:Label ID="olblPERSONAFISICATELEFONONUMERO" runat="server" Text="NÚMERO DE TELEFONO /S:"
                      CssClass="control-label"></asp:Label>
                   <asp:TextBox ID="otxtPERSONAFISICATELEFONONUMERO" runat="server" CssClass="form-control"
                      MaxLength="100"></asp:TextBox>
@@ -189,7 +190,7 @@
                   </asp:TextBox>
                </div>
                <div class="form-group">
-                  <asp:Label ID="olblPERSONAFISICAPROFESION" runat="server" Text="PROFESION:" CssClass="control-label">
+                  <asp:Label ID="olblPERSONAFISICAPROFESION" runat="server" Text="PROFESIÓN:" CssClass="control-label">
                   </asp:Label>
                   <asp:TextBox ID="otxtPERSONAFISICAPROFESION" runat="server" CssClass="form-control" MaxLength="100">
                   </asp:TextBox>

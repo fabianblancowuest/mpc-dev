@@ -5,6 +5,10 @@
   background-size: auto;
 } */
 
+.altura-minima {
+  min-height: 90vh;
+}
+
 .tabla-adaptada {
   width: auto; /* Permite que la tabla se ajuste al contenido */
   table-layout: auto; /* Hace que las celdas se ajusten automáticamente */
@@ -601,13 +605,15 @@ Pago Pactado = Verde claro */
   position: relative;
 }
 
-#tabla-acceso-rol table tr:last-child table tr {
+#tabla-acceso-rol table tr:last-child table tr,
+#tabla-personas-fisicas table tr:last-child table tr {
   display: flex;
   justify-content: center;
   width: 100%;
 }
 
-#tabla-acceso-rol table tr:last-child td td {
+#tabla-acceso-rol table tr:last-child td td,
+#tabla-personas-fisicas table tr:last-child td td {
   background-color: #0d6efd;
   width: 80px;
   font-weight: bold;
@@ -617,15 +623,18 @@ Pago Pactado = Verde claro */
   padding: 5px;
 }
 
-#tabla-acceso-rol table tr:last-child td td:hover {
+#tabla-acceso-rol table tr:last-child td td:hover,
+#tabla-personas-fisicas table tr:last-child td td:hover {
   background-color: #0b5ed7;
 }
 
-#tabla-acceso-rol table tr:last-child td a {
+#tabla-acceso-rol table tr:last-child td a,
+#tabla-personas-fisicas table tr:last-child td a {
   color: white;
 }
 
-#tabla-acceso-rol table tr:last-child td span {
+#tabla-acceso-rol table tr:last-child td span,
+#tabla-personas-fisicas table tr:last-child td span {
   background-color: greenyellow;
   display: block;
   width: 100%;
