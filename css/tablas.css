@@ -678,3 +678,77 @@ Pago Pactado = Verde claro */
   font-weight: bold;
   border-radius: 5px;
 } */
+
+/* Vendedor gestiona lotes todos los barrios */
+
+.calendario {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+}
+
+.calendario table {
+  width: 700px;
+  max-width: 100%;
+}
+
+.calendario table tr {
+  line-height: 2.2;
+}
+
+.calendario table td,
+.calendario table th {
+  border: 1px solid #777;
+}
+
+.calendario table th {
+  text-align: center;
+}
+
+.calendario table a {
+  text-align: center;
+  cursor: pointer;
+}
+
+/* .calendario table a[href*="javascript"] {
+  background-color: #0b5ed7;
+  color: white;
+} */
+
+.calendario table td a:active,
+.calendario table td a:active,
+.calendario table td a:hover,
+.calendario table td a:hover,
+.calendario table td a:focus .calendario table td a:focus {
+  background-color: #4d8cbf;
+  color: white !important;
+  cursor: pointer;
+}
+
+.calendario table tr:first-child {
+  background-color: #0b5ed7;
+  color: white;
+}
+
+.separar {
+  gap: 1rem;
+}
+
+.separar span {
+  display: inline-block;
+  margin-top: 0.5em;
+  font-weight: bold;
+  text-align: center;
+}
+
+.fecha-resaltada {
+  background-color: #0b5ed7;
+  color: white;
+  text-align: center;
+  border: none;
+  border-radius: 5px;
+  font-weight: bold;
+  letter-spacing: 1px;
+  line-height: 2.2;
+}

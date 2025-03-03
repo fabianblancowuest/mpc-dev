@@ -25,7 +25,7 @@
                         SelectCommand="loteVentaUltimasRelocalizaciones" SelectCommandType="StoredProcedure">
                     </asp:SqlDataSource>
                     <asp:GridView ID="ogvloteVentaUltimasRelocalizaciones" runat="server" AllowSorting="True"
-                        AutoGenerateColumns="False" CssClass="table-cemmi"
+                        AutoGenerateColumns="False" CssClass="table-cemmi tabla-adaptada"
                         DataSourceID="odsloteVentaUltimasRelocalizaciones" Font-Size="Small">
                         <Columns>
                             <asp:BoundField DataField="idLoteVentaRelocalizaOperador" HeaderText="id Relocaliza"

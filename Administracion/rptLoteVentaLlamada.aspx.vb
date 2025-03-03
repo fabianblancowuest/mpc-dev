@@ -175,6 +175,8 @@ Partial Class Administracion_rptLoteVentaLlamada
         ogvGlobal.DataBind()
         ogvGlobalBarrio.DataBind()
         ogvGlobalBarrioNovedad.DataBind()
+        ogvLlamadaDetalle.DataBind()
+
     End Sub
 
     Protected Sub oddlFechaDesde_SelectedIndexChanged(sender As Object, e As EventArgs) Handles oddlFechaDesde.SelectedIndexChanged
@@ -190,14 +192,30 @@ Partial Class Administracion_rptLoteVentaLlamada
    
     Protected Sub ogvLlamadaDetalle_SelectedIndexChanged(sender As Object, e As EventArgs) Handles ogvLlamadaDetalle.SelectedIndexChanged
         PanelPanelSuperior.Visible = False
+        PanelInferior.Visible = True
+
         PanelLlamadasPorLote.Visible = False
         obutReporteVolver.Visible = True
 
         olblReporteIdLoteVenta.Text = ogvLlamadaDetalle.SelectedDataKey.Item("idLoteventa")
+
+
+        ' idLoteventa, Barrio, Manzana, barrioLoteParcela, cliente, telefono, registros, loteVentaLLamadaTipoDescripcion
+        olblReporteLoteSeleccionado.Text = "Manzana:" + ogvLlamadaDetalle.SelectedDataKey.Item("Manzana") + "  Parcela:" + ogvLlamadaDetalle.SelectedDataKey.Item("barrioLoteParcela")
+        olblReporteClienteNombres.Text = ogvLlamadaDetalle.SelectedDataKey.Item("cliente")
+        'olblReporteClienteDomicilio.Text = ogvLlamadaDetalle.SelectedDataKey.Item("cliente01Domicilio")
+        olblReporteClienteTelefonos.Text = ogvLlamadaDetalle.SelectedDataKey.Item("telefono")
+
+
+
+
+
+
         ogvReporteLlamadasRegistradas.DataBind()
 
         PanelConsultaDesdeReporte.Visible = True
-        PanelReportePeriodo.Visible = False
+
+        'PanelReportePeriodo.Visible = False
 
     End Sub
 

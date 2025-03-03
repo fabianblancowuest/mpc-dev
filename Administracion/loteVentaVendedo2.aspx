@@ -53,7 +53,7 @@
                     <div class="row">
 
                         <div class="vendedor-gestiona-lotes-todos-los-barrios contenedor-busqueda align-items-center">
-                            <asp:Label ID="Label1" runat="server" Text="SELECCIONE  LOTE:" CssClass="select">
+                            <asp:Label ID="Label1" runat="server" Text="SELECCIONE LOTE:" CssClass="select">
                             </asp:Label>
                             <asp:SqlDataSource ID="odsBARRIOLOTEOperador" runat="server"
                                 ConnectionString="<%$ ConnectionStrings:STRSYSTEM %>"
@@ -96,7 +96,7 @@
                                     PropertyName="SelectedValue" Type="Int32" />
                             </SelectParameters>
                         </asp:SqlDataSource>
-                        <div class="table-responsive">
+                        <div class="table-responsive vendedor-gestiona-lotes-todos-los-barrios">
                             <asp:GridView ID="ogvLOTEVENTA" runat="server" AutoGenerateColumns="False"
                                 CssClass="table-cemmi" AlternatingRowStyle-CssClass="alt" AllowPaging="True"
                                 PageSize="15" PagerStyle-CssClass="pgr"
@@ -208,7 +208,8 @@
                 </asp:Panel>
 
 
-                <asp:Panel ID="PanelAlta" runat="server" Visible="false">
+                <asp:Panel ID="PanelAlta" runat="server" Visible="false"
+                    CssClass="vendedor-gestiona-lotes-todos-los-barrios separar">
                     <form class="form" role="form">
 
                         <div class="form-group">
@@ -268,24 +269,27 @@
                                 DataTextField="VENDEDORDescripcion" DataValueField="IDVENDEDOR" CssClass="form-control">
                             </asp:DropDownList>
                         </div>
-                        <div class="form-group">
+                        <div class="form-group calendario">
                             <asp:Label ID="olblLOTEVENTAFECHAVISITA" runat="server"
-                                Text="Fecha de Venta:  ingresar DD/MM/AAAA" CssClass="control-label"></asp:Label>
-                            <asp:TextBox ID="otxtLOTEVENTAFECHAVISITA" CssClass="" runat="server"></asp:TextBox>
+                                Text="Fecha de Venta : Seleccionar DD/MM/AAAA" CssClass="control-label">
+                            </asp:Label>
+                            <asp:TextBox ID="otxtLOTEVENTAFECHAVISITA" CssClass="fecha-resaltada" runat="server">
+                            </asp:TextBox>
 
                             <asp:Calendar ID="Calendar1" runat="server"></asp:Calendar>
                         </div>
 
 
-                        <div class="form-group">
-                            <asp:Label ID="Label10" runat="server" Text="Fecha de Cancelacion :  ingresar DD/MM/AAAA"
+                        <div class="form-group calendario">
+                            <asp:Label ID="Label10" runat="server" Text="Fecha de Cancelación : Seleccionar DD/MM/AAAA"
                                 CssClass="control-label"></asp:Label>
-                            <asp:TextBox ID="otxtLOTEVENTAFECHACANCELACION" CssClass="" runat="server"></asp:TextBox>
+                            <asp:TextBox ID="otxtLOTEVENTAFECHACANCELACION" CssClass="fecha-resaltada" runat="server">
+                            </asp:TextBox>
 
                             <asp:Calendar ID="Calendar2" runat="server"></asp:Calendar>
                         </div>
                         <div class="form-group">
-                            <asp:Label ID="olblLOTEVENTAADHESIONMONTO" runat="server" Text="Precio Total Adhesion:"
+                            <asp:Label ID="olblLOTEVENTAADHESIONMONTO" runat="server" Text="Precio Total Adhesión:"
                                 CssClass="control-label"></asp:Label>
                             <asp:TextBox ID="otxtLOTEVENTAADHESIONMONTO" runat="server" CssClass="form-control"
                                 MaxLength="12"></asp:TextBox>
@@ -317,7 +321,7 @@
                                 MaxLength="100"></asp:TextBox>
                         </div>
                         <div class="form-group">
-                            <asp:Label ID="olblCLIENTE01TELEFONO" runat="server" Text="1 - Telefono:"
+                            <asp:Label ID="olblCLIENTE01TELEFONO" runat="server" Text="1 - Teléfono:"
                                 CssClass="control-label"></asp:Label>
                             <asp:TextBox ID="otxtCLIENTE01TELEFONO" runat="server" CssClass="form-control"
                                 MaxLength="20"></asp:TextBox>
@@ -341,13 +345,13 @@
                                 MaxLength="100"></asp:TextBox>
                         </div>
                         <div class="form-group">
-                            <asp:Label ID="olblCLIENTE02TELEFONO" runat="server" Text="2 - Telefono:"
+                            <asp:Label ID="olblCLIENTE02TELEFONO" runat="server" Text="2 - Teléfono:"
                                 CssClass="control-label"></asp:Label>
                             <asp:TextBox ID="otxtCLIENTE02TELEFONO" runat="server" CssClass="form-control"
                                 MaxLength="20"></asp:TextBox>
                         </div>
                         <div class="form-group">
-                            <asp:Label ID="olblIDCLIENTEIVA" runat="server" Text="Condicion IVA comprador:"
+                            <asp:Label ID="olblIDCLIENTEIVA" runat="server" Text="Condición IVA comprador:"
                                 CssClass="control-label"></asp:Label>
                             <asp:SqlDataSource ID="odsCLIENTEIVA" runat="server"
                                 ConnectionString="<%$ ConnectionStrings:STRSYSTEM %>"
@@ -365,7 +369,7 @@
                             </asp:TextBox>
                         </div>
                         <div class="form-group">
-                            <asp:Label ID="olblIDLOTEDIMENSION" runat="server" Text="Dimension:"
+                            <asp:Label ID="olblIDLOTEDIMENSION" runat="server" Text="Dimensión:"
                                 CssClass="control-label"></asp:Label>
                             <asp:SqlDataSource ID="odsLOTEDIMENSION" runat="server"
                                 ConnectionString="<%$ ConnectionStrings:STRSYSTEM %>"
@@ -411,14 +415,14 @@
                             <asp:TextBox ID="OTXTCUOTABC" runat="server" CssClass="form-control" MaxLength="12">
                             </asp:TextBox>
                         </div>
-                        <div class="col-sm-offset-2 col-sm-10">
+                        <div class="col-sm-offset-2 col-sm-10 contenedor-flexible">
 
                             <asp:Label ID="olblGestionCodigo" runat="server" Text="" Visible="false"></asp:Label>
                             <asp:Label ID="olblGestionDescripcion" runat="server" Text=""></asp:Label>
                             <br />
-                            <asp:Button ID="obutAltaConfirmada" runat="server" Text="Confirma Alta"
+                            <asp:Button ID="obutAltaConfirmada" runat="server" Text="Confirmar Alta"
                                 CssClass="btn btn-success" />
-                            <asp:Button ID="obutAltaAbandonada" runat="server" Text="Abandona Alta"
+                            <asp:Button ID="obutAltaAbandonada" runat="server" Text="Abandonar Alta"
                                 CssClass="btn btn-danger" />
                         </div>
                     </form>

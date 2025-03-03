@@ -314,7 +314,7 @@ order by Barrio,Manzana , barrioLoteParcela ">
                         <asp:SessionParameter Name="idOperador" SessionField="session_idOperador" />
                     </SelectParameters>
                 </asp:SqlDataSource>
-                <asp:GridView ID="ogvLlamadaDetalle" runat="server" AutoGenerateColumns="False" CssClass="table-cemmi" DataKeyNames="idLoteventa,Barrio,Manzana,barrioLoteParcela,cliente,telefono,registros,loteVentaLLamadaTipoDescripcion" DataSourceID="odsLlamadaDetalle" Font-Size="Small">
+                <asp:GridView ID="ogvLlamadaDetalle" runat="server" AutoGenerateColumns="False" CssClass="table-cemmi" DataKeyNames="idLoteventa,Barrio,Manzana,barrioLoteParcela,cliente,telefono,registros,loteVentaLLamadaTipoDescripcion" DataSourceID="odsLlamadaDetalle" Font-Size="Small" AllowPaging="true" PageSize ="100">
                     <Columns>
                         <asp:CommandField SelectText="Ver Detalle" ShowSelectButton="True" />
                         <asp:BoundField DataField="idOperador" HeaderText="idOperador" SortExpression="idOperador" Visible="False" />
@@ -358,12 +358,12 @@ order by Barrio,Manzana , barrioLoteParcela ">
                 <div>
                     <asp:Label ID="olblReporteClienteNombres" runat="server" Text="" Font-Bold="true" ForeColor="Blue"></asp:Label>
                 </div>
-                <div>
+                <%--<div>
                     <asp:Label ID="Label6" runat="server" Text="Domicilio del / los compradores "></asp:Label>
                 </div>
                 <div>
                     <asp:Label ID="olblReporteClienteDomicilio" runat="server" Text="" Font-Bold="true" ForeColor="Blue"></asp:Label>
-                </div>
+                </div>--%>
                 <div>
                     <asp:Label ID="Label7" runat="server" Text="Teléfonos del / los compradores."></asp:Label>
                 </div>
