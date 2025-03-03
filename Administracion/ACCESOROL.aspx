@@ -68,13 +68,10 @@
 
                </div>
             </div>
-            <br />
-            <br />
 
 
-            <div class="row">
+            <div class="mt-4 text-center">
                <asp:Button ID="obutAlta" runat="server" Text="Nuevo Registro" CssClass="btn-basic btn btn-success" />
-
             </div>
 
          </asp:Panel>

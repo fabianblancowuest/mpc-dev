@@ -104,4 +104,115 @@ Partial Class Administracion_rptLoteVentaLlamada
         ogvrptloteVentaLlamada.DataBind()
 
     End Sub
+
+    Protected Sub obutReportePeriodo_Click(sender As Object, e As EventArgs) Handles obutReportePeriodo.Click
+        actualizaDatos()
+
+        actualizaGrillas()
+
+        PanelGestion.Visible = False
+        PanelReportePeriodo.Visible = True
+
+    End Sub
+
+    Protected Sub obutReporteRetorna_Click(sender As Object, e As EventArgs) Handles obutReporteRetorna.Click
+        PanelGestion.Visible = True
+        PanelReportePeriodo.Visible = False
+
+    End Sub
+
+    Protected Sub obutReporte_Click(sender As Object, e As EventArgs) Handles obutReporte.Click
+        actualizaDatos()
+
+        
+
+        actualizaGrillas()
+
+    End Sub
+    Private Sub actualizaDatos()
+        Dim Settings As ConnectionStringSettings
+        Dim reader As System.Data.SqlClient.SqlDataReader
+        Dim errorMessages As New StringBuilder()
+        Dim retorno As Integer
+        olblMensajeActualizaDatos.Text = ""
+        Dim cmd As New System.Data.SqlClient.SqlCommand
+        Settings = System.Configuration.ConfigurationManager.ConnectionStrings(Session("session_conexion"))
+        Dim connectionString As String = Settings.ConnectionString
+        retorno = 0
+        Using connection As New System.Data.SqlClient.SqlConnection(connectionString)
+            With cmd
+                .Connection = connection
+                .CommandType = Data.CommandType.StoredProcedure
+                .CommandText = "rptloteVentaLlamadaGestion"
+
+                .Parameters.Clear()
+            End With
+            Try
+                connection.Open()
+
+
+                cmd.Parameters.Add("@idOperador", Data.SqlDbType.Int).SqlValue = Session("session_idOperador")
+                cmd.Parameters.Add("@idLoteVentaLlamada", Data.SqlDbType.Int).SqlValue = oddlLoteVentaLlamada.SelectedValue
+                cmd.Parameters.Add("@fechaDesde", Data.SqlDbType.DateTime).SqlValue = oddlFechaDesde.SelectedItem.ToString
+                cmd.Parameters.Add("@fechaHasta", Data.SqlDbType.DateTime).SqlValue = oddlFechaHasta.SelectedItem.ToString
+                 reader = cmd.ExecuteReader
+
+                If reader.HasRows Then
+                    While reader.Read
+                        olblGestionCodigo.Text = reader.Item("gestionCodigo")
+                        olblGestionDescripcion.Text = reader.Item("gestionDescripcion")
+                        olblMensajeActualizaDatos.Text = reader.Item("gestionDescripcion")
+                    End While
+                End If
+            Catch ex As Exception
+                olblMensajeActualizaDatos.Text = ex.Message
+            End Try
+            connection.Close()
+        End Using
+    End Sub
+    Private Sub actualizaGrillas()
+        ogvLlamadasRegistradas.DataBind()
+        ogvGlobal.DataBind()
+        ogvGlobalBarrio.DataBind()
+        ogvGlobalBarrioNovedad.DataBind()
+    End Sub
+
+    Protected Sub oddlFechaDesde_SelectedIndexChanged(sender As Object, e As EventArgs) Handles oddlFechaDesde.SelectedIndexChanged
+        actualizaDatos()
+        actualizaGrillas()
+    End Sub
+
+    Protected Sub oddlFechaHasta_SelectedIndexChanged(sender As Object, e As EventArgs) Handles oddlFechaHasta.SelectedIndexChanged
+        actualizaDatos()
+        actualizaGrillas()
+    End Sub
+
+   
+    Protected Sub ogvLlamadaDetalle_SelectedIndexChanged(sender As Object, e As EventArgs) Handles ogvLlamadaDetalle.SelectedIndexChanged
+        PanelPanelSuperior.Visible = False
+        PanelLlamadasPorLote.Visible = False
+
+        olblReporteIdLoteVenta.Text = ogvLlamadaDetalle.SelectedDataKey.Item("idLoteventa")
+        ogvReporteLlamadasRegistradas.DataBind()
+
+        PanelConsultaDesdeReporte.Visible = True
+        PanelReportePeriodo.Visible = False
+
+    End Sub
+
+    Protected Sub obutReporteVolverAlReporte_Click(sender As Object, e As EventArgs) Handles obutReporteVolverAlReporte.Click
+        PanelLlamadasPorLote.Visible = True
+        PanelConsultaDesdeReporte.Visible = False
+
+
+
+    End Sub
+
+    Protected Sub obutReporteVolver_Click(sender As Object, e As EventArgs) Handles obutReporteVolver.Click
+        PanelPanelSuperior.Visible = True
+        PanelConsultaDesdeReporte.Visible = False
+
+
+
+    End Sub
 End Class
