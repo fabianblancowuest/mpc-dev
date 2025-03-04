@@ -308,8 +308,8 @@
                             <div class="form-group">
                                 <asp:Label ID="olblCLIENTE01NOMBRE" runat="server" Text="1 - Sr / Sra.:"
                                     CssClass="control-label"></asp:Label>
-                                <asp:TextBox ID="otxtCLIENTE01NOMBRE" runat="server" CssClass="form-control"
-                                    MaxLength="100"></asp:TextBox>
+                                <asp:TextBox ID="otxtCLIENTE01NOMBRE" runat="server"
+                                    CssClass="form-control texto-mayusculas" MaxLength="100"></asp:TextBox>
                             </div>
                             <div class="form-group">
                                 <asp:Label ID="olblCLIENTE01DNI" runat="server" Text="1 - DNI:"
@@ -334,8 +334,8 @@
                             <div class="form-group">
                                 <asp:Label ID="olblCLIENTE02NOMBRE" runat="server" Text="2 - Sr / Sra:"
                                     CssClass="control-label"></asp:Label>
-                                <asp:TextBox ID="otxtCLIENTE02NOMBRE" runat="server" CssClass="form-control"
-                                    MaxLength="100"></asp:TextBox>
+                                <asp:TextBox ID="otxtCLIENTE02NOMBRE" runat="server"
+                                    CssClass="form-control texto-mayusculas" MaxLength="100"></asp:TextBox>
                             </div>
                             <div class="form-group">
                                 <asp:Label ID="olblCLIENTE02DNI" runat="server" Text="2 - DNI:"
@@ -348,8 +348,8 @@
                             <div class="form-group">
                                 <asp:Label ID="olblCLIENTE02DOMICILIO" runat="server" Text="2 - Domicilio:"
                                     CssClass="control-label"></asp:Label>
-                                <asp:TextBox ID="otxtCLIENTE02DOMICILIO" runat="server" CssClass="form-control"
-                                    MaxLength="100"></asp:TextBox>
+                                <asp:TextBox ID="otxtCLIENTE02DOMICILIO" runat="server"
+                                    CssClass="form-control texto-mayusculas" MaxLength="100"></asp:TextBox>
                             </div>
                             <div class="form-group">
                                 <asp:Label ID="olblCLIENTE02TELEFONO" runat="server" Text="2 - Teléfono:"
@@ -428,7 +428,7 @@
                             </div>
                         </div>
 
-                        <div class="col-sm-offset-2 col-sm-10 contenedor-flexible mt-3 flex-column">
+                        <div class="col-sm-offset-2 col-sm-10 contenedor-flexible mt-3">
                             <asp:Label ID="olblGestionCodigo" runat="server" Text="" Visible="false">
                             </asp:Label>
                             <asp:Label ID="olblGestionDescripcion" runat="server" Text=""></asp:Label>
@@ -475,11 +475,12 @@
                         const selectManzanas = document.querySelectorAll("#select-todos-los-barrios select")[1];
                         const optionsManzanas = selectManzanas.querySelectorAll("option");
                         console.log(selectManzanas);
+                        selectManzanas.required = true;
 
                         for (let i = 0; i < optionsManzanas.length; i++) {
                             if (optionsManzanas[i].textContent.includes("Manzana no seleccionada")) {
                                 optionsManzanas[i].textContent = "" + optionsManzanas[i].textContent;
-                            } else if (!optionsManzanas[i].textContent.includes("0 Libres")) {
+                            } else if (!optionsManzanas[i].textContent.includes(" 0 Libres")) {
                                 // optionsManzanas[i].style.backgroundColor = "#198754";
                                 optionsManzanas[i].style.color = "#198754";
                                 optionsManzanas[i].textContent = "✅ " + optionsManzanas[i].textContent;
@@ -488,10 +489,37 @@
                             } else {
                                 // optionsManzanas[i].style.backgroundColor = "#dc3545";
                                 optionsManzanas[i].style.color = "#dc3545";
-                                optionsManzanas[i].textContent = "❌ " + optionsManzanas[i].textContent;
+                                optionsManzanas[i].textContent = "🚫 " + optionsManzanas[i].textContent;
                                 // optionsManzanas[i].style.color = "white";
                             }
                         }
+
+                        const convertirTexto = document.getElementsByClassName("texto-mayusculas");
+                        const uno = document.getElementById("ContentPlaceHolder1_otxtCLIENTE01NOMBRE");
+
+
+                        // Convertir a mayúsculas el texto de estos inputs
+                        // for (let i = 0; i < convertirTexto.length; i++) {
+                        //     convertirTexto[i].addEventListener("input", () => {
+                        //         this.value = this.vaue.toUpperCase();
+                        //     })
+
+                        // }
+
+                        // for (let i = 0; i < convertirTexto.length; i++) {
+                        //     console.log(convertirTexto.value)
+
+                        // }
+
+                        // if (uno) {
+
+
+                        //     uno.addEventListener("change", () => {
+                        //         this.value = this.value.toUpperCase();
+                        //     })
+                        // }
+
+                        console.log(uno);
                     })
                 </script>
 
