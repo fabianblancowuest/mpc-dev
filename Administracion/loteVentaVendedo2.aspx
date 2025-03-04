@@ -25,7 +25,8 @@
                     <asp:Label ID="olblOperadorAdministrador" runat="server" Text=""></asp:Label>
                     <asp:Label ID="olblIdOperador" runat="server" Text=""></asp:Label>
                 </div>
-                <div class="vendedor-gestiona-lotes-todos-los-barrios contenedor-busqueda">
+                <div class="vendedor-gestiona-lotes-todos-los-barrios contenedor-busqueda"
+                    id="select-todos-los-barrios">
                     <asp:Label ID="olblSeleccionaBarrio" runat="server" Text="Seleccione Barrio:"></asp:Label>
                     <asp:SqlDataSource ID="odsBarrioHabilitadoSelecciona" runat="server"
                         ConnectionString="<%$ ConnectionStrings:STRSYSTEM %>" SelectCommand="BARRIOTraerODDL"
@@ -468,5 +469,30 @@
 
 
                 </asp:Panel>
+
+                <script>
+                    document.addEventListener("DOMContentLoaded", () => {
+                        const selectManzanas = document.querySelectorAll("#select-todos-los-barrios select")[1];
+                        const optionsManzanas = selectManzanas.querySelectorAll("option");
+                        console.log(selectManzanas);
+
+                        for (let i = 0; i < optionsManzanas.length; i++) {
+                            if (optionsManzanas[i].textContent.includes("Manzana no seleccionada")) {
+                                optionsManzanas[i].textContent = "" + optionsManzanas[i].textContent;
+                            } else if (!optionsManzanas[i].textContent.includes("0 Libres")) {
+                                // optionsManzanas[i].style.backgroundColor = "#198754";
+                                optionsManzanas[i].style.color = "#198754";
+                                optionsManzanas[i].textContent = "✅ " + optionsManzanas[i].textContent;
+                                // optionsManzanas[i].style.color = "white";
+
+                            } else {
+                                // optionsManzanas[i].style.backgroundColor = "#dc3545";
+                                optionsManzanas[i].style.color = "#dc3545";
+                                optionsManzanas[i].textContent = "❌ " + optionsManzanas[i].textContent;
+                                // optionsManzanas[i].style.color = "white";
+                            }
+                        }
+                    })
+                </script>
 
             </asp:Content>
