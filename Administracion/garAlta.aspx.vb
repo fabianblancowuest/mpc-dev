@@ -229,6 +229,11 @@ Partial Class Administracion_garAlta
 
     Protected Sub obutRegistroAlta_Click(sender As Object, e As EventArgs) Handles obutRegistroAlta.Click
         garRegistroAlta()
+        PanelGastoRegistro.Visible = False
+        PanelGastosRegistrados.Visible = True
+        ogvGARGastosRegistrados.DataBind()
+        ogvOperadorGar.DataBind()
+
 
     End Sub
     Private Sub garRegistroAlta()
@@ -245,23 +250,31 @@ Partial Class Administracion_garAlta
             With cmd
                 .Connection = connection
                 .CommandType = Data.CommandType.StoredProcedure
-                .CommandText = "garEstadoActualizado"
+                .CommandText = "garRendicionAltaGasto"
 
                 .Parameters.Clear()
             End With
             Try
                 connection.Open()
-
-
+                
                 cmd.Parameters.Add("@idGar", Data.SqlDbType.Int).SqlValue = olblGARSeleccionadoIDGAR.Text
+                cmd.Parameters.Add("@idGarComprobanteTipo", Data.SqlDbType.Int).SqlValue = oddlgarComprobanteTipo.SelectedValue
+                cmd.Parameters.Add("@garRendicionMontoGAI", Data.SqlDbType.Float).SqlValue = otxtGARMontoGAI.Text.Replace(".", ",")
+                cmd.Parameters.Add("@garRendicionMontoTransferenciaEmpresa", Data.SqlDbType.Float).SqlValue = otxtGARMontoTransferencia.Text.Replace(".", ",")
+                cmd.Parameters.Add("@garRendicionMontoOperadorACuenta", Data.SqlDbType.Float).SqlValue = otxtGARMontoOperador.Text.Replace(".", ",")
+                cmd.Parameters.Add("@garRendicionMontoDevolucionEfectivo", Data.SqlDbType.Float).SqlValue = "0"
+                cmd.Parameters.Add("@garRendicionComprobante", Data.SqlDbType.Text).SqlValue = otxtGARRegistroComprobante.Text
+                cmd.Parameters.Add("@garRendicionDescripcion", Data.SqlDbType.Text).SqlValue = otxtGARRegistroConcepto.Text
+
+
+
+
 
                 reader = cmd.ExecuteReader
 
                 If reader.HasRows Then
                     While reader.Read
-                        olblGARSeleccionadoMontoGastado.Text = reader.Item("GARSeleccionadoMontoGastado")
-                        olblGARSeleccionadoSaldo.Text = reader.Item("GARSeleccionadoSaldo")
-
+                        
                     End While
                 End If
             Catch ex As Exception
@@ -274,4 +287,7 @@ Partial Class Administracion_garAlta
         End Using
     End Sub
 
+    Protected Sub otxtGARRegistroConcepto_TextChanged(sender As Object, e As EventArgs) Handles otxtGARRegistroConcepto.TextChanged
+
+    End Sub
 End Class

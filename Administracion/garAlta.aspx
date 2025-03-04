@@ -244,7 +244,8 @@
         </div>
         <div>
             <asp:Label ID="Label17" runat="server" Text="Concepto :"></asp:Label>
-            <asp:TextBox ID="otxtGARRegistroConcepto" runat="server"  ></asp:TextBox>
+            <br />
+            <asp:TextBox ID="otxtGARRegistroConcepto" runat="server" TextMode ="MultiLine"  Width ="80%"  ></asp:TextBox>
         </div>
         <div>
             <asp:Label ID="Label22" runat="server" Text="TOTAL DEL GASTO:"></asp:Label>
