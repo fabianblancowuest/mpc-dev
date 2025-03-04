@@ -183,6 +183,20 @@ Partial Class Administracion_garAlta
         PanelGastosRegistrados.Visible = False
         PanelGastoRegistro.Visible = True
         PanelGastoRegistro.BackColor = Drawing.Color.LightGray
+        olblGARTotal.Text = "0"
+        otxtGARMontoGAI.Text = "0"
+        otxtGARMontoTransferencia.Text = "0"
+        otxtGARMontoOperador.Text = "0"
+        otxtGARRegistroComprobante.Text = ""
+        otxtGARRegistroConcepto.Text = ""
+        oddlgarComprobanteTipo.SelectedIndex = 0
+        otxtGARMontoTotal.Text = "0"
+        otxtGARMontoGAI.Enabled = True
+        otxtGARMontoTransferencia.Enabled = True
+        otxtGARMontoOperador.Enabled = True
+        otxtGARMontoTotal.Enabled = True
+        obutRegistroAlta.Visible = False
+        obutRegistroValidar.Visible = True
 
     End Sub
 
@@ -198,8 +212,10 @@ Partial Class Administracion_garAlta
         Dim montoTransferencia As Double
         Dim montoAcuentaOperador As Double
         Dim montoGARTotal As Double
+        Dim saldoGar As Double
 
         totalGasto = otxtGARMontoTotal.Text
+        saldoGar = olblGARSeleccionadoSaldo.Text
         montoGAR = otxtGARMontoGAI.Text
         montoTransferencia = otxtGARMontoTransferencia.Text
         montoAcuentaOperador = otxtGARMontoOperador.Text
@@ -207,21 +223,29 @@ Partial Class Administracion_garAlta
         olblGARTotal.Text = montoGARTotal.ToString
 
         If totalGasto <> 0 Then
+            If montoGAR <= saldoGar Then
 
-            If totalGasto - montoGAR - montoTransferencia - montoAcuentaOperador = 0 Then
-                obutRegistroAlta.Visible = True
-                obutRegistroValidar.Visible = False
-                obutRegistroReingresar.Visible = True
-                otxtGARMontoTotal.Enabled = False
-                otxtGARMontoGAI.Enabled = False
-                otxtGARMontoOperador.Enabled = False
-                otxtGARMontoTransferencia.Enabled = False
-                olblValidacionMensaje.Text = "El comprobante ha sido validado. Puede darlo de alta."
+
+                If totalGasto - montoGAR - montoTransferencia - montoAcuentaOperador = 0 Then
+                    obutRegistroAlta.Visible = True
+                    obutRegistroValidar.Visible = False
+                    obutRegistroReingresar.Visible = True
+                    otxtGARMontoTotal.Enabled = False
+                    otxtGARMontoGAI.Enabled = False
+                    otxtGARMontoOperador.Enabled = False
+                    otxtGARMontoTransferencia.Enabled = False
+                    olblValidacionMensaje.Text = "El comprobante ha sido validado. Puede darlo de alta."
+
+                Else
+                    olblValidacionMensaje.Text = "Se registra una diferencia entre el total del comprobante y el / los medios de pago de $" + (totalGasto - montoGARTotal).ToString
+
+                End If
 
             Else
-                olblValidacionMensaje.Text = "Se registra una diferencia entre el total del comprobante y el / los medios de pago de $" + (totalGasto - montoGARTotal).ToString
+                olblValidacionMensaje.Text = "El total del gasto de $ (" + montoGAR.ToString + ") excede saldo disponible del GAR ($" + saldoGar.ToString + ") en $ " + (montoGAR - saldoGar).ToString
 
             End If
+
         Else
             olblValidacionMensaje.Text = "Debe ingresar el monto del comprobante para validar la operacion."
         End If
@@ -229,6 +253,8 @@ Partial Class Administracion_garAlta
 
     Protected Sub obutRegistroAlta_Click(sender As Object, e As EventArgs) Handles obutRegistroAlta.Click
         garRegistroAlta()
+        garEstadoActualizado()
+
         PanelGastoRegistro.Visible = False
         PanelGastosRegistrados.Visible = True
         ogvGARGastosRegistrados.DataBind()
@@ -288,6 +314,21 @@ Partial Class Administracion_garAlta
     End Sub
 
     Protected Sub otxtGARRegistroConcepto_TextChanged(sender As Object, e As EventArgs) Handles otxtGARRegistroConcepto.TextChanged
+
+    End Sub
+
+    Protected Sub obutRegistroReingresar_Click(sender As Object, e As EventArgs) Handles obutRegistroReingresar.Click
+        otxtGARMontoGAI.Enabled = True
+        otxtGARMontoTransferencia.Enabled = True
+        otxtGARMontoOperador.Enabled = True
+        otxtGARMontoTotal.Enabled = True
+        obutRegistroAlta.Visible = False
+        obutRegistroValidar.Visible = True
+
+
+    End Sub
+
+    Protected Sub ogvGARGastosRegistrados_SelectedIndexChanged(sender As Object, e As EventArgs) Handles ogvGARGastosRegistrados.SelectedIndexChanged
 
     End Sub
 End Class

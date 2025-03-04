@@ -29,7 +29,7 @@
                     </SelectParameters>
                 </asp:SqlDataSource>
                 <asp:GridView ID="ogvGarPago" runat="server" AutoGenerateColumns="False" DataSourceID="odsGarPago"
-                    CssClass="table-cemmi" EmptyDataText="La consulta realizada no recupera datos." Font-Size="Small"
+                    CssClass="table-cemmi" EmptyDataText="La consulta realizada no recupera datos." Font-Size="X-Small"
                     DataKeyNames="idgar,operadorDescripcion,garSolicitudDescripcion,garAutorizacionMonto">
                     <Columns>
                         <asp:CommandField SelectText="Procesa" ShowSelectButton="True" />
@@ -59,6 +59,9 @@
                             SortExpression="SaldoGar" DataFormatString="{0:c}">
                             <ItemStyle HorizontalAlign="Right" />
                         </asp:BoundField>
+                        <asp:BoundField DataField="Transferencias" HeaderText="Transferencias" SortExpression="Transferencias" />
+                        <asp:BoundField DataField="DevolucionOperador" HeaderText="Devolucion a Operador" SortExpression="DevolucionOperador" />
+                        <asp:BoundField DataField="DevolucionEfectivo" HeaderText="Devolucion Efectivo" SortExpression="DevolucionEfectivo" />
                         <asp:BoundField DataField="operadorCaja" HeaderText="operador Caja" ReadOnly="True"
                             SortExpression="operadorCaja" />
                         <asp:BoundField DataField="idAsientoCabecera" HeaderText="Asiento"

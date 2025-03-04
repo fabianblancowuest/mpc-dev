@@ -54,6 +54,9 @@
                         <asp:BoundField DataField="MontoRendido" HeaderText="Monto Rendido"
                             SortExpression="MontoRendido" />
                         <asp:BoundField DataField="SaldoGar" HeaderText="Saldo GAR" SortExpression="SaldoGar" />
+                        <asp:BoundField DataField="Transferencias" HeaderText="Transferencias" SortExpression="Transferencias" />
+                        <asp:BoundField DataField="DevolucionOperador" HeaderText="Devolucion Operador" SortExpression="DevolucionOperador" />
+                        <asp:BoundField DataField="DevolucionEfectivo" HeaderText="Devolucion Efectivo" SortExpression="DevolucionEfectivo" />
                         <asp:BoundField DataField="idAsientoCabecera" HeaderText="Asiento"
                             SortExpression="idAsientoCabecera" />
                         <asp:BoundField DataField="garEstado" HeaderText="Estado GAR" SortExpression="garEstado" />
