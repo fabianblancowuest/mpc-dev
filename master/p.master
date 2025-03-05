@@ -30,6 +30,7 @@
 
         <!-- Precarga de imágenes -->
         <link rel="preload" as="image" href="../img/logo.png">
+        <link rel="preload" as="image" href="../img/pagina-no-encontrada.png">
 
         <%-- <meta name="viewport"
             content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" />--%>
