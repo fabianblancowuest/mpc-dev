@@ -686,10 +686,11 @@ Pago Pactado = Verde claro */
   flex-direction: column;
   align-items: center;
   gap: 1rem;
+  max-width: 100%;
 }
 
 .calendario table {
-  width: 550px;
+  width: 500px;
   max-width: 100%;
   /* box-shadow: 3px 3px 5px #337ab7; */
   box-shadow: 3px 3px 7px #0d6efd;
@@ -789,26 +790,41 @@ Pago Pactado = Verde claro */
   letter-spacing: 0;
 }
 
-.datos-venta {
+.datos-venta,
+.calendarios {
+  max-width: 100%;
   margin: 30px auto 0 auto;
   display: flex;
   flex-wrap: wrap;
-  justify-content: center;
+  justify-content: space-between;
   gap: 1em;
 }
 
-.datos-venta span,
+.datos-venta div,
+.calendarios div {
+  max-width: 100%;
+}
+
+.datos-venta span {
+  display: block;
+  text-align: left;
+}
 .datos-venta select,
 .datos-venta select option {
   display: block;
   text-align: center;
 }
 
+.form-control {
+  max-width: 100%;
+  width: 500px;
+}
+
 .datos-venta input,
 .datos-venta select,
 .datos-venta span {
-  width: 550px;
   max-width: 100%;
+  width: 500px;
   margin-left: auto;
   margin-right: auto;
 }
@@ -822,4 +838,48 @@ Pago Pactado = Verde claro */
   width: 600px;
   max-width: 100%;
   margin: 0 auto;
+}
+
+.botones-confirmacion {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: column;
+  gap: 1em;
+}
+
+.flexible {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  max-width: 100%;
+  gap: 0.5em;
+}
+
+.flexible > * {
+  max-width: 100%;
+}
+
+.botones-confirmacion div {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  gap: 1em;
+}
+
+.botones-confirmacion input {
+  width: 200px;
+  max-width: 600px;
+  padding: 8px 16px;
+}
+
+@media (max-width: 900px) {
+  .botones-confirmacion div {
+    flex-direction: column;
+  }
+
+  .botones-confirmacion input {
+    width: 100%;
+    max-width: 100%;
+  }
 }
