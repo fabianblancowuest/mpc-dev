@@ -189,6 +189,8 @@ Partial Class Administracion_garAlta
         otxtGARMontoOperador.Text = "0"
         otxtGARRegistroComprobante.Text = ""
         otxtGARRegistroConcepto.Text = ""
+        oddlgarComprobanteTipo.DataBind()
+
         oddlgarComprobanteTipo.SelectedIndex = 0
         otxtGARMontoTotal.Text = "0"
         otxtGARMontoGAI.Enabled = True

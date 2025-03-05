@@ -260,7 +260,7 @@
 
         </div>
         <div>
-            <asp:Label ID="Label18" runat="server" Text="Monto pagado con Efectivo Empresa:"></asp:Label>
+            <asp:Label ID="Label18" runat="server" Text="Monto pagado con Efectivo Empresa: (A Rendir )"></asp:Label>
             <asp:TextBox ID="otxtGARMontoGAI" runat="server" Text="0" cssclass="imput"></asp:TextBox>
         </div>
 
