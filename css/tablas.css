@@ -816,7 +816,8 @@ Pago Pactado = Verde claro */
 }
 
 .form-control,
-.control-label {
+.control-label,
+.form-select {
   max-width: 100%;
   width: 500px;
 }

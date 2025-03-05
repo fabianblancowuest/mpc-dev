@@ -36,7 +36,7 @@
                                 SelectCommandType="StoredProcedure"></asp:SqlDataSource>
                             <asp:DropDownList ID="oddlBarrioHabilitadoSelecciona" runat="server" AutoPostBack="True"
                                 DataSourceID="odsBarrioHabilitadoSelecciona" DataTextField="barrioDescripcion"
-                                DataValueField="idBarrio" CssClass="form-control"></asp:DropDownList>
+                                DataValueField="idBarrio" CssClass="form-select"></asp:DropDownList>
                         </div>
                         <div class="form-group">
                             <asp:Label ID="olblSeleccionaManzana" runat="server" Text="Seleccione Manzana:"
@@ -53,7 +53,7 @@
                             <asp:DropDownList ID="oddlBarrioHabilitadoManzanaSelecciona" runat="server"
                                 AutoPostBack="True" DataSourceID="odsBarrioHabilitadoManzanaSelecciona"
                                 DataTextField="barrioManzanaDescripcion" DataValueField="idBarrioManzana"
-                                CssClass="form-control"></asp:DropDownList>
+                                CssClass="form-select"></asp:DropDownList>
                         </div>
                     </div>
 
@@ -64,7 +64,7 @@
                     <div class="row">
 
                         <div class="vendedor-gestiona-lotes-todos-los-barrios contenedor-busqueda align-items-center">
-                            <asp:Label ID="Label1" runat="server" Text="SELECCIONE LOTE:" CssClass="select">
+                            <asp:Label ID="Label1" runat="server" Text="Seleccione Lote:" CssClass="d-block">
                             </asp:Label>
                             <asp:SqlDataSource ID="odsBARRIOLOTEOperador" runat="server"
                                 ConnectionString="<%$ ConnectionStrings:STRSYSTEM %>"
@@ -84,7 +84,7 @@
 
                             <asp:DropDownList ID="oddlBARRIOLOTEOperador" runat="server"
                                 DataSourceID="odsBARRIOLOTEOPERADOR" DataTextField="BARRIOLOTEDescripcion"
-                                DataValueField="idBARRIOLOTE" CssClass="input" AutoPostBack="True">
+                                DataValueField="idBARRIOLOTE" CssClass="form-select" AutoPostBack="True">
                             </asp:DropDownList>
                             <div class="d-flex align-items-center justify-content-center">
                                 <asp:CheckBox ID="ochTodos" runat="server" Checked="false" AutoPostBack="true" />
@@ -400,7 +400,7 @@
                                     </asp:SqlDataSource>
                                     <asp:DropDownList ID="oddlCLIENTEIVA" runat="server" DataSourceID="odsCLIENTEIVA"
                                         DataTextField="CLIENTEIVADescripcion" DataValueField="IDCLIENTEIVA"
-                                        CssClass="form-control">
+                                        CssClass="form-select">
                                     </asp:DropDownList>
                                 </div>
                                 <div class="form-group">
@@ -419,7 +419,7 @@
                                     </asp:SqlDataSource>
                                     <asp:DropDownList ID="oddlLOTEDIMENSION" runat="server"
                                         DataSourceID="odsLOTEDIMENSION" DataTextField="LOTEDIMENSIONDescripcion"
-                                        DataValueField="IDLOTEDIMENSION" CssClass="form-control">
+                                        DataValueField="IDLOTEDIMENSION" CssClass="form-select">
                                     </asp:DropDownList>
                                 </div>
                                 <div class="form-group">
@@ -431,7 +431,7 @@
                                     </asp:SqlDataSource>
                                     <asp:DropDownList ID="oddlCUOTASCANTIDAD" runat="server"
                                         DataSourceID="odsCUOTASCANTIDAD" DataTextField="CUOTASCANTIDADDescripcion"
-                                        DataValueField="IDCUOTASCANTIDAD" CssClass="form-control">
+                                        DataValueField="IDCUOTASCANTIDAD" CssClass="form-select">
                                     </asp:DropDownList>
                                 </div>
                                 <div class="form-group">
@@ -444,7 +444,7 @@
                                     </asp:SqlDataSource>
                                     <asp:DropDownList ID="oddlLOTETIPO" runat="server" DataSourceID="odsLOTETIPO"
                                         DataTextField="LOTETIPODescripcion" DataValueField="IDLOTETIPO"
-                                        CssClass="form-control">
+                                        CssClass="form-select">
                                     </asp:DropDownList>
                                 </div>
                                 <div class="form-group">
