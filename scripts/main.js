@@ -37,6 +37,10 @@ document.addEventListener("DOMContentLoaded", () => {
   const mensajeBusqueda = document.createElement("div");
   mensajeBusqueda.classList.add("mensaje-busqueda");
 
+  const imgNoEncontrado = document.createElement("img");
+  imgNoEncontrado.src = "../img/pagina-no-encontrada.png";
+  imgNoEncontrado.classList.add("img-no-encontrado");
+
   const funcionBusqueda = () => {
     let searched = inputSearch.value.toLowerCase();
     let hasResults = false;
@@ -65,6 +69,7 @@ document.addEventListener("DOMContentLoaded", () => {
         contenedorTablaRoles.append(btnMenuPrincipal);
       }
     }
+
     // Mostrar el mensaje si no hay resultados
     if (!hasResults) {
       for (let i = 0; i < allTheads.length; i++) {
@@ -83,9 +88,6 @@ document.addEventListener("DOMContentLoaded", () => {
       tituloRoles.style.display = "none";
       contenedorTablaRoles.append(mensajeBusqueda);
       // contenedorTablaRoles.style.minHeight = "60vh";
-      const imgNoEncontrado = document.createElement("img");
-      imgNoEncontrado.classList.add("img-no-encontrado");
-      imgNoEncontrado.src = "../img/pagina-no-encontrada.png";
       contenedorTablaRoles.append(imgNoEncontrado);
       inputSearch.value = "";
     }
