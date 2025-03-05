@@ -25,28 +25,38 @@
                     <asp:Label ID="olblOperadorAdministrador" runat="server" Text=""></asp:Label>
                     <asp:Label ID="olblIdOperador" runat="server" Text=""></asp:Label>
                 </div>
-                <div class="vendedor-gestiona-lotes-todos-los-barrios flexible justify-content-center"
-                    id="select-todos-los-barrios">
-                    <asp:Label ID="olblSeleccionaBarrio" runat="server" Text="Seleccione Barrio:"></asp:Label>
-                    <asp:SqlDataSource ID="odsBarrioHabilitadoSelecciona" runat="server"
-                        ConnectionString="<%$ ConnectionStrings:STRSYSTEM %>" SelectCommand="BARRIOTraerODDL"
-                        SelectCommandType="StoredProcedure"></asp:SqlDataSource>
-                    <asp:DropDownList ID="oddlBarrioHabilitadoSelecciona" runat="server" AutoPostBack="True"
-                        DataSourceID="odsBarrioHabilitadoSelecciona" DataTextField="barrioDescripcion"
-                        DataValueField="idBarrio"></asp:DropDownList>
+                <div class="vendedor-gestiona-lotes-todos-los-barrios" id="select-todos-los-barrios">
+                    <div class="flexible">
+                        <div class="form-group">
+                            <asp:Label ID="olblSeleccionaBarrio" runat="server" Text="Seleccione Barrio:"
+                                CssClass="d-block text-center">
+                            </asp:Label>
+                            <asp:SqlDataSource ID="odsBarrioHabilitadoSelecciona" runat="server"
+                                ConnectionString="<%$ ConnectionStrings:STRSYSTEM %>" SelectCommand="BARRIOTraerODDL"
+                                SelectCommandType="StoredProcedure"></asp:SqlDataSource>
+                            <asp:DropDownList ID="oddlBarrioHabilitadoSelecciona" runat="server" AutoPostBack="True"
+                                DataSourceID="odsBarrioHabilitadoSelecciona" DataTextField="barrioDescripcion"
+                                DataValueField="idBarrio" CssClass="form-control"></asp:DropDownList>
+                        </div>
+                        <div class="form-group">
+                            <asp:Label ID="olblSeleccionaManzana" runat="server" Text="Seleccione Manzana:"
+                                CssClass="d-block text-center">
+                            </asp:Label>
+                            <asp:SqlDataSource ID="odsBarrioHabilitadoManzanaSelecciona" runat="server"
+                                ConnectionString="<%$ ConnectionStrings:STRSYSTEM %>"
+                                SelectCommand="barrioHabilitadoManzanaSelecciona" SelectCommandType="StoredProcedure">
+                                <SelectParameters>
+                                    <asp:ControlParameter ControlID="oddlBarrioHabilitadoSelecciona" Name="idBarrio"
+                                        PropertyName="SelectedValue" Type="Int32" />
+                                </SelectParameters>
+                            </asp:SqlDataSource>
+                            <asp:DropDownList ID="oddlBarrioHabilitadoManzanaSelecciona" runat="server"
+                                AutoPostBack="True" DataSourceID="odsBarrioHabilitadoManzanaSelecciona"
+                                DataTextField="barrioManzanaDescripcion" DataValueField="idBarrioManzana"
+                                CssClass="form-control"></asp:DropDownList>
+                        </div>
+                    </div>
 
-                    <asp:Label ID="olblSeleccionaManzana" runat="server" Text="Seleccione Manzana:"></asp:Label>
-                    <asp:SqlDataSource ID="odsBarrioHabilitadoManzanaSelecciona" runat="server"
-                        ConnectionString="<%$ ConnectionStrings:STRSYSTEM %>"
-                        SelectCommand="barrioHabilitadoManzanaSelecciona" SelectCommandType="StoredProcedure">
-                        <SelectParameters>
-                            <asp:ControlParameter ControlID="oddlBarrioHabilitadoSelecciona" Name="idBarrio"
-                                PropertyName="SelectedValue" Type="Int32" />
-                        </SelectParameters>
-                    </asp:SqlDataSource>
-                    <asp:DropDownList ID="oddlBarrioHabilitadoManzanaSelecciona" runat="server" AutoPostBack="True"
-                        DataSourceID="odsBarrioHabilitadoManzanaSelecciona" DataTextField="barrioManzanaDescripcion"
-                        DataValueField="idBarrioManzana"></asp:DropDownList>
                 </div>
                 <asp:Panel ID="Panel1" runat="server">
                     <asp:Label ID="olblIDBarrioLoteOperador" runat="server" Text="----" CssClass="d-block text-center">
@@ -155,7 +165,8 @@
 
                                         <ItemTemplate>
                                             <asp:Label ID="Label4" runat="server"
-                                                Text='<%# Bind("CLIENTE01DOMICILIO") %>' Font-Bold="true"></asp:Label>
+                                                Text='<%# Bind("CLIENTE01DOMICILIO") %>' Font-Bold="true">
+                                            </asp:Label>
                                             <br /> <br />
                                             <asp:Label ID="Label3" runat="server"
                                                 Text='<%# Bind("CLIENTE02DOMICILIO") %>'></asp:Label>
@@ -164,7 +175,8 @@
                                     <asp:TemplateField HeaderText="Telefono" SortExpression="CLIENTE01TELEFONO">
                                         <ItemTemplate>
                                             <asp:Label ID="Label2" runat="server"
-                                                Text='<%# Bind("CLIENTE01TELEFONO") %>' Font-Bold="true"></asp:Label>
+                                                Text='<%# Bind("CLIENTE01TELEFONO") %>' Font-Bold="true">
+                                            </asp:Label>
                                             <br /> <br />
                                             <asp:Label ID="Label1" runat="server"
                                                 Text='<%# Bind("CLIENTE02TELEFONO") %>'></asp:Label>
