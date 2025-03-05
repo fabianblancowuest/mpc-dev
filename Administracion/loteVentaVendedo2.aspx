@@ -25,7 +25,7 @@
                     <asp:Label ID="olblOperadorAdministrador" runat="server" Text=""></asp:Label>
                     <asp:Label ID="olblIdOperador" runat="server" Text=""></asp:Label>
                 </div>
-                <div class="vendedor-gestiona-lotes-todos-los-barrios" id="select-todos-los-barrios">
+                <div class="vendedor-gestiona-lotes-todos-los-barrios separar" id="select-todos-los-barrios">
                     <div class="flexible">
                         <div class="form-group">
                             <asp:Label ID="olblSeleccionaBarrio" runat="server" Text="Seleccione Barrio:"
@@ -64,34 +64,39 @@
                     <div class="row">
 
                         <div class="vendedor-gestiona-lotes-todos-los-barrios contenedor-busqueda align-items-center">
-                            <asp:Label ID="Label1" runat="server" Text="Seleccione Lote:" CssClass="d-block">
-                            </asp:Label>
-                            <asp:SqlDataSource ID="odsBARRIOLOTEOperador" runat="server"
-                                ConnectionString="<%$ ConnectionStrings:STRSYSTEM %>"
-                                SelectCommand="BARRIOMANZANALOTEOPERADORSELECCIONA" SelectCommandType="StoredProcedure">
-                                <SelectParameters>
-                                    <asp:SessionParameter Name="idOperador" SessionField="idOperador" Type="Int32" />
-                                    <asp:ControlParameter ControlID="oddlBarrioHabilitadoSelecciona"
-                                        PropertyName="SelectedValue" Name="idBarrio" Type="Int32">
-                                    </asp:ControlParameter>
-                                    <asp:ControlParameter ControlID="oddlBarrioHabilitadoManzanaSelecciona"
-                                        PropertyName="SelectedValue" Name="idBarrioManzana" Type="Int32">
-                                    </asp:ControlParameter>
-                                    <asp:ControlParameter ControlID="ochTodos" PropertyName="Checked" Name="todos"
-                                        Type="Int32"></asp:ControlParameter>
-                                </SelectParameters>
-                            </asp:SqlDataSource>
+                            <div>
 
-                            <asp:DropDownList ID="oddlBARRIOLOTEOperador" runat="server"
-                                DataSourceID="odsBARRIOLOTEOPERADOR" DataTextField="BARRIOLOTEDescripcion"
-                                DataValueField="idBARRIOLOTE" CssClass="form-select" AutoPostBack="True">
-                            </asp:DropDownList>
-                            <div class="d-flex align-items-center justify-content-center">
-                                <asp:CheckBox ID="ochTodos" runat="server" Checked="false" AutoPostBack="true" />
-                                <asp:Label ID="Label11" runat="server" Text="Todos los lotes" CssClass="mx-2">
+                                <asp:Label ID="Label1" runat="server" Text="Seleccione Lote:"
+                                    CssClass="d-block text-center">
                                 </asp:Label>
-                            </div>
+                                <asp:SqlDataSource ID="odsBARRIOLOTEOperador" runat="server"
+                                    ConnectionString="<%$ ConnectionStrings:STRSYSTEM %>"
+                                    SelectCommand="BARRIOMANZANALOTEOPERADORSELECCIONA"
+                                    SelectCommandType="StoredProcedure">
+                                    <SelectParameters>
+                                        <asp:SessionParameter Name="idOperador" SessionField="idOperador"
+                                            Type="Int32" />
+                                        <asp:ControlParameter ControlID="oddlBarrioHabilitadoSelecciona"
+                                            PropertyName="SelectedValue" Name="idBarrio" Type="Int32">
+                                        </asp:ControlParameter>
+                                        <asp:ControlParameter ControlID="oddlBarrioHabilitadoManzanaSelecciona"
+                                            PropertyName="SelectedValue" Name="idBarrioManzana" Type="Int32">
+                                        </asp:ControlParameter>
+                                        <asp:ControlParameter ControlID="ochTodos" PropertyName="Checked" Name="todos"
+                                            Type="Int32"></asp:ControlParameter>
+                                    </SelectParameters>
+                                </asp:SqlDataSource>
 
+                                <asp:DropDownList ID="oddlBARRIOLOTEOperador" runat="server"
+                                    DataSourceID="odsBARRIOLOTEOPERADOR" DataTextField="BARRIOLOTEDescripcion"
+                                    DataValueField="idBARRIOLOTE" CssClass="form-select" AutoPostBack="True">
+                                </asp:DropDownList>
+                                <div class="d-flex align-items-center justify-content-center my-2">
+                                    <asp:CheckBox ID="ochTodos" runat="server" Checked="false" AutoPostBack="true" />
+                                    <asp:Label ID="Label11" runat="server" Text="Todos los lotes" CssClass="mx-2">
+                                    </asp:Label>
+                                </div>
+                            </div>
                         </div>
                     </div>
                     <div>
