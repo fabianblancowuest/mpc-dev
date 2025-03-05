@@ -196,11 +196,8 @@
 
                         </div>
                     </div>
-                    <br />
-                    <br />
 
-
-                    <div class="row">
+                    <div class="row mt-4">
                         <asp:Button ID="obutAlta" runat="server" Text="Nuevo Registro"
                             CssClass="btn btn-basic btn-success" />
 
@@ -274,7 +271,8 @@
                             <asp:Label ID="olblLOTEVENTAFECHAVISITA" runat="server"
                                 Text="Fecha de Venta : Seleccionar DD/MM/AAAA" CssClass="control-label">
                             </asp:Label>
-                            <asp:TextBox ID="otxtLOTEVENTAFECHAVISITA" CssClass="fecha-resaltada" runat="server">
+                            <asp:TextBox ID="otxtLOTEVENTAFECHAVISITA" CssClass="fecha-resaltada" runat="server"
+                                placeholder="Fecha de venta">
                             </asp:TextBox>
 
                             <asp:Calendar ID="Calendar1" runat="server"></asp:Calendar>
@@ -284,7 +282,8 @@
                         <div class="form-group calendario">
                             <asp:Label ID="Label10" runat="server" Text="Fecha de Cancelación : Seleccionar DD/MM/AAAA"
                                 CssClass="control-label"></asp:Label>
-                            <asp:TextBox ID="otxtLOTEVENTAFECHACANCELACION" CssClass="fecha-resaltada" runat="server">
+                            <asp:TextBox ID="otxtLOTEVENTAFECHACANCELACION" CssClass="fecha-resaltada" runat="server"
+                                placeholder="Fecha de cancelación">
                             </asp:TextBox>
 
                             <asp:Calendar ID="Calendar2" runat="server"></asp:Calendar>
@@ -295,7 +294,7 @@
                                 <asp:Label ID="olblLOTEVENTAADHESIONMONTO" runat="server" Text="Precio Total Adhesión:"
                                     CssClass="control-label"></asp:Label>
                                 <asp:TextBox ID="otxtLOTEVENTAADHESIONMONTO" runat="server" CssClass="form-control"
-                                    MaxLength="12"></asp:TextBox>
+                                    MaxLength="12" placeholder="Precio total de la venta"></asp:TextBox>
                             </div>
 
 
@@ -303,59 +302,64 @@
                                 <asp:Label ID="Label9" runat="server" Text="Monto Cuota:" CssClass="control-label">
                                 </asp:Label>
                                 <asp:TextBox ID="otxtLOTEVENTACUOTAMONTO" runat="server" CssClass="form-control"
-                                    MaxLength="12"></asp:TextBox>
+                                    MaxLength="12" placeholder="Monto de la cuota"></asp:TextBox>
                             </div>
                             <div class="form-group">
                                 <asp:Label ID="olblCLIENTE01NOMBRE" runat="server" Text="1 - Sr / Sra.:"
-                                    CssClass="control-label"></asp:Label>
+                                    CssClass="control-label">
+                                </asp:Label>
                                 <asp:TextBox ID="otxtCLIENTE01NOMBRE" runat="server"
-                                    CssClass="form-control texto-mayusculas" MaxLength="100"></asp:TextBox>
+                                    CssClass="form-control texto-mayusculas" placeholder="Nombre y apellido del cliente"
+                                    MaxLength="100"></asp:TextBox>
                             </div>
                             <div class="form-group">
                                 <asp:Label ID="olblCLIENTE01DNI" runat="server" Text="1 - DNI:"
                                     CssClass="control-label">
                                 </asp:Label>
-                                <asp:TextBox ID="otxtCLIENTE01DNI" runat="server" CssClass="form-control"
-                                    MaxLength="20">
+                                <asp:TextBox ID="otxtCLIENTE01DNI" runat="server" CssClass="form-control" MaxLength="20"
+                                    placeholder="Número de documento del cliente">
                                 </asp:TextBox>
                             </div>
                             <div class="form-group">
                                 <asp:Label ID="olblCLIENTE01DOMICILIO" runat="server" Text="1 - Domicilio:"
                                     CssClass="control-label"></asp:Label>
                                 <asp:TextBox ID="otxtCLIENTE01DOMICILIO" runat="server" CssClass="form-control"
-                                    MaxLength="100"></asp:TextBox>
+                                    MaxLength="100" placeholder="Domicilio del cliente"></asp:TextBox>
                             </div>
                             <div class="form-group">
                                 <asp:Label ID="olblCLIENTE01TELEFONO" runat="server" Text="1 - Teléfono:"
                                     CssClass="control-label"></asp:Label>
                                 <asp:TextBox ID="otxtCLIENTE01TELEFONO" runat="server" CssClass="form-control"
-                                    MaxLength="20"></asp:TextBox>
+                                    MaxLength="20" placeholder="Teléfono del cliente"></asp:TextBox>
                             </div>
                             <div class="form-group">
                                 <asp:Label ID="olblCLIENTE02NOMBRE" runat="server" Text="2 - Sr / Sra:"
                                     CssClass="control-label"></asp:Label>
                                 <asp:TextBox ID="otxtCLIENTE02NOMBRE" runat="server"
-                                    CssClass="form-control texto-mayusculas" MaxLength="100"></asp:TextBox>
+                                    CssClass="form-control texto-mayusculas" MaxLength="100"
+                                    placeholder="Nombre y apellido (Segundo cliente - Opcional)">
+                                </asp:TextBox>
                             </div>
                             <div class="form-group">
                                 <asp:Label ID="olblCLIENTE02DNI" runat="server" Text="2 - DNI:"
                                     CssClass="control-label">
                                 </asp:Label>
-                                <asp:TextBox ID="otxtCLIENTE02DNI" runat="server" CssClass="form-control"
-                                    MaxLength="20">
+                                <asp:TextBox ID="otxtCLIENTE02DNI" runat="server" CssClass="form-control" MaxLength="20"
+                                    placeholder="Número de documento (Segundo cliente)">
                                 </asp:TextBox>
                             </div>
                             <div class="form-group">
                                 <asp:Label ID="olblCLIENTE02DOMICILIO" runat="server" Text="2 - Domicilio:"
                                     CssClass="control-label"></asp:Label>
                                 <asp:TextBox ID="otxtCLIENTE02DOMICILIO" runat="server"
-                                    CssClass="form-control texto-mayusculas" MaxLength="100"></asp:TextBox>
+                                    CssClass="form-control texto-mayusculas" MaxLength="100"
+                                    placeholder="Domicilio (Segundo cliente)"></asp:TextBox>
                             </div>
                             <div class="form-group">
                                 <asp:Label ID="olblCLIENTE02TELEFONO" runat="server" Text="2 - Teléfono:"
                                     CssClass="control-label"></asp:Label>
                                 <asp:TextBox ID="otxtCLIENTE02TELEFONO" runat="server" CssClass="form-control"
-                                    MaxLength="20"></asp:TextBox>
+                                    MaxLength="20" placeholder="Teléfono (Segundo cliente)"></asp:TextBox>
                             </div>
                             <div class="form-group">
                                 <asp:Label ID="olblIDCLIENTEIVA" runat="server" Text="Condición IVA comprador:"
@@ -372,7 +376,8 @@
                             <div class="form-group">
                                 <asp:Label ID="olblCLIENTECUIT" runat="server" Text="CUIT Comprador:"
                                     CssClass="control-label"></asp:Label>
-                                <asp:TextBox ID="otxtCLIENTECUIT" runat="server" CssClass="form-control" MaxLength="13">
+                                <asp:TextBox ID="otxtCLIENTECUIT" runat="server" CssClass="form-control" MaxLength="13"
+                                    placeholder="CUIT (Segundo cliente)">
                                 </asp:TextBox>
                             </div>
                             <div class="form-group">
@@ -415,15 +420,16 @@
                             <div class="form-group">
                                 <asp:Label ID="Label12" runat="server" Text="Precio TOTAL Lote en BC:"
                                     CssClass="control-label"></asp:Label>
-                                <asp:TextBox ID="OTXTLOTEPRECIOBC" runat="server" CssClass="form-control"
-                                    MaxLength="12">
+                                <asp:TextBox ID="OTXTLOTEPRECIOBC" runat="server" CssClass="form-control" MaxLength="12"
+                                    placeholder="Precio total del lote (en bolsas de cemento)">
                                 </asp:TextBox>
                             </div>
 
                             <div class="form-group">
                                 <asp:Label ID="Label13" runat="server" Text="Monto Cuota Mensual en BC: "
                                     CssClass="control-label"></asp:Label>
-                                <asp:TextBox ID="OTXTCUOTABC" runat="server" CssClass="form-control" MaxLength="12">
+                                <asp:TextBox ID="OTXTCUOTABC" runat="server" CssClass="form-control" MaxLength="12"
+                                    placeholder="Cuota mensual (en bolsas de cemento)">
                                 </asp:TextBox>
                             </div>
                         </div>
@@ -497,29 +503,32 @@
                         const convertirTexto = document.getElementsByClassName("texto-mayusculas");
                         const uno = document.getElementById("ContentPlaceHolder1_otxtCLIENTE01NOMBRE");
 
+                        console.log(uno);
+
+                        const calendario = document.querySelectorAll(".calendario table")[0];
+                        console.log(calendario)
+
+                        const columnas = calendario.querySelectorAll("td");
+
+                        document.addEventListener("submit"){
+                            for (let i = 0; i < columnas.length; i++) {
+                                if (columnas[i].style.backgroundColor === "Silver") {
+                                    columnas[i].style.backgroundColor = "blue";
+                                    columnas[i].style.color = "white";
+                                }
+                            }
+                        }
+
+
 
                         // Convertir a mayúsculas el texto de estos inputs
-                        // for (let i = 0; i < convertirTexto.length; i++) {
-                        //     convertirTexto[i].addEventListener("input", () => {
-                        //         this.value = this.vaue.toUpperCase();
-                        //     })
+                        for (let i = 0; i < convertirTexto.length; i++) {
+                            convertirTexto[i].addEventListener("input", () => {
+                                convertirTexto.value = convertirTexto.value.toUpperCase();
+                            })
 
-                        // }
+                        }
 
-                        // for (let i = 0; i < convertirTexto.length; i++) {
-                        //     console.log(convertirTexto.value)
-
-                        // }
-
-                        // if (uno) {
-
-
-                        //     uno.addEventListener("change", () => {
-                        //         this.value = this.value.toUpperCase();
-                        //     })
-                        // }
-
-                        console.log(uno);
                     })
                 </script>
 

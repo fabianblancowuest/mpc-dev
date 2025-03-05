@@ -692,7 +692,7 @@ Pago Pactado = Verde claro */
   width: 700px;
   max-width: 100%;
   /* box-shadow: 3px 3px 5px #337ab7; */
-  box-shadow: 3px 3px 7px;
+  box-shadow: 3px 3px 7px #0d6efd;
 }
 
 .calendario table tr {
@@ -732,8 +732,23 @@ Pago Pactado = Verde claro */
 .calendario table td a:active,
 .calendario table td a:hover,
 .calendario table td a:hover,
-.calendario table td a:focus .calendario table td a:focus {
+.calendario table td a:focus,
+.calendario table td a:focus {
   background-color: #4d8cbf;
+  color: white !important;
+  cursor: pointer;
+}
+
+.calendario table td:active,
+.calendario table td:focus,
+.calendario table td::after,
+.calendario table td::marker,
+.calendario table td::selection,
+.calendario table td::target-text,
+.calendario table td::content,
+.calendario table td::backdrop,
+.calendario table td::cue {
+  background-color: #4d8cbf !important;
   color: white !important;
   cursor: pointer;
 }
@@ -765,6 +780,11 @@ Pago Pactado = Verde claro */
   line-height: 2.2;
 }
 
+.fecha-resaltada::placeholder {
+  color: #999 !important;
+  letter-spacing: 0;
+}
+
 .datos-venta {
   margin: 30px auto 0 auto;
 }
@@ -787,7 +807,7 @@ Pago Pactado = Verde claro */
 
 .datos-venta input,
 .datos-venta select {
-  box-shadow: 1px 1px 3px #0d6efd;
+  box-shadow: 0.5px 0.5px 2px #0d6efd;
 }
 
 .tamanio-max {

@@ -19,7 +19,7 @@ Partial Class STRSYSTEM_Administracion_LOTEVENTAVENDEDOR2
             'otxtLOTEVENTAFECHAVISITA.Attributes.Add("readonly", "readonly")
             otxtLOTEVENTAFECHAVISITA.Text = Left(Date.Today.ToString, 10)
             otxtLOTEVENTAFECHACANCELACION.Text = Left(Date.Today.ToString, 10)
-            'Tareas que se realizan en esta pagina por primer y única vez
+            'Tareas que se realizan en esta pagina por primer y ï¿½nica vez
 
             'STRSYSTEM.accesoRolUsuarioActividadRegistro(Session("session_idOperador"), Session("session_paginaActual")) 
 
