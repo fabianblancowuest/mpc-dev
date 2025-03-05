@@ -689,7 +689,7 @@ Pago Pactado = Verde claro */
 }
 
 .calendario table {
-  width: 700px;
+  width: 550px;
   max-width: 100%;
   /* box-shadow: 3px 3px 5px #337ab7; */
   box-shadow: 3px 3px 7px #0d6efd;
@@ -758,6 +758,10 @@ Pago Pactado = Verde claro */
   color: white;
 }
 
+/* .calendario table td a[href*="javascript"]:: {
+  background-color: red;
+} */
+
 .separar {
   gap: 1rem;
 }
@@ -787,6 +791,10 @@ Pago Pactado = Verde claro */
 
 .datos-venta {
   margin: 30px auto 0 auto;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1em;
 }
 
 .datos-venta span,
@@ -799,7 +807,7 @@ Pago Pactado = Verde claro */
 .datos-venta input,
 .datos-venta select,
 .datos-venta span {
-  width: 700px;
+  width: 550px;
   max-width: 100%;
   margin-left: auto;
   margin-right: auto;

@@ -32,11 +32,11 @@ Partial Class STRSYSTEM_Administracion_LOTEVENTAVENDEDOR2
         oddlBARRIO.SelectedValue = oddlBarrioHabilitadoSelecciona.SelectedValue
         oddlBARRIO.Enabled = False
 
-        olblGestionDescripcion.Text = "Esperando accion Operador."
+        olblGestionDescripcion.Text = "Esperando acción operador."
 
         olblIDLOTEVENTA.Text = "0"
-        obutAltaConfirmada.Text = "Confirma Alta "
-        obutAltaAbandonada.Text = "Abandona Alta"
+        obutAltaConfirmada.Text = "Confirmar Alta"
+        obutAltaAbandonada.Text = "Abandonar Alta"
         otxtLOTEVENTACODIGO.Text = ""
         otxtLOTEVENTADESCRIPCION.Text = ""
         otxtLOTEVENTAFECHAVISITA.Text = ""
@@ -101,9 +101,9 @@ Partial Class STRSYSTEM_Administracion_LOTEVENTAVENDEDOR2
 
             oddlBARRIOLOTE.SelectedValue = oddlBARRIOLOTEOperador.SelectedValue
             oddlBARRIOLOTE.Enabled = False
-            olblGestionDescripcion.Text = "Esperando accion de Operador"
-            obutAltaConfirmada.Text = "Confirma Modificacion"
-            obutAltaAbandonada.Text = "Abandona Modificacion"
+            olblGestionDescripcion.Text = "Esperando acción de operador"
+            obutAltaConfirmada.Text = "Confirmar modificación"
+            obutAltaAbandonada.Text = "Abandonar modificacion"
             olblIDLOTEVENTA.Text = ogvLOTEVENTA.SelectedDataKey.Item("IDLOTEVENTA")
             oddlBARRIOLOTE.SelectedValue = ogvLOTEVENTA.SelectedDataKey.Item("IDBARRIOLOTE")
             otxtLOTEVENTACODIGO.Text = ogvLOTEVENTA.SelectedDataKey.Item("LOTEVENTACODIGO")
