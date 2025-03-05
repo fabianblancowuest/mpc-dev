@@ -322,7 +322,8 @@
                                     </asp:Label>
                                     <asp:TextBox ID="otxtCLIENTE01NOMBRE" runat="server"
                                         CssClass="form-control texto-mayusculas"
-                                        placeholder="Nombre y apellido del cliente" MaxLength="100"></asp:TextBox>
+                                        placeholder="Nombre y apellido del cliente" MaxLength="100">
+                                    </asp:TextBox>
                                 </div>
                                 <div class="form-group">
                                     <asp:Label ID="olblCLIENTE01DNI" runat="server" Text="1 - DNI:"
