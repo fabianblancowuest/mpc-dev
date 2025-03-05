@@ -796,7 +796,7 @@ Pago Pactado = Verde claro */
   margin: 30px auto 0 auto;
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-between;
+  justify-content: center;
   gap: 1em;
 }
 
@@ -815,7 +815,8 @@ Pago Pactado = Verde claro */
   text-align: center;
 }
 
-.form-control {
+.form-control,
+.control-label {
   max-width: 100%;
   width: 500px;
 }
@@ -842,7 +843,7 @@ Pago Pactado = Verde claro */
 
 .botones-confirmacion {
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
   align-items: center;
   flex-direction: column;
   gap: 1em;
@@ -850,7 +851,7 @@ Pago Pactado = Verde claro */
 
 .flexible {
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
   flex-wrap: wrap;
   max-width: 100%;
   gap: 0.5em;

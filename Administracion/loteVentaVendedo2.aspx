@@ -25,7 +25,7 @@
                     <asp:Label ID="olblOperadorAdministrador" runat="server" Text=""></asp:Label>
                     <asp:Label ID="olblIdOperador" runat="server" Text=""></asp:Label>
                 </div>
-                <div class="vendedor-gestiona-lotes-todos-los-barrios contenedor-busqueda"
+                <div class="vendedor-gestiona-lotes-todos-los-barrios flexible justify-content-center"
                     id="select-todos-los-barrios">
                     <asp:Label ID="olblSeleccionaBarrio" runat="server" Text="Seleccione Barrio:"></asp:Label>
                     <asp:SqlDataSource ID="odsBarrioHabilitadoSelecciona" runat="server"
@@ -228,7 +228,7 @@
                                 </asp:SqlDataSource>
                                 <asp:DropDownList ID="oddlBARRIOLOTE" runat="server" DataSourceID="odsBARRIOLOTE"
                                     DataTextField="BARRIOLOTEDescripcion" DataValueField="IDBARRIOLOTE"
-                                    CssClass="form-control">
+                                    CssClass="form-control text-center" disabled>
                                 </asp:DropDownList>
                             </div>
                             <div class="form-group">
@@ -252,12 +252,13 @@
 
                                 </asp:SqlDataSource>
                                 <asp:DropDownList ID="oddlBARRIO" runat="server" DataSourceID="odsBARRIO"
-                                    DataTextField="BARRIODescripcion" DataValueField="IDBARRIO" CssClass="form-control">
+                                    DataTextField="BARRIODescripcion" DataValueField="IDBARRIO"
+                                    CssClass="form-control text-center">
                                 </asp:DropDownList>
                             </div>
                         </div>
 
-                        <div class="form-group mt-4">
+                        <div class="form-group mt-4 text-center">
                             <asp:Label ID="olblIDVENDEDOR" runat="server" Text="Vendedor:" CssClass="control-label">
                             </asp:Label>
                             <asp:SqlDataSource ID="odsVENDEDOR" runat="server"
@@ -268,7 +269,8 @@
                                 </SelectParameters>
                             </asp:SqlDataSource>
                             <asp:DropDownList ID="oddlVENDEDOR" runat="server" DataSourceID="odsVENDEDOR"
-                                DataTextField="VENDEDORDescripcion" DataValueField="IDVENDEDOR" CssClass="form-control">
+                                DataTextField="VENDEDORDescripcion" DataValueField="IDVENDEDOR"
+                                CssClass="form-control mx-auto text-center" disabled>
                             </asp:DropDownList>
                         </div>
                         <div class="calendarios">
