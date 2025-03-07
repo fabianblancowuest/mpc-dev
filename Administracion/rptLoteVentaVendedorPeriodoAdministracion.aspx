@@ -250,9 +250,36 @@
                     const ventaVendedorBox = document.getElementById("venta-periodo-admin");
                     const selectsAdhesiones = ventaVendedorBox.querySelectorAll("select");
                     const comisionTotal = columnas[columnas.length - 3];
+                    const btnVolver = document.getElementById("ContentPlaceHolder1_obutDocumentacionVolver");
 
                     console.log("HOla");
                     console.log(selectsAdhesiones);
+                    console.log(btnVolver)
+
+                    const links = document.querySelectorAll("td a");
+                    console.log(links)
+
+                    for (let i = 0; i < links.length; i++) {
+                        links[i].addEventListener("click", (event) => {
+                            if (links[i].href.includes("javascript:__doPostBack")) {
+                                setTimeout(() => {
+
+                                }, 500);
+                                menuBotones.style.display = "none";
+                            }
+                        })
+                    }
+
+                    // if (panelDocumentacion) {
+                    //     console.log(btnVolver)
+                    // }
+
+
+                    if (tablaVPeriodo) {
+                        ventaVendedorBox.style.display = "flex";
+                    } else if (panelDocumentacion) {
+                        ventaVendedorBox.style.display = "none";
+                    }
 
                     btnComision.addEventListener("click", (event) => {
                         event.preventDefault();
@@ -267,7 +294,7 @@
                             })
                         } else {
                             Swal.fire({
-                                title: `<h4 style="font-size: 20px; max-width: 600px">En el mes de ${mesSeleccionado} el vendedor ${vendedorSeleccionado} no registró comisión alguna.</h4`,
+                                title: `<h4 style="font-size: 20px; max-width: 600px">En el mes de ${mesSeleccionado} el vendedor <strong>${vendedorSeleccionado}</strong> no registró comisión alguna.</h4`,
                                 // html: `<strong style="color: green; font-size: 24px">${comisionTotal.textContent}</strong>`,
                                 // icon: "success",
                             })
@@ -279,11 +306,7 @@
 
                     console.log(panelDocumentacion)
 
-                    if (tablaVPeriodo) {
-                        menuBotones.style.display = "flex";
-                    } else if (panelDocumentacion) {
-                        menuBotones.style.backgroundColor = "red";
-                    }
+
 
                     btnEspaciar.addEventListener("click", (event) => {
                         event.preventDefault();

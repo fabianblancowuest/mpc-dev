@@ -372,6 +372,7 @@ th {
 }
 
 .panel-documentacion div {
+  max-width: 100%;
   text-align: center;
 }
 
