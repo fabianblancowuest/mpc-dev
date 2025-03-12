@@ -409,8 +409,10 @@
                 </form>
             </asp:Panel>
 
-            <button class="btn-basic btn btn-primary btn-imprimir" id="btn-imprimir">Imprimir <i
-                    class="bi bi-printer-fill"></i></button>
+            <div>
+                <button class="btn-basic btn btn-primary btn-imprimir" id="btn-imprimir">Imprimir <i
+                        class="bi bi-printer-fill"></i></button>
+            </div>
 
             <script>
                 document.addEventListener("DOMContentLoaded", () => {
