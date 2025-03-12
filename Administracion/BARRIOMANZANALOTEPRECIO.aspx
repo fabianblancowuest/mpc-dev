@@ -166,37 +166,17 @@
                                     </ItemTemplate>
                                     <ItemStyle HorizontalAlign="Center" />
                                 </asp:TemplateField>
+                                <asp:BoundField DataField="200 cuotas monto cuota" HeaderText="200 cuotas monto cuota" SortExpression="200 cuotas monto cuota" />
+                                <asp:BoundField DataField="200 cuotas cuota BC" HeaderText="200 cuotas cuota BC" SortExpression="200 cuotas cuota BC" />
+                                <asp:BoundField DataField="160 cuotas monto cuota" HeaderText="160 cuotas monto cuota" SortExpression="160 cuotas monto cuota" />
+                                <asp:BoundField DataField="160 cuotas cuota BC" HeaderText="160 cuotas cuota BC" SortExpression="160 cuotas cuota BC" />
+                                <asp:BoundField DataField="120 cuotas monto cuota" HeaderText="120 cuotas monto cuota" SortExpression="120 cuotas monto cuota" />
+                                <asp:BoundField DataField="120 cuotas cuota BC" HeaderText="120 cuotas cuota BC" SortExpression="120 cuotas cuota BC" />
                             </Columns>
                             <PagerStyle CssClass="pgr" />
                         </asp:GridView>
-                        <asp:SqlDataSource ID="odsBarrioManzanaResumen" runat="server"
-                            ConnectionString="<%$ ConnectionStrings:STRSYSTEM %>"
-                            SelectCommand="BARRIOLOTEMANZANAESTADOADHESION" SelectCommandType="StoredProcedure">
-                            <SelectParameters>
-                                <asp:ControlParameter ControlID="oddlBarrioManzanaOperador" Name="idBarrioManzana"
-                                    PropertyName="SelectedValue" Type="Int32" />
-                            </SelectParameters>
-                        </asp:SqlDataSource>
 
                     </div>
-                    <asp:GridView ID="ogvBarrioManzanaResumen" runat="server" AutoGenerateColumns="False"
-                        CssClass="table-cemmi barrio-mz-lote-resultados" DataSourceID="odsBarrioManzanaResumen"
-                        Width="100%">
-                        <Columns>
-                            <asp:BoundField DataField="TotalLotes" HeaderText="Total Lotes" ReadOnly="True"
-                                SortExpression="TotalLotes">
-                                <ItemStyle HorizontalAlign="Center" />
-                            </asp:BoundField>
-                            <asp:BoundField DataField="TotalAdhesiones" HeaderText="Total Adhesiones" ReadOnly="True"
-                                SortExpression="TotalAdhesiones">
-                                <ItemStyle HorizontalAlign="Center" />
-                            </asp:BoundField>
-                            <asp:BoundField DataField="TotalLibres" HeaderText="Total Libres" ReadOnly="True"
-                                SortExpression="TotalLibres">
-                                <ItemStyle HorizontalAlign="Center" />
-                            </asp:BoundField>
-                        </Columns>
-                    </asp:GridView>
                 </div>
 
                 <div class="row">

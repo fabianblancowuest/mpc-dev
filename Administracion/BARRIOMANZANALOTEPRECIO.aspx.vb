@@ -61,8 +61,7 @@ Partial Class STRSYSTEM_Administracion_BARRIOMANZANALOTEPRECIO
             Panel1.Visible = True
             PanelAlta.Visible = False
             ogvBARRIOLOTE.DataBind()
-            ogvBarrioManzanaResumen.DataBind()
-
+           
         End If
     End Sub
 

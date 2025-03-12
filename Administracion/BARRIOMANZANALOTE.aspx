@@ -407,12 +407,13 @@
                             CssClass="btn btn-danger btn-basic btn-inline" />
                     </div>
                 </form>
+                <div>
+                    <button class="btn-basic btn btn-primary btn-imprimir" id="btn-imprimir">Imprimir <i
+                            class="bi bi-printer-fill"></i></button>
+                </div>
             </asp:Panel>
 
-            <div>
-                <button class="btn-basic btn btn-primary btn-imprimir" id="btn-imprimir">Imprimir <i
-                        class="bi bi-printer-fill"></i></button>
-            </div>
+
 
             <script>
                 document.addEventListener("DOMContentLoaded", () => {
