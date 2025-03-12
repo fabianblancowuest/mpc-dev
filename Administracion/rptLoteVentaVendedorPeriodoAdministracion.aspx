@@ -270,9 +270,9 @@
                         })
                     }
 
-                    // if (panelDocumentacion) {
-                    //     console.log(btnVolver)
-                    // }
+                    if (panelDocumentacion) {
+                        console.log(btnVolver)
+                    }
 
 
                     if (tablaVPeriodo) {

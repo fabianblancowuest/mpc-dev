@@ -837,6 +837,10 @@ Pago Pactado = Verde claro */
   box-shadow: 0.5px 0.5px 2px #0d6efd;
 }
 
+.datos-venta input {
+  text-align: left;
+}
+
 .tamanio-max {
   width: 600px;
   max-width: 100%;

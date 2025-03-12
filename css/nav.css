@@ -1,5 +1,87 @@
 @import url("https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Quicksand:wght@300..700&family=Roboto:ital,wght@0,100..900;1,100..900&family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap");
 
+/* Personalizar barras de navegación generales */
+
+body {
+  --scrollbar-border-thickness: 3px;
+}
+body::-webkit-scrollbar {
+  width: var(--scrollbar-width, 20px);
+  height: var(--scrollbar-height, 20px);
+}
+body::-webkit-scrollbar-thumb {
+  background: var(--scrollbar-thumb-color, #3b82f6);
+  border: var(--scrollbar-border-thickness, 3px) solid
+    var(--scrollbar-border-color, rgb(255, 255, 255));
+  border-radius: var(--scrollbar-border-radius, 4px);
+}
+body::-webkit-scrollbar-track {
+  background: var(--scrollbar-track-color, #a1a1aa);
+}
+body::-webkit-scrollbar-button {
+  background: var(--scrollbar-button-color, #3f3f46);
+  border: var(--scrollbar-border-thickness, 3px) solid
+    var(--scrollbar-border-color, rgb(255, 255, 255));
+  border-radius: var(--scrollbar-border-radius, 4px);
+}
+body::-webkit-scrollbar-corner {
+  background: var(--scrollbar-corner-color, #ffffff);
+  border: var(--scrollbar-border-thickness, 3px) solid
+    var(--scrollbar-border-color, rgb(255, 255, 255));
+  border-radius: var(--scrollbar-border-radius, 4px);
+}
+body::-webkit-scrollbar-button:vertical:start:increment,
+#preview::-webkit-scrollbar-button:vertical:end:decrement,
+#preview::-webkit-scrollbar-button:horizontal:start:increment,
+#preview::-webkit-scrollbar-button:horizontal:end:decrement {
+  display: var(--show-double-buttons, none);
+}
+
+/* Personalizar barras de navegación de tablas */
+
+/* Personalizar scrollbars dentro de tablas o cualquier elemento con overflow */
+table::-webkit-scrollbar,
+tbody::-webkit-scrollbar,
+div::-webkit-scrollbar {
+  width: var(--scrollbar-width, 20px);
+  height: var(--scrollbar-height, 20px);
+}
+
+table::-webkit-scrollbar-thumb,
+tbody::-webkit-scrollbar-thumb,
+div::-webkit-scrollbar-thumb {
+  background: var(--scrollbar-thumb-color, #3b82f6);
+  border: var(--scrollbar-border-thickness, 3px) solid
+    var(--scrollbar-border-color, rgb(255, 255, 255));
+  border-radius: var(--scrollbar-border-radius, 4px);
+}
+
+table::-webkit-scrollbar-track,
+tbody::-webkit-scrollbar-track,
+div::-webkit-scrollbar-track {
+  background: var(--scrollbar-track-color, #a1a1aa);
+}
+
+table::-webkit-scrollbar-button,
+tbody::-webkit-scrollbar-button,
+div::-webkit-scrollbar-button {
+  background: var(--scrollbar-button-color, #3f3f46);
+  border: var(--scrollbar-border-thickness, 3px) solid
+    var(--scrollbar-border-color, rgb(255, 255, 255));
+  border-radius: var(--scrollbar-border-radius, 4px);
+}
+
+table::-webkit-scrollbar-corner,
+tbody::-webkit-scrollbar-corner,
+div::-webkit-scrollbar-corner {
+  background: var(--scrollbar-corner-color, #ffffff);
+  border: var(--scrollbar-border-thickness, 3px) solid
+    var(--scrollbar-border-color, rgb(255, 255, 255));
+  border-radius: var(--scrollbar-border-radius, 4px);
+}
+
+/* Barra de navegación principal */
+
 .navbar {
   font-family: "Montserrat", sans-serif;
   margin-bottom: 0;
@@ -123,3 +205,5 @@ div.nav-link {
     padding-top: 10px;
   } */
 }
+
+/* Scrollbar */
