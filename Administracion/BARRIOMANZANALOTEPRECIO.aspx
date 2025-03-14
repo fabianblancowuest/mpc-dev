@@ -1,5 +1,6 @@
-<%@ Page Language="VB" MasterPageFile="~/master/p.master" AutoEventWireup="false" CodeFile="BARRIOMANZANALOTEPRECIO.aspx.vb"
-    Inherits="STRSYSTEM_Administracion_BARRIOMANZANALOTEPRECIO" Title="PRECIOS DE LOTES EN BARRIOS POR MANZANA" Culture="es-AR" %>
+<%@ Page Language="VB" MasterPageFile="~/master/p.master" AutoEventWireup="false"
+    CodeFile="BARRIOMANZANALOTEPRECIO.aspx.vb" Inherits="STRSYSTEM_Administracion_BARRIOMANZANALOTEPRECIO"
+    Title="PRECIOS DE LOTES EN BARRIOS POR MANZANA" Culture="es-AR" %>
 
     <%@ Register Assembly="AjaxControlToolkit" Namespace="AjaxControlToolkit" TagPrefix="asp" %>
         <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="Server">
@@ -34,7 +35,7 @@
                                 <asp:SessionParameter Name="idOperador" SessionField="idOperador" Type="Int32" />
                             </SelectParameters>
                         </asp:SqlDataSource>
-                        <div class="barrio-mz">BARRIO</div>
+                        <!-- <div class="barrio-mz">BARRIO</div> -->
                         <asp:DropDownList ID="oddlBARRIOOperador" runat="server" DataSourceID="odsBARRIOOPERADOR"
                             DataTextField="BARRIODescripcion" DataValueField="idBARRIO" AutoPostBack="True">
                         </asp:DropDownList>
@@ -50,20 +51,25 @@
                                     PropertyName="SelectedValue" Type="Int32" />
                             </SelectParameters>
                         </asp:SqlDataSource>
-                        <div class="barrio-mz">MANZANA</div>
+                        <!-- <div class="barrio-mz">MANZANA</div> -->
                         <asp:DropDownList ID="oddlBarrioManzanaOperador" runat="server"
                             DataSourceID="odsBARRIOMANZANAOPERADOR" DataTextField="barrioManzanaCodigo"
                             DataValueField="idBarrioManzana" AutoPostBack="True">
                         </asp:DropDownList>
                     </div>
-
                 </div>
+
+                <h2 class="titulo-rol titulo-imprimir oculto">MI PRIMER CASA S.A. - PRECIO DE LOTES EN BARRIOS
+                    <br>
+                    BARRIO: <span id="barrio-span"></span> -
+                    MANZANA: <span id="manzana-span"></span>
+                </h2>
 
 
                 <div>
                     <asp:SqlDataSource ID="odsBARRIOLOTE" runat="server"
-                        ConnectionString="<%$ ConnectionStrings:STRSYSTEM %>" SelectCommand="BARRIOMANZANALOTEPRECIOTRAERId"
-                        SelectCommandType="StoredProcedure">
+                        ConnectionString="<%$ ConnectionStrings:STRSYSTEM %>"
+                        SelectCommand="BARRIOMANZANALOTEPRECIOTRAERId" SelectCommandType="StoredProcedure">
                         <SelectParameters>
                             <asp:ControlParameter ControlID="oddlBarrioManzanaOperador" Name="idBarrioManzana"
                                 PropertyName="SelectedValue" Type="Int32" />
@@ -166,12 +172,20 @@
                                     </ItemTemplate>
                                     <ItemStyle HorizontalAlign="Center" />
                                 </asp:TemplateField>
-                                <asp:BoundField DataField="200 cuotas monto cuota" HeaderText="200 cuotas monto cuota" SortExpression="200 cuotas monto cuota" />
-                                <asp:BoundField DataField="200 cuotas cuota BC" HeaderText="200 cuotas cuota BC" SortExpression="200 cuotas cuota BC" />
-                                <asp:BoundField DataField="160 cuotas monto cuota" HeaderText="160 cuotas monto cuota" SortExpression="160 cuotas monto cuota" />
-                                <asp:BoundField DataField="160 cuotas cuota BC" HeaderText="160 cuotas cuota BC" SortExpression="160 cuotas cuota BC" />
-                                <asp:BoundField DataField="120 cuotas monto cuota" HeaderText="120 cuotas monto cuota" SortExpression="120 cuotas monto cuota" />
-                                <asp:BoundField DataField="120 cuotas cuota BC" HeaderText="120 cuotas cuota BC" SortExpression="120 cuotas cuota BC" />
+                                <asp:BoundField DataField="PrecioTerreno" HeaderText="PrecioTerreno"
+                                    SortExpression="PrecioTerreno" DataFormatString="{0:c}" />
+                                <asp:BoundField DataField="200 cuotas monto cuota" HeaderText="200 cuotas monto cuota"
+                                    SortExpression="200 cuotas monto cuota" />
+                                <asp:BoundField DataField="200 cuotas cuota BC" HeaderText="200 cuotas cuota BC"
+                                    SortExpression="200 cuotas cuota BC" />
+                                <asp:BoundField DataField="160 cuotas monto cuota" HeaderText="160 cuotas monto cuota"
+                                    SortExpression="160 cuotas monto cuota" />
+                                <asp:BoundField DataField="160 cuotas cuota BC" HeaderText="160 cuotas cuota BC"
+                                    SortExpression="160 cuotas cuota BC" />
+                                <asp:BoundField DataField="120 cuotas monto cuota" HeaderText="120 cuotas monto cuota"
+                                    SortExpression="120 cuotas monto cuota" />
+                                <asp:BoundField DataField="120 cuotas cuota BC" HeaderText="120 cuotas cuota BC"
+                                    SortExpression="120 cuotas cuota BC" />
                             </Columns>
                             <PagerStyle CssClass="pgr" />
                         </asp:GridView>
@@ -179,10 +193,9 @@
                     </div>
                 </div>
 
-                <div class="row">
+                <div class="row my-3">
                     <asp:Button ID="obutAlta" runat="server" Text="Nuevo Registro"
                         CssClass="btn-basic btn btn-success no-print" />
-
                 </div>
 
             </asp:Panel>
@@ -359,21 +372,62 @@
                     const tabla = document.querySelector("#tabla-barrio-manzana table");
                     const columnas = tabla.querySelectorAll("td");
                     const columnasTh = tabla.querySelectorAll("th");
+                    const filas = tabla.querySelectorAll("tr");
                     console.log(tabla)
                     console.log("Columnas", columnasTh)
 
-                    document.getElementById("btn-expandir").addEventListener("click", (event) => {
+                    // Índices de las columnas a modificar
+                    // const indices = [9, 10, 12, 14];
 
-                        event.preventDefault();
-                        for (let i = 0; i < columnas.length; i++) {
-                            // columnasTh[i].classList.toggle("espaciar");
-                            columnas[i].classList.toggle("espaciar");
-                            columnasTh[i].classList.toggle("espaciar");
-                            // columnas[i].style.maxWidth = "fit-content";
-                            columnasTh[i].style.maxWidth = "fit-content";
-                            columnas[i].style.overflow = "visible";
-                        }
-                    })
+                    // indices.forEach(index => {
+                    //     if (columnas[index]) {
+                    //         // Evita duplicar el signo $
+                    //         if (!columnas[index].textContent.includes("$")) {
+                    //             columnas[index].textContent = `$${columnas[index].textContent.trim()}`;
+                    //         }
+                    //     }
+                    // });
+
+                    // Índices de las columnas a modificar
+                    const indices = [9, 10, 12, 14];
+
+                    filas.forEach(fila => {
+                        const celdas = fila.querySelectorAll("td"); // Obtener las celdas de la fila
+                        indices.forEach(index => {
+                            if (celdas[index] && !celdas[index].textContent.includes("$")) {
+                                celdas[index].textContent = `$${celdas[index].textContent.trim()}`;
+                            }
+                        });
+                    });
+
+
+
+                    // document.getElementById("btn-expandir").addEventListener("click", (event) => {
+
+                    //     event.preventDefault();
+                    //     for (let i = 0; i < columnas.length; i++) {
+                    //         // columnasTh[i].classList.toggle("espaciar");
+                    //         columnas[i].classList.toggle("espaciar");
+                    //         columnasTh[i].classList.toggle("espaciar");
+                    //         // columnas[i].style.maxWidth = "fit-content";
+                    //         columnasTh[i].style.maxWidth = "fit-content";
+                    //         columnas[i].style.overflow = "visible";
+                    //     }
+                    // })
+
+                    const barrioId = document.getElementById("ContentPlaceHolder1_oddlBARRIOOperador")
+                    const manzanaId = document.getElementById("ContentPlaceHolder1_oddlBarrioManzanaOperador")
+
+                    console.log(barrioId)
+
+                    const textoBarrio = barrioId.options[barrioId.selectedIndex].text;
+                    const textoManzana = manzanaId.options[manzanaId.selectedIndex].text;
+
+                    console.log(textoBarrio);
+
+                    document.getElementById("barrio-span").textContent = textoBarrio;
+                    document.getElementById("manzana-span").textContent = textoManzana;
+
                 })
             </script>
 

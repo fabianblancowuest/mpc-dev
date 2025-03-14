@@ -4,6 +4,8 @@ Partial Class Administracion_garAlta
 
     Protected Sub obutSolicitudAlta_Click(sender As Object, e As EventArgs) Handles obutSolicitudAlta.Click
         garAlta()
+        garEstadoActualizado()
+        ogvOperadorGar.DataBind()
 
     End Sub
 
@@ -77,7 +79,7 @@ Partial Class Administracion_garAlta
 
     Protected Sub ogvOperadorGar_SelectedIndexChanged(sender As Object, e As EventArgs) Handles ogvOperadorGar.SelectedIndexChanged
         If ogvOperadorGar.SelectedDataKey.Item("idAsientoCabecera").ToString.Trim <> "0" Then
-            orbOpcion.SelectedValue = "1"
+            'orbOpcion.SelectedValue = "1"
             PanelGARAutorizado.Visible = True
             PanelGARNoAutorizado.Visible = False
             olblGAROperadorSolicita.Text = oddlgarOperadorSelecciona.SelectedItem.ToString
@@ -93,7 +95,12 @@ Partial Class Administracion_garAlta
             PanelGastosRegistrados.Visible = True
             ogvGARGastosRegistrados.DataBind()
             garEstadoActualizado()
+            If olblGARSeleccionadoSaldo.Text = "0,00" Then
+                obutGarGastoAlta.Visible = False
+            Else
+                obutGarGastoAlta.Visible = True
 
+            End If
 
         Else
             PanelGARAutorizado.Visible = False
@@ -161,9 +168,11 @@ Partial Class Administracion_garAlta
             ogvOperadorGar.EmptyDataText = "No existen GAR pendientes de aprobacion o pagados en caja."
         End If
         If orbOpcion.SelectedValue = "3" Then
-            ogvOperadorGar.EmptyDataText = "No existen GAR rendidos al 100%."
+            ogvOperadorGar.EmptyDataText = "No existen GAR cargados 100% y pendientes de rendición."
         End If
-
+        If orbOpcion.SelectedValue = "4" Then
+            ogvOperadorGar.EmptyDataText = "No existen GAR cargados 100% y rendidos al 100%."
+        End If
     End Sub
 
      
@@ -174,6 +183,9 @@ Partial Class Administracion_garAlta
         PanelSolicitud.Visible = True
         PanelOperador.Visible = True
         PanelGARAutorizado.Visible = False
+        ogvGARGastosRegistrados.DataBind()
+        ogvOperadorGar.DataBind()
+
 
 
 
@@ -251,6 +263,8 @@ Partial Class Administracion_garAlta
         Else
             olblValidacionMensaje.Text = "Debe ingresar el monto del comprobante para validar la operacion."
         End If
+
+        
     End Sub
 
     Protected Sub obutRegistroAlta_Click(sender As Object, e As EventArgs) Handles obutRegistroAlta.Click
@@ -331,6 +345,10 @@ Partial Class Administracion_garAlta
     End Sub
 
     Protected Sub ogvGARGastosRegistrados_SelectedIndexChanged(sender As Object, e As EventArgs) Handles ogvGARGastosRegistrados.SelectedIndexChanged
+
+    End Sub
+
+    Protected Sub Page_Load(sender As Object, e As EventArgs) Handles Me.Load
 
     End Sub
 End Class

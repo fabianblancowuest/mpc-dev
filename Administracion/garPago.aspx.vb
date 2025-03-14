@@ -12,6 +12,8 @@ Partial Class Administracion_garPago
     End Sub
 
     Protected Sub obutRetorna_Click(sender As Object, e As EventArgs) Handles obutRetorna.Click
+        ogvGarPago.DataBind()
+
         PanelGARListado.Visible = True
         PanelGARAlta.Visible = False
 

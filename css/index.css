@@ -1065,6 +1065,13 @@ select {
   max-width: 100%;
 }
 
+.caja-busqueda select:focus,
+.caja-busqueda select:active {
+  box-shadow: 1px 1px 20px #286090;
+  border: 1px solid #286090;
+  outline: 1px solid #286090;
+}
+
 @media (max-width: 900px) {
   .caja-busqueda select {
     text-align: center;

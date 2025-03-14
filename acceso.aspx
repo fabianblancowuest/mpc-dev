@@ -140,7 +140,6 @@
                 </asp:GridView>
 
 
-
                 <asp:Label ID="Label3" runat="server" Text="Accesos Habilitados:" CssClass="titulo-rol"></asp:Label>
 
                 <asp:SqlDataSource ID="odsAccesoOperadorAccesoCorrecto" runat="server"
@@ -175,9 +174,7 @@
                     </Columns>
                 </asp:GridView>
                 <asp:Button ID="obutAccesocorrectoLogout" runat="server" Text="SALIR"
-                    CssClass="btn btn-danger btn-basic" />
-
-
+                    CssClass="btn btn-primary btn-basic" />
             </asp:Panel>
         </form>
 

@@ -56,7 +56,6 @@
                             DataValueField="idBarrioManzana" AutoPostBack="True">
                         </asp:DropDownList>
                     </div>
-
                 </div>
 
 
@@ -436,6 +435,8 @@
                             columnas[i].style.overflow = "visible";
                         }
                     })
+
+
                 })
             </script>
 

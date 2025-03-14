@@ -163,12 +163,11 @@ Partial Class STRSYSTEM_Administracion_BARRIOMANZANALOTE
     End Sub
 
     Protected Sub oddlBARRIOOperador_SelectedIndexChanged(sender As Object, e As EventArgs) Handles oddlBARRIOOperador.SelectedIndexChanged
+         oddlBarrioManzanaOperador.DataBind()
         ogvBARRIOLOTE.DataBind()
         oddlBARRIO.DataBind()
         oddlBARRIO.SelectedValue = oddlBARRIOOperador.SelectedValue
         oddlBARRIO.Enabled = False
-
-        oddlBARRIOMANZANA.DataBind()
     End Sub
 
     Protected Sub oddlBarrioManzanaOperador_SelectedIndexChanged(sender As Object, e As EventArgs) Handles oddlBarrioManzanaOperador.SelectedIndexChanged

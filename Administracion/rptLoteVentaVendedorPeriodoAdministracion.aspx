@@ -6,7 +6,7 @@
         <asp:Content ID="Content1" ContentPlaceHolderID="head" Runat="Server">
         </asp:Content>
         <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" Runat="Server"
-            CssClass="rptloteVentaVendedorPeriodoAdministracion">
+            >
 
             <!-- <div>
         <asp:Label ID="Label3" runat="server" Text="Mi Primer Casa S.A." Font-Bold ="true" Font-Size ="Large" ></asp:Label>    

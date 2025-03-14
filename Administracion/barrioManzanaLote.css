@@ -1,96 +1,179 @@
-
-
 .barrio-mz-lote-resultados {
-    margin: 2em auto;
+  margin: 2em auto;
 }
 
 .barrio-mz-lote-resultados td {
-    font-size: bold !important;
+  font-size: bold !important;
 }
 
 .btn-estandar {
-    width: 200px;
+  width: 200px;
 }
 
-.barrio-mz {    
-    text-align: center;
-    display: none;
+.barrio-mz {
+  text-align: center;
+  display: none;
+}
+
+.titulo-rol,
+h1 {
+  font-size: 20px;
+  margin: 0 auto;
+}
+
+.caja-busqueda {
+  font-size: 16px;
+  display: block;
+  margin: 0 auto;
+  text-align: center;
+}
+
+table tr {
+  line-height: 1 !important;
 }
 
 @media print {
-    body {
-        background-color: white;
-        color: black;
-        font-size: 2rem !important;
-        font-weight: bold;
-        font-family: cursive;
-    }
+  body {
+    background-color: white;
+    color: black;
+    font-size: 2rem !important;
+    font-weight: bold;
+    font-family: cursive;
+  }
 
-    
-    @page {
-        margin: 1em;
-    }
+  .contenedor-flexible {
+    display: none;
+  }
 
-    table {
-        table-layout: auto !important;
-        width: 100%;
-        border-collapse: collapse;
-        border: 1px solid #ddd;
-      }
-    
-      th, td {
-        border: 1px solid #ddd;
-      }
+  .titulo-rol {
+    display: none;
+  }
 
-    .no-print {
-        display: none;
-    }
+  .caja-busqueda {
+    display: none;
+  }
 
-    .table-cemmi tbody td:first-child, .table-cemmi tbody th:first-child, .table-cemmi tbody th:nth-child(2), .table-cemmi tbody td:nth-child(2) {
-        display: none;
-    }
+  .titulo-imprimir {
+    display: block;
+    font-size: 18px;
+    margin-bottom: 15px;
+  }
 
-    .form-group select {
-        text-align: center;
-    }
+  form {
+    gap: 0;
+  }
 
-    .form-group span {
-        display: none;
-    }
+  select {
+    padding: 0;
+    width: fit-content;
+  }
 
-    .table-cemmi tbody td {
-        padding: 0;
-    }
+  @page {
+    margin: 1em;
+  }
 
-    /* .table-cemmi tbody td:nth-child(2), .table-cemmi tbody th:nth-child(2) {
+  table {
+    table-layout: auto !important;
+    width: 100%;
+    border-collapse: collapse;
+    border: 1px solid #ddd;
+  }
+
+  th,
+  td {
+    border: 1px solid #ddd;
+  }
+
+  td {
+    white-space: nowrap;
+    line-height: 1;
+    font-size: 10px !important;
+    font-weight: normal;
+  }
+
+  /* .caja-busqueda {
+    width: 100%;
+    font-size: 14px;
+    display: block;
+    margin: 0 auto;
+  } */
+
+  .no-print {
+    display: none;
+  }
+
+  .table-cemmi tbody th {
+    color: black;
+  }
+
+  .table-cemmi tbody th:nth-child(2),
+  .table-cemmi tbody td:nth-child(2),
+  .table-cemmi tbody th:nth-child(3),
+  .table-cemmi tbody td:nth-child(3),
+  .table-cemmi tbody th:nth-child(4),
+  .table-cemmi tbody td:nth-child(4),
+  .table-cemmi tbody th:nth-child(5),
+  .table-cemmi tbody td:nth-child(5) {
+    display: none;
+  }
+
+  .form-group select {
+    text-align: center;
+    display: none;
+  }
+
+  .form-group span {
+    display: none;
+  }
+
+  .tabla-barrio-manzana table tr:nth-child(odd) {
+    background-color: #e0e0e0 !important;
+  }
+
+  .table-cemmi tbody td {
+    padding: 0;
+  }
+
+  /* .table-cemmi tbody td:nth-child(2), .table-cemmi tbody th:nth-child(2) {
         display: none;
     } */
 
-    .table-cemmi tbody td:nth-child(n+12), .table-cemmi tbody th:nth-child(n+12) {
-        display: none;
-    }
+  /* .table-cemmi tbody td:nth-child(n + 12),
+  .table-cemmi tbody th:nth-child(n + 12) {
+    display: none;
+  } */
 
-    .barrio-mz {
-        display: block;
-    }
+  /* .barrio-mz {
+    display: inline;
+  } */
 
-    .btn-imprimir {
-        display: none;
-    }
+  .btn-imprimir {
+    display: none;
+  }
 
-    .ancho-imp {
-        width: .5em;
-    }
+  .ancho-imp {
+    width: 0.5em;
+  }
 }
 
 .btn-imprimir {
-    float: right;
-    margin: 1em auto;
+  float: right;
 }
 
 @media (max-width: 768px) {
-    .btn-imprimir {
-        float: none;
-        display: block;
-    }
+  .btn-imprimir {
+    float: none;
+    display: block;
+  }
+}
+
+/* #dfe7fd o #fffbeb */
+
+.tabla-barrio-manzana table tr:nth-child(odd) {
+  background-color: #e0e0e0;
+}
+
+.tabla-barrio-manzana table tr:hover {
+  background-color: #e0e0e0;
+  transition: background 0.3s ease-in-out;
 }

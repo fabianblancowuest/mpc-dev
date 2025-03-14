@@ -81,7 +81,8 @@
                 <asp:RadioButtonList ID="orbOpcion" runat="server" AutoPostBack="True">
                     <asp:ListItem Selected="True" Value="1">Activos</asp:ListItem>
                     <asp:ListItem Value="2">Pendientes de aprobación y / o pago en caja</asp:ListItem>
-                    <asp:ListItem Value="3">GAR Rendidos 100%</asp:ListItem>
+                    <asp:ListItem Value="3">GAR 100% cargados pendientes de rendicion</asp:ListItem>
+                    <asp:ListItem Value="4">GAR 100% cargados y rendidos 100%</asp:ListItem>
                 </asp:RadioButtonList>
             </div>
             <asp:Button ID="obutGARAlta" runat="server" Text="Nueva solicitud de GAR"
@@ -119,6 +120,7 @@
                         SortExpression="garAutorizacionFecha" />
                     <asp:BoundField DataField="garAutorizacionMonto" HeaderText="Monto Autorizado"
                         SortExpression="garAutorizacionMonto" />
+                    <asp:BoundField DataField="MontoComprobantes" HeaderText="Monto Comprobantes" SortExpression="MontoComprobantes" />
                     <asp:BoundField DataField="MontoRendido" HeaderText="Monto Rendido"
                         SortExpression="MontoRendido" />
                     <asp:BoundField DataField="Transferencias" HeaderText="Transferencias" SortExpression="Transferencias" />
@@ -277,6 +279,14 @@
         <div>
             <asp:Label ID="Label21" runat="server" Text="TOTAL DEL GASTO:"></asp:Label>
             <asp:Label ID="olblGARTotal" runat="server" Text="0" Font-Bold="true"></asp:Label>
+        </div>
+        <div>
+            <asp:Label ID="Label25" runat="server" Text="Imagen del Comprobante "></asp:Label>
+            <asp:Image ID="oimgComprobanteImagen" runat="server" />
+             <asp:Label ID="olblComprobanteImagen" runat="server" Text=""></asp:Label>
+
+            <asp:FileUpload ID="ofupImagen" runat="server" />
+            <asp:Button ID="Button1" runat="server" Text="Button" />
         </div>
         <div>
             <asp:Label ID="olblValidacionMensaje" runat="server" Text=""></asp:Label>
