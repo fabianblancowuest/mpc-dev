@@ -201,7 +201,7 @@
             </asp:Panel>
 
 
-            <asp:Panel ID="PanelAlta" runat="server" Visible="false">
+            <asp:Panel ID="PanelAlta" runat="server" Visible="false" CssClass="panel-alta">
                 <form class="form" role="form">
 
                     <div class="form-group">
@@ -277,7 +277,7 @@
                             MaxLength="50"></asp:TextBox>
                     </div>
                     <div class="form-group">
-                        <asp:Label ID="olblIDORIENTACION" runat="server" Text="ORIENTACION EN CAR�TULA:"
+                        <asp:Label ID="olblIDORIENTACION" runat="server" Text="ORIENTACION EN CARÁTULA:"
                             CssClass="control-label"></asp:Label>
                         <asp:SqlDataSource ID="odsORIENTACION" runat="server"
                             ConnectionString="<%$ ConnectionStrings:STRSYSTEM %>" SelectCommand="ORIENTACIONTraerOddl"
@@ -288,7 +288,7 @@
                         </asp:DropDownList>
                     </div>
                     <div class="form-group">
-                        <asp:Label ID="olblSECUENCIA" runat="server" Text="SECUENCIA EN CAR�TULA (En sentido horario):"
+                        <asp:Label ID="olblSECUENCIA" runat="server" Text="SECUENCIA EN CARÁTULA (En sentido horario):"
                             CssClass="control-label"></asp:Label>
                         <asp:TextBox ID="otxtSECUENCIA" runat="server" CssClass="form-control" MaxLength="4">
                         </asp:TextBox>
@@ -384,6 +384,10 @@
                     if (tabla) {
                         btnImprimir.style.display = "block";
                     }
+
+                    btnImprimir.addEventListener("click", () => {
+                        btnImprimir.style.display = none;
+                    })
 
                     // Índices de las columnas a modificar
                     // const indices = [9, 10, 12, 14];
