@@ -126,10 +126,6 @@ table tr {
     display: none;
   }
 
-  .tabla-barrio-manzana table tr:nth-child(odd) {
-    background-color: #e0e0e0 !important;
-  }
-
   .table-cemmi tbody td {
     padding: 0;
   }
@@ -170,10 +166,18 @@ table tr {
 /* #dfe7fd o #fffbeb */
 
 .tabla-barrio-manzana table tr:nth-child(odd) {
-  background-color: #e0e0e0;
+  background-color: #b3e5fc !important;
 }
 
-.tabla-barrio-manzana table tr:hover {
-  background-color: #e0e0e0;
+/* .tabla-barrio-manzana table tr:hover {
+  background-color: #e0e0e0 !important;
   transition: background 0.3s ease-in-out;
+} */
+
+.tabla-barrio-manzana table tr:nth-child(odd):hover {
+  background-color: #4d8cbf !important;
+}
+
+.btn-oculto {
+  display: none;
 }

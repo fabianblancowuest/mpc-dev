@@ -231,6 +231,7 @@ th {
   font-size: 11px !important;
 }
 
+.tabla-barrio-manzana table tr:hover,
 .tabla-adhesiones tr:hover,
 .venta-vendedor-periodo tr:hover,
 .tabla-operaciones-canceladas tr:hover .tabla-operaciones-señadas tr:hover {

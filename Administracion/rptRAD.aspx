@@ -19,6 +19,9 @@
         <asp:Label ID="Label12" runat="server" Text="Hasta Fecha" Width="20%"></asp:Label>
         <asp:TextBox ID="otxtFechaHasta" runat="server" Visible="false"></asp:TextBox>
         <asp:DropDownList ID="oddlFechaHasta" runat="server" AutoPostBack="True" DataSourceID="odsCalendario" DataTextField="fecha" DataValueField="id"></asp:DropDownList>
+        <br />
+        <asp:Button ID="obutRADActualizaPeriodo" runat="server" Text="Actualiza" />
+    
     </div>
 
 

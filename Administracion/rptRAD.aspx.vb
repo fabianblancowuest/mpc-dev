@@ -56,4 +56,10 @@ Partial Class Administracion_rptRAD
 
 
     End Sub
+
+    Protected Sub obutRADActualizaPeriodo_Click(sender As Object, e As EventArgs) Handles obutRADActualizaPeriodo.Click
+        actualizaDatos()
+        ogvrptMinutaFecha.DataBind()
+
+    End Sub
 End Class

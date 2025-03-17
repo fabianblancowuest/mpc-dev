@@ -360,14 +360,18 @@
                         <asp:Button ID="obutAltaAbandonada" runat="server" Text="Abandona Alta"
                             CssClass="btn btn-danger btn-basic btn-inline" />
                     </div>
+
                 </form>
             </asp:Panel>
 
-            <button class="btn-basic btn btn-primary btn-imprimir" id="btn-imprimir">Imprimir <i
+            <button class="btn-basic btn btn-primary btn-imprimir btn-oculto" id="btn-imprimir">Imprimir <i
                     class="bi bi-printer-fill"></i></button>
+
+
 
             <script>
                 document.addEventListener("DOMContentLoaded", () => {
+
 
                     const tabla = document.querySelector("#tabla-barrio-manzana table");
                     const columnas = tabla.querySelectorAll("td");
@@ -375,6 +379,11 @@
                     const filas = tabla.querySelectorAll("tr");
                     console.log(tabla)
                     console.log("Columnas", columnasTh)
+                    const btnImprimir = document.getElementById("btn-imprimir");
+
+                    if (tabla) {
+                        btnImprimir.style.display = "block";
+                    }
 
                     // Índices de las columnas a modificar
                     // const indices = [9, 10, 12, 14];
