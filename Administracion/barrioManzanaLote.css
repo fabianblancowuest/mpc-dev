@@ -36,9 +36,6 @@ table tr {
   body {
     background-color: white;
     color: black;
-    font-size: 2rem !important;
-    font-weight: bold;
-    font-family: cursive;
   }
 
   .contenedor-flexible {

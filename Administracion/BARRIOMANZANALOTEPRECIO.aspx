@@ -452,7 +452,7 @@
                         event.preventDefault();
 
                         let fontSizeActual = parseInt(window.getComputedStyle(tabla).fontSize); // Obtener el tamaño actual en número
-                        tabla.style.fontSize = (fontSizeActual + 2) + "px";
+                        tabla.style.fontSize = (fontSizeActual + 1) + "px";
                         // filas.forEach(fila => {
                         //     let fontSizeActual = parseInt(window.getComputedStyle(fila).fontSize); // Obtener el tamaño actual en número
                         //     fila.style.fontSize = (fontSizeActual + 2) + "px"; // Aumentar el tamaño
@@ -464,7 +464,7 @@
                         event.preventDefault();
 
                         let fontSizeActual = parseInt(window.getComputedStyle(tabla).fontSize); // Obtener el tamaño actual en número
-                        tabla.style.fontSize = (fontSizeActual - 2) + "px";
+                        tabla.style.fontSize = (fontSizeActual - 1) + "px";
                         // filas.forEach(fila => {
                         //     let fontSizeActual = parseInt(window.getComputedStyle(fila).fontSize); // Obtener el tamaño actual en número
                         //     fila.style.fontSize = (fontSizeActual - 2) + "px"; // Aumentar el tamaño
