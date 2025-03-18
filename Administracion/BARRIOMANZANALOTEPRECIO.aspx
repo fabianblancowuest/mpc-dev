@@ -60,11 +60,20 @@
                 </div>
 
 
-                <div id="botones-menu" class="m-4 mx-auto text-center">
-                    <button class="btn btn-light no-imprimir mx-auto" id="btn-colorear">Resaltar alternado <i
+                <div id="botones-menu" class="my-4 justify-content-center">
+                    <button class="btn btn-light no-imprimir" id="btn-colorear">Resaltar alternado <i
                             class="bi bi-highlights"></i></button>
-                    <button class="btn btn-light no-imprimir mx-auto" id="btn-resaltar-esquinas">Resaltar esquinas <i
+                    <button class="btn btn-light no-imprimir" id="btn-resaltar-esquinas">Resaltar esquinas <i
                             class="bi bi-pen-fill"></i>
+                    </button>
+                    <button id="btn-aumentar-fuente" class="btn btn-light no-imprimir">
+                        Amentar tamaño fuente
+                    </button>
+                    <button id="btn-disminuir-fuente" class="btn btn-light no-imprimir">
+                        Disminuir tamaño fuente
+                    </button>
+                    <button id="btn-espaciar-filas" class="btn btn-light no-imprimir">
+                        Espaciar Contenido
                     </button>
                 </div>
 
@@ -391,15 +400,22 @@
             <script>
                 document.addEventListener("DOMContentLoaded", () => {
 
+                    const tabla = document.querySelector("#tabla-barrio-manzana table");
+                    const columnas = tabla.querySelectorAll("td");
+                    const columnasTh = tabla.querySelectorAll("th");
+                    const filas = tabla.querySelectorAll("tr");
+                    const btnImprimir = document.getElementById("btn-imprimir");
+
                     // Obtener el botón
                     const btnResaltarAlternado = document.getElementById('btn-colorear');
                     const btnResaltarEsquinas = document.getElementById("btn-resaltar-esquinas");
+                    const btnAumentarFuente = document.getElementById("btn-aumentar-fuente")
+                    const btnDisminuirFuente = document.getElementById("btn-disminuir-fuente")
 
                     // Añadir el evento de clic al botón
                     btnResaltarAlternado.addEventListener('click', (event) => {
                         event.preventDefault();
                         // Seleccionar todas las filas de la tabla
-                        const filas = document.querySelectorAll('.tabla-barrio-manzana table tr');
 
                         // Iterar sobre las filas y aplicar el color de fondo a las filas impares
                         filas.forEach((fila, index) => {
@@ -420,7 +436,6 @@
                     btnResaltarEsquinas.addEventListener("click", () => {
                         event.preventDefault();
                         // Seleccionar todas las filas de la tabla
-                        const filas = document.querySelectorAll('.tabla-barrio-manzana table tr');
 
                         // Iterar sobre las filas y aplicar el color de fondo a las filas impares
                         filas.forEach((fila, index) => {
@@ -436,16 +451,46 @@
                         btnResaltarEsquinas.classList.toggle("btn-primary");
                     })
 
+                    btnAumentarFuente.addEventListener("click", (event) => {
+                        event.preventDefault();
+
+                        let fontSizeActual = parseInt(window.getComputedStyle(tabla).fontSize); // Obtener el tamaño actual en número
+                        tabla.style.fontSize = (fontSizeActual + 2) + "px";
+                        // filas.forEach(fila => {
+                        //     let fontSizeActual = parseInt(window.getComputedStyle(fila).fontSize); // Obtener el tamaño actual en número
+                        //     fila.style.fontSize = (fontSizeActual + 2) + "px"; // Aumentar el tamaño
+                        // })
+                    })
+
+                    btnDisminuirFuente.addEventListener("click", (event) => {
+
+                        event.preventDefault();
+
+                        let fontSizeActual = parseInt(window.getComputedStyle(tabla).fontSize); // Obtener el tamaño actual en número
+                        tabla.style.fontSize = (fontSizeActual - 2) + "px";
+                        // filas.forEach(fila => {
+                        //     let fontSizeActual = parseInt(window.getComputedStyle(fila).fontSize); // Obtener el tamaño actual en número
+                        //     fila.style.fontSize = (fontSizeActual - 2) + "px"; // Aumentar el tamaño
+                        // })
+                    })
+
+                    const btnEspaciarContenido = document.getElementById("btn-espaciar-filas");
+
+                    btnEspaciarContenido.addEventListener("click", (event) => {
+                        event.preventDefault();
+                        console.log("Click 11")
+
+                        columnas.forEach((fila) => {
+                            fila.classList.toggle("espaciar-contenido");
+                        })
+
+                        btnEspaciarContenido.classList.toggle("btn-light")
+                        btnEspaciarContenido.classList.toggle("btn-primary")
+
+                    });
 
 
 
-                    const tabla = document.querySelector("#tabla-barrio-manzana table");
-                    const columnas = tabla.querySelectorAll("td");
-                    const columnasTh = tabla.querySelectorAll("th");
-                    const filas = tabla.querySelectorAll("tr");
-                    console.log(tabla)
-                    console.log("Columnas", columnasTh)
-                    const btnImprimir = document.getElementById("btn-imprimir");
 
                     // if (tabla) {
                     //     btnImprimir.style.display = "block";

@@ -233,3 +233,7 @@ table tr {
   width: 200px;
   max-width: 100%;
 }
+
+.espaciar-contenido {
+  line-height: 2.5 !important;
+}
