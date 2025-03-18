@@ -59,6 +59,16 @@
                     </div>
                 </div>
 
+
+                <div id="botones-menu" class="m-4 mx-auto text-center">
+                    <button class="btn btn-light no-imprimir mx-auto" id="btn-colorear">Resaltar alternado <i
+                            class="bi bi-highlights"></i></button>
+                    <button class="btn btn-light no-imprimir mx-auto" id="btn-resaltar-esquinas">Resaltar esquinas <i
+                            class="bi bi-pen-fill"></i>
+                    </button>
+                </div>
+
+
                 <h2 class="titulo-rol titulo-imprimir oculto">MI PRIMER CASA S.A. - PRECIO DE LOTES EN BARRIOS
                     <br>
                     BARRIO: <span id="barrio-span"></span> -
@@ -380,6 +390,53 @@
 
             <script>
                 document.addEventListener("DOMContentLoaded", () => {
+
+                    // Obtener el botón
+                    const btnResaltarAlternado = document.getElementById('btn-colorear');
+                    const btnResaltarEsquinas = document.getElementById("btn-resaltar-esquinas");
+
+                    // Añadir el evento de clic al botón
+                    btnResaltarAlternado.addEventListener('click', (event) => {
+                        event.preventDefault();
+                        // Seleccionar todas las filas de la tabla
+                        const filas = document.querySelectorAll('.tabla-barrio-manzana table tr');
+
+                        // Iterar sobre las filas y aplicar el color de fondo a las filas impares
+                        filas.forEach((fila, index) => {
+                            if (index % 2 === 0) {
+                                // Color para las filas impares
+                                fila.classList.toggle("resaltar-alternado");
+                                // Remover el color de las filas pares si ya existía
+                                // fila.style.backgroundColor = ''; 
+                            }
+                        });
+
+
+                        btnResaltarAlternado.classList.toggle("btn-light");
+                        btnResaltarAlternado.classList.toggle("btn-primary");
+                    });
+
+
+                    btnResaltarEsquinas.addEventListener("click", () => {
+                        event.preventDefault();
+                        // Seleccionar todas las filas de la tabla
+                        const filas = document.querySelectorAll('.tabla-barrio-manzana table tr');
+
+                        // Iterar sobre las filas y aplicar el color de fondo a las filas impares
+                        filas.forEach((fila, index) => {
+                            if (fila.textContent.includes("ESQ")) {
+                                // Color para las filas impares
+                                fila.classList.toggle("resaltar-esquinas");
+                                // Remover el color de las filas pares si ya existía
+                                // fila.style.backgroundColor = ''; 
+                            }
+                        });
+
+                        btnResaltarEsquinas.classList.toggle("btn-light");
+                        btnResaltarEsquinas.classList.toggle("btn-primary");
+                    })
+
+
 
 
                     const tabla = document.querySelector("#tabla-barrio-manzana table");

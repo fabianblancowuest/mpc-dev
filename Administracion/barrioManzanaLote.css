@@ -166,7 +166,20 @@ table tr {
 /* #dfe7fd o #fffbeb */
 
 .tabla-barrio-manzana table tr:nth-child(odd) {
-  background-color: #b3e5fc !important;
+  /* background-color: #b3e5fc !important; */
+}
+
+.resaltar-alternado {
+  /* background-color: #b3e5fc !important; */
+  background-color: #fff9c4; /* Amarillo pastel */
+  background-color: #ffeb3b; /* Amarillo vibrante */
+  background-color: #ffd700; /* Amarillo dorado */
+  font-weight: bold;
+}
+
+.resaltar-esquinas {
+  background-color: greenyellow;
+  font-weight: bold;
 }
 
 /* .tabla-barrio-manzana table tr:hover {

@@ -199,7 +199,6 @@ order by idEjercicioDetalle DEsc"></asp:SqlDataSource>
                     event.preventDefault();
 
                     const buttonText = btnEspaciar.innerText.trim();
-                    console.log("hola");
 
                     for (let i = 0; i < columnas.length; i++) {
                         columnas[i].classList.toggle("centrar-contenido");
