@@ -168,10 +168,8 @@ table tr {
 
 .resaltar-alternado {
   /* background-color: #b3e5fc !important; */
-  background-color: #fff9c4; /* Amarillo pastel */
-  background-color: #ffeb3b; /* Amarillo vibrante */
-  background-color: #ffd700; /* Amarillo dorado */
-  font-weight: bold;
+  background-color: #bec8d0; /* Amarillo pastel */
+  /* font-weight: bold; */
 }
 
 .resaltar-esquinas {
