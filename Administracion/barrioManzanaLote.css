@@ -202,3 +202,21 @@ table tr {
     display: none;
   }
 }
+
+.panel-alta-check div {
+  display: flex;
+  align-items: center !important;
+  justify-content: center !important;
+  flex-direction: row !important;
+  width: 500px;
+  max-width: 100%;
+  box-shadow: 0 0 5px black;
+  gap: 10px;
+  margin: 10px auto;
+  border-radius: 5px;
+}
+
+.panel-alta-check div .control-label {
+  width: 200px;
+  max-width: 100%;
+}

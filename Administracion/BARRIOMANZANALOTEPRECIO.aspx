@@ -327,20 +327,29 @@
                         <asp:TextBox ID="otxtBARRIOLOTEADHESIONREFERENCIA" runat="server" CssClass="form-control"
                             MaxLength="20"></asp:TextBox>
                     </div>
-                    <div class="form-group">
-                        <asp:Label ID="olblBARRIOLOTEESTADO" runat="server" Text="ESTADO DEL LOTE:"
-                            CssClass="control-label"></asp:Label>
-                        <asp:CheckBox ID="otxtBARRIOLOTEESTADO" runat="server" />
+                    <div class="form-group panel-alta-check">
+                        <div>
+                            <asp:Label ID="olblBARRIOLOTEESTADO" runat="server" Text="LOTE ACTIVO"
+                                CssClass="control-label"></asp:Label>
+
+                            <!-- Anterior --- Text:"ESTADO DEL LOTE" -->
+
+                            <asp:CheckBox ID="otxtBARRIOLOTEESTADO" runat="server" />
+                        </div>
                     </div>
-                    <div class="form-group">
-                        <asp:Label ID="olblBARRIOLOTEENVENTA" runat="server" Text="LOTE VENDIDO ?:"
-                            CssClass="control-label"></asp:Label>
-                        <asp:CheckBox ID="otxtBARRIOLOTEENVENTA" runat="server" />
+                    <div class="form-group panel-alta-check">
+                        <div>
+                            <asp:Label ID="olblBARRIOLOTEENVENTA" runat="server" Text="LOTE VENDIDO"
+                                CssClass="control-label"></asp:Label>
+                            <asp:CheckBox ID="otxtBARRIOLOTEENVENTA" runat="server" />
+                        </div>
                     </div>
-                    <div class="form-group">
-                        <asp:Label ID="olblBARRIOLOTEBONIFICADO" runat="server" Text="LOTE BONIFICADO ?:"
-                            CssClass="control-label"></asp:Label>
-                        <asp:CheckBox ID="otxtBARRIOLOTEBONIFICADO" runat="server" />
+                    <div class="form-group panel-alta-check">
+                        <div>
+                            <asp:Label ID="olblBARRIOLOTEBONIFICADO" runat="server" Text="LOTE BONIFICADO"
+                                CssClass="control-label"></asp:Label>
+                            <asp:CheckBox ID="otxtBARRIOLOTEBONIFICADO" runat="server" />
+                        </div>
                     </div>
                     <div class="form-group">
                         <asp:Label ID="olblPARCELACATASTRAL" runat="server" Text="NOMENCLATURA CATASTRAL:"
