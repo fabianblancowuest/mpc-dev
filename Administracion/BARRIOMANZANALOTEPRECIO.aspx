@@ -67,14 +67,16 @@
                             class="bi bi-pen-fill"></i>
                     </button>
                     <button id="btn-aumentar-fuente" class="btn btn-light no-imprimir">
-                        Amentar tamaño fuente
+                        Tamaño fuente <i class="bi bi-plus-square"></i>
                     </button>
                     <button id="btn-disminuir-fuente" class="btn btn-light no-imprimir">
-                        Disminuir tamaño fuente
+                        Tamaño fuente <i class="bi bi-dash-square"></i>
                     </button>
                     <button id="btn-espaciar-filas" class="btn btn-light no-imprimir">
-                        Espaciar Contenido
+                        Espaciar Contenido <i class="bi bi-text-center"></i>
                     </button>
+                    <button class="btn btn-primary btn-light" id="btn-imprimir">Imprimir <i
+                            class="bi bi-printer-fill"></i></button>
                 </div>
 
 
@@ -391,11 +393,6 @@
 
                 </form>
             </asp:Panel>
-
-            <button class="btn-basic btn btn-primary btn-imprimir" id="btn-imprimir">Imprimir <i
-                    class="bi bi-printer-fill"></i></button>
-
-
 
             <script>
                 document.addEventListener("DOMContentLoaded", () => {
