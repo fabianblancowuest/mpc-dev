@@ -196,3 +196,9 @@ table tr {
   justify-content: center;
   align-items: center;
 }
+
+@media (max-width: 768px) {
+  .btn-imprimir {
+    display: none;
+  }
+}

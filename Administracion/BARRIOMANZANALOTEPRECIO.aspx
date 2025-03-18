@@ -364,7 +364,7 @@
                 </form>
             </asp:Panel>
 
-            <button class="btn-basic btn btn-primary btn-imprimir btn-oculto" id="btn-imprimir">Imprimir <i
+            <button class="btn-basic btn btn-primary btn-imprimir" id="btn-imprimir">Imprimir <i
                     class="bi bi-printer-fill"></i></button>
 
 
@@ -381,13 +381,13 @@
                     console.log("Columnas", columnasTh)
                     const btnImprimir = document.getElementById("btn-imprimir");
 
-                    if (tabla) {
-                        btnImprimir.style.display = "block";
-                    }
+                    // if (tabla) {
+                    //     btnImprimir.style.display = "block";
+                    // }
 
-                    btnImprimir.addEventListener("click", () => {
-                        btnImprimir.style.display = none;
-                    })
+                    // btnImprimir.addEventListener("click", () => {
+                    //     btnImprimir.style.display = none;
+                    // })
 
                     // Índices de las columnas a modificar
                     // const indices = [9, 10, 12, 14];
