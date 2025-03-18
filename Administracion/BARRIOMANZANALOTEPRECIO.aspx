@@ -75,7 +75,7 @@
                     <button id="btn-espaciar-filas" class="btn btn-light no-imprimir">
                         Espaciar Contenido <i class="bi bi-text-center"></i>
                     </button>
-                    <button class="btn btn-primary btn-light" id="btn-imprimir">Imprimir <i
+                    <button class="btn btn-primary btn-light no-imprimir" id="btn-imprimir">Imprimir <i
                             class="bi bi-printer-fill"></i></button>
                 </div>
 
@@ -475,7 +475,6 @@
 
                     btnEspaciarContenido.addEventListener("click", (event) => {
                         event.preventDefault();
-                        console.log("Click 11")
 
                         columnas.forEach((fila) => {
                             fila.classList.toggle("espaciar-contenido");

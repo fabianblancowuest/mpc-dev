@@ -237,3 +237,7 @@ table tr {
 .espaciar-contenido {
   line-height: 2.5 !important;
 }
+
+#tabla-barrio-manzana table tr th {
+  /* text-transform: uppercase; */
+}
