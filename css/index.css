@@ -529,7 +529,7 @@ input[type="radio"] {
     border: 1px solid #ccc;
     border-radius: 8px;
     overflow: hidden;
-    background-color: #f9f9f9;
+    /* background-color: #f9f9f9; */
   }
 
   /* Las celdas se convierten en filas individuales */

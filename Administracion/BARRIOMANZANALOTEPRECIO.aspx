@@ -60,7 +60,7 @@
                 </div>
 
 
-                <div id="botones-menu" class="my-4 justify-content-center">
+                <div id="botones-menu" class="my-4 mx-auto justify-content-center">
                     <button class="btn btn-light no-imprimir" id="btn-colorear">Resaltar alternado <i
                             class="bi bi-highlights"></i></button>
                     <button class="btn btn-light no-imprimir" id="btn-resaltar-esquinas">Resaltar esquinas <i
