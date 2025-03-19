@@ -282,11 +282,12 @@
         </div>
         <div>
             <asp:Label ID="Label25" runat="server" Text="Imagen del Comprobante "></asp:Label>
-            <asp:Image ID="oimgComprobanteImagen" runat="server" />
+            <br />
+            <asp:Image ID="oimgComprobanteImagen" runat="server" Width ="50%"  Height ="50%"/>
              <asp:Label ID="olblComprobanteImagen" runat="server" Text=""></asp:Label>
 
             <asp:FileUpload ID="ofupImagen" runat="server" />
-            <asp:Button ID="Button1" runat="server" Text="Button" />
+            <asp:Button ID="Button1" runat="server" Text="Subir imagen" />
         </div>
         <div>
             <asp:Label ID="olblValidacionMensaje" runat="server" Text=""></asp:Label>
