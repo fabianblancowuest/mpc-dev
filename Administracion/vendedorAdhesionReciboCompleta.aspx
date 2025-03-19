@@ -31,7 +31,7 @@ order by operadorDescripcion "></asp:SqlDataSource>
                 <asp:ControlParameter ControlID="oddlVendedorAdhesion" Name="idVendedor" PropertyName="SelectedValue" Type="Int32" />
             </SelectParameters>
         </asp:SqlDataSource>
-        <asp:GridView ID="ogvAdhesionesVendedor" runat="server" AutoGenerateColumns="False" CssClass="table-cemmi" DataKeyNames="idLoteVenta" DataSourceID="odsAdhesionesVendedor" Font-Size="X-Small">
+        <asp:GridView ID="ogvAdhesionesVendedor" runat="server" AutoGenerateColumns="False" CssClass="table-cemmi" DataKeyNames="idLoteVenta,idBarrioLote,loteVentaCodigo,loteVentaDescripcion,idBarrio,idVendedor,loteVentaFechaVisita,loteVentaAdhesionMonto,loteVentaCuotaMonto,cliente01Nombre,cliente01DNI,cliente01Domicilio,cliente01Telefono,cliente02Nombre,cliente02DNI,cliente02Domicilio,cliente02Telefono,idClienteIVA,clienteCUIT,idLoteDimension,idCuotasCantidad,idLoteTipo,loteVentafechaCancelacion,LOTEPRECIOBC,CUOTABC,idLoteEstado,idBarrioLote01,Barrio,MZ,PC,Cobrado,saldoAdhesion,CantidadRecibos,EstadoCobranza" DataSourceID="odsAdhesionesVendedor" Font-Size="X-Small">
             <Columns>
                 <asp:CommandField ShowSelectButton="True" />
                 <asp:BoundField DataField="idLoteVenta" HeaderText="id Lote Venta" InsertVisible="False" ReadOnly="True" SortExpression="idLoteVenta" />

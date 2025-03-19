@@ -325,8 +325,9 @@ Partial Class Administracion_contratoRevision
     Protected Sub obutEdita_Click(sender As Object, e As EventArgs) Handles obutEdita.Click
         PanelSeleccion.Visible = False
         PanelAlta.Visible = True
+        'oddlBarrioHabilitadoManzanaSeleccionaCambio .databind
 
-        oddlBarrioHabilitadoManzanaSeleccionaCambio.SelectedValue = oddlBarrioHabilitadoManzanaSelecciona.SelectedValue
+        'oddlBarrioHabilitadoManzanaSeleccionaCambio.SelectedValue = oddlBarrioHabilitadoManzanaSelecciona.SelectedValue
         oddlBARRIOLOTEOPERADORCAMBIA.SelectedValue = oddlBARRIOLOTEOperador.SelectedValue
         edicion()
 
