@@ -18,7 +18,7 @@
                         Text="Gestión de revisión de contratos de adhesión celebrados con clientes"></asp:Label>
                 </h2>
                 <!-- Selecciones -->
-                <div class="revision-contratos-select">
+                <div class="revision-contratos-select vendedor-gestiona-lotes-todos-los-barrios separar">
                     <div class="py-2">
                         <%=Session ("idBarrio") %>
                             <asp:Label ID="olblSeleccionaBarrio" runat="server" Text="Seleccione Barrio:"></asp:Label>
@@ -203,7 +203,8 @@
                 </div>
             </asp:Panel>
 
-            <asp:Panel ID="PanelAlta" runat="server" Visible="false">
+            <asp:Panel ID="PanelAlta" runat="server" Visible="false"
+                CssClass="vendedor-gestiona-lotes-todos-los-barrios separar">
 
                 <div>
                     <asp:Label ID="olblIDBarrioLoteOperador" runat="server" Text=""></asp:Label>
@@ -289,7 +290,7 @@
                             Visible="false"></asp:TextBox>
                     </div>
 
-                    <div class="form-group">
+                    <div class="form-group mt-4 text-center">
                         <asp:Label ID="olblIDVENDEDOR" runat="server" Text="Vendedor:" CssClass="control-label">
                         </asp:Label>
                         <asp:SqlDataSource ID="odsVENDEDOR" runat="server"
@@ -297,148 +298,177 @@
                             SelectCommand="vendedorIDTraerODDLTodos" SelectCommandType="StoredProcedure">
                         </asp:SqlDataSource>
                         <asp:DropDownList ID="oddlVENDEDOR" runat="server" DataSourceID="odsVENDEDOR"
-                            DataTextField="VENDEDORDescripcion" DataValueField="IDVENDEDOR" CssClass="form-control">
+                            DataTextField="VENDEDORDescripcion" DataValueField="IDVENDEDOR"
+                            CssClass="fform-control mx-auto text-center">
                         </asp:DropDownList>
                     </div>
-                    <div class="form-group">
-                        <asp:Label ID="olblLOTEVENTAFECHAVISITA" runat="server"
-                            Text="Fecha de Venta:  ingresar DD/MM/AAAA" CssClass="control-label"></asp:Label>
-                        <asp:TextBox ID="otxtLOTEVENTAFECHAVISITA" CssClass="" runat="server"></asp:TextBox>
 
-                        <asp:Calendar ID="Calendar1" runat="server"></asp:Calendar>
-                    </div>
+                    <div class="calendarios">
 
+                        <div class="calendario">
 
-                    <div class="form-group">
-                        <asp:Label ID="Label10" runat="server" Text="Fecha de Cancelacion :  ingresar DD/MM/AAAA"
-                            CssClass="control-label"></asp:Label>
-                        <asp:TextBox ID="otxtLOTEVENTAFECHACANCELACION" CssClass="" runat="server"></asp:TextBox>
+                            <div class="form-group">
+                                <asp:Label ID="olblLOTEVENTAFECHAVISITA" runat="server"
+                                    Text="Fecha de Venta:  ingresar DD/MM/AAAA" CssClass="control-label"></asp:Label>
+                                <asp:TextBox ID="otxtLOTEVENTAFECHAVISITA" CssClass="" runat="server"></asp:TextBox>
 
-                        <asp:Calendar ID="Calendar2" runat="server"></asp:Calendar>
-                    </div>
-                    <div class="form-group">
-                        <asp:Label ID="olblLOTEVENTAADHESIONMONTO" runat="server" Text="Precio Total Adhesion:"
-                            CssClass="control-label"></asp:Label>
-                        <asp:TextBox ID="otxtLOTEVENTAADHESIONMONTO" runat="server" CssClass="form-control"
-                            MaxLength="12"></asp:TextBox>
-                    </div>
+                                <asp:Calendar ID="Calendar1" runat="server"></asp:Calendar>
+                            </div>
+                        </div>
 
+                        <div class="calendario">
 
-                    <div class="form-group">
-                        <asp:Label ID="Label9" runat="server" Text="Monto Cuota:" CssClass="control-label"></asp:Label>
-                        <asp:TextBox ID="otxtLOTEVENTACUOTAMONTO" runat="server" CssClass="form-control" MaxLength="12">
-                        </asp:TextBox>
-                    </div>
-                    <div class="form-group">
-                        <asp:Label ID="olblCLIENTE01NOMBRE" runat="server" Text="1 - Sr / Sra.:"
-                            CssClass="control-label"></asp:Label>
-                        <asp:TextBox ID="otxtCLIENTE01NOMBRE" runat="server" CssClass="form-control" MaxLength="100">
-                        </asp:TextBox>
-                    </div>
-                    <div class="form-group">
-                        <asp:Label ID="olblCLIENTE01DNI" runat="server" Text="1 - DNI:" CssClass="control-label">
-                        </asp:Label>
-                        <asp:TextBox ID="otxtCLIENTE01DNI" runat="server" CssClass="form-control" MaxLength="20">
-                        </asp:TextBox>
-                    </div>
-                    <div class="form-group">
-                        <asp:Label ID="olblCLIENTE01DOMICILIO" runat="server" Text="1 - Domicilio:"
-                            CssClass="control-label"></asp:Label>
-                        <asp:TextBox ID="otxtCLIENTE01DOMICILIO" runat="server" CssClass="form-control" MaxLength="100">
-                        </asp:TextBox>
-                    </div>
-                    <div class="form-group">
-                        <asp:Label ID="olblCLIENTE01TELEFONO" runat="server" Text="1 - Telefono:"
-                            CssClass="control-label"></asp:Label>
-                        <asp:TextBox ID="otxtCLIENTE01TELEFONO" runat="server" CssClass="form-control" MaxLength="20">
-                        </asp:TextBox>
-                    </div>
-                    <div class="form-group">
-                        <asp:Label ID="olblCLIENTE02NOMBRE" runat="server" Text="2 - Sr / Sra:"
-                            CssClass="control-label"></asp:Label>
-                        <asp:TextBox ID="otxtCLIENTE02NOMBRE" runat="server" CssClass="form-control" MaxLength="100">
-                        </asp:TextBox>
-                    </div>
-                    <div class="form-group">
-                        <asp:Label ID="olblCLIENTE02DNI" runat="server" Text="2 - DNI:" CssClass="control-label">
-                        </asp:Label>
-                        <asp:TextBox ID="otxtCLIENTE02DNI" runat="server" CssClass="form-control" MaxLength="20">
-                        </asp:TextBox>
-                    </div>
-                    <div class="form-group">
-                        <asp:Label ID="olblCLIENTE02DOMICILIO" runat="server" Text="2 - Domicilio:"
-                            CssClass="control-label"></asp:Label>
-                        <asp:TextBox ID="otxtCLIENTE02DOMICILIO" runat="server" CssClass="form-control" MaxLength="100">
-                        </asp:TextBox>
-                    </div>
-                    <div class="form-group">
-                        <asp:Label ID="olblCLIENTE02TELEFONO" runat="server" Text="2 - Telefono:"
-                            CssClass="control-label"></asp:Label>
-                        <asp:TextBox ID="otxtCLIENTE02TELEFONO" runat="server" CssClass="form-control" MaxLength="20">
-                        </asp:TextBox>
-                    </div>
-                    <div class="form-group">
-                        <asp:Label ID="olblIDCLIENTEIVA" runat="server" Text="Condicion IVA comprador:"
-                            CssClass="control-label"></asp:Label>
-                        <asp:SqlDataSource ID="odsCLIENTEIVA" runat="server"
-                            ConnectionString="<%$ ConnectionStrings:STRSYSTEM %>" SelectCommand="CLIENTEIVATraerOddl"
-                            SelectCommandType="StoredProcedure"></asp:SqlDataSource>
-                        <asp:DropDownList ID="oddlCLIENTEIVA" runat="server" DataSourceID="odsCLIENTEIVA"
-                            DataTextField="CLIENTEIVADescripcion" DataValueField="IDCLIENTEIVA" CssClass="form-control">
-                        </asp:DropDownList>
-                    </div>
-                    <div class="form-group">
-                        <asp:Label ID="olblCLIENTECUIT" runat="server" Text="CUIT Comprador:" CssClass="control-label">
-                        </asp:Label>
-                        <asp:TextBox ID="otxtCLIENTECUIT" runat="server" CssClass="form-control" MaxLength="13">
-                        </asp:TextBox>
-                    </div>
-                    <div class="form-group">
-                        <asp:Label ID="olblIDLOTEDIMENSION" runat="server" Text="Dimension:" CssClass="control-label">
-                        </asp:Label>
-                        <asp:SqlDataSource ID="odsLOTEDIMENSION" runat="server"
-                            ConnectionString="<%$ ConnectionStrings:STRSYSTEM %>" SelectCommand="LOTEDIMENSIONTraerOddl"
-                            SelectCommandType="StoredProcedure"></asp:SqlDataSource>
-                        <asp:DropDownList ID="oddlLOTEDIMENSION" runat="server" DataSourceID="odsLOTEDIMENSION"
-                            DataTextField="LOTEDIMENSIONDescripcion" DataValueField="IDLOTEDIMENSION"
-                            CssClass="form-control">
-                        </asp:DropDownList>
-                    </div>
-                    <div class="form-group">
-                        <asp:Label ID="olblIDCUOTASCANTIDAD" runat="server" Text="Cantidad Cuotas:"
-                            CssClass="control-label"></asp:Label>
-                        <asp:SqlDataSource ID="odsCUOTASCANTIDAD" runat="server"
-                            ConnectionString="<%$ ConnectionStrings:STRSYSTEM %>"
-                            SelectCommand="CUOTASCANTIDADTraerOddl" SelectCommandType="StoredProcedure">
-                        </asp:SqlDataSource>
-                        <asp:DropDownList ID="oddlCUOTASCANTIDAD" runat="server" DataSourceID="odsCUOTASCANTIDAD"
-                            DataTextField="CUOTASCANTIDADDescripcion" DataValueField="IDCUOTASCANTIDAD"
-                            CssClass="form-control">
-                        </asp:DropDownList>
-                    </div>
-                    <div class="form-group">
-                        <asp:Label ID="olblIDLOTETIPO" runat="server" Text="Tipo de Lote:" CssClass="control-label">
-                        </asp:Label>
-                        <asp:SqlDataSource ID="odsLOTETIPO" runat="server"
-                            ConnectionString="<%$ ConnectionStrings:STRSYSTEM %>" SelectCommand="LOTETIPOTraerOddl"
-                            SelectCommandType="StoredProcedure"></asp:SqlDataSource>
-                        <asp:DropDownList ID="oddlLOTETIPO" runat="server" DataSourceID="odsLOTETIPO"
-                            DataTextField="LOTETIPODescripcion" DataValueField="IDLOTETIPO" CssClass="form-control">
-                        </asp:DropDownList>
-                    </div>
-                    <div class="form-group">
-                        <asp:Label ID="Label12" runat="server" Text="Precio TOTAL Lote en BC:" CssClass="control-label">
-                        </asp:Label>
-                        <asp:TextBox ID="OTXTLOTEPRECIOBC" runat="server" CssClass="form-control" MaxLength="12">
-                        </asp:TextBox>
+                            <div class="form-group">
+                                <asp:Label ID="Label10" runat="server"
+                                    Text="Fecha de Cancelacion :  ingresar DD/MM/AAAA" CssClass="control-label">
+                                </asp:Label>
+                                <asp:TextBox ID="otxtLOTEVENTAFECHACANCELACION" CssClass="" runat="server">
+                                </asp:TextBox>
+
+                                <asp:Calendar ID="Calendar2" runat="server"></asp:Calendar>
+                            </div>
+                        </div>
                     </div>
 
-                    <div class="form-group">
-                        <asp:Label ID="Label13" runat="server" Text="Monto Cuota Mensual en BC: "
-                            CssClass="control-label"></asp:Label>
-                        <asp:TextBox ID="OTXTCUOTABC" runat="server" CssClass="form-control" MaxLength="12">
-                        </asp:TextBox>
+                    <div class="datos-venta">
+                        <div class="form-group">
+                            <asp:Label ID="olblLOTEVENTAADHESIONMONTO" runat="server" Text="Precio Total Adhesion:"
+                                CssClass="control-label"></asp:Label>
+                            <asp:TextBox ID="otxtLOTEVENTAADHESIONMONTO" runat="server" CssClass="form-control"
+                                MaxLength="12"></asp:TextBox>
+                        </div>
+
+                        <div class="form-group">
+                            <asp:Label ID="Label9" runat="server" Text="Monto Cuota:" CssClass="control-label">
+                            </asp:Label>
+                            <asp:TextBox ID="otxtLOTEVENTACUOTAMONTO" runat="server" CssClass="form-control"
+                                MaxLength="12">
+                            </asp:TextBox>
+                        </div>
+                        <div class="form-group">
+                            <asp:Label ID="olblCLIENTE01NOMBRE" runat="server" Text="1 - Sr / Sra.:"
+                                CssClass="control-label"></asp:Label>
+                            <asp:TextBox ID="otxtCLIENTE01NOMBRE" runat="server" CssClass="form-control"
+                                MaxLength="100">
+                            </asp:TextBox>
+                        </div>
+                        <div class="form-group">
+                            <asp:Label ID="olblCLIENTE01DNI" runat="server" Text="1 - DNI:" CssClass="control-label">
+                            </asp:Label>
+                            <asp:TextBox ID="otxtCLIENTE01DNI" runat="server" CssClass="form-control" MaxLength="20">
+                            </asp:TextBox>
+                        </div>
+                        <div class="form-group">
+                            <asp:Label ID="olblCLIENTE01DOMICILIO" runat="server" Text="1 - Domicilio:"
+                                CssClass="control-label"></asp:Label>
+                            <asp:TextBox ID="otxtCLIENTE01DOMICILIO" runat="server" CssClass="form-control"
+                                MaxLength="100">
+                            </asp:TextBox>
+                        </div>
+                        <div class="form-group">
+                            <asp:Label ID="olblCLIENTE01TELEFONO" runat="server" Text="1 - Telefono:"
+                                CssClass="control-label"></asp:Label>
+                            <asp:TextBox ID="otxtCLIENTE01TELEFONO" runat="server" CssClass="form-control"
+                                MaxLength="20">
+                            </asp:TextBox>
+                        </div>
+                        <div class="form-group">
+                            <asp:Label ID="olblCLIENTE02NOMBRE" runat="server" Text="2 - Sr / Sra:"
+                                CssClass="control-label"></asp:Label>
+                            <asp:TextBox ID="otxtCLIENTE02NOMBRE" runat="server" CssClass="form-control"
+                                MaxLength="100">
+                            </asp:TextBox>
+                        </div>
+                        <div class="form-group">
+                            <asp:Label ID="olblCLIENTE02DNI" runat="server" Text="2 - DNI:" CssClass="control-label">
+                            </asp:Label>
+                            <asp:TextBox ID="otxtCLIENTE02DNI" runat="server" CssClass="form-control" MaxLength="20">
+                            </asp:TextBox>
+                        </div>
+                        <div class="form-group">
+                            <asp:Label ID="olblCLIENTE02DOMICILIO" runat="server" Text="2 - Domicilio:"
+                                CssClass="control-label"></asp:Label>
+                            <asp:TextBox ID="otxtCLIENTE02DOMICILIO" runat="server" CssClass="form-control"
+                                MaxLength="100">
+                            </asp:TextBox>
+                        </div>
+                        <div class="form-group">
+                            <asp:Label ID="olblCLIENTE02TELEFONO" runat="server" Text="2 - Telefono:"
+                                CssClass="control-label"></asp:Label>
+                            <asp:TextBox ID="otxtCLIENTE02TELEFONO" runat="server" CssClass="form-control"
+                                MaxLength="20">
+                            </asp:TextBox>
+                        </div>
+                        <div class="form-group">
+                            <asp:Label ID="olblIDCLIENTEIVA" runat="server" Text="Condicion IVA comprador:"
+                                CssClass="control-label"></asp:Label>
+                            <asp:SqlDataSource ID="odsCLIENTEIVA" runat="server"
+                                ConnectionString="<%$ ConnectionStrings:STRSYSTEM %>"
+                                SelectCommand="CLIENTEIVATraerOddl" SelectCommandType="StoredProcedure">
+                            </asp:SqlDataSource>
+                            <asp:DropDownList ID="oddlCLIENTEIVA" runat="server" DataSourceID="odsCLIENTEIVA"
+                                DataTextField="CLIENTEIVADescripcion" DataValueField="IDCLIENTEIVA"
+                                CssClass="form-control">
+                            </asp:DropDownList>
+                        </div>
+                        <div class="form-group">
+                            <asp:Label ID="olblCLIENTECUIT" runat="server" Text="CUIT Comprador:"
+                                CssClass="control-label">
+                            </asp:Label>
+                            <asp:TextBox ID="otxtCLIENTECUIT" runat="server" CssClass="form-control" MaxLength="13">
+                            </asp:TextBox>
+                        </div>
+                        <div class="form-group">
+                            <asp:Label ID="olblIDLOTEDIMENSION" runat="server" Text="Dimension:"
+                                CssClass="control-label">
+                            </asp:Label>
+                            <asp:SqlDataSource ID="odsLOTEDIMENSION" runat="server"
+                                ConnectionString="<%$ ConnectionStrings:STRSYSTEM %>"
+                                SelectCommand="LOTEDIMENSIONTraerOddl" SelectCommandType="StoredProcedure">
+                            </asp:SqlDataSource>
+                            <asp:DropDownList ID="oddlLOTEDIMENSION" runat="server" DataSourceID="odsLOTEDIMENSION"
+                                DataTextField="LOTEDIMENSIONDescripcion" DataValueField="IDLOTEDIMENSION"
+                                CssClass="form-control">
+                            </asp:DropDownList>
+                        </div>
+                        <div class="form-group">
+                            <asp:Label ID="olblIDCUOTASCANTIDAD" runat="server" Text="Cantidad Cuotas:"
+                                CssClass="control-label"></asp:Label>
+                            <asp:SqlDataSource ID="odsCUOTASCANTIDAD" runat="server"
+                                ConnectionString="<%$ ConnectionStrings:STRSYSTEM %>"
+                                SelectCommand="CUOTASCANTIDADTraerOddl" SelectCommandType="StoredProcedure">
+                            </asp:SqlDataSource>
+                            <asp:DropDownList ID="oddlCUOTASCANTIDAD" runat="server" DataSourceID="odsCUOTASCANTIDAD"
+                                DataTextField="CUOTASCANTIDADDescripcion" DataValueField="IDCUOTASCANTIDAD"
+                                CssClass="form-control">
+                            </asp:DropDownList>
+                        </div>
+                        <div class="form-group">
+                            <asp:Label ID="olblIDLOTETIPO" runat="server" Text="Tipo de Lote:" CssClass="control-label">
+                            </asp:Label>
+                            <asp:SqlDataSource ID="odsLOTETIPO" runat="server"
+                                ConnectionString="<%$ ConnectionStrings:STRSYSTEM %>" SelectCommand="LOTETIPOTraerOddl"
+                                SelectCommandType="StoredProcedure"></asp:SqlDataSource>
+                            <asp:DropDownList ID="oddlLOTETIPO" runat="server" DataSourceID="odsLOTETIPO"
+                                DataTextField="LOTETIPODescripcion" DataValueField="IDLOTETIPO" CssClass="form-control">
+                            </asp:DropDownList>
+                        </div>
+                        <div class="form-group">
+                            <asp:Label ID="Label12" runat="server" Text="Precio TOTAL Lote en BC:"
+                                CssClass="control-label">
+                            </asp:Label>
+                            <asp:TextBox ID="OTXTLOTEPRECIOBC" runat="server" CssClass="form-control" MaxLength="12">
+                            </asp:TextBox>
+                        </div>
+
+                        <div class="form-group">
+                            <asp:Label ID="Label13" runat="server" Text="Monto Cuota Mensual en BC: "
+                                CssClass="control-label"></asp:Label>
+                            <asp:TextBox ID="OTXTCUOTABC" runat="server" CssClass="form-control" MaxLength="12">
+                            </asp:TextBox>
+                        </div>
                     </div>
+
                     <div class="col-sm-offset-2 col-sm-10">
 
                         <asp:Label ID="olblGestionCodigo" runat="server" Text="" Visible="false"></asp:Label>
