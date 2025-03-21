@@ -148,11 +148,11 @@
                             CssClass="control-label"></asp:Label>
                         <asp:CalendarExtender ID="oceOPERADORULTIMOLOGIN" runat="server"
                             TargetControlID="otxtOPERADORULTIMOLOGIN" Format="dd/MM/yyyy" PopupPosition="BottomRight"
-                            PopupButtonID="obutOPERADORULTIMOLOGINPopup">
+                            PopupButtonID="obutOPERADORULTIMOLOGINPopup" CssClass="calendario">
                         </asp:CalendarExtender>
                         <asp:TextBox ID="otxtOPERADORULTIMOLOGIN" CssClass="form-control" runat="server"></asp:TextBox>
-                        <asp:Button ID="obutOPERADORULTIMOLOGINPopup" runat="server"
-                            CssClass="obut-ocal-popup-button" />
+                        <asp:Button ID="obutOPERADORULTIMOLOGINPopup" runat="server" Text="Seleccionar Fecha"
+                            CssClass="obut-ocal-popup-button btn btn-primary" />
                     </div>
                     <div class="form-group">
                         <asp:Label ID="olblOPERADORESTADO" runat="server"
