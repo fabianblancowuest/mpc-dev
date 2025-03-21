@@ -903,8 +903,8 @@ select {
 
 .panel-impresion-contrato {
   margin-top: 10mm;
-  margin-left: 13mm;
-  margin-right: 11mm;
+  margin-left: 12mm;
+  margin-right: 12mm;
 }
 
 @media print {
