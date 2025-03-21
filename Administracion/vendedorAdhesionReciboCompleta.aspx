@@ -81,15 +81,19 @@ order by operadorDescripcion "></asp:SqlDataSource>
             <asp:Label ID="Label3" runat="server" Text="Recibos por vendedor y adhesión."></asp:Label>
         </div>
         <div>
+             <asp:Label ID="Label12" runat="server" Text="Adhesion:"></asp:Label>
+            <asp:Label ID="olblIdLoteVenta" runat="server" Text="" Font-Bold="true"></asp:Label>
+        </div>
+        <div>
             <asp:Label ID="Label4" runat="server" Text="Barrio:"></asp:Label>
             <asp:Label ID="olblBarrio" runat="server" Text="" Font-Bold="true"></asp:Label>
-        </div>
-        <div>
-            <asp:Label ID="Label5" runat="server" Text="Manzana:"></asp:Label>
+        <%--</div>
+        <div>--%>
+            <asp:Label ID="Label5" runat="server" Text=" , Manzana:"></asp:Label>
             <asp:Label ID="olblManzana" runat="server" Text="" Font-Bold="true"></asp:Label>
-        </div>
-        <div>
-            <asp:Label ID="Label6" runat="server" Text="Parcela:"></asp:Label>
+       <%-- </div>
+        <div>--%>
+            <asp:Label ID="Label6" runat="server" Text=" , Parcela:"></asp:Label>
             <asp:Label ID="olblParcela" runat="server" Text="" Font-Bold="true"></asp:Label>
         </div>
 
@@ -119,7 +123,34 @@ order by operadorDescripcion "></asp:SqlDataSource>
             <asp:Label ID="olblAdhesionSaldo" runat="server" Text="" Font-Bold="true"></asp:Label>
         </div>
         <br />
+        <div>
+            <asp:SqlDataSource ID="odsloteVentaRecibo" runat="server" ConnectionString="<%$ ConnectionStrings:ordenCompra %>" SelectCommand="loteVentaRecibo" SelectCommandType="StoredProcedure">
 
+
+                <SelectParameters>
+                    <asp:ControlParameter ControlID="olblIdLoteVenta" Name="idLoteVenta" PropertyName="Text" Type="Int32" />
+                </SelectParameters>
+
+
+            </asp:SqlDataSource>
+
+
+            <asp:GridView ID="ogvLoteVentaRecibo" runat="server" AutoGenerateColumns="False" CssClass="table-cemmi" DataKeyNames="idRecibo" DataSourceID="odsloteVentaRecibo" EmptyDataText="No existen recibos vinculados a la adhesión seleccionada." Font-Size="Small">
+                <Columns>
+                    <asp:BoundField DataField="idRecibo" HeaderText="idRecibo" InsertVisible="False" ReadOnly="True" SortExpression="idRecibo" Visible="False" />
+                    <asp:BoundField DataField="reciboNumero" HeaderText="Numero" SortExpression="reciboNumero" />
+                    <asp:BoundField DataField="reciboFechaCobranza" HeaderText="Fecha Cobranza" SortExpression="reciboFechaCobranza" />
+                    <asp:BoundField DataField="reciboEfectivo" HeaderText="Monto Efectivo" SortExpression="reciboEfectivo" />
+                    <asp:BoundField DataField="reciboTransferencia" HeaderText="Monto Transferencia" SortExpression="reciboTransferencia" />
+                    <asp:BoundField DataField="idLoteVenta" HeaderText="idLoteVenta" SortExpression="idLoteVenta" Visible="False" />
+                    <asp:BoundField DataField="reciboObservacion" HeaderText="Observacion" SortExpression="reciboObservacion" />
+                    <asp:CheckBoxField DataField="reciboEstado" HeaderText="reciboEstado" SortExpression="reciboEstado" />
+                </Columns>
+            </asp:GridView>
+        </div>
+        <div>
+            <asp:Button ID="obutReciboVolver" runat="server" Text="Volver a reporte de adhesiones" />
+        </div>
     </asp:Panel>
 
 </asp:Content>
