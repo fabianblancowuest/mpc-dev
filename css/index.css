@@ -903,13 +903,19 @@ select {
 
 .panel-impresion-contrato {
   margin-top: 10mm;
-  margin-left: 12mm;
-  margin-right: 12mm;
+  margin-left: 4mm;
+  margin-right: 4mm;
 }
 
 @media print {
   @page: first {
     margin-bottom: 3cm;
+  }
+
+  .panel-impresion-contrato {
+    margin-top: 10mm;
+    margin-left: 12mm;
+    margin-right: 12mm;
   }
 }
 
