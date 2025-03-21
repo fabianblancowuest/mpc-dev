@@ -1088,3 +1088,23 @@ select {
   outline: 1px solid #337ab7;
   box-shadow: 1px 1px 3px #337ab7;
 } */
+
+.contenedor-centrado .form-control,
+.contenedor-centrado span:not(.check) {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.contenedor-centrado span {
+  text-align: center;
+}
+
+.contenedor-centrado .check {
+  display: flex;
+  justify-content: center;
+  max-width: 100%;
+  width: 500px;
+  margin-left: auto;
+  margin-right: auto;
+}

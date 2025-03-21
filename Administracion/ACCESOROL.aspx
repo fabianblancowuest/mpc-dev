@@ -32,7 +32,7 @@
                      <asp:ControlParameter ControlID="otxtCadena" Name="cadena" PropertyName="Text" Type="String" />
                   </SelectParameters>
                </asp:SqlDataSource>
-               <div id="tabla-acceso-rol" class="table-responsive">
+               <div id="tabla-acceso-rol" class="table-responsive contenedor-centrado">
                   <asp:GridView ID="ogvACCESOROL" runat="server" AutoGenerateColumns="False"
                      CssClass="table-cemmi tabla-adaptada" AlternatingRowStyle-CssClass="alt" AllowPaging="True"
                      PageSize="15" PagerStyle-CssClass="pgr"
@@ -77,13 +77,13 @@
          </asp:Panel>
 
 
-         <asp:Panel ID="PanelAlta" runat="server" Visible="false">
-            <form class="form" role="form">
+         <asp:Panel ID="PanelAlta" runat="server" Visible="false" CssClass="contenedor-centrado">
+            <form class="form contenedor-centrado" role="form">
 
-               <div class="form-group">
+               <div class="form-group text-center">
                   <asp:Label ID="olblIDACCESOROL" runat="server" Text="" Visible="false"></asp:Label>
                </div>
-               <div class="form-group">
+               <div class="form-group text-center">
                   <asp:Label ID="olblACCESOROLCODIGO" runat="server" Text="CÓDIGO DE ROL:" CssClass="control-label">
                   </asp:Label>
                   <asp:TextBox ID="otxtACCESOROLCODIGO" runat="server" CssClass="form-control" MaxLength="65">
@@ -113,7 +113,7 @@
                   <asp:TextBox ID="otxtACCESOROLDOCUMENTOOPERATIVO" runat="server" CssClass="form-control"
                      MaxLength="100"></asp:TextBox>
                </div>
-               <div class="form-group">
+               <div class="form-group check">
                   <asp:Label ID="olblACCESOROLESTADO" runat="server" Text="ESTADO (HABILITADO / INHABILITADO):"
                      CssClass="control-label"></asp:Label>
                   <asp:CheckBox ID="otxtACCESOROLESTADO" runat="server" />
