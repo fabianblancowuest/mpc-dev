@@ -1,8 +1,11 @@
 ﻿<%@ Page Title="Asignacion de recibos de cobro por adhesion y vendedor." Language="VB" MasterPageFile="~/master/p.master" AutoEventWireup="false" CodeFile="vendedorAdhesionReciboCompleta.aspx.vb" Inherits="Administracion_vendedorAdhesionReciboCompleta" %>
-
+<%@ Register Assembly="AjaxControlToolkit" Namespace="AjaxControlToolkit" TagPrefix="asp" %>   
 <asp:Content ID="Content1" ContentPlaceHolderID="head" Runat="Server">
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" Runat="Server">
+    
+<asp:ScriptManager ID="ScriptManager1" runat="server" EnableScriptGlobalization="true" EnableScriptLocalization="true"></asp:ScriptManager>  
+     <asp:Label ID="olblgestionDescripcionAlta" runat="server" Text=""></asp:Label>
 
     <div>
         <asp:Label ID="Label1" runat="server" Text="Asignacion de recibos de cobro por vendedor a sus adhesiones."></asp:Label>
@@ -135,23 +138,101 @@ order by operadorDescripcion "></asp:SqlDataSource>
             </asp:SqlDataSource>
 
 
-            <asp:GridView ID="ogvLoteVentaRecibo" runat="server" AutoGenerateColumns="False" CssClass="table-cemmi" DataKeyNames="idRecibo" DataSourceID="odsloteVentaRecibo" EmptyDataText="No existen recibos vinculados a la adhesión seleccionada." Font-Size="Small">
+            <asp:GridView ID="ogvLoteVentaRecibo" runat="server" AutoGenerateColumns="False" CssClass="table-cemmi" DataSourceID="odsloteVentaRecibo" EmptyDataText="No existen recibos vinculados a la adhesión seleccionada." Font-Size="Small">
                 <Columns>
-                    <asp:BoundField DataField="idRecibo" HeaderText="idRecibo" InsertVisible="False" ReadOnly="True" SortExpression="idRecibo" Visible="False" />
-                    <asp:BoundField DataField="reciboNumero" HeaderText="Numero" SortExpression="reciboNumero" />
-                    <asp:BoundField DataField="reciboFechaCobranza" HeaderText="Fecha Cobranza" SortExpression="reciboFechaCobranza" />
-                    <asp:BoundField DataField="reciboEfectivo" HeaderText="Monto Efectivo" SortExpression="reciboEfectivo" />
-                    <asp:BoundField DataField="reciboTransferencia" HeaderText="Monto Transferencia" SortExpression="reciboTransferencia" />
-                    <asp:BoundField DataField="idLoteVenta" HeaderText="idLoteVenta" SortExpression="idLoteVenta" Visible="False" />
-                    <asp:BoundField DataField="reciboObservacion" HeaderText="Observacion" SortExpression="reciboObservacion" />
-                    <asp:CheckBoxField DataField="reciboEstado" HeaderText="reciboEstado" SortExpression="reciboEstado" />
+                    <asp:BoundField DataField="idReciboAdhesion" HeaderText="idReciboAdhesion" InsertVisible="False" ReadOnly="True" SortExpression="idReciboAdhesion" />
+                    <asp:BoundField DataField="reciboAdhesionCodigo" HeaderText="reciboAdhesionCodigo" SortExpression="reciboAdhesionCodigo" />
+                    <asp:BoundField DataField="reciboAdhesionDescripcion" HeaderText="reciboAdhesionDescripcion" SortExpression="reciboAdhesionDescripcion" />
+                    <asp:BoundField DataField="reciboAdhesionEstado" HeaderText="reciboAdhesionEstado" SortExpression="reciboAdhesionEstado" />
+                    <asp:BoundField DataField="idLoteVenta" HeaderText="idLoteVenta" SortExpression="idLoteVenta" />
+                    <asp:BoundField DataField="reciboNumero" HeaderText="reciboNumero" SortExpression="reciboNumero" />
+                    <asp:BoundField DataField="reciboFechaCobranza" HeaderText="reciboFechaCobranza" SortExpression="reciboFechaCobranza" />
+                    <asp:BoundField DataField="reciboMontoEfectivo" HeaderText="reciboMontoEfectivo" SortExpression="reciboMontoEfectivo" />
+                    <asp:BoundField DataField="reciboMontoTransferencia" HeaderText="reciboMontoTransferencia" SortExpression="reciboMontoTransferencia" />
                 </Columns>
             </asp:GridView>
         </div>
         <div>
+            <br />
             <asp:Button ID="obutReciboVolver" runat="server" Text="Volver a reporte de adhesiones" />
         </div>
+        <div>
+            <asp:Button ID="obutVinculaNuevoRecibo" runat="server" Text="Vincula nuevo recibo a la presente adhesion." BackColor ="Green" ForeColor ="White"  />
+
+
+        </div>
+       
+
+
     </asp:Panel>
+     <asp:Panel ID="PanelAlta" runat="server" Visible="false">
+<form class="form" role="form">
+
+<div class="form-group">
+            <asp:Label ID="olblIDRECIBOADHESION" runat="server" Text="" Visible="false"></asp:Label>
+</div>
+<div class="form-group">
+<asp:Label ID="olblRECIBOADHESIONCODIGO" runat="server" Text="CODIGO RECIBO:" CssClass="control-label"></asp:Label>           
+         <asp:TextBox ID="otxtRECIBOADHESIONCODIGO" runat="server" CssClass="form-control" MaxLength="10" Text="Recibo"></asp:TextBox>         
+</div>
+<div class="form-group">
+<asp:Label ID="olblRECIBOADHESIONDESCRIPCION" runat="server" Text="RECIBO EXTENSION:" CssClass="control-label"></asp:Label>  
+               
+         <asp:TextBox ID="otxtRECIBOADHESIONDESCRIPCION" runat="server" CssClass="form-control" MaxLength="50" Text="Recibo"></asp:TextBox>          
+</div>
+<div class="form-group">
+<asp:Label ID="olblRECIBOADHESIONESTADO" runat="server" Text="ESTADO:" CssClass="control-label"></asp:Label>          
+    
+    <asp:RadioButtonList ID="otxtRECIBOADHESIONESTADO" runat="server">
+        <asp:ListItem Selected="True" Value="1">Activo</asp:ListItem>
+        <asp:ListItem Value="0">Inactivo</asp:ListItem>
+    </asp:RadioButtonList>
+    
+              
+</div>
+<div class="form-group">
+<asp:Label ID="Label13" runat="server" Text="LOTE VENTA:" CssClass="control-label"></asp:Label>      
+                         <asp:SqlDataSource ID="odsLOTEVENTA" runat="server"     
+                ConnectionString="<%$ ConnectionStrings:STRSYSTEM %>"   
+                SelectCommand="LOTEVENTATraerOddl" SelectCommandType="StoredProcedure"></asp:SqlDataSource>         
+                        <asp:DropDownList ID="oddlLOTEVENTA" runat="server" DataSourceID="odsLOTEVENTA"  
+                DataTextField="LOTEVENTADescripcion" DataValueField="IDLOTEVENTA" CssClass="form-control">    
+            </asp:DropDownList> 
+</div>
+<div class="form-group">
+<asp:Label ID="olblRECIBONUMERO" runat="server" Text="NUMERO DE RECIBO:" CssClass="control-label"></asp:Label>           
+         <asp:TextBox ID="otxtRECIBONUMERO" runat="server" CssClass="form-control" MaxLength="8"></asp:TextBox>      
+</div>
+<div class="form-group">
+<asp:Label ID="olblRECIBOFECHACOBRANZA" runat="server" Text="FECHA RECIBO:" CssClass="control-label"></asp:Label>            
+<asp:CalendarExtender ID="oceRECIBOFECHACOBRANZA" runat="server" TargetControlID="otxtRECIBOFECHACOBRANZA" Format="dd/MM/yyyy"  PopupPosition="BottomRight"   PopupButtonID="obutRECIBOFECHACOBRANZAPopup">                               
+</asp:CalendarExtender>  
+<asp:TextBox ID="otxtRECIBOFECHACOBRANZA" CssClass="form-control" runat="server"></asp:TextBox>           
+<asp:Button ID="obutRECIBOFECHACOBRANZAPopup" runat="server" CssClass="obut-ocal-popup-button" />          
+</div>
+<div class="form-group">
+<asp:Label ID="olblRECIBOMONTOEFECTIVO" runat="server" Text="EFECTIVO:" CssClass="control-label"></asp:Label>         
+         <asp:TextBox ID="otxtRECIBOMONTOEFECTIVO" runat="server" CssClass="form-control" MaxLength="17" Text="0"></asp:TextBox>         
+</div>
+<div class="form-group">
+<asp:Label ID="olblRECIBOMONTOTRANSFERENCIA" runat="server" Text="MONTO:" CssClass="control-label"></asp:Label>            
+         <asp:TextBox ID="otxtRECIBOMONTOTRANSFERENCIA" runat="server" CssClass="form-control" MaxLength="17" Text="0"></asp:TextBox>           
+</div>
+
+ <div class="col-sm-offset-2 col-sm-10">
+
+               <asp:Label ID="olblGestionCodigo" runat="server" Text="" Visible="false"></asp:Label>
+               <asp:Label ID="olblGestionDescripcion" runat="server" Text=""></asp:Label>
+       <br />
+               <asp:Button ID="obutAltaConfirmada" runat="server" Text="Confirma Vinculacion recibo con adhesion" CssClass="btn btn-success"  />
+               <asp:Button ID="obutAltaAbandonada" runat="server" Text="Abandona Alta" CssClass="btn btn-danger" />
+</div>               
+</form> 
+
+
+
+
+</asp:Panel> 
 
 </asp:Content>
 

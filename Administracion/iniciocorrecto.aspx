@@ -10,7 +10,7 @@
                 <div>
                     <%-- <uc1:notificacionOperador runat="server" ID="notificacionOperador" />--%>
                 </div>
-                <div class="contenedor-busqueda">
+                <div class="contenedor-busqueda" id="barraBusquedaInicio">
                     <input type="search" name="" id="input-search" placeholder="Ingrese el rol a buscar..."
                         title="Permite la búsqueda de roles asignados">
                     <button type="button" class="btn btn-primary" id="btn-search">Buscar <i
