@@ -93,6 +93,18 @@ div::-webkit-scrollbar-corner {
   position: static;
 }
 
+/* Fijar NavBar */
+.fixed {
+  position: fixed !important;
+  box-shadow: 3px 3px 10px #3b82f6;
+}
+
+/* Barra Búsqueda Roles Inicio */
+
+.agregar-margen {
+  margin-top: 78px;
+}
+
 .nav-proof {
   /* display: flex; */
 }

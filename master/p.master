@@ -96,9 +96,14 @@
                         </div>
                     </div>
                     <ul class="navbar-nav ms-auto navbar-user-settings text-white">
+                        <li class="nav-item" id="fijarNavbar">
+                            <div class="nav-link"><i class="bi bi-segmented-nav"></i><span> Fijar
+                                    barra nav</span>
+                            </div>
+                        </li>
                         <li class="nav-item" id="ocultarFlecha">
                             <div class="nav-link"><i class="bi bi-arrow-up-square">
-                                </i><span> Ocultar flecha navegación</span>
+                                </i><span> Ocultar flecha nav</span>
                             </div>
                         </li>
                         <li class="nav-item">
@@ -133,6 +138,8 @@
                 const mostrarFlechaTextIco = ` Mostrar flecha navegación`;
                 const ocultarFlechaTextIco = ` Ocultar flecha navegación`;
 
+                const fijarBarraNav = document.getElementById("fijarNavbar");
+
                 ocultarFlechaNav.addEventListener("click", () => {
                     document.getElementById("flechaArriba").classList.toggle("oculto");
                     if (ocultarFlecha.textContent === " Ocultar flecha navegación") {
@@ -141,6 +148,19 @@
                         ocultarFlecha.innerHTML = ocultarFlechaTextIco;
                         // ocultarFlecha.textContent = "Ocultar flecha";
                     }
+                });
+
+                fijarBarraNav.addEventListener("click", () => {
+                    document.getElementById("navbar").classList.toggle("fixed");
+                    console.log("click fijar nav");
+
+                    document.getElementById("barraBusquedaInicio").classList.toggle("agregar-margen");
+                    // if (ocultarFlecha.textContent === " Ocultar flecha navegación") {
+                    //     ocultarFlecha.innerHTML = mostrarFlechaTextIco;
+                    // } else {
+                    //     ocultarFlecha.innerHTML = ocultarFlechaTextIco;
+                    //     // ocultarFlecha.textContent = "Ocultar flecha";
+                    // }
                 });
             </script>
         </div>
