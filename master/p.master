@@ -134,13 +134,13 @@
                 // Ocultar flecha arriba
                 const ocultarFlechaNav = document.querySelector("#ocultarFlecha")
                 const ocultarFlecha = document.querySelector("#ocultarFlecha div span");
-                const mostrarFlechaTextIco = ` Mostrar flecha navegación`;
-                const ocultarFlechaTextIco = ` Ocultar flecha navegación`;
+                const mostrarFlechaTextIco = ` Mostrar flecha nav`;
+                const ocultarFlechaTextIco = ` Ocultar flecha nav`;
 
 
                 ocultarFlechaNav.addEventListener("click", () => {
                     document.getElementById("flechaArriba").classList.toggle("oculto");
-                    if (ocultarFlecha.textContent === " Ocultar flecha navegación") {
+                    if (ocultarFlecha.textContent === " Ocultar flecha nav") {
                         ocultarFlecha.innerHTML = mostrarFlechaTextIco;
                     } else {
                         ocultarFlecha.innerHTML = ocultarFlechaTextIco;
@@ -160,8 +160,9 @@
                     document.getElementById("barraBusquedaInicio").classList.toggle("agregar-margen");
                     if (fijarNav.textContent === " No fijar barra nav") {
                         fijarNav.innerHTML = fijarBarraNavTexto;
+
                     } else {
-                        fijarNav.innerHTML = noFijarBarraNavTexto
+                        fijarNav.innerHTML = noFijarBarraNavTexto;
                         // ocultarFlecha.textContent = "Ocultar flecha";
                     }
                 });
