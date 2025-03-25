@@ -105,6 +105,18 @@ div::-webkit-scrollbar-corner {
   margin-top: 78px;
 }
 
+@media (max-width: 1450px) {
+  .agregar-margen {
+    margin-top: 95px;
+  }
+}
+
+@media (max-width: 990px) {
+  .agregar-margen {
+    margin-top: 75px;
+  }
+}
+
 .nav-proof {
   /* display: flex; */
 }
