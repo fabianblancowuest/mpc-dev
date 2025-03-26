@@ -236,3 +236,8 @@ table tr {
 #tabla-barrio-manzana table tr th {
   /* text-transform: uppercase; */
 }
+
+#PanelAlta div.form-group {
+  display: flex;
+  justify-content: center;
+}

@@ -246,8 +246,8 @@
             </asp:Panel>
 
 
-            <asp:Panel ID="PanelAlta" runat="server" Visible="false">
-                <form class="form" role="form">
+            <asp:Panel ID="PanelAlta" runat="server" Visible="false" CssClass="panel-alta">
+                <form class="form mx-auto" role="form">
 
                     <div class="form-group">
                         <asp:Label ID="olblIDBARRIOLOTE" runat="server" Text="" Visible="false"></asp:Label>
@@ -320,20 +320,21 @@
                             CssClass="control-label"></asp:Label>
                         <asp:TextBox ID="otxtBARRIOLOTESUPERFICIE" runat="server" CssClass="form-control"
                             MaxLength="50"></asp:TextBox>
+                        </asp:TextBox>
                     </div>
                     <div class="form-group">
-                        <asp:Label ID="olblIDORIENTACION" runat="server" Text="ORIENTACION EN CAR�TULA:"
+                        <asp:Label ID="olblIDORIENTACION" runat="server" Text="ORIENTACION EN CARÁTULA:"
                             CssClass="control-label"></asp:Label>
                         <asp:SqlDataSource ID="odsORIENTACION" runat="server"
                             ConnectionString="<%$ ConnectionStrings:STRSYSTEM %>" SelectCommand="ORIENTACIONTraerOddl"
                             SelectCommandType="StoredProcedure"></asp:SqlDataSource>
                         <asp:DropDownList ID="oddlORIENTACION" runat="server" DataSourceID="odsORIENTACION"
                             DataTextField="ORIENTACIONDescripcion" DataValueField="IDORIENTACION"
-                            CssClass="form-control">
+                            CssClass="form-select">
                         </asp:DropDownList>
                     </div>
                     <div class="form-group">
-                        <asp:Label ID="olblSECUENCIA" runat="server" Text="SECUENCIA EN CAR�TULA (En sentido horario):"
+                        <asp:Label ID="olblSECUENCIA" runat="server" Text="SECUENCIA EN CARÁTULA (En sentido horario):"
                             CssClass="control-label"></asp:Label>
                         <asp:TextBox ID="otxtSECUENCIA" runat="server" CssClass="form-control" MaxLength="4">
                         </asp:TextBox>
@@ -345,7 +346,7 @@
                             ConnectionString="<%$ ConnectionStrings:STRSYSTEM %>" SelectCommand="LOTETIPOTraerOddl"
                             SelectCommandType="StoredProcedure"></asp:SqlDataSource>
                         <asp:DropDownList ID="oddlLOTETIPO" runat="server" DataSourceID="odsLOTETIPO"
-                            DataTextField="LOTETIPODescripcion" DataValueField="IDLOTETIPO" CssClass="form-control">
+                            DataTextField="LOTETIPODescripcion" DataValueField="IDLOTETIPO" CssClass="form-select">
                         </asp:DropDownList>
                     </div>
                     <div class="form-group">
@@ -357,7 +358,7 @@
                         </asp:SqlDataSource>
                         <asp:DropDownList ID="oddlCOSTOREFERENCIA" runat="server" DataSourceID="odsCOSTOREFERENCIA"
                             DataTextField="COSTOREFERENCIADescripcion" DataValueField="IDCOSTOREFERENCIA"
-                            CssClass="form-control">
+                            CssClass="form-select">
                         </asp:DropDownList>
                     </div>
                     <div class="form-group">
@@ -372,21 +373,24 @@
                         <asp:TextBox ID="otxtBARRIOLOTEADHESIONREFERENCIA" runat="server" CssClass="form-control"
                             MaxLength="20"></asp:TextBox>
                     </div>
-                    <div class="form-group">
-                        <asp:Label ID="olblBARRIOLOTEESTADO" runat="server" Text="ESTADO DEL LOTE:"
-                            CssClass="control-label"></asp:Label>
-                        <asp:CheckBox ID="otxtBARRIOLOTEESTADO" runat="server" />
+                    <div class="panel-alta-check">
+                        <div class="form-group">
+                            <asp:Label ID="olblBARRIOLOTEESTADO" runat="server" Text="ESTADO DEL LOTE:"
+                                CssClass="control-label"></asp:Label>
+                            <asp:CheckBox ID="otxtBARRIOLOTEESTADO" runat="server" />
+                        </div>
+                        <div class="form-group">
+                            <asp:Label ID="olblBARRIOLOTEENVENTA" runat="server" Text="LOTE VENDIDO:"
+                                CssClass="control-label"></asp:Label>
+                            <asp:CheckBox ID="otxtBARRIOLOTEENVENTA" runat="server" />
+                        </div>
+                        <div class="form-group">
+                            <asp:Label ID="olblBARRIOLOTEBONIFICADO" runat="server" Text="LOTE BONIFICADO:"
+                                CssClass="control-label"></asp:Label>
+                            <asp:CheckBox ID="otxtBARRIOLOTEBONIFICADO" runat="server" />
+                        </div>
                     </div>
-                    <div class="form-group">
-                        <asp:Label ID="olblBARRIOLOTEENVENTA" runat="server" Text="LOTE VENDIDO ?:"
-                            CssClass="control-label"></asp:Label>
-                        <asp:CheckBox ID="otxtBARRIOLOTEENVENTA" runat="server" />
-                    </div>
-                    <div class="form-group">
-                        <asp:Label ID="olblBARRIOLOTEBONIFICADO" runat="server" Text="LOTE BONIFICADO ?:"
-                            CssClass="control-label"></asp:Label>
-                        <asp:CheckBox ID="otxtBARRIOLOTEBONIFICADO" runat="server" />
-                    </div>
+
                     <div class="form-group">
                         <asp:Label ID="olblPARCELACATASTRAL" runat="server" Text="NOMENCLATURA CATASTRAL:"
                             CssClass="control-label"></asp:Label>
