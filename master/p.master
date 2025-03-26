@@ -38,7 +38,7 @@
         </asp:ContentPlaceHolder>
     </head>
 
-    <body>
+    <body class="body">
         <!-- Nueva nav -->
 
 
@@ -119,7 +119,7 @@
         </nav>
         <div class="darth">
             <div class="watermark">
-                <div class="container">
+                <div class="container" id="container">
                     <!-- <img src="../images/mpc-proof.jpg" alt="fondo"> -->
                     <form id="form1" runat="server">
                         <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
@@ -152,8 +152,16 @@
                 const fijarNav = document.querySelector("#fijarNavbar div span");
                 const fijarBarraNavTexto = ` Fijar barra nav`;
                 const noFijarBarraNavTexto = ` No fijar barra nav`;
+                const contenededorPrincipal = document.getElementById("container");
+                console.log("contenedor", contenededorPrincipal);
 
-                fijarBarraNav.addEventListener("click", () => {
+                if (fijarNav.textContent === " No fijar barra nav") {
+                    contenededorPrincipal.style.setProperty("margin-top", "80px", "important");
+
+                }
+
+                fijarBarraNav.addEventListener("click", (event) => {
+                    event.preventDefault();
                     document.getElementById("navbar").classList.toggle("fixed");
                     console.log("click fijar nav");
 

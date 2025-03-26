@@ -105,6 +105,10 @@ div::-webkit-scrollbar-corner {
   margin-top: 78px;
 }
 
+.margen-superior {
+  margin-top: 80px !important;
+}
+
 @media (max-width: 1450px) {
   .agregar-margen {
     margin-top: 95px;

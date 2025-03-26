@@ -8,6 +8,13 @@
             <asp:Label ID="Label1" runat="server" Text="Liberación de Lote"></asp:Label>
         </h1>
 
+        <!-- Contenedor buscar lote -->
+        <div class="contenedor-busqueda" id="barraBusquedaLote">
+            <input type="search" name="" id="search-manzana" placeholder="Ingrese lote a buscar..."
+                title="Permite la búsqueda de lotes">
+            <button type="button" class="btn btn-danger" id="btn-search">Buscar <i class="bi bi-search"></i></button>
+        </div>
+
         <h2 class="subtitulo-rol">
             <asp:Label ID="olblVistaTipo" runat="server" Text="Usted esta en la vista de Lotes Liberados"></asp:Label>
         </h2>
@@ -117,4 +124,23 @@
             </asp:Panel>
 
         </asp:Panel>
+
+        <script>
+            document.addEventListener("DOMContentLoaded", function () {
+                document.getElementById("search-manzana").addEventListener("keyup", function () {
+                    let filter = this.value.toLowerCase();
+                    let table = document.getElementById("<%= ogvloteVentaUltimasLiberaciones.ClientID %>");
+                    let rows = table.getElementsByTagName("tr");
+
+                    for (let i = 1; i < rows.length; i++) { // Omitir la cabecera
+                        let manzanaCell = rows[i].getElementsByTagName("td")[5]; // Índice de la columna 'Manzana'
+                        if (manzanaCell) {
+                            let text = manzanaCell.textContent || manzanaCell.innerText;
+                            rows[i].style.display = text.toLowerCase().includes(filter) ? "" : "none";
+                        }
+                    }
+                });
+            });
+        </script>
+
     </asp:Content>
