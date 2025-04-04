@@ -132,8 +132,9 @@
                     let table = document.getElementById("<%= ogvloteVentaUltimasLiberaciones.ClientID %>");
                     let rows = table.getElementsByTagName("tr");
 
-                    for (let i = 1; i < rows.length; i++) { // Omitir la cabecera
-                        let manzanaCell = rows[i].getElementsByTagName("td")[5]; // Índice de la columna 'Manzana'
+                    for (let i = 1; i < rows.length; i++) {
+                        //columna 'Manzana'
+                        let manzanaCell = rows[i].getElementsByTagName("td")[5];
                         if (manzanaCell) {
                             let text = manzanaCell.textContent || manzanaCell.innerText;
                             rows[i].style.display = text.toLowerCase().includes(filter) ? "" : "none";
