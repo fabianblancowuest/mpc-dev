@@ -129,7 +129,7 @@ div::-webkit-scrollbar-corner {
   margin-left: auto;
 } */
 
-@media (min-width: 900px) {
+@media (min-width: 1200px) {
   .navbar-user-settings {
     display: flex;
     gap: 2em;
@@ -150,7 +150,7 @@ div.nav-link {
   cursor: pointer;
 }
 
-@media (max-width: 900px) {
+@media (max-width: 1200px) {
   a.nav-link,
   div.nav-link {
     display: block;
