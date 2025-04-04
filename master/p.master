@@ -42,7 +42,7 @@
         <!-- Nueva nav -->
 
 
-        <nav id="navbar" class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top no-imprimir">
+        <nav id="navbar" class="navbar navbar-expand-xl navbar-dark bg-dark fixed-top no-imprimir">
             <div class="container-fluid">
                 <a class="navbar-brand" href="#">Sistema Integral</a>
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#myNavbar"
