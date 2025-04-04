@@ -32,6 +32,24 @@ table tr {
   line-height: 1 !important;
 }
 
+.mostrar-lotes {
+  display: flex;
+  justify-content: center;
+  gap: 1em;
+  margin: 2em auto;
+}
+
+.mostrar-lotes tr {
+  display: block;
+  margin: 0.5em auto;
+}
+
+.mostrar-lotes input[type="radio"] {
+  width: 15px;
+  height: 15px;
+  cursor: pointer;
+}
+
 @media print {
   body {
     background-color: white;
@@ -146,6 +164,10 @@ table tr {
 
   .ancho-imp {
     width: 0.5em;
+  }
+
+  .mostrar-lotes {
+    display: none;
   }
 }
 

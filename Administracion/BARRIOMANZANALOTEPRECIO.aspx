@@ -58,7 +58,12 @@
                         </asp:DropDownList>
                     </div>
                 </div>
-
+                <div align="center" class="mostrar-lotes">
+                    <asp:RadioButtonList ID="orbModoListado" runat="server" AutoPostBack="True">
+                        <asp:ListItem Selected="True" Value="1">Sólamente los lotes habilitados</asp:ListItem>
+                        <asp:ListItem Value="2">Todos los lotes</asp:ListItem>
+                    </asp:RadioButtonList>
+                </div>
 
                 <div id="botones-menu" class="my-4 mx-auto justify-content-center">
                     <button class="btn btn-light no-imprimir" id="btn-colorear">Resaltar alternado <i
@@ -88,17 +93,19 @@
 
 
                 <div>
-                    <asp:SqlDataSource ID="odsBARRIOLOTE" runat="server"
-                        ConnectionString="<%$ ConnectionStrings:STRSYSTEM %>"
-                        SelectCommand="BARRIOMANZANALOTEPRECIOTRAERId" SelectCommandType="StoredProcedure">
-                        <SelectParameters>
-                            <asp:ControlParameter ControlID="oddlBarrioManzanaOperador" Name="idBarrioManzana"
-                                PropertyName="SelectedValue" Type="Int32" />
-                        </SelectParameters>
-                    </asp:SqlDataSource>
                     <div class="table-responsive tabla-barrio-manzana" id="tabla-barrio-manzana">
                         <!-- Botones de tabla -->
                         <!-- <button class="btn btn-light margenes-y text-center mx-auto d-block" id="btn-expandir">Expandir contenido</button> -->
+                        <asp:SqlDataSource ID="odsBARRIOLOTE" runat="server"
+                            ConnectionString="<%$ ConnectionStrings:STRSYSTEM %>"
+                            SelectCommand="BARRIOMANZANALOTEPRECIOTRAERId" SelectCommandType="StoredProcedure">
+                            <SelectParameters>
+                                <asp:ControlParameter ControlID="oddlBarrioManzanaOperador" Name="idBarrioManzana"
+                                    PropertyName="SelectedValue" Type="Int32" />
+                                <asp:ControlParameter ControlID="orbModoListado" Name="modoListado"
+                                    PropertyName="SelectedValue" Type="Int32" />
+                            </SelectParameters>
+                        </asp:SqlDataSource>
 
                         <asp:GridView ID="ogvBARRIOLOTE" runat="server" AutoGenerateColumns="False"
                             CssClass="table-cemmi fuente-mas-chica" AlternatingRowStyle-CssClass="alt" PageSize="100"
