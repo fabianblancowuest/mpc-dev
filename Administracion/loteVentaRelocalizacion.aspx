@@ -193,10 +193,9 @@
 
                     <div>
                         <asp:Button ID="obutRelocalizaVenta" runat="server" Text="Relocaliza Venta"
-                            BackColor="LightGreen" Font-Bold="true" ForeColor="Black" />
+                            CssClass="btn btn-success" />
 
-                        <asp:Button ID="obutRetorna" runat="server" Text="Retorna" BackColor="LightBlue"
-                            Font-Bold="true" ForeColor="Black" />
+                        <asp:Button ID="obutRetorna" runat="server" Text="Retorna" CssClass="btn btn-danger" />
                     </div>
 
                     <div>

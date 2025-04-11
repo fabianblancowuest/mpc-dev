@@ -169,6 +169,11 @@ table tr {
   .mostrar-lotes {
     display: none;
   }
+
+  .esquinas {
+    background-color: grey !important;
+    color: red;
+  }
 }
 
 .btn-imprimir {

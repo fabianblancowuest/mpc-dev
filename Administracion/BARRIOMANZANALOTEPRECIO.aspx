@@ -445,6 +445,7 @@
                         filas.forEach((fila, index) => {
                             if (fila.textContent.includes("ESQ")) {
                                 // Color para las filas impares
+                                fila.classList.add("esquinas");
                                 fila.classList.toggle("resaltar-esquinas");
                                 // Remover el color de las filas pares si ya existía
                                 // fila.style.backgroundColor = ''; 

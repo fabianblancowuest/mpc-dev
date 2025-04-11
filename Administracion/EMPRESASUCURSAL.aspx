@@ -12,7 +12,7 @@
          <asp:Panel ID="PanelTitulo" runat="server">
             <h1 class="titulo-rol">
                <asp:Label ID="olblEMPRESASUCURSALTitulo" runat="server" Text="Sucursales por Empresa"></asp:Label>
-               Sucursale por empresa
+               Sucursales por empresa
             </h1>
          </asp:Panel>
 
@@ -61,9 +61,9 @@
                            visible="False" SortExpression="IDEMPRESA" />
                         <asp:BoundField DataField="EMPRESASUCURSALCODIGO" HeaderText="Codigo Sucursal"
                            SortExpression="EMPRESASUCURSALCODIGO" />
-                        <asp:BoundField DataField="EMPRESASUCURSALDESCRIPCION" HeaderText="Descripci�n Sucursal"
+                        <asp:BoundField DataField="EMPRESASUCURSALDESCRIPCION" HeaderText="Descripción Sucursal"
                            SortExpression="EMPRESASUCURSALDESCRIPCION" />
-                        <asp:BoundField DataField="EMPRESASUCURSALEXPLICACION" HeaderText="Descripci�n Adicional"
+                        <asp:BoundField DataField="EMPRESASUCURSALEXPLICACION" HeaderText="Descripción Adicional"
                            SortExpression="EMPRESASUCURSALEXPLICACION" />
                         <asp:TemplateField HeaderText="Estado (habilitado / inhabilitado)"
                            SortExpression="EMPRESASUCURSALESTADO">
@@ -112,13 +112,13 @@
                   </asp:TextBox>
                </div>
                <div class="form-group">
-                  <asp:Label ID="olblEMPRESASUCURSALDESCRIPCION" runat="server" Text="Descripci�n Sucursal:"
+                  <asp:Label ID="olblEMPRESASUCURSALDESCRIPCION" runat="server" Text="Descripción Sucursal:"
                      CssClass="control-label"></asp:Label>
                   <asp:TextBox ID="otxtEMPRESASUCURSALDESCRIPCION" runat="server" CssClass="form-control"
                      MaxLength="50"></asp:TextBox>
                </div>
                <div class="form-group">
-                  <asp:Label ID="olblEMPRESASUCURSALEXPLICACION" runat="server" Text="Descripci�n Adicional:"
+                  <asp:Label ID="olblEMPRESASUCURSALEXPLICACION" runat="server" Text="Descripción Adicional:"
                      CssClass="control-label"></asp:Label>
                   <asp:TextBox ID="otxtEMPRESASUCURSALEXPLICACION" runat="server" CssClass="form-control"
                      TextMode="MultiLine" height="500px"></asp:TextBox>
