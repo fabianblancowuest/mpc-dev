@@ -520,4 +520,23 @@
                 <!-- class="btn btn-basic btn-primary btn-imprimir my-4 d-block no-imprimir" -->
                 <% Response.Write(armaReporteVenta())%>
             </asp:Panel>
+            <script>
+                const select = document.getElementById("ContentPlaceHolder1_oddlBARRIOLOTEOperador");
+
+                document.addEventListener("click", (event) => {
+                    if (event.target.name === "ctl00$ContentPlaceHolder1$obutImprime") {
+                        if (select.value === "0") {
+                            // alert("Debe seleccionar un lote");
+                            Swal.fire({
+                                icon: "error",
+                                title: "Precacución",
+                                text: "Debe seleccionar un lote",
+                            });
+
+                            event.preventDefault();
+                        }
+                    }
+                });
+
+            </script>
         </asp:Content>
