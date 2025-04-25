@@ -520,12 +520,20 @@
                     <button id="btn-disminuir-fuente" class="btn btn-light no-imprimir">
                         Tamaño fuente <i class="bi bi-dash-square"></i>
                     </button>
-
-                    <button class="no-imprimir btn btn-primary no-imprimir" id="btnImpContrato">Imprimir
+                    <button class="btn btn-light no-imprimir" id="btnImpContrato">Imprimir
                         <i class="bi bi-printer-fill"></i></button>
                 </div>
                 <!-- class="btn btn-basic btn-primary btn-imprimir my-4 d-block no-imprimir" -->
                 <% Response.Write(armaReporteVenta())%>
+                    <div id="botones-menu" class="my-4 mx-auto justify-content-center">
+                        <button id="btn-acomodar-firmantes+" class="btn btn-light no-imprimir">
+                            Acomodar firmantes <i class="bi bi-align-bottom"></i>
+                        </button>
+                        <button id="btn-acomodar-firmantes-" class="btn btn-light no-imprimir">
+                            Acomodar firmantes <i class="bi bi-align-top"></i>
+                        </button>
+                    </div>
+
 
 
 
@@ -551,10 +559,13 @@
 
                     const btnAumentarFuente = document.getElementById("btn-aumentar-fuente");
                     const btnDisminuirFuente = document.getElementById("btn-disminuir-fuente");
+                    const btnAcomodarFirmantes = document.getElementById("btn-acomodar-firmantes+");
+                    const btnAcomodarFirmantes_ = document.getElementById("btn-acomodar-firmantes-");
                     const parrafo = document.querySelector("p");
                     const tituloContrato = document.querySelector("h2");
                     const subtituloContrato = document.querySelector("h3");
                     const divFirmates = document.getElementsByClassName("firmantes")[0];
+                    const b = document.getElementsByTagName("b");
 
                     btnAumentarFuente.addEventListener("click", (event) => {
                         event.preventDefault();
@@ -563,8 +574,13 @@
                         let fontSizeActualT = parseInt(window.getComputedStyle(tituloContrato).fontSize); // Obtener el tamaño actual en número
                         let fontSizeActualST = parseInt(window.getComputedStyle(subtituloContrato).fontSize); // Obtener el tamaño actual en número
                         parrafo.style.fontSize = (fontSizeActual + 1) + "px";
-                        // tituloContrato.style.fontSize = (fontSizeActual + 1) + "px";
-                        // subtituloContrato.style.fontSize = (fontSizeActual + 1) + "px";
+                        for (let i = 0; i < b.length; i++) {
+                            let fontSizeB = parseInt(window.getComputedStyle(b[i]).fontSize)
+                            b[i].style.fontSize = (fontSizeB + 1) + "px";
+
+                        }
+                        tituloContrato.style.fontSize = (fontSizeActualT + 1) + "px";
+                        tituloContrato.style.fontSize = (fontSizeActualST + 1) + "px";
                         // filas.forEach(fila => {
                         //     let fontSizeActual = parseInt(window.getComputedStyle(fila).fontSize); // Obtener el tamaño actual en número
                         //     fila.style.fontSize = (fontSizeActual + 2) + "px"; // Aumentar el tamaño
@@ -580,11 +596,33 @@
 
                         let fontSizeActual = parseInt(window.getComputedStyle(parrafo).fontSize); // Obtener el tamaño actual en número
                         parrafo.style.fontSize = (fontSizeActual - 1) + "px";
+                        for (let i = 0; i < b.length; i++) {
+                            let fontSizeB = parseInt(window.getComputedStyle(b[i]).fontSize)
+                            b[i].style.fontSize = (fontSizeB - 1) + "px";
+
+                        }
                         // filas.forEach(fila => {
                         //     let fontSizeActual = parseInt(window.getComputedStyle(fila).fontSize); // Obtener el tamaño actual en número
                         //     fila.style.fontSize = (fontSizeActual - 2) + "px"; // Aumentar el tamaño
                         // })
                     })
+
+                    console.log(divFirmates)
+
+                    btnAcomodarFirmantes.addEventListener("click", (event) => {
+
+                        event.preventDefault();
+                        let marginTopActual = parseInt(window.getComputedStyle(divFirmates).marginTop);
+                        divFirmates.style.marginTop = (marginTopActual + 4) + "px";
+                    })
+
+                    btnAcomodarFirmantes_.addEventListener("click", (event) => {
+
+                        event.preventDefault();
+                        let marginTopActual = parseInt(window.getComputedStyle(divFirmates).marginTop);
+                        divFirmates.style.marginTop = (marginTopActual - 4) + "px";
+                    })
+
                 })
 
             </script>
