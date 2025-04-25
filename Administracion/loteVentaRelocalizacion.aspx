@@ -1,4 +1,4 @@
-﻿<%@ Page Title="Liberación de Lote Adherido" Language="VB" MaintainScrollPositionOnPostback="true"
+﻿<%@ Page Title="Relocalizaciòn de Lote Adherido" Language="VB" MaintainScrollPositionOnPostback="true"
     MasterPageFile="~/master/p.master" AutoEventWireup="false" CodeFile="loteVentaRelocalizacion.aspx.vb"
     Inherits="Administracion_loteVentaRelocalizacion" %>
 

@@ -159,15 +159,14 @@
                                     DataFormatString="{0:c}">
                                     <ItemStyle HorizontalAlign="Center" />
                                 </asp:BoundField>
-                                <asp:TemplateField HeaderText="ESTADO DEL LOTE" SortExpression="BARRIOLOTEESTADO"
-                                    >
+                                <asp:TemplateField HeaderText="ESTADO DEL LOTE" SortExpression="BARRIOLOTEESTADO">
                                     <ItemTemplate>
                                         <asp:CheckBox ID="BARRIOLOTEESTADOBox" runat="server"
                                             Checked='<% # Bind("BARRIOLOTEESTADO")%>' Enabled="false" />
                                     </ItemTemplate>
                                     <ItemStyle HorizontalAlign="Center" />
                                 </asp:TemplateField>
-                                
+
                                 <asp:BoundField DataField="PARCELACATASTRAL" HeaderText="NOMENCLATURA CATASTRAL"
                                     SortExpression="PARCELACATASTRAL" Visible="False" />
                                 <asp:BoundField DataField="idLoteVenta" HeaderText="id Venta" InsertVisible="False"
@@ -222,45 +221,60 @@
                     </asp:GridView>
                 </div>
 
-                <div>
+                <div class="contenedor-responsive">
 
 
 
-                    <asp:SqlDataSource ID="odsbarrioManzanaEstadisticas" runat="server" ConnectionString="<%$ ConnectionStrings:STRSYSTEM %>" SelectCommand="barrioManzanaEstadisticas" SelectCommandType="StoredProcedure">
+                    <asp:SqlDataSource ID="odsbarrioManzanaEstadisticas" runat="server"
+                        ConnectionString="<%$ ConnectionStrings:STRSYSTEM %>" SelectCommand="barrioManzanaEstadisticas"
+                        SelectCommandType="StoredProcedure">
                         <SelectParameters>
-                            <asp:ControlParameter ControlID="oddlBarrioManzanaOperador" Name="idBarrioManzana" PropertyName="SelectedValue" Type="Int32" />
+                            <asp:ControlParameter ControlID="oddlBarrioManzanaOperador" Name="idBarrioManzana"
+                                PropertyName="SelectedValue" Type="Int32" />
                         </SelectParameters>
                     </asp:SqlDataSource>
 
 
-                    <asp:GridView ID="ogvbarrioManzanaEstadisticas" runat="server" AutoGenerateColumns="False" CssClass="table-cemmi" DataSourceID="odsbarrioManzanaEstadisticas">
+                    <asp:GridView ID="ogvbarrioManzanaEstadisticas" runat="server" AutoGenerateColumns="False"
+                        CssClass="table-cemmi fuente-mas-chica" DataSourceID="odsbarrioManzanaEstadisticas">
                         <Columns>
-                            <asp:BoundField DataField="Total Lotes" HeaderText="Total Lotes" ReadOnly="True" SortExpression="Total Lotes" />
-                            <asp:BoundField DataField="Total m2 manzana" HeaderText="Total m2 manzana" ReadOnly="True" SortExpression="Total m2 manzana">
-                            <ItemStyle HorizontalAlign="Center" />
+                            <asp:BoundField DataField="Total Lotes" HeaderText="Total Lotes" ReadOnly="True"
+                                SortExpression="Total Lotes" />
+                            <asp:BoundField DataField="Total m2 manzana" HeaderText="Total m2 manzana" ReadOnly="True"
+                                SortExpression="Total m2 manzana">
+                                <ItemStyle HorizontalAlign="Center" />
                             </asp:BoundField>
-                            <asp:BoundField DataField="Total BC manzana" HeaderText="Total BC manzana" ReadOnly="True" SortExpression="Total BC manzana">
-                            <ItemStyle HorizontalAlign="Center" />
+                            <asp:BoundField DataField="Total BC manzana" HeaderText="Total BC manzana" ReadOnly="True"
+                                SortExpression="Total BC manzana">
+                                <ItemStyle HorizontalAlign="Center" />
                             </asp:BoundField>
-                            <asp:BoundField DataField="Total adhesiones manzana" DataFormatString="{0:c}" HeaderText="Total adhesiones manzana" ReadOnly="True" SortExpression="Total adhesiones manzana" />
-                            <asp:BoundField DataField="Lotes adheridos" HeaderText="Lotes adheridos" ReadOnly="True" SortExpression="Lotes adheridos">
-                            <ItemStyle HorizontalAlign="Center" />
+                            <asp:BoundField DataField="Total adhesiones manzana" DataFormatString="{0:c}"
+                                HeaderText="Total adhesiones manzana" ReadOnly="True"
+                                SortExpression="Total adhesiones manzana" />
+                            <asp:BoundField DataField="Lotes adheridos" HeaderText="Lotes adheridos" ReadOnly="True"
+                                SortExpression="Lotes adheridos">
+                                <ItemStyle HorizontalAlign="Center" />
                             </asp:BoundField>
-                            <asp:BoundField DataField="Avance Ventas" HeaderText="Avance Ventas" ReadOnly="True" SortExpression="Avance Ventas">
-                            <ItemStyle HorizontalAlign="Center" />
+                            <asp:BoundField DataField="Avance Ventas" HeaderText="Avance Ventas" ReadOnly="True"
+                                SortExpression="Avance Ventas">
+                                <ItemStyle HorizontalAlign="Center" />
                             </asp:BoundField>
-                            <asp:BoundField DataField="Superficie adherida" HeaderText="Superficie adherida" ReadOnly="True" SortExpression="Superficie adherida">
-                            <ItemStyle HorizontalAlign="Center" />
+                            <asp:BoundField DataField="Superficie adherida" HeaderText="Superficie adherida"
+                                ReadOnly="True" SortExpression="Superficie adherida">
+                                <ItemStyle HorizontalAlign="Center" />
                             </asp:BoundField>
-                            <asp:BoundField DataField="BC adheridas" HeaderText="BC adheridas" ReadOnly="True" SortExpression="BC adheridas">
-                            <ItemStyle HorizontalAlign="Center" />
+                            <asp:BoundField DataField="BC adheridas" HeaderText="BC adheridas" ReadOnly="True"
+                                SortExpression="BC adheridas">
+                                <ItemStyle HorizontalAlign="Center" />
                             </asp:BoundField>
-                            <asp:BoundField DataField="Adhesiones adheridas" DataFormatString="{0:c}" HeaderText="Adhesiones adheridas" ReadOnly="True" SortExpression="Adhesiones adheridas" />
+                            <asp:BoundField DataField="Adhesiones adheridas" DataFormatString="{0:c}"
+                                HeaderText="Adhesiones adheridas" ReadOnly="True"
+                                SortExpression="Adhesiones adheridas" />
                         </Columns>
                     </asp:GridView>
                 </div>
 
-                <div class="row">
+                <div class="row my-3">
                     <asp:Button ID="obutAlta" runat="server" Text="Nuevo Registro"
                         CssClass="btn-basic btn btn-success no-print" />
 

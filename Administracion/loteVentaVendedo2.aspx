@@ -32,8 +32,9 @@
                                 CssClass="d-block text-center">
                             </asp:Label>
                             <asp:SqlDataSource ID="odsBarrioHabilitadoSelecciona" runat="server"
-                                ConnectionString="<%$ ConnectionStrings:STRSYSTEM %>" SelectCommand="BARRIOHABILITADOTraerODDL"
-                                SelectCommandType="StoredProcedure"></asp:SqlDataSource>
+                                ConnectionString="<%$ ConnectionStrings:STRSYSTEM %>"
+                                SelectCommand="BARRIOHABILITADOTraerODDL" SelectCommandType="StoredProcedure">
+                            </asp:SqlDataSource>
                             <asp:DropDownList ID="oddlBarrioHabilitadoSelecciona" runat="server" AutoPostBack="True"
                                 DataSourceID="odsBarrioHabilitadoSelecciona" DataTextField="barrioDescripcion"
                                 DataValueField="idBarrio" CssClass="form-select"></asp:DropDownList>

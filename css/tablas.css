@@ -125,6 +125,10 @@ tr td a {
   width: 100%;
 }
 
+.contenedor-tabla-roles tr:hover {
+  outline: 3px solid whitesmoke;
+}
+
 @media (max-width: 900px) {
   .tabla-roles tr:not(tr:first-child) {
     min-height: 250px;

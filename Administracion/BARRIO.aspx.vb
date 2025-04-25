@@ -1,27 +1,26 @@
 
-
 imports STRSYSTEM    
 Partial Class STRSYSTEM_Administracion_BARRIO      
 
     Inherits System.Web.UI.Page
 
-    Protected Sub Page_Load(ByVal sender As Object, ByVal e As System.EventArgs) Handles Me.Load
+Protected Sub Page_Load(ByVal sender As Object, ByVal e As System.EventArgs) Handles Me.Load       
         If Session("session_idOperador") Is Nothing Then
             Response.Redirect("~/Administracion/accesoFueraDeSesion.aspx")
         End If
 
         If IsPostBack Then
             ' Tareas que hay que realizar si se retorna a la Pagina desde 
-
-        Else
-            olblBARRIOTitulo.text = "BARRIOS                                                                                                                                                                                                 "
-
+    
+        ELSE
+          olblBARRIOTitulo.text="BARRIOS                                                                                                                                                                                                 "
+            
             'Tareas que se realizan en esta pagina por primer y única vez
-
+     
             'STRSYSTEM.accesoRolUsuarioActividadRegistro(Session("session_idOperador"), Session("session_paginaActual")) 
 
         End If
-    End Sub
+END sub  
 
 
 
@@ -36,6 +35,9 @@ otxtBARRIODESCRIPCION.text=     ""
 otxtBARRIOEXPLICACION.text=     ""
 otxtBARRIOPLANO.text=    ""
 otxtBARRIOESTADO.Checked=      0
+otxtBARRIOVENDEDORHABILITADO.Checked=          0
+otxtBARRIOPORCENTAJECOMISIONADHESION.text=            ""
+otxtBARRIOPORCENTAJECOMISIONCUOTA.text=           ""
         Panel1.Visible = False
         PanelAlta.Visible = True
   End Sub 
@@ -70,6 +72,10 @@ otxtBARRIOESTADO.Checked=      0
         otxtBARRIOESTADO.Checked = ogvBARRIO.SelectedDataKey.Item("BARRIOESTADO")           
         oddlCBARRIO.SelectedValue = ogvBARRIO.SelectedDataKey.Item("IDCBARRIO")      
         oddlACTUALIZACIONMODO.SelectedValue = ogvBARRIO.SelectedDataKey.Item("IDACTUALIZACIONMODO")             
+        otxtBARRIOVENDEDORHABILITADO.Checked = ogvBARRIO.SelectedDataKey.Item("BARRIOVENDEDORHABILITADO")                  
+        oddlCENTROCOSTO.SelectedValue = ogvBARRIO.SelectedDataKey.Item("IDCENTROCOSTO")           
+        otxtBARRIOPORCENTAJECOMISIONADHESION.text = ogvBARRIO.SelectedDataKey.Item("BARRIOPORCENTAJECOMISIONADHESION")                       
+        otxtBARRIOPORCENTAJECOMISIONCUOTA.text = ogvBARRIO.SelectedDataKey.Item("BARRIOPORCENTAJECOMISIONCUOTA")                      
         Panel1.Visible = False
         PanelAlta.Visible = True
     End Sub
@@ -105,6 +111,10 @@ otxtBARRIOESTADO.Checked=      0
          cmd.Parameters.Add("@BARRIOESTADO", Data.SqlDbType.Bit).SqlValue = otxtBARRIOESTADO.Checked           
          cmd.Parameters.Add("@IDCBARRIO", Data.SqlDbType.Int).SqlValue = oddlCBARRIO.SelectedValue      
          cmd.Parameters.Add("@IDACTUALIZACIONMODO", Data.SqlDbType.Int).SqlValue = oddlACTUALIZACIONMODO.SelectedValue             
+         cmd.Parameters.Add("@BARRIOVENDEDORHABILITADO", Data.SqlDbType.Bit).SqlValue = otxtBARRIOVENDEDORHABILITADO.Checked                   
+         cmd.Parameters.Add("@IDCENTROCOSTO", Data.SqlDbType.Int).SqlValue = oddlCENTROCOSTO.SelectedValue           
+         cmd.Parameters.Add("@BARRIOPORCENTAJECOMISIONADHESION", Data.SqlDbType.Float).SqlValue = otxtBARRIOPORCENTAJECOMISIONADHESION.text                        
+         cmd.Parameters.Add("@BARRIOPORCENTAJECOMISIONCUOTA", Data.SqlDbType.Float).SqlValue = otxtBARRIOPORCENTAJECOMISIONCUOTA.text                      
                 reader = cmd.ExecuteReader
 
                 If reader.HasRows Then

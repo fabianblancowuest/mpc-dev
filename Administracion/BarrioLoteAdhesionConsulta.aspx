@@ -5,21 +5,21 @@
     <asp:Content ID="Content1" ContentPlaceHolderID="head" Runat="Server">
     </asp:Content>
     <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" Runat="Server"
-        CssClass="consulta-adhesiones-por-barrio">
+       >
         <h1 class="titulo-rol">CONSULTA DE ADHESIONES POR BARRIO</h1>
         <div class="contenedor-busqueda consulta-adhesiones-por-barrio">
-            <asp:Label ID="olblSeleccionaBarrio" runat="server" Text="Seleccione Barrio:"></asp:Label>
+            <asp:Label ID="olblSeleccionaBarrio" runat="server" Text="Seleccione Barrio:" Visible="false"></asp:Label>
             <asp:SqlDataSource ID="odsBarrioHabilitadoSelecciona" runat="server"
                 ConnectionString="<%$ ConnectionStrings:STRSYSTEM %>" SelectCommand="barrioHabilitadoSelecciona"
                 SelectCommandType="StoredProcedure"></asp:SqlDataSource>
             <asp:DropDownList ID="oddlBarrioHabilitadoSelecciona" runat="server" AutoPostBack="True"
                 DataSourceID="odsBarrioHabilitadoSelecciona" DataTextField="barrioDescripcion" DataValueField="idBarrio"
-                CssClass="form-select"></asp:DropDownList>
+                CssClass="form-select" Visible="false"></asp:DropDownList>
         </div>
 
 
         <div id="radio-mz-apellido">
-            <asp:RadioButtonList ID="orbOpcion" runat="server" AutoPostBack="True" class="radio-mz-apellido">
+            <asp:RadioButtonList ID="orbOpcion" runat="server" AutoPostBack="True" class="radio-mz-apellido" Visible="false">
                 <asp:ListItem Value="1">Lotes por manzana</asp:ListItem>
                 <asp:ListItem Value="2">Busqueda por apellido </asp:ListItem>
             </asp:RadioButtonList>
@@ -45,7 +45,7 @@
             </div>
         </asp:Panel>
 
-        <asp:Panel ID="PanelCadena" runat="server" Visible="false">
+        <asp:Panel ID="PanelCadena" runat="server" Visible="true">
             <div class="text-center">
                 <asp:Label ID="Label2" runat="server" Text="Apellido a buscar:"></asp:Label>
             </div>
@@ -63,11 +63,11 @@
                 SelectCommandType="StoredProcedure">
                 <SelectParameters>
                     <asp:ControlParameter ControlID="oddlBarrioHabilitadoSelecciona" Name="idBarrio"
-                        PropertyName="SelectedValue" Type="Int32" />
+                        PropertyName="SelectedValue" Type="Int32" DefaultValue="13" />
                     <asp:ControlParameter ControlID="oddlBarrioHabilitadoManzanaSelecciona" Name="idBarrioManzana"
-                        PropertyName="SelectedValue" Type="Int32" />
+                        PropertyName="SelectedValue" Type="Int32" DefaultValue="0" />
                     <asp:ControlParameter ControlID="orbOpcion" Name="tipo" PropertyName="SelectedValue"
-                        Type="String" />
+                        Type="String" DefaultValue="2" />
                     <asp:ControlParameter ControlID="otxtCadena" DefaultValue="" Name="cadenaBusqueda"
                         PropertyName="Text" Type="String" />
                 </SelectParameters>
@@ -82,6 +82,9 @@
                         <asp:BoundField DataField="idBarrioLote" HeaderText="id Lote" SortExpression="idBarrioLote" />
                         <asp:BoundField DataField="idBarrio" HeaderText="idBarrio" SortExpression="idBarrio"
                             Visible="False" />
+                        <asp:BoundField DataField="barrio" HeaderText="barrio" SortExpression="barrio">
+                        <ItemStyle Font-Bold="True" Font-Size="Large" />
+                        </asp:BoundField>
                         <asp:BoundField DataField="idBarrioManzana" HeaderText="idBarrioManzana"
                             SortExpression="idBarrioManzana" Visible="False" />
                         <asp:BoundField DataField="idLoteVenta" HeaderText="id Venta" InsertVisible="False"
@@ -104,7 +107,9 @@
                         <asp:BoundField DataField="loteVentaCuotaMonto" HeaderText="Monto Cuota"
                             SortExpression="loteVentaCuotaMonto" />
                         <asp:BoundField DataField="cliente01Nombre" HeaderText="cliente 01 "
-                            SortExpression="cliente01Nombre" />
+                            SortExpression="cliente01Nombre" >
+                        <ItemStyle Font-Bold="True" Font-Size="Large" />
+                        </asp:BoundField>
                         <asp:BoundField DataField="cliente01DNI" HeaderText="cliente 01 DNI"
                             SortExpression="cliente01DNI" />
                         <asp:BoundField DataField="cliente01Domicilio" HeaderText="01 Domicilio"
@@ -112,7 +117,9 @@
                         <asp:BoundField DataField="cliente01Telefono" HeaderText="Telefono"
                             SortExpression="cliente01Telefono" />
                         <asp:BoundField DataField="cliente02Nombre" HeaderText="cliente02 "
-                            SortExpression="cliente02Nombre" />
+                            SortExpression="cliente02Nombre" >
+                        <ItemStyle Font-Bold="True" Font-Size="Large" />
+                        </asp:BoundField>
                         <asp:BoundField DataField="cliente02DNI" HeaderText="DNI" SortExpression="cliente02DNI" />
                         <asp:BoundField DataField="cliente02Domicilio" HeaderText="02 Domicilio"
                             SortExpression="cliente02Domicilio" />

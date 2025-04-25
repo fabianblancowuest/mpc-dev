@@ -510,15 +510,35 @@
 
                 </div>
 
-
-
             </asp:Panel>
 
             <asp:Panel ID="PanelImpresion" runat="server" Visible="false" CssClass="panel-impresion-contrato">
                 <button class="no-imprimir btn btn-primary btn-basic e-bloque margenes-y" id="btnImpContrato">Imprimir
                     <i class="bi bi-printer-fill"></i></button>
+                <!-- Prueba acá -->
+                <!-- <div id="botones-menu" class="my-4 mx-auto justify-content-center">
+                    <button class="btn btn-light no-imprimir" id="btn-colorear">Resaltar alternado <i
+                            class="bi bi-highlights"></i></button>
+                    <button class="btn btn-light no-imprimir" id="btn-resaltar-esquinas">Resaltar esquinas <i
+                            class="bi bi-pen-fill"></i>
+                    </button>
+                    <button id="btn-aumentar-fuente" class="btn btn-light no-imprimir">
+                        Tamaño fuente <i class="bi bi-plus-square"></i>
+                    </button>
+                    <button id="btn-disminuir-fuente" class="btn btn-light no-imprimir">
+                        Tamaño fuente <i class="bi bi-dash-square"></i>
+                    </button>
+                    <button id="btn-espaciar-filas" class="btn btn-light no-imprimir">
+                        Espaciar Contenido <i class="bi bi-text-center"></i>
+                    </button>
+                    <button class="btn btn-primary btn-light no-imprimir" id="btn-imprimir">Imprimir <i
+                            class="bi bi-printer-fill"></i></button>
+                </div> -->
                 <!-- class="btn btn-basic btn-primary btn-imprimir my-4 d-block no-imprimir" -->
                 <% Response.Write(armaReporteVenta())%>
+
+
+
             </asp:Panel>
             <script>
                 const select = document.getElementById("ContentPlaceHolder1_oddlBARRIOLOTEOperador");
@@ -529,13 +549,14 @@
                             // alert("Debe seleccionar un lote");
                             Swal.fire({
                                 icon: "error",
-                                title: "Precacución",
+                                title: "No seleccionó lote",
                                 text: "Debe seleccionar un lote",
                             });
 
                             event.preventDefault();
                         }
                     }
+
                 });
 
             </script>
