@@ -513,27 +513,16 @@
             </asp:Panel>
 
             <asp:Panel ID="PanelImpresion" runat="server" Visible="false" CssClass="panel-impresion-contrato">
-                <button class="no-imprimir btn btn-primary btn-basic e-bloque margenes-y" id="btnImpContrato">Imprimir
-                    <i class="bi bi-printer-fill"></i></button>
-                <!-- Prueba acá -->
-                <!-- <div id="botones-menu" class="my-4 mx-auto justify-content-center">
-                    <button class="btn btn-light no-imprimir" id="btn-colorear">Resaltar alternado <i
-                            class="bi bi-highlights"></i></button>
-                    <button class="btn btn-light no-imprimir" id="btn-resaltar-esquinas">Resaltar esquinas <i
-                            class="bi bi-pen-fill"></i>
-                    </button>
+                <div id="botones-menu" class="my-4 mx-auto justify-content-center">
                     <button id="btn-aumentar-fuente" class="btn btn-light no-imprimir">
                         Tamaño fuente <i class="bi bi-plus-square"></i>
                     </button>
                     <button id="btn-disminuir-fuente" class="btn btn-light no-imprimir">
                         Tamaño fuente <i class="bi bi-dash-square"></i>
                     </button>
-                    <button id="btn-espaciar-filas" class="btn btn-light no-imprimir">
-                        Espaciar Contenido <i class="bi bi-text-center"></i>
-                    </button>
-                    <button class="btn btn-primary btn-light no-imprimir" id="btn-imprimir">Imprimir <i
-                            class="bi bi-printer-fill"></i></button>
-                </div> -->
+                    <button class="no-imprimir btn btn-primary no-imprimir" id="btnImpContrato">Imprimir
+                        <i class="bi bi-printer-fill"></i></button>
+                </div>
                 <!-- class="btn btn-basic btn-primary btn-imprimir my-4 d-block no-imprimir" -->
                 <% Response.Write(armaReporteVenta())%>
 
@@ -541,23 +530,60 @@
 
             </asp:Panel>
             <script>
-                const select = document.getElementById("ContentPlaceHolder1_oddlBARRIOLOTEOperador");
+                document.addEventListener("DOMContentLoaded", () => {
+                    const select = document.getElementById("ContentPlaceHolder1_oddlBARRIOLOTEOperador");
 
-                document.addEventListener("click", (event) => {
-                    if (event.target.name === "ctl00$ContentPlaceHolder1$obutImprime") {
-                        if (select.value === "0") {
-                            // alert("Debe seleccionar un lote");
-                            Swal.fire({
-                                icon: "error",
-                                title: "No seleccionó lote",
-                                text: "Debe seleccionar un lote",
-                            });
+                    document.addEventListener("click", (event) => {
+                        if (event.target.name === "ctl00$ContentPlaceHolder1$obutImprime") {
+                            if (select.value === "0") {
+                                // alert("Debe seleccionar un lote");
+                                Swal.fire({
+                                    icon: "error",
+                                    title: "No seleccionó lote",
+                                    text: "Debe seleccionar un lote",
+                                });
 
-                            event.preventDefault();
+                                event.preventDefault();
+                            }
                         }
-                    }
+                    });
 
-                });
+                    const btnAumentarFuente = document.getElementById("btn-aumentar-fuente");
+                    const btnDisminuirFuente = document.getElementById("btn-disminuir-fuente");
+                    const parrafo = document.querySelector("p");
+                    const tituloContrato = document.querySelector("h2");
+                    const subtituloContrato = document.querySelector("h3");
+
+                    btnAumentarFuente.addEventListener("click", (event) => {
+                        event.preventDefault();
+
+                        let fontSizeActual = parseInt(window.getComputedStyle(parrafo).fontSize); // Obtener el tamaño actual en número
+                        let fontSizeActualT = parseInt(window.getComputedStyle(tituloContrato).fontSize); // Obtener el tamaño actual en número
+                        let fontSizeActualST = parseInt(window.getComputedStyle(subtituloContrato).fontSize); // Obtener el tamaño actual en número
+                        parrafo.style.fontSize = (fontSizeActual + 1) + "px";
+                        // tituloContrato.style.fontSize = (fontSizeActual + 1) + "px";
+                        // subtituloContrato.style.fontSize = (fontSizeActual + 1) + "px";
+                        // filas.forEach(fila => {
+                        //     let fontSizeActual = parseInt(window.getComputedStyle(fila).fontSize); // Obtener el tamaño actual en número
+                        //     fila.style.fontSize = (fontSizeActual + 2) + "px"; // Aumentar el tamaño
+                        // })
+
+                        console.log("Hola");
+                    })
+
+
+                    btnDisminuirFuente.addEventListener("click", (event) => {
+
+                        event.preventDefault();
+
+                        let fontSizeActual = parseInt(window.getComputedStyle(parrafo).fontSize); // Obtener el tamaño actual en número
+                        parrafo.style.fontSize = (fontSizeActual - 1) + "px";
+                        // filas.forEach(fila => {
+                        //     let fontSizeActual = parseInt(window.getComputedStyle(fila).fontSize); // Obtener el tamaño actual en número
+                        //     fila.style.fontSize = (fontSizeActual - 2) + "px"; // Aumentar el tamaño
+                        // })
+                    })
+                })
 
             </script>
         </asp:Content>
