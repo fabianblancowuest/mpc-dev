@@ -520,6 +520,7 @@
                     <button id="btn-disminuir-fuente" class="btn btn-light no-imprimir">
                         Tamaño fuente <i class="bi bi-dash-square"></i>
                     </button>
+
                     <button class="no-imprimir btn btn-primary no-imprimir" id="btnImpContrato">Imprimir
                         <i class="bi bi-printer-fill"></i></button>
                 </div>
@@ -553,6 +554,7 @@
                     const parrafo = document.querySelector("p");
                     const tituloContrato = document.querySelector("h2");
                     const subtituloContrato = document.querySelector("h3");
+                    const divFirmates = document.getElementsByClassName("firmantes")[0];
 
                     btnAumentarFuente.addEventListener("click", (event) => {
                         event.preventDefault();
