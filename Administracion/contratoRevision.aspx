@@ -580,7 +580,7 @@
 
                         }
                         tituloContrato.style.fontSize = (fontSizeActualT + 1) + "px";
-                        tituloContrato.style.fontSize = (fontSizeActualST + 1) + "px";
+                        subtituloContrato.style.fontSize = (fontSizeActualST + 1) + "px";
                         // filas.forEach(fila => {
                         //     let fontSizeActual = parseInt(window.getComputedStyle(fila).fontSize); // Obtener el tamaño actual en número
                         //     fila.style.fontSize = (fontSizeActual + 2) + "px"; // Aumentar el tamaño
@@ -593,6 +593,11 @@
                     btnDisminuirFuente.addEventListener("click", (event) => {
 
                         event.preventDefault();
+
+                        let fontSizeActualT = parseInt(window.getComputedStyle(tituloContrato).fontSize); // Obtener el tamaño actual en número
+                        let fontSizeActualST = parseInt(window.getComputedStyle(subtituloContrato).fontSize); // Obtener el tamaño actual en número
+                        tituloContrato.style.fontSize = (fontSizeActualT - 1) + "px";
+                        subtituloContrato.style.fontSize = (fontSizeActualST - 1) + "px";
 
                         let fontSizeActual = parseInt(window.getComputedStyle(parrafo).fontSize); // Obtener el tamaño actual en número
                         parrafo.style.fontSize = (fontSizeActual - 1) + "px";
