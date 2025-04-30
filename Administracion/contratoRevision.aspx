@@ -534,10 +534,6 @@
                             Acomodar firmantes <i class="bi bi-align-top"></i>
                         </button>
                     </div>
-
-
-
-
             </asp:Panel>
             <script>
                 document.addEventListener("DOMContentLoaded", () => {
