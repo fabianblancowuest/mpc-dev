@@ -678,14 +678,21 @@ h1 {
   /* font-size: 1.2rem; */
 }
 
-.flecha-arriba {
+.flecha {
   position: fixed;
-  right: 30px;
-  bottom: 30px;
   color: #337ab7;
   font-size: 3.2rem;
 }
 
+.flecha-arriba {
+  right: 30px;
+  bottom: 30px;
+}
+
+.flecha-abajo {
+  left: 30px;
+  bottom: 30px;
+}
 .solo-imprimir {
   display: none;
 }

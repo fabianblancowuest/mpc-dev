@@ -102,7 +102,7 @@
                         </li>
                         <li class="nav-item" id="ocultarFlecha">
                             <div class="nav-link"><i class="bi bi-arrow-up-square">
-                                </i><span> Ocultar flecha nav</span>
+                                </i><span> Ocultar flechas nav</span>
                             </div>
                         </li>
                         <li class="nav-item">
@@ -128,8 +128,11 @@
                 </div>
             </div>
             <a href="#navbar" id="flechaArriba">
-                <i class="bi bi-arrow-up-square flecha-arriba"></i>
+                <i class="bi bi-arrow-up-square flecha flecha-arriba"></i>
             </a>
+            <button id="flechaAbajo">
+                <i class="bi bi-arrow-down-square flecha flecha-abajo"></i>
+            </button>
             <script>
                 // Ocultar flecha arriba
                 const ocultarFlechaNav = document.querySelector("#ocultarFlecha")
@@ -137,9 +140,22 @@
                 const mostrarFlechaTextIco = ` Mostrar flecha nav`;
                 const ocultarFlechaTextIco = ` Ocultar flecha nav`;
 
+                const flechaAbajo = document.getElementById("flechaAbajo");
+
+                console.log(flechaAbajo);
+
+                flechaAbajo.addEventListener("click", (event) => {
+                    event.preventDefault();
+                    console.log("click")
+                    window.scrollTo({
+                        top: document.body.scrollHeight,
+                        behavior: 'smooth'
+                    });
+                })
 
                 ocultarFlechaNav.addEventListener("click", () => {
                     document.getElementById("flechaArriba").classList.toggle("oculto");
+                    document.getElementById("flechaAbajo").classList.toggle("oculto");
                     if (ocultarFlecha.textContent === " Ocultar flecha nav") {
                         ocultarFlecha.innerHTML = mostrarFlechaTextIco;
                     } else {
