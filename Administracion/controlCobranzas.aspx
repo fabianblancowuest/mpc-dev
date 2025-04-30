@@ -9,7 +9,7 @@
     <asp:SqlDataSource ID="odsReporte" runat="server" ConnectionString="<%$ ConnectionStrings:STRSYSTEM %>" SelectCommand="reporteGeneralCobranzaMinuta" SelectCommandType="StoredProcedure">
         <SelectParameters>
             <asp:Parameter DefaultValue="BUFALOS" Name="barrio" Type="String" />
-            <asp:Parameter DefaultValue="2" Name="manzana" Type="String" />
+            <asp:Parameter DefaultValue="02" Name="manzana" Type="String" />
         </SelectParameters>
     </asp:SqlDataSource>
     <asp:GridView ID="OGVodsReporte" runat="server" AutoGenerateColumns="False" CssClass="table-cemmi" DataSourceID="odsReporte" Font-Size="XX-Small" AllowSorting="True">
