@@ -522,6 +522,7 @@
                     </button>
                     <button class="btn btn-light no-imprimir" id="btnImpContrato">Imprimir
                         <i class="bi bi-printer-fill"></i></button>
+                    <button class="btn btn-light no-imprimir">Por defecto <i class="bi bi-arrow-clockwise"></i></button>
                 </div>
                 <!-- class="btn btn-basic btn-primary btn-imprimir my-4 d-block no-imprimir" -->
                 <% Response.Write(armaReporteVenta())%>

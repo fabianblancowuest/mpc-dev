@@ -130,15 +130,15 @@
             <a href="#navbar" id="flechaArriba">
                 <i class="bi bi-arrow-up-square flecha flecha-arriba"></i>
             </a>
-            <button id="flechaAbajo">
+            <button id="flechaAbajo" class="no-imprimir">
                 <i class="bi bi-arrow-down-square flecha flecha-abajo"></i>
             </button>
             <script>
                 // Ocultar flecha arriba
                 const ocultarFlechaNav = document.querySelector("#ocultarFlecha")
                 const ocultarFlecha = document.querySelector("#ocultarFlecha div span");
-                const mostrarFlechaTextIco = ` Mostrar flecha nav`;
-                const ocultarFlechaTextIco = ` Ocultar flecha nav`;
+                const mostrarFlechaTextIco = ` Mostrar flechas nav`;
+                const ocultarFlechaTextIco = ` Ocultar flechas nav`;
 
                 const flechaAbajo = document.getElementById("flechaAbajo");
 
@@ -156,7 +156,7 @@
                 ocultarFlechaNav.addEventListener("click", () => {
                     document.getElementById("flechaArriba").classList.toggle("oculto");
                     document.getElementById("flechaAbajo").classList.toggle("oculto");
-                    if (ocultarFlecha.textContent === " Ocultar flecha nav") {
+                    if (ocultarFlecha.textContent === " Ocultar flechas nav") {
                         ocultarFlecha.innerHTML = mostrarFlechaTextIco;
                     } else {
                         ocultarFlecha.innerHTML = ocultarFlechaTextIco;
