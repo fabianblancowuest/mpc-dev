@@ -251,5 +251,5 @@ div.nav-link {
 
 #fijarNavbar span {
   display: inline-block;
-  /* min-width: 100px; */
+  min-width: 80px;
 }

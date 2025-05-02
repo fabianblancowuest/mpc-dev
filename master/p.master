@@ -178,7 +178,7 @@
                 ocultarFlechaNav.addEventListener("click", () => {
                     document.getElementById("flechaArriba").classList.toggle("oculto");
                     document.getElementById("flechaAbajo").classList.toggle("oculto");
-                    if (ocultarFlecha.textContent === " Ocultar flechas nav") {
+                    if (ocultarFlecha.textContent === " Ocultar flechas") {
                         ocultarFlecha.innerHTML = mostrarFlechaTextIco;
                     } else {
                         ocultarFlecha.innerHTML = ocultarFlechaTextIco;
