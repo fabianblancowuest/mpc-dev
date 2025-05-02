@@ -44,7 +44,11 @@
 
         <nav id="navbar" class="navbar navbar-expand-xl navbar-dark bg-dark fixed-top no-imprimir">
             <div class="container-fluid">
-                <a class="navbar-brand" href="#">Sistema Integral</a>
+                <a class="navbar-brand" href="#">Sistema
+                    <br>
+                    <span>Integral</span>
+                    <i class="bi bi-house-fill"></i>
+                </a>
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#myNavbar"
                     aria-controls="myNavbar" aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
@@ -98,6 +102,11 @@
                     <ul class="navbar-nav ms-auto navbar-user-settings text-white">
                         <li class="nav-item" id="fijarNavbar">
                             <div class="nav-link"><i class="bi bi-pin"></i><span> Fijar barra nav</span>
+                            </div>
+                        </li>
+                        <li class="nav-item" id="fullscreenBtn">
+                            <div class="nav-link"><i class="bi bi-fullscreen">
+                                </i><span> Pantalla completa</span>
                             </div>
                         </li>
                         <li class="nav-item" id="ocultarFlecha">
@@ -190,6 +199,31 @@
                         // ocultarFlecha.textContent = "Ocultar flecha";
                     }
                 });
+                const btnFullScreen = document.getElementById("fullscreenBtn");
+
+                btnFullScreen.addEventListener("click", (event) => {
+                    event.preventDefault();
+                    if (!document.fullscreenElement) {
+                        // Entrar en pantalla completa
+                        if (document.documentElement.requestFullscreen) {
+                            document.documentElement.requestFullscreen();
+                        } else if (document.documentElement.webkitRequestFullscreen) {
+                            document.documentElement.webkitRequestFullscreen();
+                        } else if (document.documentElement.msRequestFullscreen) {
+                            document.documentElement.msRequestFullscreen();
+                        }
+                    } else {
+                        // Salir de pantalla completa
+                        if (document.exitFullscreen) {
+                            document.exitFullscreen();
+                        } else if (document.webkitExitFullscreen) {
+                            document.webkitExitFullscreen();
+                        } else if (document.msExitFullscreen) {
+                            document.msExitFullscreen();
+                        }
+                    }
+                    // alert("Hola");
+                })
             </script>
         </div>
 

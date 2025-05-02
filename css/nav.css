@@ -93,6 +93,13 @@ div::-webkit-scrollbar-corner {
   position: static;
 }
 
+.navbar-brand {
+  font-size: 14px;
+  box-shadow: 1px 1px 5px gray;
+  border-radius: 5px;
+  padding: 10px;
+}
+
 /* Fijar NavBar */
 .fixed {
   position: fixed !important;

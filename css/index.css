@@ -957,7 +957,7 @@ select {
 }
 
 .firmantes {
-  margin-top: 6rem;
+  margin-top: 10rem;
   display: flex;
   justify-content: space-around;
 }
