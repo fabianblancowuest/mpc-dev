@@ -101,7 +101,8 @@
                     </div>
                     <ul class="navbar-nav ms-auto navbar-user-settings text-white">
                         <li class="nav-item" id="fijarNavbar">
-                            <div class="nav-link"><i class="bi bi-pin"></i><span> Fijar barra nav</span>
+                            <div class="nav-link"><i class="bi bi-pin">
+                                </i><span> Fijar barra</span>
                             </div>
                         </li>
                         <li class="nav-item" id="fullscreenBtn">
@@ -111,7 +112,12 @@
                         </li>
                         <li class="nav-item" id="ocultarFlecha">
                             <div class="nav-link"><i class="bi bi-arrow-up-square">
-                                </i><span> Ocultar flechas nav</span>
+                                </i><span> Ocultar flechas</span>
+                            </div>
+                        </li>
+                        <li class="nav-item" id="imprimirBtn">
+                            <div class="nav-link"><i class="bi bi-printer"></i>
+                                </i><span> Imprimir</span>
                             </div>
                         </li>
                         <li class="nav-item">
@@ -143,15 +149,22 @@
                 <i class="bi bi-arrow-down-square flecha flecha-abajo"></i>
             </button>
             <script>
+                const imprimirBtn = document.getElementById("imprimirBtn");
+
                 // Ocultar flecha arriba
                 const ocultarFlechaNav = document.querySelector("#ocultarFlecha")
                 const ocultarFlecha = document.querySelector("#ocultarFlecha div span");
-                const mostrarFlechaTextIco = ` Mostrar flechas nav`;
-                const ocultarFlechaTextIco = ` Ocultar flechas nav`;
+                const mostrarFlechaTextIco = ` Mostrar flechas`;
+                const ocultarFlechaTextIco = ` Ocultar flechas`;
 
                 const flechaAbajo = document.getElementById("flechaAbajo");
 
                 console.log(flechaAbajo);
+
+                imprimirBtn.addEventListener("click", (event) => {
+                    event.preventDefault();
+                    window.print();
+                })
 
                 flechaAbajo.addEventListener("click", (event) => {
                     event.preventDefault();
@@ -175,12 +188,12 @@
 
                 const fijarBarraNav = document.getElementById("fijarNavbar");
                 const fijarNav = document.querySelector("#fijarNavbar div span");
-                const fijarBarraNavTexto = ` Fijar barra nav`;
-                const noFijarBarraNavTexto = ` No fijar barra nav`;
+                const fijarBarraNavTexto = ` Fijar barra`;
+                const noFijarBarraNavTexto = ` No fijar barra`;
                 const contenededorPrincipal = document.getElementById("container");
                 console.log("contenedor", contenededorPrincipal);
 
-                if (fijarNav.textContent === " No fijar barra nav") {
+                if (fijarNav.textContent === " No fijar barra") {
                     contenededorPrincipal.style.setProperty("margin-top", "80px", "important");
 
                 }
@@ -191,7 +204,7 @@
                     console.log("click fijar nav");
 
                     document.getElementById("barraBusquedaInicio").classList.toggle("agregar-margen");
-                    if (fijarNav.textContent === " No fijar barra nav") {
+                    if (fijarNav.textContent === " No fijar barra") {
                         fijarNav.innerHTML = fijarBarraNavTexto;
 
                     } else {

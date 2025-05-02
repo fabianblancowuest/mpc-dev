@@ -145,7 +145,7 @@ div::-webkit-scrollbar-corner {
 @media (min-width: 1200px) {
   .navbar-user-settings {
     display: flex;
-    gap: 2em;
+    gap: 1.3em;
   }
 }
 
@@ -251,5 +251,5 @@ div.nav-link {
 
 #fijarNavbar span {
   display: inline-block;
-  min-width: 100px;
+  /* min-width: 100px; */
 }
