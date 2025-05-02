@@ -520,9 +520,11 @@
                     <button id="btn-disminuir-fuente" class="btn btn-light no-imprimir">
                         Tamaño fuente <i class="bi bi-dash-square"></i>
                     </button>
+                    <button class="btn btn-light no-imprimir">Por defecto <i class="bi bi-arrow-clockwise"></i></button>
+                    <!-- <button class="btn btn-light no-imprimir" id="margen-izquierdo">Margen izquierdo</button> -->
+                    <!-- <button class="btn btn-light no-imprimir" id="margen-derecho">Margen derecho</button> -->
                     <button class="btn btn-light no-imprimir" id="btnImpContrato">Imprimir
                         <i class="bi bi-printer-fill"></i></button>
-                    <button class="btn btn-light no-imprimir">Por defecto <i class="bi bi-arrow-clockwise"></i></button>
                 </div>
                 <!-- class="btn btn-basic btn-primary btn-imprimir my-4 d-block no-imprimir" -->
                 <% Response.Write(armaReporteVenta())%>
@@ -537,6 +539,7 @@
             </asp:Panel>
             <script>
                 document.addEventListener("DOMContentLoaded", () => {
+
                     const select = document.getElementById("ContentPlaceHolder1_oddlBARRIOLOTEOperador");
 
                     document.addEventListener("click", (event) => {
@@ -554,6 +557,8 @@
                         }
                     });
 
+                    const panelContrato = document.getElementsByClassName("panel-impresion-contrato")[0];
+
                     const btnAumentarFuente = document.getElementById("btn-aumentar-fuente");
                     const btnDisminuirFuente = document.getElementById("btn-disminuir-fuente");
                     const btnAcomodarFirmantes = document.getElementById("btn-acomodar-firmantes+");
@@ -563,6 +568,7 @@
                     const subtituloContrato = document.querySelector("h3");
                     const divFirmates = document.getElementsByClassName("firmantes")[0];
                     const b = document.getElementsByTagName("b");
+
 
                     btnAumentarFuente.addEventListener("click", (event) => {
                         event.preventDefault();
@@ -599,6 +605,7 @@
                         let fontSizeActual = parseInt(window.getComputedStyle(parrafo).fontSize); // Obtener el tamaño actual en número
                         parrafo.style.fontSize = (fontSizeActual - 1) + "px";
                         for (let i = 0; i < b.length; i++) {
+                            // Fuente negrita los artículos
                             let fontSizeB = parseInt(window.getComputedStyle(b[i]).fontSize)
                             b[i].style.fontSize = (fontSizeB - 1) + "px";
 
@@ -624,6 +631,24 @@
                         let marginTopActual = parseInt(window.getComputedStyle(divFirmates).marginTop);
                         divFirmates.style.marginTop = (marginTopActual - 4) + "px";
                     })
+
+                    const margenIzq = document.getElementById("margen-izquierdo");
+                    const margenDer = document.getElementById("margen-derecho");
+
+                    margenIzq.addEventListener("click", (event) => {
+                        event.preventDefault();
+                        let margenIzquierdoActual = parseInt(window.getComputedStyle(panelContrato).marginLeft);
+                        panelContrato.style.marginLeft = (margenIzquierdoActual - .3) + "mm";
+
+                    })
+
+                    margenDer.addEventListener("click", (event) => {
+                        event.preventDefault();
+                        let margenDerechodoActual = parseInt(window.getComputedStyle(panelContrato).marginRight); // Obtener el tamaño actual en número
+                        panelContrato.style.marginRight = (margenDerechodoActual + .3) + "mm";
+
+                    })
+
 
                 })
 

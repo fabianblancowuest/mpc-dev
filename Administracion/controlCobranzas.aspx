@@ -6,10 +6,50 @@
     <div>
         <asp:Label ID="Label1" runat="server" Text="Control de cobranzas en sistema de Caja " Font-Bold="true" Font-Size="Large"></asp:Label>
     </div>
+
+                <div class="row contenedor-flexible margenes-y">
+
+                    <div class="caja-busqueda">
+                        <asp:Label ID="Label2" runat="server" Text="SELECCIONE BARRIO:" CssClass="control-label">
+                        </asp:Label>
+                        <asp:SqlDataSource ID="odsBARRIOOperador" runat="server"
+                            ConnectionString="<%$ ConnectionStrings:STRSYSTEM %>"
+                            SelectCommand="BARRIOOPERADORSELECCIONA" SelectCommandType="StoredProcedure">
+                            <SelectParameters>
+                                <asp:SessionParameter Name="idOperador" SessionField="idOperador" Type="Int32" />
+                            </SelectParameters>
+                        </asp:SqlDataSource>
+                        <div class="barrio-mz">BARRIO</div>
+                        <asp:DropDownList ID="oddlBARRIOOperador" runat="server" DataSourceID="odsBARRIOOPERADOR"
+                            DataTextField="barrioPlano" DataValueField="idBarrio" AutoPostBack="True">
+                        </asp:DropDownList>
+                        <br />
+                        <asp:Label ID="Label3" runat="server" Text="SELECCIONE MANZANA:" CssClass="control-label">
+                        </asp:Label>
+                        <asp:SqlDataSource ID="odsBARRIOMANZANAOPERADOR" runat="server"
+                            ConnectionString="<%$ ConnectionStrings:STRSYSTEM %>"
+                            SelectCommand="BARRIOMANZANAOPERADORSELECCIONA" SelectCommandType="StoredProcedure">
+                            <SelectParameters>
+                                <asp:SessionParameter Name="idOperador" SessionField="idOperador" Type="String" />
+                                <asp:ControlParameter ControlID="oddlBARRIOOperador" Name="idBarrio"
+                                    PropertyName="SelectedValue" Type="Int32" />
+                            </SelectParameters>
+                        </asp:SqlDataSource>
+                        <div class="barrio-mz">MANZANA</div>
+                        <asp:DropDownList ID="oddlBarrioManzanaOperador" runat="server"
+                            DataSourceID="odsBARRIOMANZANAOPERADOR" DataTextField="barrioManzanaCodigo"
+                            DataValueField="idBarrioManzana" AutoPostBack="True">
+                        </asp:DropDownList>
+                    </div>
+                </div>
+
+    
+    <asp:Label ID="olblBarrio" runat="server" Text="" Visible ="false"></asp:Label>
+    <asp:Label ID="olblManzana" runat="server" Text="" Visible ="false"></asp:Label>
     <asp:SqlDataSource ID="odsReporte" runat="server" ConnectionString="<%$ ConnectionStrings:STRSYSTEM %>" SelectCommand="reporteGeneralCobranzaMinuta" SelectCommandType="StoredProcedure">
         <SelectParameters>
-            <asp:Parameter DefaultValue="BUFALOS" Name="barrio" Type="String" />
-            <asp:Parameter DefaultValue="02" Name="manzana" Type="String" />
+            <asp:ControlParameter ControlID="olblBarrio" DefaultValue="" Name="barrio" PropertyName="Text" Type="String" />
+            <asp:ControlParameter ControlID="olblManzana" DefaultValue="" Name="manzana" PropertyName="Text" Type="String" />
         </SelectParameters>
     </asp:SqlDataSource>
     <asp:GridView ID="OGVodsReporte" runat="server" AutoGenerateColumns="False" CssClass="table-cemmi" DataSourceID="odsReporte" Font-Size="XX-Small" AllowSorting="True">
