@@ -222,7 +222,6 @@
                             document.msExitFullscreen();
                         }
                     }
-                    // alert("Hola");
                 })
             </script>
         </div>

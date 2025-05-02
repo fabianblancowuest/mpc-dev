@@ -46,29 +46,29 @@
 //     let hasResults = false;
 //     let allTheads = document.querySelectorAll("th");
 
-//     let tablaAux = document.createElement("div");
-//     // Filtrar y mostrar solo las tarjetas que coinciden con la búsqueda
+// let tablaAux = document.createElement("div");
+// // Filtrar y mostrar solo las tarjetas que coinciden con la búsqueda
 
-//     for (let row of allRows) {
-//       let cell = row.querySelector(".acceso-rol");
+// for (let row of allRows) {
+//   let cell = row.querySelector(".acceso-rol");
 
-//       if (cell && inputSearch) {
-//         const cardTitle = cell.textContent.toLocaleLowerCase();
+//   if (cell && inputSearch) {
+//     const cardTitle = cell.textContent.toLocaleLowerCase();
 
-//         if (cardTitle.includes(searched)) {
-//           //Mostrar la fila
-//           row.style.display = "";
-//           row.style.backgroundColor = "#E3F2FD";
-//           hasResults = true;
-//           inputSearch.value = "";
-//           mensajeBusqueda.innerHTML = "";
-//         } else {
-//           row.style.display = "none"; //Ocultar la fila
-//         }
-//       } else if (!cell) {
-//         contenedorTablaRoles.append(btnMenuPrincipal);
-//       }
+//     if (cardTitle.includes(searched)) {
+//       //Mostrar la fila
+//       row.style.display = "";
+//       row.style.backgroundColor = "#E3F2FD";
+//       hasResults = true;
+//       inputSearch.value = "";
+//       mensajeBusqueda.innerHTML = "";
+//     } else {
+//       row.style.display = "none"; //Ocultar la fila
 //     }
+//   } else if (!cell) {
+//     contenedorTablaRoles.append(btnMenuPrincipal);
+//   }
+// }
 
 //     // Mostrar el mensaje si no hay resultados
 //     if (!hasResults) {
@@ -216,6 +216,21 @@ document.addEventListener("DOMContentLoaded", (event) => {
       });
     } else {
       funcionBusqueda();
+    }
+  });
+
+  inputSearch.addEventListener("keydown", (event) => {
+    if (event.key === "Enter") {
+      event.preventDefault();
+      if (!inputSearch.value) {
+        Swal.fire({
+          icon: "error",
+          title: "Oops...",
+          text: "¡Debe ingresar un criterio de búsqueda!",
+        });
+      } else {
+        funcionBusqueda();
+      }
     }
   });
 
