@@ -746,7 +746,8 @@ h1 {
 }
 
 @media (max-width: 900px) {
-  .flecha-arriba {
+  .flecha-arriba,
+  .flecha-abajo {
     color: #373a3e;
     color: white;
     background-color: #337ab7;
