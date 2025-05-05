@@ -59,6 +59,7 @@
                                 SortExpression="accesoRolDocumentoOperativo" Visible="False" />
                             <asp:CheckBoxField DataField="accesoRolEstado" HeaderText="Estado"
                                 SortExpression="accesoRolEstado" Visible="False" />
+                            <asp:BoundField DataField="fua" HeaderText="ULTIMO ACCESO" SortExpression="fua" />
                         </Columns>
                     </asp:GridView>
 

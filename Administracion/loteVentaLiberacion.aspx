@@ -25,7 +25,7 @@
                 ConnectionString="<%$ ConnectionStrings:STRSYSTEM %>" SelectCommand="loteVentaUltimasLiberaciones"
                 SelectCommandType="StoredProcedure"></asp:SqlDataSource>
             <asp:GridView ID="ogvloteVentaUltimasLiberaciones" runat="server" AutoGenerateColumns="False" DataSourceID="odsloteVentaUltimasLiberaciones"
-                EmptyDataText="No se registran liberaciones de lotes" AllowSorting="True" Font-Size="XX-Small" PageSize="100000">
+                EmptyDataText="No se registran liberaciones de lotes" AllowSorting="True" Font-Size="XX-Small" PageSize="100000" CssClass="table-cemmi">
                 <Columns>
                     <asp:BoundField DataField="id" HeaderText="id" InsertVisible="False" ReadOnly="True"
                         SortExpression="id" />
