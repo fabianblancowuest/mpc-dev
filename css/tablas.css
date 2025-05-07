@@ -200,6 +200,7 @@ tr td a {
 
   .tabla-roles td:nth-child(3)::before {
     content: "Último Acceso: ";
+    color: #777;
     /* display: inline; */
   }
 }
