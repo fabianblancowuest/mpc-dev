@@ -188,6 +188,15 @@ tr td a {
   .tabla-roles td:nth-child(5) {
     order: 1;
   }
+
+  .tabla-roles tr th:nth-child(3) {
+    display: none;
+  }
+
+  .tabla-roles td:nth-child(3)::before {
+    content: "Último Acceso: ";
+    /* display: inline; */
+  }
 }
 
 /* Venta Vendedor Período */
