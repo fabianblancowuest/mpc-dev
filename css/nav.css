@@ -163,6 +163,17 @@ div.nav-link {
   cursor: pointer;
 }
 
+.nav-link {
+  border-radius: 5px;
+  cursor: pointer;
+}
+@media (min-width: 1000px) {
+  .nav-link:hover {
+    outline: 1px solid white;
+    box-shadow: 2px 2px 5px white;
+  }
+}
+
 @media (max-width: 1200px) {
   a.nav-link,
   div.nav-link {
