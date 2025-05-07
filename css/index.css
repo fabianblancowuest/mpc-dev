@@ -784,6 +784,18 @@ h1 {
   .tabla-operaciones-señadas {
     font-size: 16px;
   }
+
+  /* Botones que no se muestran en impresión */
+
+  button,
+  .btn,
+  .btn-primary,
+  .btn-success,
+  .btn-warning,
+  .btn-danger,
+  .contenedor-busqueda {
+    display: none;
+  }
 }
 
 .btn-imprimir {
