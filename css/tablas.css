@@ -193,6 +193,11 @@ tr td a {
     display: none;
   }
 
+  /* .tabla-roles td:nth-child(3) {
+    border: 1px solid gray;
+    border-radius: 5px;
+  } */
+
   .tabla-roles td:nth-child(3)::before {
     content: "Último Acceso: ";
     /* display: inline; */
