@@ -264,3 +264,31 @@ div.nav-link {
   display: inline-block;
   min-width: 70px;
 }
+
+.no-collapse-arrow {
+  color: white;
+  border-radius: 5px;
+  cursor: pointer;
+  padding: 5px 10px;
+}
+
+.no-collapse-arrow:hover {
+  outline: 1px solid white;
+  box-shadow: 2px 2px 5px white;
+}
+
+.no-collapse-arrow span {
+  font-size: 0.8rem !important;
+}
+
+@media (min-width: 900px) {
+  .no-collapse-arrow {
+    display: none;
+  }
+}
+
+@media (max-width: 900px) {
+  .no-collapse-arrow__ {
+    display: none;
+  }
+}
