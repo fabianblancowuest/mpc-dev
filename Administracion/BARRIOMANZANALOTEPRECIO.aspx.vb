@@ -185,4 +185,62 @@ Partial Class STRSYSTEM_Administracion_BARRIOMANZANALOTEPRECIO
         olblBARRIOLOTETitulo.Text = oddlBARRIO.SelectedValue.ToString
 
     End Sub
+
+    Protected Sub orbModoColumnas_SelectedIndexChanged(sender As Object, e As EventArgs) Handles orbModoColumnas.SelectedIndexChanged
+
+        columnasPrecio()
+
+
+
+    End Sub
+
+    Protected Sub orbModoListado_SelectedIndexChanged(sender As Object, e As EventArgs) Handles orbModoListado.SelectedIndexChanged
+        columnasPrecio()
+
+    End Sub
+
+
+    Private Sub columnasPrecio()
+        If orbModoColumnas.SelectedValue = "1" Then
+            ogvBARRIOLOTE.Columns(18).Visible = True
+            ogvBARRIOLOTE.Columns(19).Visible = True
+            ogvBARRIOLOTE.Columns(20).Visible = True
+            ogvBARRIOLOTE.Columns(21).Visible = True
+            ogvBARRIOLOTE.Columns(22).Visible = True
+            ogvBARRIOLOTE.Columns(23).Visible = True
+
+
+
+
+
+            ogvBARRIOLOTE.Columns(24).Visible = False
+            ogvBARRIOLOTE.Columns(25).Visible = False
+            ogvBARRIOLOTE.Columns(26).Visible = False
+            ogvBARRIOLOTE.Columns(27).Visible = False
+            ogvBARRIOLOTE.Columns(28).Visible = False
+            ogvBARRIOLOTE.Columns(29).Visible = False
+
+        Else
+
+            ogvBARRIOLOTE.Columns(18).Visible = False
+            ogvBARRIOLOTE.Columns(19).Visible = False
+            ogvBARRIOLOTE.Columns(20).Visible = False
+            ogvBARRIOLOTE.Columns(21).Visible = False
+            ogvBARRIOLOTE.Columns(22).Visible = False
+            ogvBARRIOLOTE.Columns(23).Visible = False
+
+
+
+
+
+            ogvBARRIOLOTE.Columns(24).Visible = True
+            ogvBARRIOLOTE.Columns(25).Visible = True
+            ogvBARRIOLOTE.Columns(26).Visible = True
+            ogvBARRIOLOTE.Columns(27).Visible = True
+            ogvBARRIOLOTE.Columns(28).Visible = True
+            ogvBARRIOLOTE.Columns(29).Visible = True
+        End If
+
+
+    End Sub
 End Class

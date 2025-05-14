@@ -64,6 +64,15 @@
                         <asp:ListItem Value="2">Todos los lotes</asp:ListItem>
                     </asp:RadioButtonList>
                 </div>
+                 <div align="center" class="mostrar-lotes">
+                    <asp:RadioButtonList ID="orbModoColumnas" runat="server" AutoPostBack="True">
+                        <asp:ListItem Selected="True" Value="1"> Columnas con 200 , 160 y 120 cuotas</asp:ListItem>
+                        <asp:ListItem Value="2">Columnas con 144 , 120  y 96 cuotas </asp:ListItem>
+                    </asp:RadioButtonList>
+                </div>
+
+
+
 
                 <div id="botones-menu" class="my-4 mx-auto justify-content-center">
                     <button class="btn btn-light no-imprimir" id="btn-colorear">Resaltar alternado <i
@@ -214,6 +223,12 @@
                                     SortExpression="120 cuotas monto cuota" />
                                 <asp:BoundField DataField="120 cuotas cuota BC" HeaderText="120 cuotas cuota BC"
                                     SortExpression="120 cuotas cuota BC" />
+                                <asp:BoundField DataField="144 cuotas monto cuota" HeaderText="144 cuotas monto cuota" SortExpression="144 cuotas monto cuota" />
+                                <asp:BoundField DataField="144 cuotas cuota BC" HeaderText="144 cuotas cuota BC" SortExpression="144 cuotas cuota BC" />
+                                <asp:BoundField DataField="120 cuotas monto cuota." HeaderText="120 cuotas monto cuota." SortExpression="120 cuotas monto cuota." />
+                                <asp:BoundField DataField="120 cuotas cuota BC." HeaderText="120 cuotas cuota BC." SortExpression="120 cuotas cuota BC." />
+                                <asp:BoundField DataField="96 cuotas monto cuota" HeaderText="96 cuotas monto cuota" SortExpression="96 cuotas monto cuota" />
+                                <asp:BoundField DataField="96 cuotas cuota BC" HeaderText="96 cuotas cuota BC" SortExpression="96 cuotas cuota BC" />
                             </Columns>
                             <PagerStyle CssClass="pgr" />
                         </asp:GridView>

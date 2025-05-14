@@ -175,8 +175,8 @@
                                     SortExpression="cliente01Nombre">
                                     <ItemStyle Font-Size="X-Small" />
                                 </asp:BoundField>
-                                <asp:BoundField DataField="cliente01DNI" HeaderText=" DNI"
-                                    SortExpression="cliente01DNI" />
+                                <asp:BoundField DataField="cliente01DNI" HeaderText=" DNI" SortExpression="cliente01DNI" />
+                                <asp:BoundField DataField="cliente01Telefono" HeaderText="TELEFONO" SortExpression="cliente01Telefono" />
                                 <asp:BoundField DataField="loteVentaFechaVisita" DataFormatString="{0:d}"
                                     HeaderText=" Fecha Visita" SortExpression="loteVentaFechaVisita">
                                     <ItemStyle HorizontalAlign="Center" />
@@ -188,6 +188,7 @@
                                 <asp:BoundField DataField="vendedor" HeaderText="Vendedor" SortExpression="vendedor">
                                     <ItemStyle Font-Size="XX-Small" />
                                 </asp:BoundField>
+                                <asp:BoundField DataField="Lib Ant" HeaderText="CLI Ant" SortExpression="Lib Ant" />
                             </Columns>
                             <PagerStyle CssClass="pgr" />
                         </asp:GridView>
@@ -443,6 +444,8 @@
                     <div class="contenedor-flexible">
                         <asp:Button ID="obutAltaConfirmada" runat="server" Text="Confirma Alta"
                             CssClass="btn btn-success btn-basic btn-inline" />
+                         <asp:Button ID="obtnClientesAnteriores" runat="server" Text="Ver Clientes Anteriores del lote."
+                            CssClass="btn btn-secondary " />
                         <asp:Button ID="obutAltaAbandonada" runat="server" Text="Abandona Alta"
                             CssClass="btn btn-danger btn-basic btn-inline" />
                     </div>
