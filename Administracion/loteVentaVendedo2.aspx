@@ -527,6 +527,50 @@
 
                 <script>
                     document.addEventListener("DOMContentLoaded", () => {
+
+                        // Dar estilos al botón de selección archivo
+                        const inputsValues = document.getElementsByTagName("input");
+                        console.log("inputs", inputsValues);
+
+                        for (let i = 0; i < inputsValues.length; i++) {
+                            if (inputsValues[i].value === "Subir Imagen") {
+                                inputsValues[i].style.height = "50px";
+                                inputsValues[i].style.marginTop = "20px";
+
+                            }
+                        }
+
+                        // Dar estilos a las imágenes
+                        const imagesCharge = document.getElementsByTagName("img");
+
+                        for (let i = 0; i < imagesCharge.length; i++) {
+                            imagesCharge[i].style.display = "block";
+                            imagesCharge[i].style.margin = "0 auto";
+                            imagesCharge[i].style.maxWidth = "800px";
+                            imagesCharge[i].style.padding = "10px";
+                            imagesCharge[i].style.border = "1px solid gray";
+                            imagesCharge[i].style.boxShadow = "2px 2px 5px rgba(0, 0, 0, .5)";
+
+                        }
+
+                        const divs = document.getElementsByTagName("div");
+
+                        for (let i = 0; i < divs.length; i++) {
+                            divs[i].style.textAlign = "center";
+
+                        }
+
+                        const tds = document.getElementsByTagName("tbody");
+
+                        for (let i = 0; i < tds.length; i++) {
+                            tds[i].style.display = "block";
+                            tds[i].style.width = "100%";
+                            tds[i].style.margin = "0 auto";
+                            tds[i].style.textAlign = "center";
+                            // tds[i].width = "100%";
+
+                        }
+
                         const selectManzanas = document.querySelectorAll("#select-todos-los-barrios select")[1];
                         const optionsManzanas = selectManzanas.querySelectorAll("option");
                         console.log(selectManzanas);
