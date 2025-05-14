@@ -538,6 +538,12 @@
                                 inputsValues[i].style.marginTop = "20px";
 
                             }
+
+                            if (inputsValues[i].value === "Volver") {
+                                inputsValues[i].classList.add("btn");
+                                inputsValues[i].classList.add("btn-basic");
+                                inputsValues[i].classList.add("btn-primary");
+                            }
                         }
 
                         // Dar estilos a las imágenes
@@ -547,8 +553,8 @@
                             imagesCharge[i].style.display = "block";
                             imagesCharge[i].style.margin = "0 auto";
                             imagesCharge[i].style.maxWidth = "800px";
-                            imagesCharge[i].style.padding = "10px";
-                            imagesCharge[i].style.border = "1px solid gray";
+                            // imagesCharge[i].style.padding = "10px";
+                            // imagesCharge[i].style.border = "1px solid gray";
                             imagesCharge[i].style.boxShadow = "2px 2px 5px rgba(0, 0, 0, .5)";
 
                         }
@@ -560,16 +566,15 @@
 
                         }
 
-                        const tds = document.getElementsByTagName("tbody");
+                        // const tds = document.getElementsByTagName("tbody");
 
-                        for (let i = 0; i < tds.length; i++) {
-                            tds[i].style.display = "block";
-                            tds[i].style.width = "100%";
-                            tds[i].style.margin = "0 auto";
-                            tds[i].style.textAlign = "center";
-                            // tds[i].width = "100%";
+                        // for (let i = 0; i < tds.length; i++) {
+                        //     tds[i].style.display = "block";
+                        //     tds[i].style.width = "100%";
+                        //     tds[i].style.margin = "0 auto";
+                        //     tds[i].style.textAlign = "center";
 
-                        }
+                        // }
 
                         const selectManzanas = document.querySelectorAll("#select-todos-los-barrios select")[1];
                         const optionsManzanas = selectManzanas.querySelectorAll("option");
