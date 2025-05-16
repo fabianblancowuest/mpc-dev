@@ -50,6 +50,24 @@ table tr {
   cursor: pointer;
 }
 
+.mostrar-lotes tr td {
+  display: flex;
+}
+
+@media (max-width: 900px) {
+  .mostrar-lotes table {
+    width: 90%;
+  }
+
+  .mostrar-lotes {
+    flex-direction: column;
+  }
+  .mostrar-lotes label {
+    display: block;
+    width: 100%;
+  }
+}
+
 @media print {
   body {
     background-color: white;
@@ -173,6 +191,48 @@ table tr {
   .esquinas {
     background-color: grey !important;
     color: red;
+  }
+
+  /* .tabla-lista-precios tr:nth-child(odd) {
+    color: blue;
+  } */
+
+  .tabla-lista-precios th:nth-child(1),
+  .tabla-lista-precios td:nth-child(1) {
+    color: blue;
+    font-weight: bold;
+  }
+
+  .tabla-lista-precios td:nth-child(11),
+  .tabla-lista-precios td:nth-child(12),
+  .tabla-lista-precios th:nth-child(11),
+  .tabla-lista-precios th:nth-child(12) {
+    color: green;
+    background-color: green;
+  }
+
+  .tabla-lista-precios td:nth-child(13),
+  .tabla-lista-precios td:nth-child(14),
+  .tabla-lista-precios th:nth-child(13),
+  .tabla-lista-precios th:nth-child(14) {
+    color: red;
+    background-color: red;
+  }
+
+  .tabla-lista-precios td:nth-child(15),
+  .tabla-lista-precios td:nth-child(16),
+  .tabla-lista-precios th:nth-child(15),
+  .tabla-lista-precios th:nth-child(16) {
+    color: violet;
+    background-color: violet;
+  }
+
+  .tabla-lista-precios td:nth-child(17),
+  .tabla-lista-precios td:nth-child(18),
+  .tabla-lista-precios th:nth-child(17),
+  .tabla-lista-precios th:nth-child(18) {
+    color: blue;
+    background-color: blue;
   }
 }
 

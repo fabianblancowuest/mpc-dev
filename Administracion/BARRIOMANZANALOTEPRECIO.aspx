@@ -59,14 +59,18 @@
                     </div>
                 </div>
                 <div align="center" class="mostrar-lotes">
-                    <asp:RadioButtonList ID="orbModoListado" runat="server" AutoPostBack="True">
-                        <asp:ListItem Selected="True" Value="1">Sólamente los lotes habilitados</asp:ListItem>
-                        <asp:ListItem Value="2">Todos los lotes</asp:ListItem>
-                    </asp:RadioButtonList>
-                    <asp:RadioButtonList ID="orbModoColumnas" runat="server" AutoPostBack="True">
-                        <asp:ListItem Selected="True" Value="1"> Columnas con 200 , 160 y 120 cuotas</asp:ListItem>
-                        <asp:ListItem Value="2">Columnas con 144 , 120 y 96 cuotas </asp:ListItem>
-                    </asp:RadioButtonList>
+                    <div>
+                        <asp:RadioButtonList ID="orbModoListado" runat="server" AutoPostBack="True">
+                            <asp:ListItem Selected="True" Value="1">Sólamente los lotes habilitados</asp:ListItem>
+                            <asp:ListItem Value="2">Todos los lotes</asp:ListItem>
+                        </asp:RadioButtonList>
+                    </div>
+                    <div>
+                        <asp:RadioButtonList ID="orbModoColumnas" runat="server" AutoPostBack="True">
+                            <asp:ListItem Selected="True" Value="1"> Columnas con 200 , 160 y 120 cuotas</asp:ListItem>
+                            <asp:ListItem Value="2">Columnas con 144 , 120 y 96 cuotas </asp:ListItem>
+                        </asp:RadioButtonList>
+                    </div>
                 </div>
 
 
@@ -116,8 +120,8 @@
                         </asp:SqlDataSource>
 
                         <asp:GridView ID="ogvBARRIOLOTE" runat="server" AutoGenerateColumns="False"
-                            CssClass="table-cemmi fuente-mas-chica" AlternatingRowStyle-CssClass="alt" PageSize="100"
-                            PagerStyle-CssClass="pgr"
+                            CssClass="table-cemmi fuente-mas-chica tabla-lista-precios"
+                            AlternatingRowStyle-CssClass="alt" PageSize="100" PagerStyle-CssClass="pgr"
                             DataKeyNames="IDBARRIOLOTE,IDBARRIO,IDBARRIOMANZANA,BARRIOLOTEPARCELA,BARRIOLOTEFRENTEMETROS,BARRIOLOTELADOIZQUIERDOMETROS,BARRIOLOTEFONDOMETROS,BARRIOLOTELADODERECHOMETROS,BARRIOLOTESUPERFICIE,IDORIENTACION,SECUENCIA,IDLOTETIPO,IDCOSTOREFERENCIA,BARRIOLOTEPRECIOREFERENCIABC,BARRIOLOTEADHESIONREFERENCIA,BARRIOLOTEESTADO,BARRIOLOTEENVENTA,BARRIOLOTEBONIFICADO,PARCELACATASTRAL"
                             DataSourceID="odsBARRIOLOTE"
                             EmptyDataText="No existen entradas en la tabla con el argumento de busqueda ingresado">
@@ -426,7 +430,6 @@
 
                     const tabla = document.querySelector("#tabla-barrio-manzana table");
                     const columnas = tabla.querySelectorAll("td");
-                    const columnasTh = tabla.querySelectorAll("th");
                     const filas = tabla.querySelectorAll("tr");
                     const btnImprimir = document.getElementById("btn-imprimir");
 
@@ -435,6 +438,16 @@
                     const btnResaltarEsquinas = document.getElementById("btn-resaltar-esquinas");
                     const btnAumentarFuente = document.getElementById("btn-aumentar-fuente")
                     const btnDisminuirFuente = document.getElementById("btn-disminuir-fuente")
+
+                    // const columnasTh = tabla.querySelectorAll("th");
+                    // for (let i = 0; i < columnasTh.length; i++) {
+                    //     if (columnasTh[i].textContent.includes("200")) {
+                    //         columnasTh[i].style.color = "green";
+                    //         columnasTh[i].style.backgroundColor = "unset";
+                    //         console.log(columnasTh[i]);
+                    //     }
+
+                    // }
 
                     // Añadir el evento de clic al botón
                     btnResaltarAlternado.addEventListener('click', (event) => {
