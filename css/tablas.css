@@ -861,12 +861,12 @@ Pago Pactado = Verde claro */
   text-align: center;
 }
 
-.form-control,
+/* .form-control,
 .control-label,
 .form-select {
   max-width: 100%;
   width: 500px;
-}
+} */
 
 .datos-venta input,
 .datos-venta select,

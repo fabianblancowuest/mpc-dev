@@ -466,12 +466,6 @@ input[type="radio"] {
   outline: 1px solid var(--btn-bg-color);
 }
 
-@media (max-width: 900px) {
-  .form-input {
-    width: 95%;
-  }
-}
-
 .text-info {
   color: var(--btn-bg-color) !important;
   padding: 10px 30px;
