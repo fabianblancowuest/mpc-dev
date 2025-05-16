@@ -478,9 +478,9 @@ input[type="radio"] {
 }
 
 .panel-acceso {
-  min-height: 100vh;
+  height: 100vh;
   padding: 1em 0;
-  max-width: 100%;
+  /* max-width: 100%; */
   /* min-height: 100vh; */
   display: flex;
   flex-direction: column;
@@ -498,14 +498,13 @@ input[type="radio"] {
 }
 
 #obutAccesocorrectoLogout {
-  margin-top: auto;
-  margin-bottom: 100px;
+  position: absolute;
+  bottom: 100px;
 }
 
 @media (max-width: 900px) {
   #obutAccesocorrectoLogout {
-    margin-top: auto;
-    margin-bottom: 40px;
+    bottom: 40px;
   }
 }
 
