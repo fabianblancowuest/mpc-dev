@@ -160,6 +160,7 @@
                 const ocultarFlechaNav = document.querySelector("#ocultarFlecha")
                 const ocultarFlechaNav__ = document.querySelector("#ocultarFlecha__")
                 const ocultarFlecha = document.querySelector("#ocultarFlecha div span");
+                const ocultarFlecha__ = document.querySelector("#ocultarFlecha__ div span");
                 const mostrarFlechaTextIco = ` Mostrar flechas`;
                 const ocultarFlechaTextIco = ` Ocultar flechas`;
 
@@ -195,10 +196,10 @@
                 ocultarFlechaNav__.addEventListener("click", () => {
                     document.getElementById("flechaArriba").classList.toggle("oculto");
                     document.getElementById("flechaAbajo").classList.toggle("oculto");
-                    if (ocultarFlecha.textContent === " Ocultar flechas") {
-                        ocultarFlecha.innerHTML = mostrarFlechaTextIco;
+                    if (ocultarFlecha__.textContent === " Ocultar flechas") {
+                        ocultarFlecha__.innerHTML = mostrarFlechaTextIco;
                     } else {
-                        ocultarFlecha.innerHTML = ocultarFlechaTextIco;
+                        ocultarFlecha__.innerHTML = ocultarFlechaTextIco;
                         // ocultarFlecha.textContent = "Ocultar flecha";
                     }
                 });

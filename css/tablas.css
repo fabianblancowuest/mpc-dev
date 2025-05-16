@@ -536,6 +536,31 @@ Pago Pactado = Verde claro */
   .accesos-habilitados .btn-primary {
     width: 95vw !important;
   }
+
+  .accesos-habilitados tr td:nth-child(2)::before {
+    content: "ID Operador: ";
+    color: #777;
+  }
+  .accesos-habilitados tr td:nth-child(3)::before {
+    content: "Empresa: ";
+    color: #777;
+  }
+  .accesos-habilitados tr td:nth-child(4)::before {
+    content: "Razón Social: ";
+    color: #777;
+  }
+  .accesos-habilitados tr td:nth-child(5)::before {
+    content: "Sucursal: ";
+    color: #777;
+  }
+  .accesos-habilitados tr td:nth-child(6)::before {
+    content: "Sector: ";
+    color: #777;
+  }
+  .accesos-habilitados tr td:nth-child(7)::before {
+    content: "Roles: ";
+    color: #777;
+  }
 }
 
 .descripcion-ultimo-acceso {
