@@ -63,15 +63,11 @@
                         <asp:ListItem Selected="True" Value="1">Sólamente los lotes habilitados</asp:ListItem>
                         <asp:ListItem Value="2">Todos los lotes</asp:ListItem>
                     </asp:RadioButtonList>
-                </div>
-                <div align="center" class="mostrar-lotes">
                     <asp:RadioButtonList ID="orbModoColumnas" runat="server" AutoPostBack="True">
                         <asp:ListItem Selected="True" Value="1"> Columnas con 200 , 160 y 120 cuotas</asp:ListItem>
                         <asp:ListItem Value="2">Columnas con 144 , 120 y 96 cuotas </asp:ListItem>
                     </asp:RadioButtonList>
                 </div>
-
-
 
 
                 <div id="botones-menu" class="my-4 mx-auto justify-content-center">
