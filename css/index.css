@@ -1042,12 +1042,14 @@ select {
 
 #botones-menu {
   display: flex;
+  flex-wrap: wrap;
   gap: 1em;
 }
 
 #botones-menu button {
   box-shadow: 1px 1px 3px;
-  min-width: 180px;
+  min-width: 160px;
+  font-size: 16px;
 }
 
 @media (max-width: 900px) {

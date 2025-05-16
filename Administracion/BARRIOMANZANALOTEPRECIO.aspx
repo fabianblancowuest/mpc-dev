@@ -64,10 +64,10 @@
                         <asp:ListItem Value="2">Todos los lotes</asp:ListItem>
                     </asp:RadioButtonList>
                 </div>
-                 <div align="center" class="mostrar-lotes">
+                <div align="center" class="mostrar-lotes">
                     <asp:RadioButtonList ID="orbModoColumnas" runat="server" AutoPostBack="True">
                         <asp:ListItem Selected="True" Value="1"> Columnas con 200 , 160 y 120 cuotas</asp:ListItem>
-                        <asp:ListItem Value="2">Columnas con 144 , 120  y 96 cuotas </asp:ListItem>
+                        <asp:ListItem Value="2">Columnas con 144 , 120 y 96 cuotas </asp:ListItem>
                     </asp:RadioButtonList>
                 </div>
 
@@ -85,6 +85,9 @@
                     </button>
                     <button id="btn-disminuir-fuente" class="btn btn-light no-imprimir">
                         Tamaño fuente <i class="bi bi-dash-square"></i>
+                    </button>
+                    <button id="btn-pordefecto-fuente" class="btn btn-light no-imprimir">
+                        Por defecto <i class="bi bi-arrow-clockwise"></i>
                     </button>
                     <button id="btn-espaciar-filas" class="btn btn-light no-imprimir">
                         Espaciar Contenido <i class="bi bi-text-center"></i>
@@ -223,12 +226,18 @@
                                     SortExpression="120 cuotas monto cuota" />
                                 <asp:BoundField DataField="120 cuotas cuota BC" HeaderText="120 cuotas cuota BC"
                                     SortExpression="120 cuotas cuota BC" />
-                                <asp:BoundField DataField="144 cuotas monto cuota" HeaderText="144 cuotas monto cuota" SortExpression="144 cuotas monto cuota" />
-                                <asp:BoundField DataField="144 cuotas cuota BC" HeaderText="144 cuotas cuota BC" SortExpression="144 cuotas cuota BC" />
-                                <asp:BoundField DataField="120 cuotas monto cuota." HeaderText="120 cuotas monto cuota." SortExpression="120 cuotas monto cuota." />
-                                <asp:BoundField DataField="120 cuotas cuota BC." HeaderText="120 cuotas cuota BC." SortExpression="120 cuotas cuota BC." />
-                                <asp:BoundField DataField="96 cuotas monto cuota" HeaderText="96 cuotas monto cuota" SortExpression="96 cuotas monto cuota" />
-                                <asp:BoundField DataField="96 cuotas cuota BC" HeaderText="96 cuotas cuota BC" SortExpression="96 cuotas cuota BC" />
+                                <asp:BoundField DataField="144 cuotas monto cuota" HeaderText="144 cuotas monto cuota"
+                                    SortExpression="144 cuotas monto cuota" />
+                                <asp:BoundField DataField="144 cuotas cuota BC" HeaderText="144 cuotas cuota BC"
+                                    SortExpression="144 cuotas cuota BC" />
+                                <asp:BoundField DataField="120 cuotas monto cuota." HeaderText="120 cuotas monto cuota."
+                                    SortExpression="120 cuotas monto cuota." />
+                                <asp:BoundField DataField="120 cuotas cuota BC." HeaderText="120 cuotas cuota BC."
+                                    SortExpression="120 cuotas cuota BC." />
+                                <asp:BoundField DataField="96 cuotas monto cuota" HeaderText="96 cuotas monto cuota"
+                                    SortExpression="96 cuotas monto cuota" />
+                                <asp:BoundField DataField="96 cuotas cuota BC" HeaderText="96 cuotas cuota BC"
+                                    SortExpression="96 cuotas cuota BC" />
                             </Columns>
                             <PagerStyle CssClass="pgr" />
                         </asp:GridView>
@@ -492,6 +501,15 @@
                         //     let fontSizeActual = parseInt(window.getComputedStyle(fila).fontSize); // Obtener el tamaño actual en número
                         //     fila.style.fontSize = (fontSizeActual - 2) + "px"; // Aumentar el tamaño
                         // })
+                    })
+
+
+                    const fuentePorDefecto = document.getElementById("btn-pordefecto-fuente");
+
+                    fuentePorDefecto.addEventListener("click", (event) => {
+                        event.preventDefault();
+
+                        tabla.style.fontSize = "11.5px";
                     })
 
                     const btnEspaciarContenido = document.getElementById("btn-espaciar-filas");
